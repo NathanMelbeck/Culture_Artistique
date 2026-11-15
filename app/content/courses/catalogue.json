@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "groups": [{"id": "antiquite", "title": "Antiquité", "periods": ["egypte", "grece", "rome"]}],
+  "courses": [
+    "res://content/courses/egypte.json",
+    "res://content/courses/grece.json",
+    "res://content/courses/rome.json"
+  ]
+}

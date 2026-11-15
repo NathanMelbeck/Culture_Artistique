@@ -4,7 +4,9 @@ Application locale de culture artistique, développée avec **Godot 4.7.2 et GDS
 
 ## Démarrer le lecteur
 
-Dans Godot, importer **`app/project.godot`**, puis appuyer sur **F5**. Le menu propose Cours, Jeux et Crédits. Les cours et les jeux disposent pour le moment d'écrans d'attente, sans contenu ni progression fictifs. Les crédits sont déjà consultables.
+Dans Godot, importer **`app/project.godot`**, puis appuyer sur **F5**. Le menu propose Cours, Jeux et Crédits. Cours donne accès aux parcours Égypte, Grèce et Rome ; Jeux conserve son écran d'attente. Les crédits sont consultables.
+
+La proposition des premiers cours est développée sur **`feat/cours-antiquite`**. Chaque période comprend six chapitres rédigés, avec sommaire, texte natif sélectionnable, illustrations existantes légendées, agrandissement dans l'application et quiz de quatre questions expliquées. Le catalogue permet de consulter toute l'Antiquité ou de choisir directement une période. Il ne s'agit pas de pages PDF affichées comme images : seuls les visuels sélectionnés sont extraits des supports, puis intégrés à des blocs de cours rédigés séparément.
 
 Le bouton **Fiche** dans la barre du haut ouvre les **17 fiches de révision (34 pages)** : choix d'une période, recherche par nom, page précédente/suivante, zoom de 100 à 300 % et retour à la largeur du lecteur. Les fiches sont consultées directement dans l'application, hors ligne. La fiche, sa page et son zoom sont conservés lorsque l'on revient au menu pendant la même session.
 
@@ -14,7 +16,7 @@ Depuis PowerShell, avec le moteur installé à côté du dépôt :
 & '..\Godot\Godot_v4.7.2-stable_win64.exe' --path '.\app'
 ```
 
-L'application ne fait aucun téléchargement au lancement : la photographie et les polices sont embarquées. Seuls les boutons de références externes dans les crédits ouvrent le navigateur, avec la mention « Internet requis ».
+L'application ne fait aucun téléchargement au lancement : les textes, illustrations, fiches et polices sont embarqués. Seuls les boutons de références externes dans les crédits ou les cours ouvrent le navigateur, avec la mention « Internet requis ».
 
 ## Commandes
 
@@ -34,22 +36,33 @@ app/
   project.godot
   scenes/app_shell.*             Coquille, en-tête et pied de page
   scenes/main_menu/              Menu principal
-  scenes/section_preview/        Écrans d'attente Cours / Jeux
+  scenes/section_preview/        Écran d'attente Jeux
+  scenes/courses/                Catalogue, lecteur et quiz des cours
   scenes/credits/                Sources et licences hors ligne
   scenes/revision_sheets/        Lecteur de fiches intégré au lecteur Godot
   components/destination_card.*  Carte de navigation réutilisable
+  components/course_block.gd     Paragraphes, encadrés et figures du lecteur
   services/navigation_service.gd Navigation locale
+  services/quiz_session.gd       Règles de session partagées des quiz
   repositories/media_repository.gd Résolution des médias locaux
   repositories/revision_repository.gd Catalogue des fiches et pages locales
+  repositories/course_repository.gd Cours et notices des illustrations
+  repositories/progress_repository.gd Chapitres lus et meilleurs résultats
   content/media.json             Notices et crédits des médias
   content/revision_sheets.json   Périodes, ordre, sources et pages de révision
+  content/courses/               Catalogue et textes des trois cours
+  content/course_media.json      Provenance des 15 illustrations des cours
   assets/                       Photo, polices et icônes embarquées
   theme/app_theme.gd             Couleurs, typographie et styles
   tests/menu_smoke.gd            Parcours d'entrée et captures
   tests/revision_smoke.gd        Navigation, recherche, zoom et 34 pages
+  tests/courses_smoke.gd         Cours, sommaire, corrections et reprise
+  tests/course_data_test.gd      Scores et sauvegarde locale isolée
 fiche_revision/                 Fiches PDF originales fournies par Nathan
-documents_support_cours/        Supports de cours sources (pas encore intégrés)
+documents_support_cours/        Supports pédagogiques sources inchangés
 tools/import_revision_sheets.py Préparation des pages pour Godot
+tools/extract_course_assets.py  Extraction des illustrations existantes
+tools/validate_courses.py       Validation du catalogue et de ses relations
 docs/asset-register.csv          Provenance des ressources
 design/maquette-v1/              Sources de conception et lien Figma
 test/                           Ancien prototype indépendant
@@ -64,11 +77,25 @@ $godot = '..\Godot\Godot_v4.7.2-stable_win64_console.exe'
 & $godot --headless --path '.\app' --editor --quit
 & $godot --path '.\app' --script 'res://tests/menu_smoke.gd'
 & $godot --path '.\app' --script 'res://tests/revision_smoke.gd'
+& $godot --headless --path '.\app' --script 'res://tests/course_data_test.gd'
+& $godot --path '.\app' --script 'res://tests/courses_smoke.gd'
 ```
 
 Le second parcours injecte de vrais événements souris et clavier, vérifie la navigation et le redimensionnement et écrit des captures dans `docs/validation/menu/` (exclues de Git). Il demande un affichage graphique. Aucun export autonome du nouveau lecteur n'est encore fourni.
 
 Le parcours des fiches vérifie aussi les 34 ressources locales, les bornes de pagination, les changements de période, le zoom, les recherches sans accent, les résultats vides et la reprise de lecture. Ses captures sont dans `docs/validation/revision/` (exclues de Git).
+
+Les tests des cours emploient une progression en mémoire et un fichier temporaire unique, sans modifier la progression personnelle. La validation des JSON peut être lancée avec `python tools/validate_courses.py`.
+
+## Les cours d'Antiquité
+
+Les fichiers JSON sous `app/content/courses/` constituent la source de vérité des textes et questions. Chaque chapitre contient des blocs typés et les pages du support utilisées comme base pédagogique. Les cours sont des propositions à relire avec Nathan, pas une transcription littérale des diapositives.
+
+Le lecteur conserve la position de lecture et le quiz en cours pendant la session, y compris après un retour au menu. « Continuer » ou « Marquer comme lu » enregistre le chapitre ; le meilleur score du quiz est enregistré séparément dans `user://learning_progress.json`. La lecture n'est donc pas assimilée à une validation des connaissances. Le fichier est remplacé après écriture d'une version temporaire et les champs invalides sont ignorés.
+
+Les 15 illustrations sont extraites des images contenues dans les supports fournis, avec conservation de leurs proportions et des crédits visibles. Leurs pages et index d'origine sont renseignés dans `app/content/course_media.json` et dans `docs/course-asset-register.csv`. Aucun meuble ou monument n'est redessiné. Une reprise moderne du klismos est explicitement présentée comme telle.
+
+Pour reconstruire ces illustrations, utiliser `python tools/extract_course_assets.py` avec `pypdf` et `Pillow`, puis laisser Godot réimporter les ressources. Les PDF sources ne sont pas chargés à l'exécution. Les notes de couverture pédagogique et de vérification sont dans [docs/cours-antiquite-editorial.md](docs/cours-antiquite-editorial.md).
 
 ## Ajouter ou mettre à jour les fiches
 

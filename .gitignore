@@ -8,5 +8,6 @@ builds/
 # Captures générées par les vérifications du lecteur.
 docs/validation/menu/
 docs/validation/revision/
+docs/validation/courses/
 .tmp/
 __pycache__/

@@ -4,10 +4,13 @@ const HOME := preload("res://scenes/main_menu/main_menu.tscn")
 const SECTION := preload("res://scenes/section_preview/section_preview.tscn")
 const CREDITS := preload("res://scenes/credits/credits.tscn")
 const REVISION := preload("res://scenes/revision_sheets/revision_sheets.tscn")
+const COURSES := preload("res://scenes/courses/courses.tscn")
 var navigation := NavigationService.new()
 var media_repository := MediaRepository.new()
 var revision_repository := RevisionRepository.new()
-var _revision_state: Dictionary = {}
+var course_repository := CourseRepository.new()
+var progress_repository := ProgressRepository.new()
+var _view_states: Dictionary = {}
 var _page: Control
 var _page_host: VBoxContainer
 var _scroll: ScrollContainer
@@ -122,14 +125,14 @@ func _build_shell() -> void:
 func _show_route(route: String) -> void:
 	var was_keyboard := false
 	if is_instance_valid(_page):
-		if navigation.current_route != "revision" and _page.has_method("get_view_state"):
-			_revision_state = _page.get_view_state()
+		if _page.has_method("get_view_state"):
+			_view_states[str(_page.name)] = _page.get_view_state()
 		_scroll_positions[_page.name] = _scroll.scroll_vertical
 		was_keyboard = get_viewport().gui_get_focus_owner() != null
 		_page_host.remove_child(_page)
 		_page.queue_free()
-	_back_button.visible = route not in ["home", "revision"]
-	_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED if route == "revision" else ScrollContainer.SCROLL_MODE_AUTO
+	_back_button.visible = route not in ["home", "revision", "courses"]
+	_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED if route in ["revision", "courses"] else ScrollContainer.SCROLL_MODE_AUTO
 	if route == "home":
 		_page = HOME.instantiate()
 		_page.media_repository = media_repository
@@ -139,7 +142,12 @@ func _show_route(route: String) -> void:
 	elif route == "revision":
 		_page = REVISION.instantiate()
 		_page.repository = revision_repository
-		_page.view_state = _revision_state
+		_page.view_state = _view_states.get("revision", {})
+	elif route == "courses":
+		_page = COURSES.instantiate()
+		_page.repository = course_repository
+		_page.progress_repository = progress_repository
+		_page.view_state = _view_states.get("courses", {})
 	else:
 		_page = SECTION.instantiate()
 		_page.route = route
@@ -160,8 +168,8 @@ func _restore_view(with_focus: bool) -> void:
 			var first := _page.find_child("CoursesCard", true, false) as Button
 			if first != null:
 				first.grab_focus()
-		elif navigation.current_route == "revision":
-			_nav_buttons["revision"].grab_focus()
+		elif navigation.current_route in ["revision", "courses"]:
+			_nav_buttons[navigation.current_route].grab_focus()
 		else:
 			_back_button.grab_focus()
 

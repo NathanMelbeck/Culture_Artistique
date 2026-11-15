@@ -87,7 +87,7 @@ func _run() -> void:
 			var license_text := app.find_child("LicenseText", true, false) as TextEdit
 			check(license_text != null and license_text.text.contains("GODOT ENGINE") and license_text.text.contains("SIL OPEN FONT LICENSE"), "Les licences sont lisibles dans l’application")
 			await key(KEY_ESCAPE)
-		await click("BackHome")
+		await click("HomeButton" if item[1] == "courses" else "BackHome")
 		check(app.navigation.current_route == "home", "Retour au menu depuis " + item[1])
 	await click("CoursesNav")
 	check(app.navigation.current_route == "courses", "La navigation supérieure ouvre les cours")

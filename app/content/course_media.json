@@ -1,0 +1,272 @@
+{
+  "egypte-nil": {
+    "path": "res://assets/courses/antiquity/egypte-nil.webp",
+    "title": "Vallée du Nil",
+    "caption": "Carte de la vallée du Nil extraite du support. Haute-Égypte en amont, Basse-Égypte dans le delta.",
+    "alt": "Carte montrant le Nil, le delta au nord et la Nubie au sud.",
+    "source": "documents_support_cours/Antiquité-Egypte.pdf",
+    "source_page": 2,
+    "source_image_index": 0,
+    "original_image_name": "Im2.png",
+    "original_size": [
+      960,
+      1960
+    ],
+    "source_image_sha256": "f5244d4b669bff78123f6a462b062428ef95a617d6afa0bde8804ab13759bc4f",
+    "credit": "Support fourni par Nathan · page 2 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "egypte-temple": {
+    "path": "res://assets/courses/antiquity/egypte-temple.webp",
+    "title": "Une salle à colonnes",
+    "caption": "Photographie d'une salle à colonnes d'un temple égyptien, issue du support. Le site et l'auteur ne sont pas précisés dans cette page.",
+    "alt": "Alignements de colonnes massives portant un plafond en pierre, avec des reliefs sur leurs surfaces.",
+    "source": "documents_support_cours/Antiquité-Egypte.pdf",
+    "source_page": 8,
+    "source_image_index": 1,
+    "original_image_name": "Im15.jpg",
+    "original_size": [
+      688,
+      1300
+    ],
+    "source_image_sha256": "e96d38337ff935a35f7616d7941878fbeca2db9b76430b0773b361a588c69fe5",
+    "credit": "Support fourni par Nathan · page 8 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "egypte-colonnes": {
+    "path": "res://assets/courses/antiquity/egypte-colonnes.webp",
+    "title": "Des chapiteaux végétaux",
+    "caption": "Planche existante du support comparant plusieurs colonnes égyptiennes. Les couleurs relèvent de cette illustration didactique.",
+    "alt": "Cinq colonnes dessinées avec des chapiteaux inspirés du papyrus, du palmier et du lotus.",
+    "source": "documents_support_cours/Antiquité-Egypte.pdf",
+    "source_page": 11,
+    "source_image_index": 0,
+    "original_image_name": "Im19.png",
+    "original_size": [
+      636,
+      297
+    ],
+    "source_image_sha256": "f782137ec4dbe9fa73993b511b0b69d7fdb15f99c610a4dfbeed0df98bc38e65",
+    "credit": "Support fourni par Nathan · page 11 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "egypte-peinture": {
+    "path": "res://assets/courses/antiquity/egypte-peinture.webp",
+    "title": "Lire une scène peinte",
+    "caption": "Scène de musiciens reproduite dans le support : observer les profils, les gestes et la relation entre image et écriture. Attribution non précisée dans la page.",
+    "alt": "Trois musiciens peints, accompagnés de signes hiéroglyphiques.",
+    "source": "documents_support_cours/Antiquité-Egypte.pdf",
+    "source_page": 14,
+    "source_image_index": 1,
+    "original_image_name": "Im26.png",
+    "original_size": [
+      700,
+      493
+    ],
+    "source_image_sha256": "dc2d589df82a3a1767bd790e0c18c9d7dae552755f2e32e585715a8f5829b273",
+    "credit": "Support fourni par Nathan · page 14 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "egypte-coffre": {
+    "path": "res://assets/courses/antiquity/egypte-coffre.webp",
+    "title": "Un coffre polychrome",
+    "caption": "Photographie d'un coffre à décor polychrome provenant du support ; attribution et datation non précisées. Observer le volume, les panneaux et les motifs.",
+    "alt": "Coffre sur pieds, à couvercle bombé, décoré de bandes bleues, dorées et de figures.",
+    "source": "documents_support_cours/Antiquité-Egypte.pdf",
+    "source_page": 17,
+    "source_image_index": 0,
+    "original_image_name": "Im32.jpg",
+    "original_size": [
+      640,
+      538
+    ],
+    "source_image_sha256": "be9daba5a2641c36a8a6183db5b88f064ee1dd06611eeb876142ea4ec7ed899a",
+    "credit": "Support fourni par Nathan · page 17 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "egypte-siege": {
+    "path": "res://assets/courses/antiquity/egypte-siege.webp",
+    "title": "Observer un siège",
+    "caption": "Photographie de siège extraite du support. Le cours étudie sa structure et ses pieds ; l'attribution n'est pas déduite de l'image seule.",
+    "alt": "Chaise en bois, avec un dossier rectangulaire ajouré et quatre pieds terminés en pattes animales.",
+    "source": "documents_support_cours/Antiquité-Egypte.pdf",
+    "source_page": 18,
+    "source_image_index": 1,
+    "original_image_name": "Im34.jpg",
+    "original_size": [
+      559,
+      768
+    ],
+    "source_image_sha256": "8d5261ed79189ad841524afaa6f024a04f7d4d5dd6758a1ce8739aced52dd198",
+    "credit": "Support fourni par Nathan · page 18 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "grece-vase": {
+    "path": "res://assets/courses/antiquity/grece-vase.webp",
+    "title": "Un vase à figures noires",
+    "caption": "Photographie de vase reproduite dans le support. Identification et datation non précisées ; observer la silhouette noire et les détails incisés.",
+    "alt": "Vase grec à deux anses, avec des personnages noirs sur un fond orangé.",
+    "source": "documents_support_cours/Antiquité- Grece.pdf",
+    "source_page": 6,
+    "source_image_index": 0,
+    "original_image_name": "Im7.png",
+    "original_size": [
+      198,
+      254
+    ],
+    "source_image_sha256": "e723ba24ff6b59e2a46f9f4cc3114a33f786429aaec67a5e9811f370b7d9961d",
+    "credit": "Support fourni par Nathan · page 6 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "grece-ordres": {
+    "path": "res://assets/courses/antiquity/grece-ordres.webp",
+    "title": "Comparer les trois ordres",
+    "caption": "Schéma existant extrait du support : dorique, ionique et corinthien. Il présente des types de chapiteaux, pas trois édifices précis.",
+    "alt": "Trois dessins de colonnes : chapiteau simple, volutes, puis feuillage d'acanthe.",
+    "source": "documents_support_cours/Antiquité- Grece.pdf",
+    "source_page": 8,
+    "source_image_index": 0,
+    "original_image_name": "Im13.jpg",
+    "original_size": [
+      640,
+      268
+    ],
+    "source_image_sha256": "457ea3a1ae23d6eb692e479eb1adfb76b48d9c253d4c16c76a0161056ce8fa85",
+    "credit": "Support fourni par Nathan · page 8 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "grece-motifs": {
+    "path": "res://assets/courses/antiquity/grece-motifs.webp",
+    "title": "Un répertoire de motifs",
+    "caption": "Planche de motifs décoratifs du support : palmettes, ondes et frises répétées. Illustration documentaire, sans attribution précisée.",
+    "alt": "Bandes verticales de motifs noirs et orangés, comprenant des palmettes et des ondes.",
+    "source": "documents_support_cours/Antiquité- Grece.pdf",
+    "source_page": 9,
+    "source_image_index": 0,
+    "original_image_name": "Im14.png",
+    "original_size": [
+      1200,
+      1800
+    ],
+    "source_image_sha256": "ba0cc08864cfe4cf10c9557202eba855fbe2d60383e96de0dbc8d6aca481bf60",
+    "credit": "Support fourni par Nathan · page 9 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "grece-klismos": {
+    "path": "res://assets/courses/antiquity/grece-klismos.webp",
+    "title": "Le klismos et ses reprises",
+    "caption": "Réinterprétation postérieure d'un klismos, photographiée dans le support. Ce siège n'est pas présenté comme un original grec antique.",
+    "alt": "Chaise à pieds courbes, montants arrière inclinés et large dossier concave.",
+    "source": "documents_support_cours/Antiquité- Grece.pdf",
+    "source_page": 11,
+    "source_image_index": 0,
+    "original_image_name": "Im20.png",
+    "original_size": [
+      600,
+      775
+    ],
+    "source_image_sha256": "cef3029dab593278316fa28d364ca7bf6d55c2cd16a7f43f58d2d39091b1c610",
+    "credit": "Support fourni par Nathan · page 11 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "rome-colisee": {
+    "path": "res://assets/courses/antiquity/rome-colisee.webp",
+    "title": "Le Colisée",
+    "caption": "Photographie du Colisée de Rome extraite du support. Observer l'association des arcades et des ordres superposés.",
+    "alt": "Vue extérieure du Colisée avec plusieurs niveaux d'arcades.",
+    "source": "documents_support_cours/Antiquité-Rome.pdf",
+    "source_page": 1,
+    "source_image_index": 0,
+    "original_image_name": "Im1.png",
+    "original_size": [
+      1200,
+      1800
+    ],
+    "source_image_sha256": "41ba5e1469256845ef6460baf2c050797c6022d5d12a4f59c08a31bf8bf832e2",
+    "credit": "Support fourni par Nathan · page 1 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "rome-mosaique": {
+    "path": "res://assets/courses/antiquity/rome-mosaique.webp",
+    "title": "Un décor en tesselles",
+    "caption": "Détail de mosaïque reproduit dans le support. Provenance précise non indiquée ; observer les petites unités et leur assemblage en motifs.",
+    "alt": "Mosaïque de tesselles formant une fleur dans un cadre géométrique.",
+    "source": "documents_support_cours/Antiquité-Rome.pdf",
+    "source_page": 4,
+    "source_image_index": 2,
+    "original_image_name": "Im7.jpg",
+    "original_size": [
+      1020,
+      626
+    ],
+    "source_image_sha256": "90e7e688ae4e7d66d6de0c34412b3aabd34a46a75a92cfe62de7200302bed4c7",
+    "credit": "Support fourni par Nathan · page 4 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "rome-peinture": {
+    "path": "res://assets/courses/antiquity/rome-peinture.webp",
+    "title": "Portrait et vie culturelle",
+    "caption": "Portrait peint d'une femme tenant un stylet et des tablettes, reproduit dans le support. L'identité du modèle ne peut pas être affirmée à partir de ce document.",
+    "alt": "Portrait féminin avec des tablettes dans une main et un stylet près de la bouche.",
+    "source": "documents_support_cours/Antiquité-Rome.pdf",
+    "source_page": 4,
+    "source_image_index": 3,
+    "original_image_name": "Im8.jpg",
+    "original_size": [
+      468,
+      503
+    ],
+    "source_image_sha256": "e5b0bee81816758c31908b56b2ffab05f5c6f7a348fb7e2a0361664094c548f0",
+    "credit": "Support fourni par Nathan · page 4 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "rome-aqueduc": {
+    "path": "res://assets/courses/antiquity/rome-aqueduc.webp",
+    "title": "Le pont du Gard",
+    "caption": "Photographie du pont du Gard extraite du support : les niveaux d'arcades portent le canal de l'aqueduc.",
+    "alt": "Pont-aqueduc en pierre à trois niveaux d'arcades franchissant une rivière.",
+    "source": "documents_support_cours/Antiquité-Rome.pdf",
+    "source_page": 6,
+    "source_image_index": 1,
+    "original_image_name": "Im13.png",
+    "original_size": [
+      1024,
+      684
+    ],
+    "source_image_sha256": "e3d973babf72a370965ab6ed20967a81adfb28f01a40588ecff88247ed522e09",
+    "credit": "Support fourni par Nathan · page 6 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  },
+  "rome-curule": {
+    "path": "res://assets/courses/antiquity/rome-curule.webp",
+    "title": "Un siège à supports croisés",
+    "caption": "Dessin documentaire existant du support, consacré à un siège de type curule et à ses supports. Il ne représente pas une pièce conservée identifiée.",
+    "alt": "Dessin d'un siège sans dossier, avec des supports en X et des détails de son piètement.",
+    "source": "documents_support_cours/Antiquité-Rome.pdf",
+    "source_page": 7,
+    "source_image_index": 1,
+    "original_image_name": "Im16.png",
+    "original_size": [
+      330,
+      256
+    ],
+    "source_image_sha256": "4a23a6710858507c75f9b07025634696e492d87f1ca9817dd44c9a8947189f37",
+    "credit": "Support fourni par Nathan · page 7 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
+    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+  }
+}

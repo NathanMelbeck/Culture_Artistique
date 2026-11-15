@@ -1,0 +1,89 @@
+{
+  "id": "rome", "period_id": "rome", "group_id": "antiquite",
+  "title": "Rome antique", "subtitle": "Construire, habiter et représenter le pouvoir",
+  "summary": "Comprendre comment Rome transforme des héritages en architecture, en images et en objets du quotidien.",
+  "cover_media": "rome-colisee",
+  "source_title": "Antiquité — Rome, support fourni par Nathan (7 pages)",
+  "objectives": ["Situer les grands régimes de Rome et ses échanges artistiques.", "Distinguer un principe de construction d'un décor architectural.", "Relier peinture, mosaïque et mobilier aux usages de l'espace."],
+  "references": [
+    {"title": "The Met — Le portrait romain", "url": "https://www.metmuseum.org/essays/roman-portrait-sculpture-the-stylistic-cycle", "note": "Relations entre choix de représentation et pouvoir ; ressource en anglais."},
+    {"title": "The Met — La peinture romaine", "url": "https://www.metmuseum.org/essays/roman-painting", "note": "Décors domestiques et peintures murales conservées ; ressource en anglais."},
+    {"title": "The Met — Théâtre et amphithéâtre dans le monde romain", "url": "https://www.metmuseum.org/it/essays/theater-and-amphitheater-in-the-roman-world", "note": "Fonctions et structures de deux types de monuments ; ressource en anglais."},
+    {"title": "UNESCO — Le pont du Gard", "url": "https://whc.unesco.org/en/list/344/", "note": "Fonction du pont-aqueduc et organisation de ses arcades."},
+    {"title": "Turismo Roma — Le Panthéon", "url": "https://turismoroma.it/en/node/1107", "note": "Notice du service touristique de Rome sur la coupole et la composition du monument."}
+  ],
+  "chapters": [
+    {
+      "id": "reperes", "title": "Rome : une histoire de transformations", "intro": "Une cité devenue un vaste monde politique et culturel.", "source_pages": [1, 2],
+      "blocks": [
+        {"type": "paragraph", "text": "Rome se développe dans la péninsule italienne avant d'étendre son autorité dans une grande partie du bassin méditerranéen. Conquêtes, déplacements d'artisans, commerce et commandes favorisent la circulation des objets et des modèles. L'art romain intègre notamment des héritages étrusques, grecs et hellénistiques ; il les adapte à des fonctions et à des commanditaires variés."},
+        {"type": "key_points", "items": ["753 av. J.-C. : date traditionnelle de la fondation de Rome, relevant du récit légendaire.", "509 av. J.-C. : repère traditionnel du début de la République. Ses institutions et son accès au pouvoir ne se confondent pas avec une démocratie moderne.", "27 av. J.-C. : Auguste constitue un repère pour le début du régime impérial.", "395 ap. J.-C. : partage durable de l'Empire ; 476 : fin conventionnelle de l'Empire romain d'Occident. L'Empire d'Orient poursuit son histoire."]},
+        {"type": "image", "media": "rome-colisee"},
+        {"type": "paragraph", "text": "Ces dates organisent une première lecture ; elles ne font pas changer tous les ateliers et toutes les régions au même instant. Une œuvre s'étudie avec sa date, son lieu de production, ses matériaux et sa fonction. L'étiquette « romaine » ne désigne pas une apparence unique valable partout et pour plusieurs siècles."},
+        {"type": "callout", "title": "L'idée directrice", "text": "Les Romains ne font pas que copier la Grèce. Ils choisissent, transforment, combinent et diffusent des formes dans leurs villes, leurs sanctuaires, leurs maisons et leurs objets."}
+      ]
+    },
+    {
+      "id": "pouvoir-images", "title": "Les images du divin et du pouvoir", "intro": "Une représentation peut rendre présent, convaincre et commémorer.", "source_pages": [2, 3, 4],
+      "blocks": [
+        {"type": "paragraph", "text": "La religion romaine associe des cultes civiques, domestiques et, selon les contextes, impériaux. Les rapprochements entre Zeus et Jupiter, Athéna et Minerve ou Aphrodite et Vénus aident à comprendre les échanges de récits et d'attributs. Ils ne signifient pas que les pratiques religieuses grecques et romaines sont partout identiques ou réduites à un changement de nom."},
+        {"type": "paragraph", "text": "Le portrait peut présenter un individu, commémorer un défunt ou diffuser une image officielle. Un visage marqué par l'âge peut insister sur l'expérience ; un corps idéalisé et des références classiques peuvent exprimer une autre conception de l'autorité. Ces choix varient selon les périodes, les fonctions et les attentes du commanditaire."},
+        {"type": "image", "media": "rome-peinture"},
+        {"type": "paragraph", "text": "Le portrait féminin du support invite à observer les accessoires : stylet et tablettes évoquent une pratique de l'écriture et une image de culture. Il n'autorise pas à identifier le modèle avec certitude. Il montre aussi pourquoi on ne peut pas réduire toutes les représentations féminines romaines à un même thème moral ou à un simple objet de désir."},
+        {"type": "callout", "title": "Décrire sans généraliser", "text": "La sculpture romaine emploie marbre, bronze et d'autres matériaux. Il n'existe pas une règle universelle selon laquelle elle abandonnerait la pierre au profit du bronze. Les pertes, les refontes et les découvertes modifient l'ensemble des œuvres visibles aujourd'hui."},
+        {"type": "paragraph", "text": "Devant une image de pouvoir, cherchez la tenue, la pose, les attributs, l'inscription éventuelle et le lieu d'exposition. Puis distinguez la description de l'œuvre du récit politique qu'elle cherche à faire accepter."}
+      ]
+    },
+    {
+      "id": "architecture", "title": "Organiser l'espace et franchir les portées", "intro": "L'architecture romaine associe usage, technique et représentation.", "source_pages": [5, 6],
+      "blocks": [
+        {"type": "paragraph", "text": "Forum, thermes, marchés, basiliques, théâtres et aqueducs répondent à des besoins différents. Le forum concentre plusieurs activités civiques ; les thermes proposent des espaces de bain et de sociabilité ; un aqueduc conduit l'eau. Classer les édifices par fonction permet de comprendre le plan avant de se concentrer sur la façade."},
+        {"type": "image", "media": "rome-aqueduc"},
+        {"type": "paragraph", "text": "L'[b]arc en plein cintre[/b] dessine un demi-cercle. Prolonger une forme d'arc produit une voûte en berceau ; croiser deux berceaux forme une voûte d'arêtes. Une coupole couvre un espace selon une géométrie différente. Ces solutions reportent les charges et permettent de couvrir des espaces qui ne reposent pas seulement sur des colonnes et des linteaux."},
+        {"type": "paragraph", "text": "Les constructions peuvent associer pierre, brique, bois et béton romain. Ce dernier assemble un mortier et des fragments de matériaux, sans être le béton armé moderne. Les techniques se combinent selon les régions et les édifices. Le Panthéon de Rome est un exemple majeur de coupole en béton ; le pont du Gard montre une autre logique, celle des arcades et de l'acheminement de l'eau."},
+        {"type": "heading", "text": "Un héritage grec transformé"},
+        {"type": "paragraph", "text": "Les ordres grecs sont repris et développés, avec notamment les types toscan et composite. Une façade peut associer des arcs à des colonnes ou pilastres engagés. Les supports n'ont alors pas tous le même rôle : certains portent, d'autres organisent surtout le décor et l'expression monumentale."},
+        {"type": "callout", "title": "Ne pas confondre les édifices", "text": "Un théâtre possède une scène et un espace de spectateurs généralement en demi-cercle. Un amphithéâtre, comme le Colisée, entoure une arène. Le mot « romain » ne suffit pas à préciser leur fonction."}
+      ]
+    },
+    {
+      "id": "habiter-decors", "title": "Habiter : peinture et mosaïque", "intro": "Le décor organise une perception de l'intérieur et de ses usages.", "source_pages": [4, 7],
+      "blocks": [
+        {"type": "paragraph", "text": "Une maison peut distribuer différemment les espaces d'accueil, les pièces de vie et les espaces plus privés. Dans les demeures aisées, peintures, revêtements et mobilier participent à une mise en scène sociale. Ces exemples ne décrivent pas l'habitat de toute la population : les types de logement et les moyens disponibles sont très variés."},
+        {"type": "paragraph", "text": "Les peintures murales conservées, notamment dans les sites de la région de Pompéi, montrent des architectures imaginaires, des paysages, des natures mortes ou des personnages. Elles peuvent suggérer l'ouverture et la profondeur d'un mur réel. Le décor combine ainsi la surface matérielle et un espace représenté."},
+        {"type": "image", "media": "rome-mosaique"},
+        {"type": "paragraph", "text": "La [b]mosaïque[/b] assemble des tesselles, petites unités de pierre, de pâte de verre ou d'autres matériaux selon les œuvres. Leur forme, leur taille et leur orientation construisent des contours et des nuances. Les motifs géométriques, végétaux et figurés organisent sols et parfois murs ; ils peuvent signaler une zone, encadrer une image ou accompagner un parcours."},
+        {"type": "callout", "title": "Lire la matière", "text": "Sur l'image, repérez d'abord les unités qui composent la fleur, puis celles du cadre. Une mosaïque se distingue d'un motif peint par son assemblage d'éléments ; une incrustation de grandes plaques de pierre relève d'une autre technique."},
+        {"type": "paragraph", "text": "L'usure et les restaurations font partie de l'objet visible. Pour parler de qualité ou de résistance, examinez les matériaux, le support et l'état de conservation ; ne classez pas toutes les mosaïques comme fragiles ou durables à partir d'une règle unique."}
+      ]
+    },
+    {
+      "id": "mobilier", "title": "Meubles, bronze et signes de statut", "intro": "Du type de meuble à la lecture de ses matériaux et de son décor.", "source_pages": [7],
+      "blocks": [
+        {"type": "paragraph", "text": "Les représentations et les vestiges documentent des lits, des tables, des sièges, des coffres, des lampes et différents supports. Le lit peut servir au repos mais aussi, dans certains contextes, au repas pris allongé. La relation entre meuble et usage évite de plaquer automatiquement notre aménagement domestique sur une maison antique."},
+        {"type": "paragraph", "text": "Le bois occupe une place importante mais se conserve moins régulièrement que le métal ou la pierre. Le bronze permet de réaliser des pieds, des montures, des éléments décoratifs et des équipements. Un élément métallique retrouvé ne prouve donc pas que le meuble entier était constitué du même matériau."},
+        {"type": "image", "media": "rome-curule"},
+        {"type": "paragraph", "text": "Le siège de type [b]curule[/b] est associé à un piètement croisé et à des fonctions de représentation du rang. L'image du support en donne un dessin documentaire : elle permet de réfléchir à la forme et aux liaisons, mais ne fournit pas à elle seule la datation et la construction d'une pièce archéologique identifiée."},
+        {"type": "paragraph", "text": "Pattes animales, feuillages, figures et références architecturales peuvent organiser le décor des supports et des traverses. La signification dépend du contexte et du commanditaire. Un lion, une patte ou une volute ne constitue pas une signature chronologique exclusive : ces motifs ont une histoire avant Rome et de nombreuses reprises après elle."},
+        {"type": "callout", "title": "Le regard de l'ébéniste", "text": "Repérez la fonction de chaque élément : porter, assembler, stabiliser, protéger ou décorer. Séparez ensuite le matériau réellement documenté de l'aspect de surface. Cette méthode reste valable pour une monture en bronze et pour un meuble revêtu."}
+      ]
+    },
+    {
+      "id": "synthese", "title": "Comparer les héritages de l'Antiquité", "intro": "Trois ensembles reliés, des objets à étudier dans leur contexte.", "source_pages": [2, 4, 5, 6, 7],
+      "blocks": [
+        {"type": "key_points", "items": ["Égypte : relier continuité de l'existence, pouvoir sacralisé, formes monumentales et production d'objets ; conserver les nuances entre périodes.", "Grèce : observer cités, récits et recherches sur les proportions ; identifier les ordres et les types sans oublier les échanges.", "Rome : comprendre la transformation des héritages, les programmes urbains, les espaces intérieurs et les images de statut."]},
+        {"type": "paragraph", "text": "Ces ensembles se chevauchent et communiquent. L'Égypte ne s'arrête pas lorsque la Grèce se développe, et une partie de l'art grec continue d'être produite sous domination romaine. Une frise aide à situer les relations ; elle ne doit pas transformer l'histoire en succession de cases étanches."},
+        {"type": "heading", "text": "Une grille pour lire un objet"},
+        {"type": "key_points", "items": ["Fonction : culte, mémoire, usage domestique, sociabilité ou représentation du pouvoir.", "Structure : supports, portées, assemblages, stabilité et rapport à l'espace.", "Matière et surface : matériau, revêtement, couleur et technique de décor.", "Contexte et preuve : provenance, datation, statut d'original, de copie ou de reconstitution."]},
+        {"type": "callout", "title": "Votre synthèse", "text": "Une lecture argumentée relie les formes à leurs usages et distingue les faits documentés des hypothèses. Les ressemblances sont utiles pour comparer ; elles ne suffisent pas à attribuer une époque."},
+        {"type": "paragraph", "text": "Vous pouvez maintenant expliquer la différence entre théâtre et amphithéâtre, reconnaître la mosaïque par sa technique et décrire un objet avec plusieurs indices. Le quiz permet de vérifier ces relations et de revenir directement au chapitre à retravailler."}
+      ]
+    }
+  ],
+  "quiz": [
+    {"id": "rome-q1", "chapter": "reperes", "prompt": "Quelle relation entre arts grec et romain est la plus juste ?", "choices": ["Rome transforme et combine des héritages selon ses usages et ses commanditaires.", "Rome ne fait que copier sans jamais transformer.", "Les deux mondes n'ont aucun contact."], "correct": 0, "explanation": "Les circulations d'artisans, d'objets et de modèles nourrissent des choix nouveaux. Un héritage partagé n'efface pas les différences de fonction et de contexte."},
+    {"id": "rome-q2", "chapter": "architecture", "prompt": "Quelle est la fonction du monument montré ?", "media": "rome-aqueduc", "choices": ["Entourer une arène pour les spectacles.", "Accueillir une scène de théâtre.", "Porter une partie d'un aqueduc pour acheminer l'eau."], "correct": 2, "explanation": "Le pont du Gard est un pont-aqueduc. Ses niveaux d'arcades portent le canal : sa fonction explique sa structure."},
+    {"id": "rome-q3", "chapter": "habiter-decors", "prompt": "Quel procédé définit la mosaïque ?", "choices": ["Peindre directement une fleur sur un enduit.", "Assembler de petites unités appelées tesselles pour former un décor.", "Sculpter tout un décor dans un seul bloc de pierre."], "correct": 1, "explanation": "La mosaïque construit son image avec des tesselles assemblées. La matière et le procédé comptent autant que le motif représenté."},
+    {"id": "rome-q4", "chapter": "mobilier", "prompt": "Un pied de meuble en bronze a été retrouvé. Quelle déduction est raisonnable ?", "choices": ["Le meuble entier était forcément en bronze.", "Le meuble était nécessairement une table impériale.", "Cet élément est métallique ; les autres parties et la fonction doivent être documentées."], "correct": 2, "explanation": "Les matériaux et les éléments d'un meuble peuvent être associés. Un fragment conservé ne suffit ni à reconstruire toute la matière de l'objet, ni à lui attribuer un propriétaire."}
+  ]
+}

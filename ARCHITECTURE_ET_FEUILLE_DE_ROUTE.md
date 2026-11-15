@@ -1,6 +1,6 @@
 # Culture_Artistique — Architecture et feuille de route
 
-Version : 0.4 — 15 novembre 2026
+Version : 0.5 — 15 novembre 2026
 
 Statut : document de référence initial, à faire évoluer avec les décisions du projet.
 
@@ -468,13 +468,15 @@ Ce prototype ne comprend ni l'administration, ni les vidéos intégrées, ni la 
 - [ ] Définir les liens vers notions, personnes et périodes pour préparer la recherche.
 - [ ] Mettre en place le dépôt de progression locale.
 
-### Étape 2 — Parcours complet cours → quiz
+### Étape 2 — Parcours complet cours → quiz : proposition sur `feat/cours-antiquite`
 
-- [ ] Construire le moteur de quiz textuel et visuel.
-- [ ] Relier la fin de période à son ensemble de questions.
-- [ ] Ajouter les explications, les retours au cours et les résultats.
-- [ ] Vérifier la navigation aller-retour et la conservation de la lecture.
-- [ ] Afficher les crédits des ressources réellement utilisées.
+- [x] Construire le moteur de quiz textuel et visuel (choix unique).
+- [x] Relier la fin de période à son ensemble de questions : Égypte, Grèce, Rome, quatre questions chacune.
+- [x] Ajouter les explications, les retours au chapitre utile et les résultats.
+- [x] Vérifier la navigation aller-retour et la conservation de la lecture pendant la session.
+- [x] Afficher les crédits des ressources réellement utilisées.
+
+La branche de proposition contient trois cours natifs, six chapitres par période, 15 illustrations existantes et une sauvegarde locale des chapitres lus et meilleurs scores. Le texte est rédigé à partir des thèmes des supports et complété par des vérifications muséales ; les supports ne sont pas affichés comme pages de cours. La relecture et la validation pédagogiques par Nathan restent nécessaires avant l'intégration à `main`. Les vidéos et les jeux chronologiques demeurent des étapes distinctes non réalisées.
 
 ### Étape 3 — Vidéo hors ligne et distribution
 
