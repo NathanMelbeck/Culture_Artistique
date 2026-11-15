@@ -1,0 +1,12 @@
+# Godot : caches et données propres au poste.
+.godot/
+**/.godot/
+**/.local/
+builds/
+**/builds/
+*.log
+# Captures générées par les vérifications du lecteur.
+docs/validation/menu/
+docs/validation/revision/
+.tmp/
+__pycache__/

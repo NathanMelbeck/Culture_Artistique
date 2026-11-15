@@ -1,0 +1,5 @@
+asset_id,file_path,source_type,source_url_or_prompt,license,attribution,derivatives,verified
+home-cabinet,app/assets/images/met-cabinet-190788.jpg,museum-photograph,https://www.metmuseum.org/art/collection/search/190788,CC0 1.0 (Met Open Access),The Metropolitan Museum of Art - Rogers Fund 1908 - 08.175.3,No retouching; proportional display,2026-11-15 - object isPublicDomain=true and public domain collection notice
+lora,app/assets/fonts/Lora.ttf,typeface,https://github.com/google/fonts/tree/main/ofl/lora,SIL Open Font License 1.1,Cyreal,Unmodified; license included,2026-11-15 - bundled OFL file
+manrope,app/assets/fonts/Manrope.ttf,typeface,https://github.com/google/fonts/tree/main/ofl/manrope,SIL Open Font License 1.1,Mikhail Sharanda and contributors,Unmodified; license included,2026-11-15 - bundled OFL file
+navigation-icons,app/assets/icons/,original-interface-icons,Local mockup sources,Original project artwork,Culture Artistique,Interface symbols only; no reconstructed historical object,2026-11-15

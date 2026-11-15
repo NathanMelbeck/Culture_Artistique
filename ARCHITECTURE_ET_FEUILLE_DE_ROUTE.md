@@ -1,6 +1,6 @@
 # Culture_Artistique — Architecture et feuille de route
 
-Version : 0.2 — 15 novembre 2026
+Version : 0.4 — 15 novembre 2026
 
 Statut : document de référence initial, à faire évoluer avec les décisions du projet.
 
@@ -24,6 +24,7 @@ Menu principal
 │   ├── Accès direct à une période
 │   ├── Recherche et filtres
 │   └── Cours d'une période → Quiz de cette période → Correction
+├── Fiche (barre du haut) → Période → Lecture intégrée des fiches de révision
 ├── Jeux
 │   ├── Quiz
 │   ├── Timeline : piocher et insérer une carte, dates cachées
@@ -44,11 +45,12 @@ Menu principal
 | Invités | Ils peuvent consulter les cours, regarder les vidéos et jouer, sans fonctions de modification du catalogue officiel. |
 | Comptes | Aucun compte en ligne nécessaire pour utiliser l'application. |
 | Progression | Sauvegarde locale, indépendante du contenu distribué. |
-| Navigation | Trois boutons principaux : Cours, Jeux, Crédits. |
+| Navigation | Trois cartes principales : Cours, Jeux, Crédits ; un accès Fiche dans la barre du haut pour les fiches de révision par période. |
 | Fin de période | Un bouton donne accès aux quiz portant sur la période étudiée. |
 | Correction | Une mauvaise réponse reçoit une explication pédagogique. |
 | Dépôt | Dépôt GitHub `NathanMelbeck/Culture_Artistique`, cloné à la racine du projet. |
 | Prototype | Conservé dans `test/` comme référence ; ce dossier ne constitue pas l'architecture définitive. |
+| Visuels des objets et lieux | Utiliser des photographies ou dessins existants et documentés, avec des droits de réutilisation vérifiés ; ne pas recréer les meubles, œuvres ou architectures en illustration. Les petites icônes et formes de l'interface peuvent être originales. |
 
 L'installation et les mises à jour de l'application doivent elles aussi pouvoir se faire avec des fichiers transmis localement. Le développement peut utiliser Internet ; l'exécution de l'application n'en dépend pas.
 
@@ -221,6 +223,18 @@ La méthode initiale d'édition reste à décider : formulaires simples, éditeu
 
 Le contrôle porte sur la version officielle publiée : une personne possédant une copie locale conserve matériellement la maîtrise de ses fichiers. Un mot de passe embarqué ne doit pas être présenté comme une protection absolue contre leur modification.
 
+### 3.9. Fiches de révision intégrées
+
+- **FIC-01 — Accès** : ouvrir la rubrique depuis le bouton « Fiche » de la barre du haut.
+- **FIC-02 — Périodes** : choisir une période dans une liste classée, avec recherche par nom et alias ; utiliser un sélecteur compact dans les petites fenêtres.
+- **FIC-03 — Lecture locale** : consulter les pages directement dans le lecteur Godot, sans ouvrir de PDF dans un logiciel externe et sans connexion Internet.
+- **FIC-04 — Commandes** : changer de page, agrandir/réduire la fiche, adapter sa largeur et faire défiler ses détails.
+- **FIC-05 — Parcours** : passer à la fiche précédente ou suivante et conserver fiche/page/zoom lors d'un retour depuis le menu pendant la session.
+- **FIC-06 — Sources** : conserver les PDF fournis dans `fiche_revision/`, leur provenance et leur mise en page. Les supports `documents_support_cours/` sont une source distincte pour les futurs cours.
+- **FIC-07 — Préparation** : préparer les pages et un manifeste à l'avance, pour qu'un lecteur distribué n'ait besoin ni de Python, ni de Poppler, ni des PDF sources.
+
+Première implémentation : 17 fiches, 34 pages rendues en WebP haute définition et référencées dans `app/content/revision_sheets.json`. Les pages sont affichées comme images à l'intérieur d'une interface Godot ; cette étape n'implémente pas la sélection du texte ni sa recomposition en blocs de cours. La reprise est conservée pendant la session, sans nouvelle sauvegarde personnelle sur disque.
+
 ## 4. Organisation des connaissances
 
 ### 4.1. Regroupements et périodes
@@ -320,6 +334,7 @@ Les scènes affichent les données et transmettent les actions. Elles ne lisent 
 |---|---|
 | `ContentRepository` | Charger le catalogue, résoudre un identifiant, fournir périodes, cours et relations. |
 | `MediaRepository` | Résoudre les médias locaux et exposer leurs métadonnées, sans téléchargement automatique. |
+| `RevisionRepository` | Charger le catalogue des fiches de révision, leurs métadonnées de période et les pages locales préparées. |
 | `CourseService` | Construire le parcours d'une période ou d'un regroupement et préparer les blocs à afficher. |
 | `SearchService` | Normaliser la requête, consulter l'index local et classer les résultats. |
 | `QuizSession` | Choisir les questions, suivre une session et calculer son résultat. |
@@ -373,7 +388,7 @@ Le format précis des paquets de mise à jour reste à décider. Le manifeste, l
 
 ## 6. Arborescence cible
 
-Arborescence proposée, à créer progressivement. Seuls le document présent et le prototype `test/` existent à ce stade ; cette liste n'est pas un inventaire de fichiers déjà implémentés.
+Arborescence proposée, à créer progressivement. Le lecteur `app/` commence par le menu, la navigation et les crédits ; la maquette est dans `design/` et le prototype reste dans `test/`. Les ressources déjà embarquées par le lecteur sont sous `app/assets/` et leurs notices sous `app/content/`. Le reste de cette arborescence décrit la cible, pas un inventaire de fonctionnalités réalisées.
 
 ```text
 Culture_Artistique/

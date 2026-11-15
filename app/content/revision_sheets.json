@@ -1,0 +1,392 @@
+{
+  "version": 1,
+  "render_long_edge": 3000,
+  "sheets": [
+    {
+      "id": "egypte",
+      "title": "Égypte antique",
+      "group": "Antiquité",
+      "aliases": [
+        "égyptien",
+        "egyptien"
+      ],
+      "source_file": "fiche_revision/Egypte.pdf",
+      "source_sha256": "9df706f0e8714a28419f34ac8623f640a72b3009fef114c5237399a4f3676337",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/egypte/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/egypte/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "grece",
+      "title": "Grèce antique",
+      "group": "Antiquité",
+      "aliases": [
+        "grec",
+        "grecque"
+      ],
+      "source_file": "fiche_revision/Grece.pdf",
+      "source_sha256": "a4cc5e375905d92839fb50e8cbf7895dae6203c96b6b6b27ef705935c2924bc6",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/grece/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/grece/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "rome",
+      "title": "Rome antique",
+      "group": "Antiquité",
+      "aliases": [
+        "romain",
+        "romaine"
+      ],
+      "source_file": "fiche_revision/Rome.pdf",
+      "source_sha256": "ff586b0fb4b3508ecf82370ad2e5418b9ce55d312e51492b33269e59ce326916",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/rome/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/rome/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "roman",
+      "title": "Style roman",
+      "group": "Moyen Âge",
+      "aliases": [
+        "art roman"
+      ],
+      "source_file": "fiche_revision/Style Roman.pdf",
+      "source_sha256": "7c8db5b6ea04a53624a7f00bea9d20b4a869f1e9dc0c5dbd9aa2c4a05281dc67",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/roman/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/roman/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "gothique",
+      "title": "Style gothique",
+      "group": "Moyen Âge",
+      "aliases": [
+        "gothique"
+      ],
+      "source_file": "fiche_revision/Style Gothique.pdf",
+      "source_sha256": "635d302d940ef1432db52f4b6e7355092ad543c76ec1e2705f12314f12fb430a",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/gothique/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/gothique/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "renaissance",
+      "title": "Renaissance",
+      "group": "Renaissance",
+      "aliases": [],
+      "source_file": "fiche_revision/Style Renaissance.pdf",
+      "source_sha256": "791f3dba27d737ac7ed29def3996fb3cf10bbaddba847c049b869cbdb75702de",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/renaissance/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/renaissance/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "louis-xiii",
+      "title": "Louis XIII",
+      "group": "XVIIᵉ siècle",
+      "aliases": [
+        "louis 13"
+      ],
+      "source_file": "fiche_revision/Style Louis 13.pdf",
+      "source_sha256": "d54ad5c2ed515e0b7ba59e75ea75658c8a655535290654ab39f9480fa9d9ea75",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/louis-xiii/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/louis-xiii/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "louis-xiv",
+      "title": "Louis XIV",
+      "group": "XVIIᵉ siècle",
+      "aliases": [
+        "louis 14"
+      ],
+      "source_file": "fiche_revision/Style Louis 14.pdf",
+      "source_sha256": "6a4869f3e656872ffb0b6cd3c7987106f1b9cc5f34291896d68aaa750a27592d",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/louis-xiv/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/louis-xiv/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "regence",
+      "title": "Régence",
+      "group": "XVIIIᵉ siècle",
+      "aliases": [],
+      "source_file": "fiche_revision/Fiche Régence.pdf",
+      "source_sha256": "2a5f1152998200e9b23bec6f554aaca73d6b7e1fe3d82e71ee81bd06ec2e5409",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/regence/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/regence/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "louis-xv",
+      "title": "Louis XV",
+      "group": "XVIIIᵉ siècle",
+      "aliases": [
+        "louis 15"
+      ],
+      "source_file": "fiche_revision/Fiche Louis 15.pdf",
+      "source_sha256": "a98b1663e3603629db61edfca7a38e5e630195953b3da13cbbe78f6b125c5d48",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/louis-xv/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/louis-xv/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "louis-xvi",
+      "title": "Louis XVI",
+      "group": "XVIIIᵉ siècle",
+      "aliases": [
+        "louis 16"
+      ],
+      "source_file": "fiche_revision/Fiche Louis 16.pdf",
+      "source_sha256": "54a4874175b1184f7ecadfcfbc538bf5b8caba2465aa4b1c6c1fcc841c2727a0",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/louis-xvi/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/louis-xvi/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "directoire",
+      "title": "Directoire",
+      "group": "Révolution et XIXᵉ siècle",
+      "aliases": [],
+      "source_file": "fiche_revision/Fiche Louis Directoire.pdf",
+      "source_sha256": "8428e72fe8edb88046a07529b515ba9f735d0c2f6af030a879f485f4c42ce580",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/directoire/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/directoire/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "empire",
+      "title": "Empire",
+      "group": "Révolution et XIXᵉ siècle",
+      "aliases": [
+        "napoleon 1"
+      ],
+      "source_file": "fiche_revision/Fiche Louis Empire.pdf",
+      "source_sha256": "de269a83b27850f6df4245d6d85e2a200ae211b6cb7251e530030af3ef411fc7",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/empire/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/empire/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "restauration",
+      "title": "Restauration et Louis-Philippe",
+      "group": "Révolution et XIXᵉ siècle",
+      "aliases": [
+        "louis philippe",
+        "louis phillipe"
+      ],
+      "source_file": "fiche_revision/Fiche Louis phillipe _ restauration.pdf",
+      "source_sha256": "3dc69cf4496d02205e6fd8f1993dd16b7cd8ec39f16eca5d55392f71c651e770",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/restauration/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/restauration/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "napoleon-iii",
+      "title": "Napoléon III",
+      "group": "Révolution et XIXᵉ siècle",
+      "aliases": [
+        "napoleon 3",
+        "second empire"
+      ],
+      "source_file": "fiche_revision/Fiche Napoleon 3.pdf",
+      "source_sha256": "a1d1853a9084a9151f44232ffa10875ac4e88faf7ba64d2592be1ab07c8325bc",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/napoleon-iii/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/napoleon-iii/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "art-nouveau",
+      "title": "Art nouveau",
+      "group": "Autour de 1900",
+      "aliases": [],
+      "source_file": "fiche_revision/Fiche Art Nouveau.pdf",
+      "source_sha256": "0f9e24db53f273d27122d261bfb010f9f1dd1eef4166496c559746bfb48a5e9b",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/art-nouveau/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/art-nouveau/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    },
+    {
+      "id": "art-deco",
+      "title": "Art déco",
+      "group": "Autour de 1900",
+      "aliases": [],
+      "source_file": "fiche_revision/Fiche Art Deco.pdf",
+      "source_sha256": "ad966a34331a4ed424139a64d24679c24da3bc295bf9b93ba0eb754920f85f75",
+      "credit": "Document fourni par Nathan ; crédits d'origine conservés dans les pages.",
+      "pages": [
+        {
+          "path": "res://assets/revision_sheets/art-deco/page-01.webp",
+          "width": 3000,
+          "height": 2122
+        },
+        {
+          "path": "res://assets/revision_sheets/art-deco/page-02.webp",
+          "width": 3000,
+          "height": 2122
+        }
+      ]
+    }
+  ]
+}

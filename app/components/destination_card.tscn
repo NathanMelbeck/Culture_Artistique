@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://components/destination_card.gd" id="1"]
+
+[node name="DestinationCard" type="Button"]
+custom_minimum_size = Vector2(0, 218)
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+script = ExtResource("1")
