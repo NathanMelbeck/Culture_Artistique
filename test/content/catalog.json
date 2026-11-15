@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "lessons": [
+    {
+      "id": "rome", "title": "Rome antique", "subtitle": "L'héritage antique", "dates": "VIIIᵉ s. av. J.-C. – Vᵉ s. apr. J.-C.",
+      "image": "res://assets/rome.svg", "object": "Siège à piètement en X", "caption": "Schéma pédagogique inspiré de sièges antiques ; ce dessin n'est pas la reproduction d'un objet de musée.",
+      "intro": "Observer comment le mobilier associe fonction, statut social et héritages artistiques.",
+      "body": "[b]Un art nourri d'échanges[/b]\nLes Romains reprennent et transforment des références grecques. Architecture, sculpture et décor domestique participent à la vie quotidienne et à l'affirmation du pouvoir.\n\n[b]Dans les intérieurs[/b]\nLes maisons aisées peuvent associer peintures murales, mosaïques et mobilier en bois ou en métal. Lits, tables, sièges et coffres répondent à des usages variés.\n\n[b]Observer le mobilier[/b]\nRegarde la structure du piètement, la forme de l'assise et la place du décor. Des pieds animaliers et des motifs végétaux apparaissent dans certains exemples, mais aucun motif isolé ne suffit à dater un meuble.\n\n[b]Repère de chronologie[/b]\n476 est le repère conventionnel de la fin de l'Empire romain d'Occident. Les héritages antiques continuent de circuler après cette date.",
+      "clues": "Piètement • Fonction • Références antiques", "source_title": "Le Metropolitan Museum — arts grecs et romains", "source_url": "https://www.metmuseum.org/about-the-met/collection-areas/greek-and-roman-art",
+      "question": "Quel élément décrit le mieux la construction du siège illustré ?",
+      "options": ["Un piètement en X", "Des panneaux à arcs brisés", "Une façade à pilastres"], "answer": 0,
+      "explanation": "Les supports se croisent sous l'assise : c'est un piètement en X. Attention : cette forme existe à plusieurs époques ; elle ne prouve pas à elle seule une origine romaine."
+    },
+    {
+      "id": "gothique", "title": "Le gothique", "subtitle": "Le meuble et l'architecture", "dates": "Milieu du XIIᵉ – XVIᵉ siècle, selon les régions",
+      "image": "res://assets/gothique.svg", "object": "Coffre à décor d'arcatures", "caption": "Schéma pédagogique de motifs gothiques. Les proportions et les décors sont simplifiés pour l'exercice.",
+      "intro": "Retrouver dans les meubles le vocabulaire des bâtiments et des décors sculptés.",
+      "body": "[b]Un vocabulaire architectural[/b]\nL'arc brisé, les réseaux décoratifs et la verticalité caractérisent de nombreuses œuvres gothiques. Leur présence et leur forme évoluent selon les régions et les périodes.\n\n[b]Du bâtiment au meuble[/b]\nCoffres, stalles et boiseries peuvent reprendre de petites arcatures, des pinacles ou des remplages. Le mobilier adapte ces formes à sa construction et à sa fonction.\n\n[b]Apprendre à regarder[/b]\nSur le coffre illustré, les panneaux évoquent des ouvertures à sommet pointu. Il s'agit d'un emprunt au vocabulaire architectural, et non de véritables fenêtres.\n\n[b]Éviter une chronologie trop rigide[/b]\nLes traditions gothiques se prolongent pendant que les formes de la Renaissance se diffusent. Le passage d'un style à l'autre n'a pas lieu partout à la même date.",
+      "clues": "Arc brisé • Arcatures • Décor sculpté", "source_title": "GrandPalaisRmn — l'art gothique", "source_url": "https://panoramadelart.com/dossiers/art-gothique",
+      "question": "Quel indice rapproche ce coffre du vocabulaire gothique ?",
+      "options": ["Son piètement croisé", "Ses arcatures à sommet pointu", "Son fronton triangulaire"], "answer": 1,
+      "explanation": "Les panneaux présentent des arcatures en arc brisé, un vocabulaire repris de l'architecture gothique. L'identification d'un meuble réel demanderait aussi d'étudier sa construction, sa provenance et ses matériaux."
+    },
+    {
+      "id": "renaissance", "title": "La Renaissance", "subtitle": "Une architecture en miniature", "dates": "XIVᵉ – XVIᵉ siècle ; essor français au XVIᵉ",
+      "image": "res://assets/renaissance.svg", "object": "Meuble à façade architecturée", "caption": "Schéma pédagogique libre : pilastres, fronton et composition symétrique inspirés du vocabulaire de la Renaissance.",
+      "intro": "Comprendre comment le retour aux modèles antiques transforme le décor du mobilier.",
+      "body": "[b]Étudier les modèles antiques[/b]\nLa Renaissance se développe progressivement, d'abord en Italie. Artistes et commanditaires s'intéressent aux textes, aux proportions et aux formes héritées de l'Antiquité.\n\n[b]Une façade de petit bâtiment[/b]\nCertains meubles présentent des pilastres, des colonnes, des corniches et des frontons. La composition est organisée et souvent symétrique.\n\n[b]Le décor sculpté et le travail du bois[/b]\nRinceaux, médaillons et figures nourrissent le vocabulaire décoratif. En Italie, l'intarsia peut créer des compositions de bois colorés et des effets de perspective.\n\n[b]Lire les indices ensemble[/b]\nSur le dessin, le fronton triangulaire surmonte une façade rythmée par des pilastres. C'est leur association qui rend la référence architecturale particulièrement lisible.",
+      "clues": "Symétrie • Pilastres • Fronton", "source_title": "Le Metropolitan Museum — studiolo de Gubbio", "source_url": "https://www.metmuseum.org/art/collection/search/198556",
+      "question": "Quels éléments donnent à ce meuble une allure architecturée ?",
+      "options": ["Des supports en X", "Des arcatures brisées uniquement", "Un fronton et des pilastres"], "answer": 2,
+      "explanation": "Le fronton triangulaire et les pilastres organisent la façade comme celle d'un bâtiment. Ce vocabulaire inspiré de l'Antiquité est largement repris à la Renaissance."
+    }
+  ],
+  "timeline": {
+    "instruction": "Classe les trois ensembles du plus ancien au plus récent, selon le début de leur développement. Les périodes peuvent se chevaucher.",
+    "order": ["rome", "gothique", "renaissance"]
+  }
+}

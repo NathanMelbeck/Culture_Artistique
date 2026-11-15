@@ -1,0 +1,5 @@
+.godot/
+builds/
+tests/.test-progress.json
+.local/
+*.log

@@ -1,0 +1,758 @@
+{
+  "pageId": "0:1",
+  "collectionId": "VariableCollectionId:6:2",
+  "variables": {
+    "colors": {
+      "#f8f6ef": "VariableID:6:4",
+      "#243d37": "VariableID:6:6",
+      "#738077": "VariableID:6:8",
+      "#69776b": "VariableID:6:10",
+      "#567856": "VariableID:6:12",
+      "#9b6542": "VariableID:6:14",
+      "#718074": "VariableID:6:16",
+      "#6e7c6d": "VariableID:6:18",
+      "#dedfd3": "VariableID:6:20",
+      "#7c8779": "VariableID:6:22",
+      "#263f37": "VariableID:6:24",
+      "#fffdf2": "VariableID:6:26",
+      "#b8c7af": "VariableID:6:28",
+      "#fffef8": "VariableID:6:30",
+      "#dfdfd2": "VariableID:6:32",
+      "#7b8575": "VariableID:6:34",
+      "#edeedf": "VariableID:6:36",
+      "#d9dfcd": "VariableID:6:38",
+      "#879080": "VariableID:6:40",
+      "#7a8275": "VariableID:6:42",
+      "#34483e": "VariableID:6:44",
+      "#fffef9": "VariableID:6:46",
+      "#83907d": "VariableID:6:48",
+      "#d8dccd": "VariableID:6:50",
+      "#e1e3d8": "VariableID:6:52",
+      "#8a937f": "VariableID:6:54",
+      "#7e8976": "VariableID:6:56",
+      "#e9ecdf": "VariableID:6:58",
+      "#304d3c": "VariableID:6:60",
+      "#fffdf3": "VariableID:6:62",
+      "#75816d": "VariableID:6:64",
+      "#fffef6": "VariableID:6:66",
+      "#4b614f": "VariableID:6:68",
+      "#eadfc8": "VariableID:6:70",
+      "#7d8776": "VariableID:6:72",
+      "#8a927d": "VariableID:6:74",
+      "#eeeade": "VariableID:6:76",
+      "#85907b": "VariableID:6:78",
+      "#7d8874": "VariableID:6:80",
+      "#304c3b": "VariableID:6:82",
+      "#e8eddf": "VariableID:6:84",
+      "#45604c": "VariableID:6:86",
+      "#667763": "VariableID:6:88",
+      "#62725a": "VariableID:6:90",
+      "#8b6b4a": "VariableID:6:92",
+      "#e9e0d0": "VariableID:6:94",
+      "#87907e": "VariableID:6:96",
+      "#263d34": "VariableID:6:98",
+      "#365047": "VariableID:6:100",
+      "#cbd8bd": "VariableID:6:102",
+      "#f7f1dc": "VariableID:6:104",
+      "#354f3c": "VariableID:6:106",
+      "#e4e8d3": "VariableID:6:108",
+      "#fffef7": "VariableID:6:110",
+      "#344d3b": "VariableID:6:112",
+      "#9ba38d": "VariableID:6:114",
+      "#7e8974": "VariableID:6:116",
+      "#e8ddc8": "VariableID:6:118",
+      "#eee3d3": "VariableID:6:120",
+      "#94633e": "VariableID:6:122",
+      "#74806a": "VariableID:6:124",
+      "#f1f0e4": "VariableID:6:126",
+      "#6e7b61": "VariableID:6:128",
+      "#d8dcce": "VariableID:6:130",
+      "#819075": "VariableID:6:132",
+      "#6b7965": "VariableID:6:134",
+      "#d5dbcc": "VariableID:6:136",
+      "#e8ecdf": "VariableID:6:138",
+      "#d4dbc7": "VariableID:6:140",
+      "#cad5bb": "VariableID:6:142",
+      "#f8f7eb": "VariableID:6:144",
+      "#d1d9c3": "VariableID:6:146",
+      "#78866e": "VariableID:6:148",
+      "#bcc9aa": "VariableID:6:150",
+      "#9d744e": "VariableID:6:152",
+      "#bccca6": "VariableID:6:154",
+      "#d3cab1": "VariableID:6:156",
+      "#c4cdac": "VariableID:6:158",
+      "#607451": "VariableID:6:160",
+      "#9daa8c": "VariableID:6:162",
+      "#f7f6eb": "VariableID:6:164",
+      "#77846b": "VariableID:6:166",
+      "#e3e5d8": "VariableID:6:168",
+      "#a36a46": "VariableID:6:170",
+      "#e9e1d0": "VariableID:6:172",
+      "#8b987e": "VariableID:6:174",
+      "#dce0cf": "VariableID:6:176",
+      "#8a957c": "VariableID:6:178",
+      "#edf0e4": "VariableID:6:180",
+      "#476847": "VariableID:6:182",
+      "#456447": "VariableID:6:184",
+      "#ffffff": "VariableID:6:186",
+      "#f6eae0": "VariableID:6:188",
+      "#8e523c": "VariableID:6:190",
+      "#bf8a72": "VariableID:6:192",
+      "#cda18b": "VariableID:6:194",
+      "#edf1e3": "VariableID:6:196",
+      "#4c6a41": "VariableID:6:198",
+      "#7e9a70": "VariableID:6:200",
+      "#e9eedf": "VariableID:6:202",
+      "#45643b": "VariableID:6:204",
+      "#65765a": "VariableID:6:206",
+      "#536d45": "VariableID:6:208",
+      "#e9eddf": "VariableID:6:210",
+      "#dce2ce": "VariableID:6:212",
+      "#738365": "VariableID:6:214",
+      "#e3e9d7": "VariableID:6:216",
+      "#83966e": "VariableID:6:218",
+      "#a4b18f": "VariableID:6:220",
+      "#eee5d1": "VariableID:6:222",
+      "#f1e8d6": "VariableID:6:224",
+      "#9b6741": "VariableID:6:226",
+      "#294639": "VariableID:6:228",
+      "#d8d8b5": "VariableID:6:230",
+      "#f6f1e5": "VariableID:6:232",
+      "#fffdf4": "VariableID:6:234",
+      "#b28a57": "VariableID:6:236",
+      "#e7dcc2": "VariableID:6:238",
+      "#7b886c": "VariableID:6:240",
+      "#8a947c": "VariableID:6:242",
+      "#cbd5b9": "VariableID:6:244",
+      "#48613b": "VariableID:6:246",
+      "#ddd3bc": "VariableID:6:248",
+      "#7f6545": "VariableID:6:250",
+      "#d5d7be": "VariableID:6:252",
+      "#626c40": "VariableID:6:254",
+      "#d9deca": "VariableID:6:256",
+      "#879274": "VariableID:6:258",
+      "#f7f8ed": "VariableID:6:260",
+      "#92a27e": "VariableID:6:262",
+      "#a6b494": "VariableID:6:264",
+      "#879476": "VariableID:6:266",
+      "#5d7650": "VariableID:6:268",
+      "#cbd5bb": "VariableID:6:270",
+      "#52654c": "VariableID:6:272",
+      "#8c977e": "VariableID:6:274",
+      "#6d7c60": "VariableID:6:276",
+      "#dfe2d3": "VariableID:6:278",
+      "#879175": "VariableID:6:280",
+      "#263f35": "VariableID:6:282",
+      "#d8e2c9": "VariableID:6:284",
+      "#aebea0": "VariableID:6:286",
+      "#a16543": "VariableID:6:288"
+    },
+    "spaces": {
+      "4": "VariableID:6:289",
+      "6": "VariableID:6:290",
+      "7": "VariableID:6:291",
+      "8": "VariableID:6:292",
+      "9": "VariableID:6:293",
+      "10": "VariableID:6:294",
+      "11": "VariableID:6:295",
+      "12": "VariableID:6:296",
+      "13": "VariableID:6:297",
+      "14": "VariableID:6:298",
+      "16": "VariableID:6:299",
+      "18": "VariableID:6:300",
+      "20": "VariableID:6:301",
+      "22": "VariableID:6:302",
+      "24": "VariableID:6:303",
+      "25": "VariableID:6:304",
+      "28": "VariableID:6:305",
+      "30": "VariableID:6:306",
+      "32": "VariableID:6:307",
+      "34": "VariableID:6:308",
+      "35": "VariableID:6:309",
+      "36": "VariableID:6:310",
+      "38": "VariableID:6:311",
+      "40": "VariableID:6:312",
+      "42": "VariableID:6:313",
+      "48": "VariableID:6:314",
+      "52": "VariableID:6:315",
+      "55": "VariableID:6:316",
+      "64": "VariableID:6:317"
+    },
+    "radii": {
+      "3": "VariableID:6:318",
+      "4": "VariableID:6:319",
+      "5": "VariableID:6:320",
+      "6": "VariableID:6:321",
+      "7": "VariableID:6:322",
+      "8": "VariableID:6:323",
+      "9": "VariableID:6:324",
+      "10": "VariableID:6:325",
+      "11": "VariableID:6:326",
+      "12": "VariableID:6:327",
+      "13": "VariableID:6:328",
+      "14": "VariableID:6:329",
+      "25": "VariableID:6:330"
+    }
+  },
+  "styles": {
+    "Manrope/Bold/13/16.9/2": "S:64a947255b29248c77bc886baf7ecc7ccac4929e,",
+    "Manrope/Regular/15/18.75/0": "S:c4c1f56a35d7073481be9f19dc41f8a210deb8a6,",
+    "Manrope/Regular/12/15/0": "S:8821e0dbf0fcb5d9dd3e3b1a361e7fd54374379f,",
+    "Manrope/Bold/11/16.5/2": "S:5fcb5a566de863c7b03ffddc7f34487cc664263b,",
+    "Lora/Regular/76/77.52/-2.8": "S:46095629511eccf197d5826877c6066ce0a876f7,",
+    "Manrope/Regular/17/28.05/0": "S:0e0b5329ad10027971879da96575f41de8f9c469,",
+    "Manrope/Bold/11/13.75/1.4": "S:c7fb7293a1b1775752b4af660a3050e6319fec8a,",
+    "Manrope/Regular/11/13.75/0": "S:cf2232772299c39a03a271f07ea75680e05bb235,",
+    "Manrope/Regular/11/13.75/1": "S:2f7c710e5d78fe2762fda72b2d3d20a671fc0697,",
+    "Lora/Regular/32/40/0": "S:ff817831d97482da854521cfa0ed44c3b51bbbc8,",
+    "Manrope/Regular/13/22.1/0": "S:fb59e89aaacc6bc23a93291d989b3ed9574bb9b0,",
+    "Manrope/Regular/13/16.25/0": "S:02208d629b6d27c35a14e91d7f2fc0193e06c753,",
+    "Manrope/Bold/13/16.25/0": "S:127ef4c26b7fcafa33f744c1ecd7accca9aeb522,",
+    "Manrope/Bold/15/18.75/0": "S:af5b0484b24da4ba1633a79ae41f76f108769fae,",
+    "Lora/Regular/55/60.5/-1.6": "S:ef529504940c0c7acd15d5e356c95d1c10e6cda3,",
+    "Manrope/Regular/14/17.5/0": "S:2f57858b69f7d44f7b5145aa06354571cbfcd2d5,",
+    "Manrope/Regular/10/12.5/0": "S:2e0700a4fb03e42ce7af64c0fa1d17fecde6a3fc,",
+    "Manrope/Bold/10/12.5/1.5": "S:cd01bb479c21a9ccbcffbe7e9975707b3209d390,",
+    "Manrope/Bold/10/12.5/0": "S:3be43d544eae836d5d586660a0edba9bf89eb05d,",
+    "Manrope/Bold/9/13.5/2": "S:c9522f6bd01b6a895e632e1cd1deb1fa99012342,",
+    "Lora/Regular/29/36.25/0": "S:9e8d45fc8ea528590878ca4b3aa61a0899ac62e3,",
+    "Manrope/Regular/12/19.2/0": "S:50f6081d754017d8710e1b7ca9519e3608df780b,",
+    "Manrope/SemiBold/10/12.5/0.5": "S:355ca787d2b1c72ec1c5568744cea89711b11afc,",
+    "Lora/Regular/25/31.25/0": "S:94aa737c7c14bdf0c1cf8eba786254f91e2d5f08,",
+    "Manrope/Regular/12/20.4/0": "S:a6ecdfff3e8a440b220cf3e17297efb476941184,",
+    "Lora/Regular/25/32.5/0": "S:a88d92c5466bc4ff9cca947dd5ddb578556e14b0,",
+    "Manrope/Regular/12/19.8/0": "S:706bd37b7c08d3d31c28a046113dbde35e90ba96,",
+    "Lora/Regular/39/46.02/-0.8": "S:757937d8c0b95ba149b20cd1b14059814eb3dedd,",
+    "Manrope/Regular/14/25.9/0": "S:0a230e02e80db546ca723309c93e10d2f46677e3,",
+    "Lora/Regular/24/30/0": "S:dc3429b1e8126ef518b31215eb81da785ee30ae6,",
+    "Manrope/Regular/12/21/0": "S:f464968d66fbea4394dd02f3c18f4ef86dbb8b57,",
+    "Manrope/Regular/10/16.5/0": "S:f796d740b8ad86d5b71d9406201679e0a54f0266,",
+    "Manrope/SemiBold/14/17.5/0": "S:e86175f1e93f81ffb480d392fac5f0c721281e20,",
+    "Manrope/Regular/20/25/0": "S:2a4aa3fb074b11f44996a1f2d04a09f1f3b5ac00,",
+    "Lora/Regular/39/48.75/0": "S:68e6c5f2f118ebc3e11b7f0249ade83c168346df,",
+    "Manrope/Regular/14/25.2/0": "S:c154daef2679ffde9270e14e558740eb68fed287,",
+    "Manrope/SemiBold/12/15/0": "S:73a1db694870e2c641ce3f059df269267800913a,",
+    "Lora/Regular/22/27.5/0": "S:6a55d45629aaf8a018bec1d8294dbabc28dab5c3,",
+    "Manrope/Medium/14/17.5/0": "S:7a3dabad9b2b4690020e771c5f30d2adb43d6d4e,",
+    "Lora/Regular/34/42.5/0": "S:8b8a526ab3b6c75109ecf5134372807bc0f3e150,",
+    "Manrope/Regular/26/32.5/0": "S:393e4e8afc35d7634c0278c150bc05cba0e47a86,",
+    "Lora/Regular/37/44.4/-0.4": "S:7f53cbf4786cd4678372446e665049b46cf1bb0e,",
+    "Manrope/Regular/13/21.45/0": "S:f5701ca7e6532b7543aca89a6fde5d3fa8441e90,",
+    "Manrope/Regular/13/23.4/0": "S:1bc24786715749a183e6d082d75fb50bb8895703,",
+    "Lora/Regular/43/47.3/-1.6": "S:192f4464d5996a8af323c6d03979b34f17d075f4,",
+    "Manrope/Regular/14/23.1/0": "S:59eee70e1335cd9fd619a21e462c5e89f0850eb1,",
+    "Manrope/Bold/10/12.5/1.2": "S:2b51c29dbde76d29ba4b2cf87017a8402aa9c6e5,",
+    "Manrope/Regular/25/31.25/0": "S:2d65c2a0fc3f46b0b8a777b95d7af6ef484101eb,",
+    "Lora/Regular/18/23.4/0": "S:23ee300dfdc588d50a800434b6386d6048aaee44,",
+    "Manrope/Regular/23/28.75/0": "S:8ca5829dbb82a636afeaf9dc24bd3fe5e8aa3439,",
+    "Manrope/Regular/10/15/0": "S:23273198666c60b47c9b177d3afb77364cd84ef6,",
+    "Manrope/Regular/9/11.25/1": "S:d6d9f30e26a785fcc246fb6312cc9f7632558f5f,",
+    "Lora/Regular/20/25/0": "S:428720deaaf1e80a61214f889e0ca461b9683e2d,",
+    "Manrope/Regular/12/21.6/0": "S:c01e2afd7114ed1849b8c52054b0635d4b9b5fbd,",
+    "Lora/Regular/21/26.25/0": "S:0c27703627b90c06946fcace93bb0a614524d824,",
+    "Lora/Regular/29/43.5/0": "S:016fbec2ef3cea43996b78ee5ffd87170e664f2d,",
+    "Manrope/Regular/10/12.5/1": "S:97c9843290a6f080cc0b03859b1fc347cb4c6819,",
+    "Manrope/Regular/13/24.7/0": "S:e49813a7a56c58d66fcc94c7cbeaac2044f90da7,",
+    "Manrope/Medium/13/16.25/0": "S:77f7a347a290b0ba3021b01a1a816aee9b61e0d1,",
+    "Manrope/Regular/11/19.8/0": "S:00b2916762ba0cc9268d0813296b92da70d10efc,",
+    "Lora/Regular/31/38.75/0": "S:b0455743388bdb3d0bb2c7cbb664224e925ec7a2,",
+    "Manrope/Regular/47/58.75/-1": "S:1698675a8db9c0cc2194293a5fd4306b96af2b5d,",
+    "Manrope/Regular/17/30.6/0": "S:5e27a6b74741a2a288c6f01e67df4853b060ece1,"
+  },
+  "components": {
+    "Navigation/Accueil": {
+      "id": "7:30",
+      "textProps": [
+        "Texte 1#7:0",
+        "Texte 2#7:1",
+        "Texte 3#7:2",
+        "Texte 4#7:3",
+        "Texte 5#7:4"
+      ],
+      "mediaProps": [
+        "Visuel 1#7:5"
+      ]
+    },
+    "Pied de page": {
+      "id": "7:219",
+      "textProps": [
+        "Texte 1#7:6",
+        "Texte 2#7:7"
+      ],
+      "mediaProps": []
+    },
+    "Navigation/Cours": {
+      "id": "10:235",
+      "textProps": [
+        "Texte 1#10:0",
+        "Texte 2#10:1",
+        "Texte 3#10:2",
+        "Texte 4#10:3",
+        "Texte 5#10:4"
+      ],
+      "mediaProps": [
+        "Visuel 1#10:5"
+      ]
+    },
+    "CA/chip active/da67ca47": {
+      "id": "10:340",
+      "textProps": [
+        "Texte 1#10:6"
+      ],
+      "mediaProps": []
+    },
+    "CA/chip/5de36f8a": {
+      "id": "10:346",
+      "textProps": [
+        "Texte 1#10:7"
+      ],
+      "mediaProps": []
+    },
+    "CA/chip/59e12aa7": {
+      "id": "10:365",
+      "textProps": [
+        "Texte 1#10:8"
+      ],
+      "mediaProps": [
+        "Visuel 1#10:9"
+      ]
+    },
+    "CA/tag white/2645bb09": {
+      "id": "10:384",
+      "textProps": [
+        "Texte 1#10:10"
+      ],
+      "mediaProps": []
+    },
+    "CA/chapter/39bc9747": {
+      "id": "11:297",
+      "textProps": [
+        "Texte 1#11:0",
+        "Texte 2#11:1"
+      ],
+      "mediaProps": []
+    },
+    "CA/chapter active/ab70cb56": {
+      "id": "11:310",
+      "textProps": [
+        "Texte 1#11:2",
+        "Texte 2#11:3"
+      ],
+      "mediaProps": []
+    },
+    "CA/tag/4f2df4a3": {
+      "id": "11:334",
+      "textProps": [
+        "Texte 1#11:4"
+      ],
+      "mediaProps": [
+        "Visuel 1#11:5"
+      ]
+    },
+    "CA/tag dark video-tag/15655a6c": {
+      "id": "11:464",
+      "textProps": [
+        "Texte 1#11:6"
+      ],
+      "mediaProps": [
+        "Visuel 1#11:7"
+      ]
+    },
+    "CA/tag warm/87088c64": {
+      "id": "11:588",
+      "textProps": [
+        "Texte 1#11:8"
+      ],
+      "mediaProps": []
+    },
+    "Navigation/Jeux": {
+      "id": "11:675",
+      "textProps": [
+        "Texte 1#11:9",
+        "Texte 2#11:10",
+        "Texte 3#11:11",
+        "Texte 4#11:12",
+        "Texte 5#11:13"
+      ],
+      "mediaProps": [
+        "Visuel 1#11:14"
+      ]
+    },
+    "CA/tag outline/f4e0662d": {
+      "id": "11:719",
+      "textProps": [
+        "Texte 1#11:15"
+      ],
+      "mediaProps": []
+    },
+    "CA/answer /330ee76": {
+      "id": "11:1026",
+      "textProps": [
+        "Texte 1#11:16",
+        "Texte 2#11:17"
+      ],
+      "mediaProps": []
+    },
+    "CA/answer selected/7ef080f7": {
+      "id": "11:1040",
+      "textProps": [
+        "Texte 1#11:18",
+        "Texte 2#11:19"
+      ],
+      "mediaProps": []
+    },
+    "CA/answer/330ee76": {
+      "id": "11:1054",
+      "textProps": [
+        "Texte 1#11:20",
+        "Texte 2#11:21"
+      ],
+      "mediaProps": []
+    },
+    "CA/answer wrong/b9e6804": {
+      "id": "11:1171",
+      "textProps": [
+        "Texte 1#11:22",
+        "Texte 2#11:23"
+      ],
+      "mediaProps": [
+        "Visuel 1#11:24"
+      ]
+    },
+    "CA/answer correct/346a57f": {
+      "id": "11:1199",
+      "textProps": [
+        "Texte 1#11:25",
+        "Texte 2#11:26"
+      ],
+      "mediaProps": [
+        "Visuel 1#11:27"
+      ]
+    },
+    "CA/board-card/a11290b6": {
+      "id": "11:1340",
+      "textProps": [
+        "Texte 1#11:28"
+      ],
+      "mediaProps": [
+        "Visuel 1#11:29"
+      ]
+    }
+  },
+  "svgAssets": {
+    "dd6a8dd3": "7:8",
+    "b7c13c93": "7:69",
+    "f2372549": "7:79",
+    "d4a157ab": "7:110",
+    "569a4ea7": "7:148",
+    "e8bb6b56": "7:158",
+    "199fc4a5": "7:166",
+    "59c7e640": "7:176",
+    "77b7968d": "7:184",
+    "7419be2c": "7:211",
+    "fd463a9d": "10:362",
+    "c3c54fcc": "10:401",
+    "f15a7671": "10:423",
+    "1b185840": "10:443",
+    "9c904ae9": "10:494",
+    "f2806b2c": "10:531",
+    "a3cc1d24": "11:328",
+    "92294a7e": "11:346",
+    "90daa6c0": "11:376",
+    "ffb0bd79": "11:402",
+    "7aab2e13": "11:440",
+    "fb74030c": "11:460",
+    "5deb799e": "11:473",
+    "6319b8c7": "11:487",
+    "824bd172": "11:574",
+    "7fb3002b": "11:744",
+    "808596c8": "11:797",
+    "59a0d56c": "11:829",
+    "c1e78ae5": "11:911",
+    "49d9a50": "11:982",
+    "7c356cb4": "11:1005",
+    "95aef80a": "11:1167",
+    "aee58796": "11:1195",
+    "1814efe2": "11:1230",
+    "3c864b18": "11:1308",
+    "4df82430": "11:1328",
+    "ecf19b1c": "11:1394",
+    "56e37db4": "11:1448",
+    "826342ff": "11:1478",
+    "33eaff37": "11:1510"
+  },
+  "componentFrameId": "6:394",
+  "frames": {
+    "01-accueil": "7:2",
+    "02-catalogue": "10:211",
+    "03-cours": "11:243",
+    "04-recherche": "11:509",
+    "05-jeux": "11:651",
+    "06-quiz": "11:919",
+    "07-correction": "11:1076",
+    "08-timeline": "11:1249",
+    "09-frise": "11:1559"
+  },
+  "links": [
+    {
+      "id": "7:4",
+      "target": "01-accueil"
+    },
+    {
+      "id": "7:18",
+      "target": "02-catalogue"
+    },
+    {
+      "id": "7:20",
+      "target": "05-jeux"
+    },
+    {
+      "id": "7:22",
+      "target": "10-credits"
+    },
+    {
+      "id": "7:144",
+      "target": "02-catalogue"
+    },
+    {
+      "id": "7:162",
+      "target": "05-jeux"
+    },
+    {
+      "id": "7:180",
+      "target": "10-credits"
+    },
+    {
+      "id": "7:206",
+      "target": "03-cours"
+    },
+    {
+      "id": "10:213",
+      "target": "01-accueil"
+    },
+    {
+      "id": "10:223",
+      "target": "02-catalogue"
+    },
+    {
+      "id": "10:225",
+      "target": "05-jeux"
+    },
+    {
+      "id": "10:227",
+      "target": "10-credits"
+    },
+    {
+      "id": "10:263",
+      "target": "01-accueil"
+    },
+    {
+      "id": "10:277",
+      "target": "04-recherche"
+    },
+    {
+      "id": "10:288",
+      "target": "02-catalogue"
+    },
+    {
+      "id": "10:293",
+      "target": "02-catalogue"
+    },
+    {
+      "id": "10:298",
+      "target": "03-cours"
+    },
+    {
+      "id": "10:301",
+      "target": "03-cours"
+    },
+    {
+      "id": "10:304",
+      "target": "03-cours"
+    },
+    {
+      "id": "10:312",
+      "target": "03-cours"
+    },
+    {
+      "id": "10:390",
+      "target": "03-cours"
+    },
+    {
+      "id": "10:427",
+      "target": "03-cours"
+    },
+    {
+      "id": "10:471",
+      "target": "03-cours"
+    },
+    {
+      "id": "11:271",
+      "target": "01-accueil"
+    },
+    {
+      "id": "11:343",
+      "target": "02-catalogue"
+    },
+    {
+      "id": "11:371",
+      "target": "10-credits"
+    },
+    {
+      "id": "11:484",
+      "target": "03-cours"
+    },
+    {
+      "id": "11:495",
+      "target": "06-quiz"
+    },
+    {
+      "id": "11:537",
+      "target": "01-accueil"
+    },
+    {
+      "id": "11:600",
+      "target": "03-cours"
+    },
+    {
+      "id": "11:607",
+      "target": "03-cours"
+    },
+    {
+      "id": "11:614",
+      "target": "03-cours"
+    },
+    {
+      "id": "11:631",
+      "target": "03-cours"
+    },
+    {
+      "id": "11:653",
+      "target": "01-accueil"
+    },
+    {
+      "id": "11:663",
+      "target": "02-catalogue"
+    },
+    {
+      "id": "11:665",
+      "target": "05-jeux"
+    },
+    {
+      "id": "11:667",
+      "target": "10-credits"
+    },
+    {
+      "id": "11:703",
+      "target": "01-accueil"
+    },
+    {
+      "id": "11:777",
+      "target": "06-quiz"
+    },
+    {
+      "id": "11:860",
+      "target": "08-timeline"
+    },
+    {
+      "id": "11:893",
+      "target": "09-frise"
+    },
+    {
+      "id": "11:906",
+      "target": "06-quiz"
+    },
+    {
+      "id": "11:946",
+      "target": "05-jeux"
+    },
+    {
+      "id": "11:1002",
+      "target": "03-cours"
+    },
+    {
+      "id": "11:1020",
+      "target": "07-correction"
+    },
+    {
+      "id": "11:1027",
+      "target": "07-correction"
+    },
+    {
+      "id": "11:1034",
+      "target": "07-correction"
+    },
+    {
+      "id": "11:1041",
+      "target": "07-correction"
+    },
+    {
+      "id": "11:1048",
+      "target": "07-correction"
+    },
+    {
+      "id": "11:1055",
+      "target": "07-correction"
+    },
+    {
+      "id": "11:1063",
+      "target": "07-correction"
+    },
+    {
+      "id": "11:1103",
+      "target": "05-jeux"
+    },
+    {
+      "id": "11:1142",
+      "target": "03-cours"
+    },
+    {
+      "id": "11:1157",
+      "target": "07-correction"
+    },
+    {
+      "id": "11:1172",
+      "target": "07-correction"
+    },
+    {
+      "id": "11:1185",
+      "target": "07-correction"
+    },
+    {
+      "id": "11:1200",
+      "target": "07-correction"
+    },
+    {
+      "id": "11:1213",
+      "target": "07-correction"
+    },
+    {
+      "id": "11:1225",
+      "target": "03-cours"
+    },
+    {
+      "id": "11:1236",
+      "target": "06-quiz"
+    },
+    {
+      "id": "11:1276",
+      "target": "05-jeux"
+    },
+    {
+      "id": "11:1544",
+      "target": "08-timeline"
+    },
+    {
+      "id": "11:1586",
+      "target": "05-jeux"
+    },
+    {
+      "id": "11:1668",
+      "target": "09-frise"
+    },
+    {
+      "id": "11:1675",
+      "target": "09-frise"
+    }
+  ]
+}

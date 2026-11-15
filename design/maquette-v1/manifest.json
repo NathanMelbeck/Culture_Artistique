@@ -1,0 +1,77 @@
+{
+  "version": "1.0",
+  "product": "Culture Artistique",
+  "viewport": {
+    "width": 1440,
+    "height": 1080
+  },
+  "palette": {
+    "forest": "#243d37",
+    "ivory": "#f8f6ef",
+    "surface": "#fffef8",
+    "sage": "#e9ecdf",
+    "bronze": "#a16543",
+    "muted": "#718074"
+  },
+  "fonts": {
+    "title": "Lora",
+    "body": "Manrope"
+  },
+  "screens": [
+    {
+      "id": "01-accueil",
+      "title": "Accueil",
+      "description": "Trois portes d’entrée, un univers visuel calme et un parcours de reprise."
+    },
+    {
+      "id": "02-catalogue",
+      "title": "Catalogue des cours",
+      "description": "Regroupement Antiquité, accès directs aux civilisations et filtres."
+    },
+    {
+      "id": "03-cours",
+      "title": "Lecture d’un cours",
+      "description": "Lecture avec sommaire, vidéo locale et passage au quiz."
+    },
+    {
+      "id": "04-recherche",
+      "title": "Recherche par spécificité",
+      "description": "Un terme mène à sa fiche, sa période et au cours associé."
+    },
+    {
+      "id": "05-jeux",
+      "title": "Les jeux",
+      "description": "Trois activités distinctes et un accès au quiz lié au cours."
+    },
+    {
+      "id": "06-quiz",
+      "title": "Quiz visuel — question",
+      "description": "Observation d’une image et sélection d’une réponse."
+    },
+    {
+      "id": "07-correction",
+      "title": "Quiz visuel — correction",
+      "description": "Erreur identifiée, bonne réponse et explication pédagogique."
+    },
+    {
+      "id": "08-timeline",
+      "title": "Timeline — carte piochée",
+      "description": "Insertion entre les cartes du plateau, dates entièrement cachées."
+    },
+    {
+      "id": "09-frise",
+      "title": "La frise à remplir",
+      "description": "Une structure chronologique à compléter avec une banque de réponses."
+    },
+    {
+      "id": "10-credits",
+      "title": "Les crédits",
+      "description": "Contributeurs, sources et mentions consultables hors ligne."
+    },
+    {
+      "id": "11-systeme-visuel",
+      "title": "Fondations et composants",
+      "description": "Palette, typographie, boutons et états pour poursuivre la maquette."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "screen": "01-accueil",
+    "height": 1080,
+    "width": 1440,
+    "overflow": []
+  },
+  {
+    "screen": "02-catalogue",
+    "height": 1093,
+    "width": 1440,
+    "overflow": []
+  },
+  {
+    "screen": "03-cours",
+    "height": 1080,
+    "width": 1440,
+    "overflow": []
+  },
+  {
+    "screen": "04-recherche",
+    "height": 1080,
+    "width": 1440,
+    "overflow": []
+  },
+  {
+    "screen": "05-jeux",
+    "height": 1080,
+    "width": 1440,
+    "overflow": []
+  },
+  {
+    "screen": "06-quiz",
+    "height": 1080,
+    "width": 1440,
+    "overflow": []
+  },
+  {
+    "screen": "07-correction",
+    "height": 1080,
+    "width": 1440,
+    "overflow": []
+  },
+  {
+    "screen": "08-timeline",
+    "height": 1080,
+    "width": 1440,
+    "overflow": []
+  },
+  {
+    "screen": "09-frise",
+    "height": 1080,
+    "width": 1440,
+    "overflow": []
+  },
+  {
+    "screen": "10-credits",
+    "height": 1080,
+    "width": 1440,
+    "overflow": []
+  },
+  {
+    "screen": "11-systeme-visuel",
+    "height": 1080,
+    "width": 1440,
+    "overflow": []
+  }
+]
