@@ -21,13 +21,8 @@ func get_course(id: String) -> Dictionary:
 	if not value is Dictionary:
 		return {}
 	var result: Dictionary = value.duplicate(true)
-	var read: Array[String] = []
-	var raw: Variant = result.get("read", [])
-	if raw is Array:
-		for chapter in raw:
-			if chapter is String and chapter not in read:
-				read.append(chapter)
-	result["read"] = read
+	# Reading status is no longer exposed. Preserve legacy fields on disk only.
+	result.erase("read")
 	for key in ["quiz_best", "quiz_total"]:
 		if result.has(key):
 			if result[key] is int or result[key] is float:
@@ -36,23 +31,13 @@ func get_course(id: String) -> Dictionary:
 				result.erase(key)
 	return result
 
-func mark_read(course_id: String, chapter_id: String) -> void:
-	var course := get_course(course_id)
-	var chapters: Array = course.get("read", []) if course.get("read", []) is Array else []
-	if chapter_id not in chapters:
-		chapters.append(chapter_id)
-	course["read"] = chapters
-	_data["courses"][course_id] = course
-	_save()
-
-func is_read(course_id: String, chapter_id: String) -> bool:
-	return chapter_id in get_course(course_id).get("read", [])
-
 func save_quiz(course_id: String, score: int, total: int) -> void:
 	var course := get_course(course_id)
 	course["quiz_best"] = maxi(int(course.get("quiz_best", 0)), score)
 	course["quiz_total"] = total
-	_data["courses"][course_id] = course
+	var stored: Dictionary = _data["courses"].get(course_id, {}) if _data["courses"].get(course_id, {}) is Dictionary else {}
+	stored.merge(course, true)
+	_data["courses"][course_id] = stored
 	_save()
 
 func _save() -> void:

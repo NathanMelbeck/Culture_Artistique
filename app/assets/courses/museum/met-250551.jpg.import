@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5qjhnq63cyp2"
-path="res://.godot/imported/egypte-siege.webp-ed201a59331a85056afc91600c046042.ctex"
+uid="uid://dm8sjshlso8bi"
+path="res://.godot/imported/met-250551.jpg-4698277c9220b929acb766ae546e76e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/courses/antiquity/egypte-siege.webp"
-dest_files=["res://.godot/imported/egypte-siege.webp-ed201a59331a85056afc91600c046042.ctex"]
+source_file="res://assets/courses/museum/met-250551.jpg"
+dest_files=["res://.godot/imported/met-250551.jpg-4698277c9220b929acb766ae546e76e1.ctex"]
 
 [params]
 

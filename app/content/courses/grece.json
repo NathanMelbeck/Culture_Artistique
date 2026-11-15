@@ -1,92 +1,423 @@
 {
-  "id": "grece", "period_id": "grece", "group_id": "antiquite",
-  "title": "Grèce antique", "subtitle": "Proportions, récits et répertoire des formes",
+  "id": "grece",
+  "period_id": "grece",
+  "group_id": "antiquite",
+  "title": "Grèce antique",
+  "subtitle": "Proportions, récits et répertoire des formes",
   "summary": "Comprendre les cités grecques, lire une image et distinguer les ordres, les motifs et les types de mobilier.",
   "cover_media": "grece-vase",
   "source_title": "Antiquité — Grèce, support fourni par Nathan (11 pages)",
-  "objectives": ["Situer les grandes phases de l'art grec et le rôle des cités.", "Reconnaître les principaux ordres architecturaux et leur vocabulaire.", "Distinguer un original antique, une copie et une reprise de style."],
+  "objectives": [
+    "Situer les grandes phases de l'art grec et le rôle des cités.",
+    "Reconnaître les principaux ordres architecturaux et leur vocabulaire.",
+    "Reconnaître les formes du mobilier à partir de témoignages grecs d’époque."
+  ],
   "references": [
-    {"title": "The Met — L'art grec à l'époque archaïque", "url": "https://www.metmuseum.org/essays/greek-art-in-the-archaic-period", "note": "Cités, échanges, kouroi, korai et céramique ; ressource en anglais."},
-    {"title": "The Met — L'architecture en Grèce ancienne", "url": "https://www.metmuseum.org/essays/architecture-in-ancient-greece", "note": "Ordres et principes de construction ; ressource en anglais."},
-    {"title": "The Met — L'art hellénistique", "url": "https://www.metmuseum.org/pt/essays/art-of-the-hellenistic-age-and-the-hellenistic-tradition", "note": "Diversité des sujets et échanges avec le monde romain ; ressource en anglais."},
-    {"title": "The Met — Une reprise du klismos vers 1825", "url": "https://www.metmuseum.org/art/collection/search/1658", "note": "Notice d'un meuble postérieur : utile pour comprendre la transmission d'un type antique, sans le confondre avec un original."}
+    {
+      "title": "The Met — L'art grec à l'époque archaïque",
+      "url": "https://www.metmuseum.org/essays/greek-art-in-the-archaic-period",
+      "note": "Cités, échanges, kouroi, korai et céramique ; ressource en anglais."
+    },
+    {
+      "title": "The Met — L'architecture en Grèce ancienne",
+      "url": "https://www.metmuseum.org/essays/architecture-in-ancient-greece",
+      "note": "Ordres et principes de construction ; ressource en anglais."
+    },
+    {
+      "title": "The Met — L'art hellénistique",
+      "url": "https://www.metmuseum.org/pt/essays/art-of-the-hellenistic-age-and-the-hellenistic-tradition",
+      "note": "Diversité des sujets et échanges avec le monde romain ; ressource en anglais."
+    },
+    {
+      "title": "The Met — Stèle attique avec un siège représenté",
+      "url": "https://www.metmuseum.org/art/collection/search/255192",
+      "note": "Un témoignage grec original, vers 375–350 av. J.-C."
+    },
+    {
+      "title": "The Met — Coupe de Hiéron et Makron",
+      "url": "https://www.metmuseum.org/art/collection/search/250995",
+      "note": "Mobilier, coussins et étoffes représentés au banquet, vers 480 av. J.-C."
+    }
   ],
   "chapters": [
     {
-      "id": "cites-reperes", "title": "Un monde de cités et d'échanges", "intro": "Une culture commune ne signifie pas un État unique.", "source_pages": [1, 2],
+      "id": "cites-reperes",
+      "title": "Un monde de cités et d'échanges",
+      "intro": "Une culture commune ne signifie pas un État unique.",
+      "source_pages": [
+        1,
+        2
+      ],
       "blocks": [
-        {"type": "paragraph", "text": "Le monde grec ancien se déploie autour de la mer Égée et, par les implantations et les échanges, dans une grande partie de la Méditerranée. Une [b]cité[/b], ou polis, rassemble un territoire et une communauté politique. Athènes, Sparte ou Corinthe possèdent leurs institutions et leurs traditions : on ne doit pas décrire leur fonctionnement comme s'il était partout identique."},
-        {"type": "paragraph", "text": "La langue, les récits mythologiques, les sanctuaires et certaines fêtes créent des liens entre ces communautés. Les échanges avec l'Égypte et le Proche-Orient comptent dans l'évolution des techniques et des décors. La culture grecque se transforme par ces contacts ; ses formes ne naissent pas dans un monde isolé."},
-        {"type": "heading", "text": "Des repères pour classer les œuvres"},
-        {"type": "key_points", "items": ["Époque archaïque : environ VIIᵉ siècle–480 av. J.-C., développement des temples, des grands types statuaires et de la céramique figurée.", "Époque classique : environ 480–323 av. J.-C., recherches sur les proportions, l'équilibre et l'organisation du corps.", "Époque hellénistique : de la mort d'Alexandre en 323 à la fin du Ier siècle av. J.-C., avec 31 comme repère conventionnel ; diversification des centres, des sujets et des expressions."]},
-        {"type": "callout", "title": "Une société à replacer dans son contexte", "text": "La citoyenneté ne concerne pas toute la population. Dans la démocratie athénienne, la participation politique est réservée aux hommes citoyens adultes ; femmes, étrangers et personnes esclavisées n'ont pas les mêmes droits. Ce cas ne décrit pas à lui seul toutes les cités grecques."},
-        {"type": "paragraph", "text": "Pour étudier une œuvre, cherchez donc trois coordonnées : où est-elle produite, à quel moment et pour quel usage ? La réponse sera souvent plus précise que la seule étiquette « grecque »."}
+        {
+          "type": "paragraph",
+          "text": "Le monde grec ancien se déploie autour de la mer Égée et, par les implantations et les échanges, dans une grande partie de la Méditerranée. Une [b]cité[/b], ou polis, rassemble un territoire et une communauté politique. Athènes, Sparte ou Corinthe possèdent leurs institutions et leurs traditions : on ne doit pas décrire leur fonctionnement comme s'il était partout identique."
+        },
+        {
+          "type": "paragraph",
+          "text": "La langue, les récits mythologiques, les sanctuaires et certaines fêtes créent des liens entre ces communautés. Les échanges avec l'Égypte et le Proche-Orient comptent dans l'évolution des techniques et des décors. La culture grecque se transforme par ces contacts ; ses formes ne naissent pas dans un monde isolé."
+        },
+        {
+          "type": "heading",
+          "text": "Des repères pour classer les œuvres"
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Époque archaïque : environ VIIᵉ siècle–480 av. J.-C., développement des temples, des grands types statuaires et de la céramique figurée.",
+            "Époque classique : environ 480–323 av. J.-C., recherches sur les proportions, l'équilibre et l'organisation du corps.",
+            "Époque hellénistique : de la mort d'Alexandre en 323 à la fin du Ier siècle av. J.-C., avec 31 comme repère conventionnel ; diversification des centres, des sujets et des expressions."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Une société à replacer dans son contexte",
+          "text": "La citoyenneté ne concerne pas toute la population. Dans la démocratie athénienne, la participation politique est réservée aux hommes citoyens adultes ; femmes, étrangers et personnes esclavisées n'ont pas les mêmes droits. Ce cas ne décrit pas à lui seul toutes les cités grecques."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour étudier une œuvre, cherchez donc trois coordonnées : où est-elle produite, à quel moment et pour quel usage ? La réponse sera souvent plus précise que la seule étiquette « grecque »."
+        }
       ]
     },
     {
-      "id": "mythes-images", "title": "Les dieux, les récits et la céramique", "intro": "Reconnaître un langage d'images partagé.", "source_pages": [3, 4, 6],
+      "id": "mythes-images",
+      "title": "Les dieux, les récits et la céramique",
+      "intro": "Reconnaître un langage d'images partagé.",
+      "source_pages": [
+        3,
+        4,
+        6
+      ],
       "blocks": [
-        {"type": "paragraph", "text": "Les divinités grecques prennent souvent une apparence humaine : c'est l'[b]anthropomorphisme[/b]. Leurs domaines, leurs relations et leurs récits permettent de raconter le monde. Zeus, Athéna ou Poséidon ne sont pas identifiés uniquement par un visage ; leurs attributs, leurs gestes et les autres personnages de la scène aident à les reconnaître."},
-        {"type": "paragraph", "text": "Un mythe peut apparaître dans un sanctuaire, sur un vase ou dans une sculpture. L'image peut servir au culte, à la mémoire, au prestige ou à l'usage social de l'objet. Il faut éviter de traiter toutes les représentations d'une divinité comme des images cultuelles ayant exactement la même fonction."},
-        {"type": "image", "media": "grece-vase"},
-        {"type": "heading", "text": "Figures noires et figures rouges"},
-        {"type": "paragraph", "text": "Sur les vases à figures noires, les personnages se détachent en silhouettes sombres sur la couleur de l'argile ; des détails sont notamment incisés. Dans la technique à figures rouges, le fond devient sombre tandis que les figures conservent la teinte de l'argile. Le dessin au pinceau facilite alors certains détails et jeux de contours. Ce sont des procédés de décor de la céramique, pas deux civilisations différentes."},
-        {"type": "callout", "title": "Regarder avant d'identifier", "text": "Décrivez d'abord ce que vous voyez : personnages, accessoires, attitudes et place dans le décor. Si l'identité d'un héros n'est pas documentée, restez sur ces observations plutôt que d'inventer un récit."},
-        {"type": "paragraph", "text": "Les vases renseignent aussi sur le mobilier, les vêtements et les pratiques sociales. Ils constituent une source précieuse lorsque les objets en bois représentés ont disparu. Mais une image sélectionne et organise le réel : elle ne remplace pas un relevé technique du meuble."}
+        {
+          "type": "paragraph",
+          "text": "Les divinités grecques prennent souvent une apparence humaine : c'est l'[b]anthropomorphisme[/b]. Leurs domaines, leurs relations et leurs récits permettent de raconter le monde. Zeus, Athéna ou Poséidon ne sont pas identifiés uniquement par un visage ; leurs attributs, leurs gestes et les autres personnages de la scène aident à les reconnaître."
+        },
+        {
+          "type": "paragraph",
+          "text": "Un mythe peut apparaître dans un sanctuaire, sur un vase ou dans une sculpture. L'image peut servir au culte, à la mémoire, au prestige ou à l'usage social de l'objet. Il faut éviter de traiter toutes les représentations d'une divinité comme des images cultuelles ayant exactement la même fonction."
+        },
+        {
+          "type": "image",
+          "media": "grece-vase"
+        },
+        {
+          "type": "source",
+          "title": "Un exemple documenté de figures noires",
+          "text": "Cette amphore attique attribuée à Exékias est datée vers 540 av. J.-C. par le Met. Les figures sombres et les détails incisés permettent d’étudier la technique sur une œuvre identifiée. Inventaire : 17.230.14a, b.",
+          "url": "https://www.metmuseum.org/art/collection/search/250551"
+        },
+        {
+          "type": "heading",
+          "text": "Figures noires et figures rouges"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sur les vases à figures noires, les personnages se détachent en silhouettes sombres sur la couleur de l'argile ; des détails sont notamment incisés. Dans la technique à figures rouges, le fond devient sombre tandis que les figures conservent la teinte de l'argile. Le dessin au pinceau facilite alors certains détails et jeux de contours. Ce sont des procédés de décor de la céramique, pas deux civilisations différentes."
+        },
+        {
+          "type": "callout",
+          "title": "Regarder avant d'identifier",
+          "text": "Décrivez d'abord ce que vous voyez : personnages, accessoires, attitudes et place dans le décor. Si l'identité d'un héros n'est pas documentée, restez sur ces observations plutôt que d'inventer un récit."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les vases renseignent aussi sur le mobilier, les vêtements et les pratiques sociales. Ils constituent une source précieuse lorsque les objets en bois représentés ont disparu. Mais une image sélectionne et organise le réel : elle ne remplace pas un relevé technique du meuble."
+        }
       ]
     },
     {
-      "id": "sculpture", "title": "Le corps : des codes à l'expression", "intro": "Apprendre à distinguer les grandes recherches de la sculpture grecque.", "source_pages": [4, 5, 6],
+      "id": "sculpture",
+      "title": "Le corps : des codes à l'expression",
+      "intro": "Apprendre à distinguer les grandes recherches de la sculpture grecque.",
+      "source_pages": [
+        4,
+        5,
+        6
+      ],
       "blocks": [
-        {"type": "paragraph", "text": "À l'époque archaïque, le [b]kouros[/b] représente un jeune homme nu et debout ; la [b]korè[/b], une jeune femme vêtue. Ces types peuvent être offerts dans un sanctuaire ou employés comme monuments funéraires. Leur frontalité et leur organisation ne doivent pas être confondues avec une absence de maîtrise : elles appartiennent à des choix de représentation historiquement situés."},
-        {"type": "paragraph", "text": "Les recherches classiques rendent plus sensible l'articulation du corps. Le [b]contrapposto[/b] décrit une répartition du poids principalement sur une jambe, qui modifie la position du bassin et des épaules. Le drapé rend lisible le volume du corps ou crée un mouvement propre. Le matériau, marbre ou bronze par exemple, intervient dans les possibilités techniques de la statue."},
-        {"type": "paragraph", "text": "À l'époque hellénistique, les artistes développent des sujets et des expressions très variés : mouvement, tension, âge ou gestes du quotidien. Il ne s'agit pas d'un passage simple d'un art « maladroit » à un art « réussi ». Chaque période poursuit plusieurs objectifs et peut reprendre des modèles plus anciens."},
-        {"type": "callout", "title": "Attention aux généralisations", "text": "La représentation du nu féminin évolue dans le monde grec, notamment avec les images d'Aphrodite à partir de l'époque classique tardive. On ne peut donc pas dire que la sculpture grecque ne montre jamais de femme nue."},
-        {"type": "heading", "text": "Original, copie et modèle"},
-        {"type": "paragraph", "text": "Une œuvre romaine peut reprendre un modèle grec aujourd'hui perdu ; une restauration peut compléter des parties manquantes. Une photographie d'une statue ne suffit donc pas à déterminer la date du modèle et celle de l'objet conservé. Consultez la notice et formulez la différence : « copie romaine d'un modèle grec » est une information bien plus précise que « statue grecque »."},
-        {"type": "key_points", "items": ["Décrire la pose, l'appui et le drapé avant de nommer un style.", "Distinguer le sujet représenté du statut social de toutes les personnes de cette société.", "Vérifier la date de l'objet et la nature de sa relation avec un modèle plus ancien."]}
+        {
+          "type": "paragraph",
+          "text": "À l'époque archaïque, le [b]kouros[/b] représente un jeune homme nu et debout ; la [b]korè[/b], une jeune femme vêtue. Ces types peuvent être offerts dans un sanctuaire ou employés comme monuments funéraires. Leur frontalité et leur organisation ne doivent pas être confondues avec une absence de maîtrise : elles appartiennent à des choix de représentation historiquement situés."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les recherches classiques rendent plus sensible l'articulation du corps. Le [b]contrapposto[/b] décrit une répartition du poids principalement sur une jambe, qui modifie la position du bassin et des épaules. Le drapé rend lisible le volume du corps ou crée un mouvement propre. Le matériau, marbre ou bronze par exemple, intervient dans les possibilités techniques de la statue."
+        },
+        {
+          "type": "paragraph",
+          "text": "À l'époque hellénistique, les artistes développent des sujets et des expressions très variés : mouvement, tension, âge ou gestes du quotidien. Il ne s'agit pas d'un passage simple d'un art « maladroit » à un art « réussi ». Chaque période poursuit plusieurs objectifs et peut reprendre des modèles plus anciens."
+        },
+        {
+          "type": "callout",
+          "title": "Attention aux généralisations",
+          "text": "La représentation du nu féminin évolue dans le monde grec, notamment avec les images d'Aphrodite à partir de l'époque classique tardive. On ne peut donc pas dire que la sculpture grecque ne montre jamais de femme nue."
+        },
+        {
+          "type": "heading",
+          "text": "Original, copie et modèle"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une œuvre romaine peut reprendre un modèle grec aujourd'hui perdu ; une restauration peut compléter des parties manquantes. Une photographie d'une statue ne suffit donc pas à déterminer la date du modèle et celle de l'objet conservé. Consultez la notice et formulez la différence : « copie romaine d'un modèle grec » est une information bien plus précise que « statue grecque »."
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Décrire la pose, l'appui et le drapé avant de nommer un style.",
+            "Distinguer le sujet représenté du statut social de toutes les personnes de cette société.",
+            "Vérifier la date de l'objet et la nature de sa relation avec un modèle plus ancien."
+          ]
+        }
       ]
     },
     {
-      "id": "ordres", "title": "L'architecture et les trois ordres", "intro": "Le chapiteau est un indice ; l'ordre est un système plus large.", "source_pages": [7, 8],
+      "id": "ordres",
+      "title": "L'architecture et les trois ordres",
+      "intro": "Le chapiteau est un indice ; l'ordre est un système plus large.",
+      "source_pages": [
+        7,
+        8
+      ],
       "blocks": [
-        {"type": "paragraph", "text": "L'architecture monumentale grecque explore les relations entre supports verticaux et éléments horizontaux. Dans un temple, les colonnes peuvent entourer un espace réservé à la divinité. Les proportions, le rythme des travées et les parties sculptées organisent la perception de l'ensemble. Le temple n'est pas une salle destinée à réunir tous les fidèles comme une église moderne."},
-        {"type": "image", "media": "grece-ordres"},
-        {"type": "key_points", "items": ["Dorique : chapiteau sobre, avec une échine sous un abaque ; dans sa forme grecque habituelle, la colonne n'a pas de base distincte. La frise associe triglyphes et métopes.", "Ionique : chapiteau à volutes, colonne généralement pourvue d'une base ; des proportions et un entablement propres accompagnent cette forme.", "Corinthien : chapiteau à feuilles d'acanthe, plus développé. Son emploi se diffuse et prend une grande importance dans le monde romain."]},
-        {"type": "paragraph", "text": "Un [b]ordre[/b] associe des proportions et des parties architecturales ; ce n'est pas le seul nom du chapiteau. Le fût est le corps de la colonne. L'entablement se place au-dessus des supports et comprend notamment l'architrave, la frise et la corniche. Un fronton est la partie triangulaire qui peut couronner la façade."},
-        {"type": "callout", "title": "Ne pas confondre", "text": "Les cannelures ne sont pas réservées à l'ionique : des colonnes doriques et corinthiennes peuvent aussi en porter. Pour reconnaître un ordre, combinez le chapiteau, la base, la frise et la composition générale."},
-        {"type": "paragraph", "text": "Ce vocabulaire sera repris sur des édifices et des meubles bien postérieurs. Une armoire à colonnes et fronton ne devient pas pour autant une armoire antique : elle peut citer un répertoire classique à une autre époque."}
+        {
+          "type": "paragraph",
+          "text": "L'architecture monumentale grecque explore les relations entre supports verticaux et éléments horizontaux. Dans un temple, les colonnes peuvent entourer un espace réservé à la divinité. Les proportions, le rythme des travées et les parties sculptées organisent la perception de l'ensemble. Le temple n'est pas une salle destinée à réunir tous les fidèles comme une église moderne."
+        },
+        {
+          "type": "image",
+          "media": "grece-ordres"
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Dorique : chapiteau sobre, avec une échine sous un abaque ; dans sa forme grecque habituelle, la colonne n'a pas de base distincte. La frise associe triglyphes et métopes.",
+            "Ionique : chapiteau à volutes, colonne généralement pourvue d'une base ; des proportions et un entablement propres accompagnent cette forme.",
+            "Corinthien : chapiteau à feuilles d'acanthe, plus développé. Son emploi se diffuse et prend une grande importance dans le monde romain."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Un [b]ordre[/b] associe des proportions et des parties architecturales ; ce n'est pas le seul nom du chapiteau. Le fût est le corps de la colonne. L'entablement se place au-dessus des supports et comprend notamment l'architrave, la frise et la corniche. Un fronton est la partie triangulaire qui peut couronner la façade."
+        },
+        {
+          "type": "callout",
+          "title": "Ne pas confondre",
+          "text": "Les cannelures ne sont pas réservées à l'ionique : des colonnes doriques et corinthiennes peuvent aussi en porter. Pour reconnaître un ordre, combinez le chapiteau, la base, la frise et la composition générale."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce vocabulaire sera repris sur des édifices et des meubles bien postérieurs. Une armoire à colonnes et fronton ne devient pas pour autant une armoire antique : elle peut citer un répertoire classique à une autre époque."
+        }
       ]
     },
     {
-      "id": "motifs-mobilier", "title": "Du motif au mobilier", "intro": "Observer comment une forme devient un répertoire transmissible.", "source_pages": [9, 10, 11],
+      "id": "motifs-mobilier",
+      "title": "Le Mobilier",
+      "intro": "Sièges, lits de banquet et tables : lire les formes, les usages et les parties souples.",
+      "source_pages": [
+        9,
+        10,
+        11
+      ],
       "blocks": [
-        {"type": "paragraph", "text": "Le décor grec associe des motifs géométriques et végétaux. La [b]grecque[/b], ou méandre, organise une ligne en retours angulaires. La palmette déploie ses éléments comme un éventail ; l'acanthe est un feuillage très présent dans le vocabulaire architectural. Répéter un motif en bande forme une frise et donne un rythme à la surface."},
-        {"type": "image", "media": "grece-motifs"},
-        {"type": "paragraph", "text": "Le mobilier est connu par des vestiges, des éléments conservés et de nombreuses représentations sur des vases ou des reliefs. Le bois survit moins souvent que la pierre ou le métal : la documentation doit être interprétée avec cette différence de conservation à l'esprit. Il serait hasardeux de déduire une essence précise d'un simple dessin."},
-        {"type": "heading", "text": "Le klismos : une silhouette à comprendre"},
-        {"type": "paragraph", "text": "Le [b]klismos[/b] est un type de siège associé au monde grec, caractérisé par des pieds courbes et un dossier largement concave porté par des montants arrière. L'intérêt de sa silhouette tient au rapport entre l'appui du corps, la courbure et la stabilité. Des lits de banquet, des tabourets et des tables complètent les types de mobilier connus."},
-        {"type": "image", "media": "grece-klismos"},
-        {"type": "callout", "title": "Ce que montre cette photographie", "text": "Le siège illustré est une reprise postérieure du klismos. Il permet d'étudier la silhouette, mais ne prouve ni les matériaux ni les assemblages d'un original antique. Les reprises de l'Antiquité sont un sujet d'étude à part entière."},
-        {"type": "paragraph", "text": "Comme pour l'Égypte, séparez structure et ornement. Un pied courbe porte le siège ; une palmette peut décorer sa traverse. Une forme peut ensuite être transposée dans un autre matériau ou dans une autre époque sans conserver exactement la même fonction."}
-      ]
+        {
+          "type": "paragraph",
+          "text": "Le mobilier grec est connu par des vestiges et par de nombreuses représentations sur des vases ou des reliefs. Une image antique renseigne une silhouette et un usage, mais elle n’est pas une coupe de construction. Il faut distinguer les matières de l’œuvre qui représente le meuble et celles du meuble représenté."
+        },
+        {
+          "type": "heading",
+          "text": "Les formes à reconnaître"
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Klismos : siège dont les pieds et les montants arrière s’incurvent, avec un dossier en bandeau concave.",
+            "Klinè : lit ou banquette utilisé notamment pour s’allonger au banquet ; observer le cadre, les pieds, les coussins et les étoffes.",
+            "Table de service : petit plateau proche des convives, porté par des pieds fins dans les scènes présentées.",
+            "Méandres, palmettes, ondes et frises forment un répertoire décoratif. Leur présence doit être croisée avec la forme et la documentation du meuble."
+          ]
+        },
+        {
+          "type": "image",
+          "media": "grece-motifs"
+        },
+        {
+          "type": "furniture_example",
+          "id": "stele-siege",
+          "title": "Un siège représenté sur une stèle grecque",
+          "media": "grece-stele-siege",
+          "status_label": "Représentation antique",
+          "description": "Le relief attique présente une femme assise de profil. Cette œuvre grecque originale constitue un témoignage d’époque sur la silhouette du siège.",
+          "characteristics": [
+            "Le dossier se lit derrière le dos du personnage : suivre sa ligne jusqu’à l’assise.",
+            "Sous l’assise, rechercher la silhouette des pieds et leurs courbes ; les vêtements peuvent masquer certaines liaisons.",
+            "Le marbre est le matériau de la stèle. Le relief n’établit pas l’essence de bois ou les assemblages du siège représenté."
+          ],
+          "reference": {
+            "title": "The Met — Un siège sur une stèle attique",
+            "text": "Stèle funéraire attique en marbre, vers 375–350 av. J.-C. Une femme assise fait face à une femme debout. Le relief constitue un témoignage antique sur la forme du siège.",
+            "url": "https://www.metmuseum.org/art/collection/search/255192"
+          }
+        },
+        {
+          "type": "furniture_example",
+          "id": "coussins-banquet",
+          "title": "Les coussins et les étoffes du banquet",
+          "media": "grece-banquet-lits",
+          "status_label": "Détail d’une représentation antique",
+          "description": "La peinture originale de cette coupe grecque montre les parties souples utilisées avec les lits de banquet. Elle permet d’observer leur forme et leur disposition auprès des convives.",
+          "characteristics": [
+            "Coussins : repérer les volumes placés derrière le dos et sous les appuis du corps.",
+            "Étoffes : observer les plis, les bordures et les motifs peints ; distinguer les tissus disposés sur le lit des vêtements des personnages.",
+            "Relation avec la structure : comparer la souplesse représentée des coussins avec les lignes droites du cadre. L’image ne révèle pas à elle seule la fibre, le garnissage ou les points de couture."
+          ],
+          "reference": {
+            "title": "The Met — Un témoignage grec original sur les parties souples",
+            "text": "Cette coupe attique à figures rouges, signée par Hiéron comme potier et attribuée à Makron, est datée vers 480 av. J.-C. (inv. 20.246). Sa peinture extérieure est une représentation d’époque du banquet, et non un dessin moderne de restitution.",
+            "url": "https://www.metmuseum.org/art/collection/search/250995"
+          }
+        },
+        {
+          "type": "furniture_example",
+          "id": "kline",
+          "title": "La klinè : cadre de lit et coussins du banquet",
+          "media": "grece-banquet-lits",
+          "status_label": "Mobilier peint sur une coupe",
+          "description": "Sur la coupe de Hiéron et Makron, les convives sont allongés. Les peintures permettent d’étudier ensemble le cadre du lit, la posture et les parties souples.",
+          "characteristics": [
+            "Cadre rectangulaire surélevé : repérer les traverses et les pieds droits sous la surface où reposent les convives.",
+            "Coussins et étoffes : observer les volumes sous le bras ou le dos, les plis et les motifs visibles.",
+            "La posture allongée explique l’aménagement du lit de banquet. L’image ne permet pas d’identifier avec certitude le rembourrage ou les coutures."
+          ],
+          "reference": {
+            "title": "The Met — Lits de banquet et coussins",
+            "text": "Vue extérieure d’une coupe attique à figures rouges, signée par Hiéron comme potier et attribuée à Makron, vers 480 av. J.-C. Les convives sont allongés sur des lits de banquet.",
+            "url": "https://www.metmuseum.org/art/collection/search/250995"
+          }
+        },
+        {
+          "type": "furniture_example",
+          "id": "tables",
+          "title": "Les tables de service : un mobilier lié au banquet",
+          "media": "grece-banquet-tables",
+          "status_label": "Mobilier peint sur une coupe",
+          "description": "Une autre vue de la même coupe montre les petites tables proches des lits. Elles complètent l’aménagement sans avoir la silhouette d’une grande table de repas moderne.",
+          "characteristics": [
+            "Plateau étroit, présenté devant les convives : rechercher le rapport entre sa hauteur et celle du lit.",
+            "Pieds fins sous le plateau : les distinguer des pieds des lits qui se superposent parfois dans la scène.",
+            "L’emplacement renseigne l’usage ; le dessin peint ne suffit pas à restituer la construction ni à compter les pieds cachés."
+          ],
+          "reference": {
+            "title": "The Met — Tables basses dans une scène de banquet",
+            "text": "Autre vue extérieure de la même coupe attique, vers 480 av. J.-C. De petites tables sont placées devant les lits : observer les plateaux et leurs pieds.",
+            "url": "https://www.metmuseum.org/art/collection/search/250995"
+          }
+        },
+        {
+          "type": "heading",
+          "text": "Textiles et décor : ce que l’image permet de savoir"
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour les métiers de l’ameublement, les coussins, les étoffes et leur rapport au cadre sont des éléments à étudier à part entière. Les scènes de banquet montrent des parties souples ; elles ne livrent pas automatiquement la fibre, le garnissage ou la technique de couture. Une proposition de restitution doit rester distincte de ces observations."
+        },
+        {
+          "type": "paragraph",
+          "text": "La grecque, ou méandre, organise une ligne en retours angulaires ; la palmette déploie ses éléments en éventail. Comparez leur rythme et leur place sur les surfaces. Un motif peint sur un vase n’est pas, à lui seul, la preuve qu’il était sculpté sur le meuble représenté."
+        }
+      ],
+      "section": "mobilier"
     },
     {
-      "id": "synthese", "title": "Construire une lecture argumentée", "intro": "Relier proportions, motifs et contexte plutôt que collectionner des étiquettes.", "source_pages": [2, 4, 7, 8, 9, 10, 11],
+      "id": "synthese",
+      "title": "Reconnaître le mobilier grec",
+      "intro": "Courbes du klismos, proportions et répertoire ornemental.",
+      "source_pages": [
+        2,
+        4,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
       "blocks": [
-        {"type": "heading", "text": "Décrire un fragment de colonne"},
-        {"type": "paragraph", "text": "Commencez par la forme du chapiteau : simple couronnement, volutes ou feuilles. Recherchez ensuite la base, les cannelures et les éléments situés au-dessus de la colonne. Si vous ne disposez que d'un fragment, indiquez ce qui manque. Une conclusion prudente est plus solide qu'une certitude fondée sur un seul détail."},
-        {"type": "key_points", "items": ["Cité : communauté politique et territoire, avec des institutions propres.", "Kouros / korè : types statuaires archaïques, jeune homme nu / jeune femme vêtue.", "Volute : enroulement ; acanthe : feuillage ornemental ; entablement : ensemble horizontal au-dessus des supports.", "Klismos : type de siège à pieds courbes et dossier concave ; une reprise moderne de ce type reste un objet moderne."]},
-        {"type": "callout", "title": "Votre synthèse", "text": "Le monde grec développe un langage de proportions, de récits et de motifs dans des contextes variés. Architecture, sculpture, céramique et mobilier partagent des recherches formelles. Les échanges avec d'autres cultures et les reprises ultérieures font partie de cette histoire."},
-        {"type": "paragraph", "text": "Comparez maintenant un chapiteau égyptien végétal et un chapiteau corinthien. Vous pouvez constater une inspiration végétale dans les deux cas sans les confondre. Décrivez la forme précise, la manière de l'organiser et le contexte : la ressemblance d'un thème n'efface pas la différence des systèmes."},
-        {"type": "paragraph", "text": "Pour préparer le quiz, entraînez-vous à expliquer un ordre sans vous limiter à une colonne, à reconnaître une technique de céramique et à distinguer l'âge d'un modèle de celui de l'objet qui le reprend."}
+        {
+          "type": "key_points",
+          "items": [
+            "Klismos : quatre pieds courbes et évasés, montants arrière inclinés, dossier en bandeau concave qui enveloppe le dos. C’est la combinaison de ces lignes qui caractérise le type.",
+            "Autres formes à comparer : tabourets et lits. Le nom d’un meuble décrit un type et un usage ; il ne date pas automatiquement chaque exemplaire.",
+            "Décor : palmettes, méandres, ondes et frises répétées. Observer leur rythme et leur disposition plutôt que leur seule présence.",
+            "Proportions : rechercher l’équilibre entre l’assise, la courbure des pieds et le dossier ; distinguer la structure du décor ajouté."
+          ]
+        },
+        {
+          "type": "image",
+          "media": "grece-stele-siege"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sur cette stèle grecque originale, observez le siège de profil : son dossier, son assise et les parties visibles de son piètement. Appuyez votre identification sur ces éléments et sur les autres témoignages grecs du chapitre « Le Mobilier »."
+        },
+        {
+          "type": "callout",
+          "title": "Les indices à réunir",
+          "text": "Un méandre ou une palmette circule entre plusieurs cultures. Pour proposer une attribution grecque, comparez la silhouette, le contexte, la datation et les représentations d’époque. Les meubles, les fragments et les images anciennes donnent des informations complémentaires."
+        }
       ]
     }
   ],
   "quiz": [
-    {"id": "grece-q1", "chapter": "cites-reperes", "prompt": "Quelle formulation décrit le mieux le monde grec des cités ?", "choices": ["Un État unique où toutes les institutions sont identiques.", "Des communautés autonomes liées notamment par la langue et des pratiques culturelles.", "Un territoire coupé de tout échange extérieur."], "correct": 1, "explanation": "La polis possède ses institutions ; des liens culturels existent entre les cités. Les contacts méditerranéens participent à la formation de leurs arts."},
-    {"id": "grece-q2", "chapter": "ordres", "prompt": "Quel indice caractérise le chapiteau ionique ?", "media": "grece-ordres", "choices": ["Les volutes.", "Les feuilles d'acanthe comme seul couronnement.", "L'absence systématique de toute cannelure."], "correct": 0, "explanation": "Le chapiteau ionique présente des volutes. Le feuillage d'acanthe évoque le corinthien ; les cannelures ne sont pas un signe exclusif de l'ionique."},
-    {"id": "grece-q3", "chapter": "mythes-images", "prompt": "Sur un vase à figures rouges, quelle partie conserve la couleur de l'argile ?", "choices": ["Le fond autour des personnages.", "Uniquement les anses.", "Les figures, qui se détachent sur un fond sombre."], "correct": 2, "explanation": "La technique réserve les figures dans la teinte de l'argile, avec un fond sombre. Dans les figures noires, les silhouettes sont au contraire foncées."},
-    {"id": "grece-q4", "chapter": "motifs-mobilier", "prompt": "Une chaise récente reprend la silhouette du klismos. Quelle affirmation est correcte ?", "choices": ["C'est nécessairement un original grec.", "Elle montre la transmission d'un type, mais ses matériaux et sa date sont ceux de sa propre fabrication.", "Elle prouve que tous les sièges grecs étaient identiques."], "correct": 1, "explanation": "Le modèle et l'objet qui le cite ont chacun une histoire. L'image d'une reprise ne documente pas automatiquement la technique d'un original antique."}
+    {
+      "id": "grece-q1",
+      "chapter": "cites-reperes",
+      "prompt": "Quelle formulation décrit le mieux le monde grec des cités ?",
+      "choices": [
+        "Un État unique où toutes les institutions sont identiques.",
+        "Des communautés autonomes liées notamment par la langue et des pratiques culturelles.",
+        "Un territoire coupé de tout échange extérieur."
+      ],
+      "correct": 1,
+      "explanation": "La polis possède ses institutions ; des liens culturels existent entre les cités. Les contacts méditerranéens participent à la formation de leurs arts."
+    },
+    {
+      "id": "grece-q2",
+      "chapter": "ordres",
+      "prompt": "Quel indice caractérise le chapiteau ionique ?",
+      "media": "grece-ordres",
+      "choices": [
+        "Les volutes.",
+        "Les feuilles d'acanthe comme seul couronnement.",
+        "L'absence systématique de toute cannelure."
+      ],
+      "correct": 0,
+      "explanation": "Le chapiteau ionique présente des volutes. Le feuillage d'acanthe évoque le corinthien ; les cannelures ne sont pas un signe exclusif de l'ionique."
+    },
+    {
+      "id": "grece-q3",
+      "chapter": "mythes-images",
+      "prompt": "Sur un vase à figures rouges, quelle partie conserve la couleur de l'argile ?",
+      "choices": [
+        "Le fond autour des personnages.",
+        "Uniquement les anses.",
+        "Les figures, qui se détachent sur un fond sombre."
+      ],
+      "correct": 2,
+      "explanation": "La technique réserve les figures dans la teinte de l'argile, avec un fond sombre. Dans les figures noires, les silhouettes sont au contraire foncées."
+    },
+    {
+      "id": "grece-q4",
+      "chapter": "motifs-mobilier",
+      "prompt": "Quels éléments caractérisent la silhouette du klismos ?",
+      "choices": [
+        "Une assise sans dossier et un piètement croisé en X.",
+        "Des pieds courbes, des montants arrière inclinés et un dossier en bandeau concave.",
+        "Un plateau de pierre porté par un pied central."
+      ],
+      "correct": 1,
+      "explanation": "Le klismos associe un dossier courbe à des montants et des pieds incurvés. Comparez ces éléments dans les témoignages grecs d’époque ; ils décrivent un type de siège et non une essence de bois ou un assemblage précis."
+    }
   ]
 }

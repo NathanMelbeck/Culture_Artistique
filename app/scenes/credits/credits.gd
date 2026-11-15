@@ -16,6 +16,8 @@ func _ready() -> void:
 	add_child(AppTheme.paragraph("%s\n%s\n%s" % [media.get("credit", ""), media.get("license", ""), media.get("modifications", "")], 14))
 	_external_link("Voir la notice de l’objet au Met   ↗", media.get("source_url", ""), "MuseumLink")
 	_external_link("Conditions Met Open Access   ↗", media.get("rights_url", ""), "RightsLink")
+	add_child(AppTheme.label("Les photographies des cours", 29, AppTheme.FOREST, true))
+	add_child(AppTheme.paragraph("Les photographies de musée des cours d’Antiquité proviennent du Metropolitan Museum of Art, New York, et sont diffusées sous CC0 / Open Access. Chaque exemple indique sa notice, sa datation, son numéro d’inventaire et sa provenance lorsqu’elle est connue. Les originaux et les représentations d’époque sont identifiés ; les parties restaurées sont signalées dans les légendes.", 14))
 	add_child(AppTheme.label("Les polices et le moteur", 29, AppTheme.FOREST, true))
 	add_child(AppTheme.paragraph("Lora — Cyreal · Manrope — Mikhail Sharanda et contributeurs. Polices distribuées sous SIL Open Font License 1.1.\nLes petites icônes de navigation sont des dessins originaux du projet.\nApplication développée avec Godot Engine, sous licence MIT.", 14))
 	var licenses := Button.new()

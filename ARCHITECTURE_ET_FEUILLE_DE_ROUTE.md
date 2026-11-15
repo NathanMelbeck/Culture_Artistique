@@ -1,6 +1,6 @@
 # Culture_Artistique — Architecture et feuille de route
 
-Version : 0.5 — 15 novembre 2026
+Version : 0.8 — 15 novembre 2026
 
 Statut : document de référence initial, à faire évoluer avec les décisions du projet.
 
@@ -8,7 +8,7 @@ Ce document décrit l'application à construire. Il ne signifie pas que les fonc
 
 ## 1. Vision du projet
 
-Créer une application de culture artistique permettant de comprendre les époques, de reconnaître leurs caractéristiques et de vérifier ses connaissances par des jeux. Le premier contexte pédagogique est le BMA ébénisterie : les cours relient histoire, arts, architecture, mobilier, décors, matériaux et techniques.
+Créer une application de culture artistique permettant de comprendre les époques, de reconnaître leurs caractéristiques et de vérifier ses connaissances par des jeux. L’application est spécialisée dans les métiers de l’ameublement : ébénisterie, menuiserie, tapisserie d’ameublement et confection/couture. Les cours relient histoire, arts, architecture, mobilier, décors, matériaux et techniques.
 
 L'application doit permettre d'apprendre à partir d'une période, mais aussi de retrouver une période à partir d'un objet, d'un artiste, d'un terme ou d'un détail caractéristique.
 
@@ -51,6 +51,7 @@ Menu principal
 | Dépôt | Dépôt GitHub `NathanMelbeck/Culture_Artistique`, cloné à la racine du projet. |
 | Prototype | Conservé dans `test/` comme référence ; ce dossier ne constitue pas l'architecture définitive. |
 | Visuels des objets et lieux | Utiliser des photographies ou dessins existants et documentés, avec des droits de réutilisation vérifiés ; ne pas recréer les meubles, œuvres ou architectures en illustration. Les petites icônes et formes de l'interface peuvent être originales. |
+| Fidélité historique du mobilier | Pour toutes les périodes, utiliser des originaux documentés, des représentations d’époque ou des reproductions fidèles dont le modèle et la fidélité sont sourcés. Exclure les réinterprétations, adaptations et meubles de style d’une autre époque comme exemples. Identifier les parties restaurées des objets anciens. |
 
 L'installation et les mises à jour de l'application doivent elles aussi pouvoir se faire avec des fichiers transmis localement. Le développement peut utiliser Internet ; l'exécution de l'application n'en dépend pas.
 
@@ -79,7 +80,9 @@ L'accès futur à l'outil d'édition sera séparé de ces trois destinations des
 - **COU-06 — Cours enrichis** : afficher du texte structuré, des images légendées, des vidéos locales, des notions à retenir et des références.
 - **COU-07 — Liens internes** : ouvrir une fiche de vocabulaire, un artiste, un objet ou un autre cours depuis un contenu.
 - **COU-08 — Fin de période** : afficher « Vérifier mes connaissances » à la fin du parcours de la période et transmettre son contexte au quiz.
-- **COU-09 — Lecture suivie** : enregistrer les cours lus et la dernière position de lecture.
+- **COU-09 — Continuité de lecture** : conserver la position pendant la session, sans bouton ni statut « lu ». Le suivi des cours lus est retiré pour le moment.
+
+**COU-10 — Le Mobilier** : chaque période actuelle ou future comprend une rubrique portant exactement ce titre. Elle couvre tous les métiers de l’ameublement, avec des exemples variés et leurs caractéristiques illustrées et sourcées. La validation exige au moins quatre études d’exemple, chacune avec une image, trois caractéristiques et une notice correspondante. Les parties textiles, garnitures et coutures sont développées selon leur documentation et leur importance à l’époque. Le [modèle de rubrique](docs/modele-section-mobilier.md) décrit la préparation et le format réutilisable.
 
 Pour un regroupement comme Antiquité, un récapitulatif pourra conduire à un quiz couvrant ses périodes. Un cours consacré à Rome devra conduire en priorité aux questions pertinentes pour Rome.
 
@@ -89,7 +92,7 @@ Le plan de cours recommandé, adaptable selon les sujets, comprend :
 2. Contexte historique et culturel.
 3. Caractéristiques artistiques.
 4. Architecture, œuvres et personnes de référence.
-5. Mobilier, matériaux et techniques.
+5. **Le Mobilier** : rubrique obligatoire de chaque période, avec structure, décor, matériaux, assises, garnitures, textiles et couture selon les sources.
 6. Motifs et indices de reconnaissance visuelle.
 7. Synthèse, dates et notions essentielles.
 8. Exercices et références.
@@ -128,6 +131,9 @@ L'interface complète de recherche est une évolution ultérieure, mais les rela
 - **MED-07 — Chargement à la demande** : ne charger la vidéo que lorsque le cours en a besoin ; arrêter sa lecture en quittant l'écran.
 - **MED-08 — Média manquant** : expliquer l'indisponibilité du média et conserver l'accès au reste du cours.
 - **MED-09 — Crédits des médias** : relier chaque image et vidéo à son auteur, sa provenance et ses informations de réutilisation.
+- **MED-10 — Images lisibles** : conserver les proportions, adapter la taille au contenu et permettre zoom et défilement dans l’application ; privilégier une source en meilleure définition lorsqu’elle existe.
+- **MED-11 — Preuves dans le cours** : justifier les techniques ou faits qui demandent une explication par des objets identifiés et des sources fiables. Les légendes décrivent le sujet ; la traçabilité vers les documents de préparation reste dans les métadonnées internes.
+- **MED-12 — Reconnaissance des styles** : donner les caractéristiques concrètes du mobilier de chaque période et des exemples documentés ; employer uniquement des originaux de la période, des représentations d’époque ou des reproductions fidèles documentées, et signaler les restaurations. Les liens complémentaires portent le titre « Autres ressources ».
 
 Un lecteur YouTube ou un lien de streaming ne satisfait pas MED-04 : la vidéo nécessaire au cours doit être disponible localement.
 
@@ -190,9 +196,9 @@ La différence avec Timeline est pédagogique : Timeline demande de piocher puis
 
 ### 3.6. Progression locale
 
-- **PRO-01 — Lecture** : conserver les cours lus et le dernier cours consulté.
+- **PRO-01 — Lecture** : retrouver le chapitre et sa position pendant la session ; ne pas enregistrer de statut « lu ».
 - **PRO-02 — Résultats** : conserver le meilleur résultat et les notions à retravailler pour les activités réalisées.
-- **PRO-03 — Distinction** : ne pas confondre « cours lu » et « connaissances vérifiées par un exercice ».
+- **PRO-03 — Résultats distincts de la navigation** : changer de chapitre ne valide aucune connaissance et ne marque aucun contenu comme lu.
 - **PRO-04 — Persistance** : retrouver sa progression après fermeture et relancement.
 - **PRO-05 — Mise à jour** : conserver la progression lors d'une mise à jour des contenus grâce à des identifiants stables.
 - **PRO-06 — Robustesse** : gérer un fichier de sauvegarde absent, ancien ou invalide sans faire planter l'application.
@@ -292,10 +298,12 @@ Prévoir des blocs typés plutôt qu'un grand texte contenant des commandes spé
 - `heading` : titre ou sous-titre ;
 - `paragraph` : paragraphe mis en forme ;
 - `image` : référence à un média et légende ;
+- `furniture_example` : étude de mobilier avec statut, description, image, caractéristiques et source ;
 - `video` : référence à une vidéo locale ;
 - `callout` : synthèse, définition ou point à retenir ;
 - `internal_link` : lien vers une entité du catalogue ;
 - `reference` : référence documentaire ;
+- `source` : justification placée près d’une affirmation, avec titre, explication et lien de la preuve ;
 - `exercise_link` : passage vers une activité avec son contexte.
 
 Le lecteur Godot rend chaque type avec un composant dédié. Un nouveau cours n'exige pas une nouvelle scène ni du code spécifique à son époque.
@@ -476,7 +484,7 @@ Ce prototype ne comprend ni l'administration, ni les vidéos intégrées, ni la 
 - [x] Vérifier la navigation aller-retour et la conservation de la lecture pendant la session.
 - [x] Afficher les crédits des ressources réellement utilisées.
 
-La branche de proposition contient trois cours natifs, six chapitres par période, 15 illustrations existantes et une sauvegarde locale des chapitres lus et meilleurs scores. Le texte est rédigé à partir des thèmes des supports et complété par des vérifications muséales ; les supports ne sont pas affichés comme pages de cours. La relecture et la validation pédagogiques par Nathan restent nécessaires avant l'intégration à `main`. Les vidéos et les jeux chronologiques demeurent des étapes distinctes non réalisées.
+La branche de proposition contient trois cours natifs, six chapitres par période, 22 illustrations existantes, douze études de mobilier commentées et une sauvegarde locale des meilleurs scores, sans suivi des chapitres lus. Le texte est rédigé à partir des thèmes des supports et complété par des vérifications muséales ; les supports ne sont pas affichés comme pages de cours. La relecture et la validation pédagogiques par Nathan restent nécessaires avant l'intégration à `main`. Les vidéos et les jeux chronologiques demeurent des étapes distinctes non réalisées.
 
 ### Étape 3 — Vidéo hors ligne et distribution
 
@@ -537,7 +545,7 @@ Cette étape désigne l'interface d'administration aboutie. Une méthode d'ajout
 | Piocher à nouveau | Le jeu traite l'issue du tour avant de proposer une nouvelle carte ; aucune pioche supplémentaire n'est possible pendant un placement en cours. |
 | Garder les dates cachées | Aucune date réelle n'apparaît sur la carte piochée, les cartes du plateau, les infobulles ou une graduation ; l'espacement ne révèle pas les écarts de durée. |
 | Corriger une frise | La règle utilisée est explicite et les réponses historiquement acceptables sont reconnues. |
-| Relancer l'application | Les résultats et cours lus sont restaurés. |
+| Relancer l'application | Les résultats des exercices sont restaurés ; aucun statut de cours lu n’est proposé. |
 | Mettre à jour le contenu | Les résultats personnels ne sont pas remplacés par le paquet publié. |
 | Ouvrir les crédits | Les mentions essentielles sont accessibles hors ligne. |
 | Utiliser une copie invitée | Les fonctions de consultation et de jeu sont disponibles sans outil d'édition du catalogue officiel. |

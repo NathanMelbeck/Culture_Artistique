@@ -1,0 +1,109 @@
+{
+  "objectID": 250551,
+  "isHighlight": true,
+  "accessionNumber": "17.230.14a, b",
+  "accessionYear": "1917",
+  "isPublicDomain": true,
+  "primaryImage": "https://images.metmuseum.org/CRDImages/gr/original/DP218568.jpg",
+  "primaryImageSmall": "https://images.metmuseum.org/CRDImages/gr/web-large/DP218568.jpg",
+  "additionalImages": [
+    "https://images.metmuseum.org/CRDImages/gr/original/DP218578.jpg",
+    "https://images.metmuseum.org/CRDImages/gr/original/DP218577.jpg",
+    "https://images.metmuseum.org/CRDImages/gr/original/DP218579.jpg",
+    "https://images.metmuseum.org/CRDImages/gr/original/DT265.jpg"
+  ],
+  "constituents": [
+    {
+      "constituentID": 49193,
+      "role": "Artist",
+      "name": "Attributed to Exekias",
+      "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500027430",
+      "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q358541",
+      "gender": ""
+    }
+  ],
+  "department": "Greek and Roman Art",
+  "objectName": "Neck-amphora with lid",
+  "title": "Terracotta neck-amphora (jar) with lid and knob (27.16)",
+  "culture": "Greek, Attic",
+  "period": "Archaic",
+  "dynasty": "",
+  "reign": "",
+  "portfolio": "",
+  "artistRole": "Artist",
+  "artistPrefix": "Attributed to",
+  "artistDisplayName": "Exekias",
+  "artistDisplayBio": "",
+  "artistSuffix": "",
+  "artistAlphaSort": "Exekias",
+  "artistNationality": "",
+  "artistBeginDate": "",
+  "artistEndDate": "",
+  "artistGender": "",
+  "artistWikidata_URL": "https://www.wikidata.org/wiki/Q358541",
+  "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500027430",
+  "objectDate": "ca. 540 BCE",
+  "objectBeginDate": -540,
+  "objectEndDate": -540,
+  "medium": "Terracotta",
+  "dimensions": "H. 18 1/2 in. (47 cm)\r\ndiameter  9 3/4 in. (24.8 cm)",
+  "measurements": [
+    {
+      "elementName": "Other",
+      "elementDescription": null,
+      "elementMeasurements": {
+        "Diameter": 24.77
+      }
+    },
+    {
+      "elementName": "Overall",
+      "elementDescription": null,
+      "elementMeasurements": {
+        "Height": 46.99
+      }
+    }
+  ],
+  "creditLine": "Rogers Fund, 1917",
+  "geographyType": "",
+  "city": "",
+  "state": "",
+  "county": "",
+  "country": "",
+  "region": "",
+  "subregion": "",
+  "locale": "",
+  "locus": "",
+  "excavation": "",
+  "river": "",
+  "classification": "Vases",
+  "rightsAndReproduction": "",
+  "linkResource": "",
+  "metadataDate": "2025-12-20T04:50:39.43Z",
+  "repository": "Metropolitan Museum of Art, New York, NY",
+  "objectURL": "https://www.metmuseum.org/art/collection/search/250551",
+  "tags": [
+    {
+      "term": "Men",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300025928",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q8441"
+    },
+    {
+      "term": "Women",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300025943",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q467"
+    },
+    {
+      "term": "Horses",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300250148",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q726"
+    },
+    {
+      "term": "Chariots",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300212699",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q203788"
+    }
+  ],
+  "objectWikidata_URL": "https://www.wikidata.org/wiki/Q29383807",
+  "isTimelineWork": true,
+  "GalleryNumber": "155"
+}

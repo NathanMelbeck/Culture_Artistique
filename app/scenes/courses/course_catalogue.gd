@@ -69,11 +69,8 @@ func _show_courses() -> void:
 		summary.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		column.add_child(summary)
 		var progress := progress_repository.get_course(course["id"])
-		var read: Array = progress.get("read", [])
-		var state := "%d / %d chapitres lus" % [read.size(), course["chapters"].size()]
 		if progress.has("quiz_best"):
-			state += " · Quiz : %d / %d" % [progress["quiz_best"], progress["quiz_total"]]
-		column.add_child(AppTheme.label(state, 12, AppTheme.MUTED))
+			column.add_child(AppTheme.label("Quiz : %d / %d" % [progress["quiz_best"], progress["quiz_total"]], 12, AppTheme.MUTED))
 		var open := Button.new()
 		open.name = "Open_" + course["id"]
 		open.text = "Ouvrir le cours  →"

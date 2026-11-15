@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deus5di3dx0y3"
-path="res://.godot/imported/grece-vase.webp-e927fe6a047a40639812a247510906b2.ctex"
+uid="uid://dmxud2dmg8lij"
+path="res://.godot/imported/met-554347.jpg-cbb102bab07a2bdbe83de28b97f1564b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/courses/antiquity/grece-vase.webp"
-dest_files=["res://.godot/imported/grece-vase.webp-e927fe6a047a40639812a247510906b2.ctex"]
+source_file="res://assets/courses/museum/met-554347.jpg"
+dest_files=["res://.godot/imported/met-554347.jpg-cbb102bab07a2bdbe83de28b97f1564b.ctex"]
 
 [params]
 

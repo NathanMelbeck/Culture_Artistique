@@ -3,7 +3,6 @@ extends VBoxContainer
 signal catalogue_requested
 signal quiz_requested
 var repository: CourseRepository
-var progress_repository: ProgressRepository
 var course: Dictionary
 var chapter_index := 0
 var scroll_position := 0
@@ -15,8 +14,6 @@ var _scroll: ScrollContainer
 var _blocks: VBoxContainer
 var _previous: Button
 var _next: Button
-var _read: Button
-var _progress: Label
 var _scroll_margin: MarginContainer
 var _chapter_heading: Label
 
@@ -31,8 +28,6 @@ func _ready() -> void:
 	var context := AppTheme.label("Antiquité / " + course["title"], 13, AppTheme.MUTED)
 	context.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	header.add_child(context)
-	_progress = AppTheme.label("", 12, AppTheme.MUTED)
-	header.add_child(_progress)
 	if quiz_resume_available:
 		var resume := AppTheme.quiet_button("Retour au quiz  →")
 		resume.name = "ResumeCourseQuiz"
@@ -94,10 +89,6 @@ func _ready() -> void:
 	_previous.custom_minimum_size.y = 44
 	_previous.pressed.connect(func() -> void: show_chapter(chapter_index - 1))
 	footer.add_child(_previous)
-	_read = AppTheme.quiet_button("Marquer comme lu")
-	_read.name = "MarkChapterRead"
-	_read.pressed.connect(_mark_read)
-	footer.add_child(_read)
 	var space := Control.new()
 	space.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	footer.add_child(space)
@@ -130,20 +121,15 @@ func show_chapter(index: int) -> void:
 		_blocks.add_child(CourseBlock.build(block, repository))
 	if chapter_index == course["chapters"].size() - 1:
 		_add_references()
-	var pages: Array = chapter.get("source_pages", [])
-	var page_names := PackedStringArray()
-	for number in pages:
-		page_names.append(str(int(number)))
-	_blocks.add_child(AppTheme.paragraph("Base pédagogique : %s · pages %s. Texte du cours rédigé et organisé pour l’application." % [course["source_title"], ", ".join(page_names)], 12))
 	_picker.select(chapter_index)
 	_previous.disabled = chapter_index == 0
 	_next.text = "Vérifier mes connaissances  →" if chapter_index == course["chapters"].size() - 1 else "Continuer  →"
 	_scroll.scroll_vertical = 0
-	_update_progress()
+	_update_navigation()
 	_adapt.call_deferred()
 
 func _add_references() -> void:
-	_blocks.add_child(AppTheme.label("Pour aller plus loin", 28, AppTheme.FOREST, true))
+	_blocks.add_child(AppTheme.label("Autres ressources", 28, AppTheme.FOREST, true))
 	_blocks.add_child(AppTheme.paragraph("Les ressources suivantes ouvrent le navigateur externe. Le cours reste disponible sans connexion.", 14))
 	for reference in course.get("references", []):
 		var button := AppTheme.quiet_button(reference["title"] + "  ↗")
@@ -162,31 +148,18 @@ func _add_references() -> void:
 		_blocks.add_child(button)
 		_blocks.add_child(AppTheme.paragraph(reference["note"] + " · Internet requis", 12))
 
-func _mark_read() -> void:
-	progress_repository.mark_read(course["id"], course["chapters"][chapter_index]["id"])
-	_update_progress()
-
 func _advance() -> void:
-	_mark_read()
 	if chapter_index == course["chapters"].size() - 1:
 		quiz_requested.emit()
 	else:
 		show_chapter(chapter_index + 1)
 
-func _update_progress() -> void:
-	var count := 0
+func _update_navigation() -> void:
 	for index in course["chapters"].size():
-		var read := progress_repository.is_read(course["id"], course["chapters"][index]["id"])
-		if read:
-			count += 1
 		var button := _buttons[index]
 		var active: bool = index == chapter_index
 		button.add_theme_color_override("font_color", AppTheme.SURFACE if active else AppTheme.FOREST)
 		button.add_theme_stylebox_override("normal", AppTheme.box(AppTheme.FOREST if active else Color.TRANSPARENT, Color.TRANSPARENT, 6, 0))
-		button.text = "%s%02d  %s" % ["✓ " if read else "", index + 1, course["chapters"][index]["title"]]
-	_progress.text = "%d / %d chapitres lus" % [count, course["chapters"].size()]
-	_read.disabled = progress_repository.is_read(course["id"], course["chapters"][chapter_index]["id"])
-	_read.text = "✓  Chapitre lu" if _read.disabled else "Marquer comme lu"
 
 func _adapt() -> void:
 	if not is_instance_valid(_sidebar):

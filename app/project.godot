@@ -1,6 +1,15 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
 config_version=5
 
 [application]
+
 config/name="Culture Artistique"
 config/version="0.1.0"
 run/main_scene="res://scenes/app_shell.tscn"
@@ -8,6 +17,7 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://assets/icons/brand.svg"
 
 [display]
+
 window/size/viewport_width=1440
 window/size/viewport_height=1000
 window/size/window_width_override=1280
@@ -16,6 +26,7 @@ window/size/min_width=960
 window/size/min_height=640
 
 [rendering]
+
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.9725, 0.9647, 0.9373, 1)

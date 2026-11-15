@@ -1,9 +1,37 @@
 {
   "version": 1,
-  "groups": [{"id": "antiquite", "title": "Antiquité", "periods": ["egypte", "grece", "rome"]}],
+  "groups": [
+    {
+      "id": "antiquite",
+      "title": "Antiquité",
+      "periods": [
+        "egypte",
+        "grece",
+        "rome"
+      ]
+    }
+  ],
   "courses": [
     "res://content/courses/egypte.json",
     "res://content/courses/grece.json",
     "res://content/courses/rome.json"
-  ]
+  ],
+  "editorial_requirements": {
+    "furniture_section": {
+      "id": "mobilier",
+      "title": "Le Mobilier",
+      "minimum_examples": 4,
+      "minimum_characteristics": 3,
+      "scope": [
+        "structure",
+        "decors",
+        "assises_garnitures_textiles"
+      ],
+      "allowed_visual_types": [
+        "original",
+        "period_representation",
+        "faithful_reproduction"
+      ]
+    }
+  }
 }

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3tixsvtrkplu"
-path="res://.godot/imported/rome-curule.webp-6d6a4f723e742208ab13bb4deee63904.ctex"
+uid="uid://c1pipe2me7j3s"
+path="res://.godot/imported/met-250995-lits.jpg-74cf421a253be04d03e89d4f99f0fbb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/courses/antiquity/rome-curule.webp"
-dest_files=["res://.godot/imported/rome-curule.webp-6d6a4f723e742208ab13bb4deee63904.ctex"]
+source_file="res://assets/courses/museum/met-250995-lits.jpg"
+dest_files=["res://.godot/imported/met-250995-lits.jpg-74cf421a253be04d03e89d4f99f0fbb7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8plfectpiq75"
-path="res://.godot/imported/grece-klismos.webp-0c5128a7a8c1dbda2dfbbbecda5a6adb.ctex"
+uid="uid://c6yx04mnremb3"
+path="res://.godot/imported/met-248087.jpg-1e4da42b96d193d438d6526fae3668a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/courses/antiquity/grece-klismos.webp"
-dest_files=["res://.godot/imported/grece-klismos.webp-0c5128a7a8c1dbda2dfbbbecda5a6adb.ctex"]
+source_file="res://assets/courses/museum/met-248087.jpg"
+dest_files=["res://.godot/imported/met-248087.jpg-1e4da42b96d193d438d6526fae3668a6.ctex"]
 
 [params]
 

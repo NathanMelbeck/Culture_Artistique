@@ -41,17 +41,19 @@ app/
   scenes/credits/                Sources et licences hors ligne
   scenes/revision_sheets/        Lecteur de fiches intégré au lecteur Godot
   components/destination_card.*  Carte de navigation réutilisable
-  components/course_block.gd     Paragraphes, encadrés et figures du lecteur
+  components/course_block.gd     Paragraphes, sources et encadrés du lecteur
+  components/course_figure.gd    Figures proportionnelles et légendes
+  components/course_image_viewer.gd Zoom et défilement intégrés
   services/navigation_service.gd Navigation locale
   services/quiz_session.gd       Règles de session partagées des quiz
   repositories/media_repository.gd Résolution des médias locaux
   repositories/revision_repository.gd Catalogue des fiches et pages locales
   repositories/course_repository.gd Cours et notices des illustrations
-  repositories/progress_repository.gd Chapitres lus et meilleurs résultats
+  repositories/progress_repository.gd Meilleurs résultats des quiz
   content/media.json             Notices et crédits des médias
   content/revision_sheets.json   Périodes, ordre, sources et pages de révision
   content/courses/               Catalogue et textes des trois cours
-  content/course_media.json      Provenance des 15 illustrations des cours
+  content/course_media.json      Provenance des 22 illustrations des cours
   assets/                       Photo, polices et icônes embarquées
   theme/app_theme.gd             Couleurs, typographie et styles
   tests/menu_smoke.gd            Parcours d'entrée et captures
@@ -91,11 +93,15 @@ Les tests des cours emploient une progression en mémoire et un fichier temporai
 
 Les fichiers JSON sous `app/content/courses/` constituent la source de vérité des textes et questions. Chaque chapitre contient des blocs typés et les pages du support utilisées comme base pédagogique. Les cours sont des propositions à relire avec Nathan, pas une transcription littérale des diapositives.
 
-Le lecteur conserve la position de lecture et le quiz en cours pendant la session, y compris après un retour au menu. « Continuer » ou « Marquer comme lu » enregistre le chapitre ; le meilleur score du quiz est enregistré séparément dans `user://learning_progress.json`. La lecture n'est donc pas assimilée à une validation des connaissances. Le fichier est remplacé après écriture d'une version temporaire et les champs invalides sont ignorés.
+Le lecteur conserve la position de lecture et le quiz en cours pendant la session, y compris après un retour au menu. Il ne propose aucun statut « lu » et « Continuer » ne sauvegarde aucun statut de lecture. Seul le meilleur score du quiz est enregistré dans `user://learning_progress.json`. Les éventuels anciens champs de lecture sont conservés sur disque mais ignorés par l’application.
 
-Les 15 illustrations sont extraites des images contenues dans les supports fournis, avec conservation de leurs proportions et des crédits visibles. Leurs pages et index d'origine sont renseignés dans `app/content/course_media.json` et dans `docs/course-asset-register.csv`. Aucun meuble ou monument n'est redessiné. Une reprise moderne du klismos est explicitement présentée comme telle.
+Les 22 illustrations comprennent 10 images extraites des documents pédagogiques et 12 photographies du Met en haute définition sous CC0. Les légendes décrivent les images, sans mentionner les documents pédagogiques. Les notices précisent matériaux, datation, provenance et restaurations lorsqu’ils sont connus ; la traçabilité technique reste dans `app/content/course_media.json` et `docs/course-asset-register.csv`.
 
-Pour reconstruire ces illustrations, utiliser `python tools/extract_course_assets.py` avec `pypdf` et `Pillow`, puis laisser Godot réimporter les ressources. Les PDF sources ne sont pas chargés à l'exécution. Les notes de couverture pédagogique et de vérification sont dans [docs/cours-antiquite-editorial.md](docs/cours-antiquite-editorial.md).
+Chaque période possède la rubrique **Le Mobilier**, couvrant structure, décor et parties souples de l’ameublement. Les trois rubriques actuelles comprennent douze études illustrées : sièges, coffret, tabouret, appui-tête, lits, tables, pied sculpté et candélabre. Les exemples grecs utilisent uniquement des représentations antiques ; la chaise de 1825 a été retirée. Pour les futures périodes, le [modèle de rubrique](docs/modele-section-mobilier.md) prévoit aussi tapisserie d’ameublement, garnitures, textiles et couture selon les sources. Le validateur impose cette rubrique, au moins quatre études illustrées et trois caractéristiques par étude.
+
+Les cartes et planches occupent la largeur de lecture en conservant leurs proportions. Chaque figure dispose d’un lecteur intégré avec zoom, défilement, modes largeur, vue entière et 100 %. Les sources documentaires sont placées près des explications concernées ; les liens ouvrent le navigateur uniquement sur demande. Les derniers chapitres donnent des critères de reconnaissance du mobilier propres à chaque période. Seuls les originaux de la période, les représentations d’époque et les reproductions fidèles documentées sont admis pour illustrer le mobilier. Les réinterprétations sont exclues. Les liens complémentaires sont regroupés sous « Autres ressources ».
+
+Pour réextraire les illustrations provenant des PDF sans modifier les photographies de musée ni leurs légendes, utiliser `python tools/extract_course_assets.py` avec `pypdf` et `Pillow`, puis laisser Godot réimporter les ressources. Les PDF sources ne sont pas chargés à l'exécution. Les notes de couverture pédagogique et de vérification sont dans [docs/cours-antiquite-editorial.md](docs/cours-antiquite-editorial.md).
 
 ## Ajouter ou mettre à jour les fiches
 

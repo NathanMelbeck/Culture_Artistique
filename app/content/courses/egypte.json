@@ -5,90 +5,466 @@
   "title": "Égypte antique",
   "subtitle": "Créer pour durer : du Nil aux métiers du bois",
   "summary": "Relier les croyances, les formes architecturales et le mobilier pour comprendre un art de la continuité.",
-  "cover_media": "egypte-coffre",
+  "cover_media": "egypte-kemeni",
   "source_title": "Antiquité — Égypte, support fourni par Nathan (18 pages)",
-  "objectives": ["Situer les grands moments de l'Égypte pharaonique.", "Expliquer le lien entre pouvoir, culte et production artistique.", "Observer une architecture, une image et un meuble avec un vocabulaire précis."],
+  "objectives": [
+    "Situer les grands moments de l'Égypte pharaonique.",
+    "Expliquer le lien entre pouvoir, culte et production artistique.",
+    "Observer une architecture, une image et un meuble avec un vocabulaire précis."
+  ],
   "references": [
-    {"title": "The Met — The Art of Ancient Egypt, ressource pour les enseignants", "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Art_of_Ancient_Egypt_A_Resource_for_Educators.pdf", "note": "Chronologie et contexte général ; document externe en anglais."},
-    {"title": "Australian Museum — La momification en Égypte ancienne", "url": "https://australian.museum/learn/cultures/international-collection/ancient-egyptian/how-were-ancient-egyptians-mummified/", "note": "Fonctions du natron et des vases canopes ; ressource en anglais."},
-    {"title": "The Met — Chaise de Reniseneb", "url": "https://www.metmuseum.org/art/collection/search/547687", "note": "Un siège documenté du Nouvel Empire, vers 1450 av. J.-C. ; notice de comparaison, sans attribuer automatiquement les sièges du support."}
+    {
+      "title": "The Met — The Art of Ancient Egypt, ressource pour les enseignants",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Art_of_Ancient_Egypt_A_Resource_for_Educators.pdf",
+      "note": "Chronologie et contexte général ; document externe en anglais."
+    },
+    {
+      "title": "Australian Museum — La momification en Égypte ancienne",
+      "url": "https://australian.museum/learn/cultures/international-collection/ancient-egyptian/how-were-ancient-egyptians-mummified/",
+      "note": "Fonctions du natron et des vases canopes ; ressource en anglais."
+    },
+    {
+      "title": "The Met — Chaise de Reniseneb",
+      "url": "https://www.metmuseum.org/art/collection/search/547687",
+      "note": "Notice du musée : matériaux, datation, provenance et restauration de l’assise."
+    },
+    {
+      "title": "The Met — Coffret à cosmétiques de Kemeni",
+      "url": "https://www.metmuseum.org/art/collection/search/543955",
+      "note": "Un placage d’ébène et d’ivoire documenté au Moyen Empire, vers 1805 av. J.-C."
+    },
+    {
+      "title": "UCL — Le travail du bois en Égypte ancienne",
+      "url": "https://www.ucl.ac.uk/museums-static/digitalegypt/wood/technology.html",
+      "note": "Outils, placage et incrustation ; ressource en anglais."
+    },
+    {
+      "title": "The Met — Our Egyptian Furniture (1965)",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_of_Art_Bulletin_v_24_no_4_December_1965.pdf",
+      "note": "Étude des techniques ; placages chevillés ou collés, page 5 du fichier PDF. En anglais."
+    }
   ],
   "chapters": [
     {
-      "id": "nil-reperes", "title": "Le Nil et les grands repères", "intro": "Comprendre le territoire avant de reconnaître ses formes.", "source_pages": [1, 2],
+      "id": "nil-reperes",
+      "title": "Le Nil et les grands repères",
+      "intro": "Comprendre le territoire avant de reconnaître ses formes.",
+      "source_pages": [
+        1,
+        2
+      ],
       "blocks": [
-        {"type": "paragraph", "text": "L'Égypte ancienne se développe autour du Nil. Avant la régulation moderne du fleuve, ses crues déposent des sédiments fertiles sur les terres cultivées. Le contraste entre vallée habitée et désert est essentiel : l'eau, la végétation et le cycle des saisons nourrissent autant l'économie que l'imaginaire religieux."},
-        {"type": "paragraph", "text": "Les mots [b]Haute-Égypte[/b] et [b]Basse-Égypte[/b] suivent le cours du fleuve. La Haute-Égypte se trouve en amont, au sud ; la Basse-Égypte correspond au nord et au delta. La Nubie s'étend plus au sud : c'est une région voisine avec laquelle l'Égypte entretient des relations changeantes, pas un simple synonyme de Haute-Égypte."},
-        {"type": "image", "media": "egypte-nil"},
-        {"type": "heading", "text": "Une histoire longue, pas un style immobile"},
-        {"type": "key_points", "items": ["Vers 3100 av. J.-C. : formation d'un royaume unifié, repère conventionnel.", "Ancien Empire : environ 2650–2150 av. J.-C., époque des grandes pyramides.", "Moyen Empire : environ 2030–1640 av. J.-C. ; Nouvel Empire : environ 1550–1070 av. J.-C.", "Ces grandes phases sont séparées par des périodes de fragmentation. Alexandre conquiert l'Égypte en 332 av. J.-C. ; elle devient romaine en 30 av. J.-C."]},
-        {"type": "callout", "title": "À retenir", "text": "Les datations anciennes sont approximatives et varient selon les conventions. Les continuités visuelles ne doivent pas effacer les changements sur plus de trois millénaires."}
+        {
+          "type": "paragraph",
+          "text": "L'Égypte ancienne se développe autour du Nil. Avant la régulation moderne du fleuve, ses crues déposent des sédiments fertiles sur les terres cultivées. Le contraste entre vallée habitée et désert est essentiel : l'eau, la végétation et le cycle des saisons nourrissent autant l'économie que l'imaginaire religieux."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les mots [b]Haute-Égypte[/b] et [b]Basse-Égypte[/b] suivent le cours du fleuve. La Haute-Égypte se trouve en amont, au sud ; la Basse-Égypte correspond au nord et au delta. La Nubie s'étend plus au sud : c'est une région voisine avec laquelle l'Égypte entretient des relations changeantes, pas un simple synonyme de Haute-Égypte."
+        },
+        {
+          "type": "image",
+          "media": "egypte-nil"
+        },
+        {
+          "type": "heading",
+          "text": "Une histoire longue, pas un style immobile"
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Vers 3100 av. J.-C. : formation d'un royaume unifié, repère conventionnel.",
+            "Ancien Empire : environ 2650–2150 av. J.-C., époque des grandes pyramides.",
+            "Moyen Empire : environ 2030–1640 av. J.-C. ; Nouvel Empire : environ 1550–1070 av. J.-C.",
+            "Ces grandes phases sont séparées par des périodes de fragmentation. Alexandre conquiert l'Égypte en 332 av. J.-C. ; elle devient romaine en 30 av. J.-C."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "À retenir",
+          "text": "Les datations anciennes sont approximatives et varient selon les conventions. Les continuités visuelles ne doivent pas effacer les changements sur plus de trois millénaires."
+        }
       ]
     },
     {
-      "id": "croyances-pouvoir", "title": "Pouvoir, dieux et mémoire", "intro": "Pourquoi créer des images et des objets pour les vivants comme pour les morts ?", "source_pages": [3, 4, 5, 6, 16],
+      "id": "croyances-pouvoir",
+      "title": "Pouvoir, dieux et mémoire",
+      "intro": "Pourquoi créer des images et des objets pour les vivants comme pour les morts ?",
+      "source_pages": [
+        3,
+        4,
+        5,
+        6,
+        16
+      ],
       "blocks": [
-        {"type": "paragraph", "text": "Le pharaon est un souverain investi d'une fonction religieuse. Ses représentations affirment son rôle dans le maintien de l'ordre du monde. Une couronne, le némès — coiffe de tissu rayée —, les sceptres ou la barbe postiche sont des signes à lire. Ils distinguent un statut ; ils ne sont pas de simples accessoires de mode."},
-        {"type": "paragraph", "text": "Le culte funéraire vise à assurer la continuité de l'existence du défunt. Le corps, le nom, les images et les offrandes y participent. Une tombe peut donc réunir des objets utilisés de son vivant, du mobilier adapté à la sépulture et des productions faites pour le rituel. Les ensembles conservés renseignent surtout des milieux capables de financer ces pratiques."},
-        {"type": "callout", "title": "Comprendre la momification", "text": "Le procédé et son coût varient selon les époques et les personnes. Le natron sert à dessécher le corps. Dans certaines pratiques, le foie, les poumons, l'estomac et les intestins sont protégés dans des vases canopes. Le cerveau retiré n'est pas l'organe conservé dans ces vases ; le cœur est généralement laissé en place."},
-        {"type": "heading", "text": "L'écriture fait partie de l'image"},
-        {"type": "paragraph", "text": "Les hiéroglyphes associent notamment des signes à valeur sonore et des signes qui précisent le sens. Une inscription peut identifier, consacrer ou rendre durable une présence. Le scribe possède donc une compétence liée à l'administration et au prestige. Les textes peuvent suivre plusieurs directions : on ne doit pas appliquer une seule règle de lecture à toutes les inscriptions."},
-        {"type": "key_points", "items": ["Toujours relier un signe à sa fonction : nommer, protéger, montrer le pouvoir ou accompagner un rite.", "Distinguer un objet quotidien, un objet de prestige et un objet funéraire : leurs usages peuvent se recouper sans être identiques."]}
+        {
+          "type": "paragraph",
+          "text": "Le pharaon est un souverain investi d'une fonction religieuse. Ses représentations affirment son rôle dans le maintien de l'ordre du monde. Une couronne, le némès — coiffe de tissu rayée —, les sceptres ou la barbe postiche sont des signes à lire. Ils distinguent un statut ; ils ne sont pas de simples accessoires de mode."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le culte funéraire vise à assurer la continuité de l'existence du défunt. Le corps, le nom, les images et les offrandes y participent. Une tombe peut donc réunir des objets utilisés de son vivant, du mobilier adapté à la sépulture et des productions faites pour le rituel. Les ensembles conservés renseignent surtout des milieux capables de financer ces pratiques."
+        },
+        {
+          "type": "callout",
+          "title": "Comprendre la momification",
+          "text": "Le procédé et son coût varient selon les époques et les personnes. Le natron sert à dessécher le corps. Dans certaines pratiques, le foie, les poumons, l'estomac et les intestins sont protégés dans des vases canopes. Le cerveau retiré n'est pas l'organe conservé dans ces vases ; le cœur est généralement laissé en place."
+        },
+        {
+          "type": "heading",
+          "text": "L'écriture fait partie de l'image"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les hiéroglyphes associent notamment des signes à valeur sonore et des signes qui précisent le sens. Une inscription peut identifier, consacrer ou rendre durable une présence. Le scribe possède donc une compétence liée à l'administration et au prestige. Les textes peuvent suivre plusieurs directions : on ne doit pas appliquer une seule règle de lecture à toutes les inscriptions."
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Toujours relier un signe à sa fonction : nommer, protéger, montrer le pouvoir ou accompagner un rite.",
+            "Distinguer un objet quotidien, un objet de prestige et un objet funéraire : leurs usages peuvent se recouper sans être identiques."
+          ]
+        }
       ]
     },
     {
-      "id": "architecture", "title": "Construire pour durer", "intro": "Distinguer tombe, temple, structure porteuse et décor.", "source_pages": [7, 8, 9, 10, 11],
+      "id": "architecture",
+      "title": "Construire pour durer",
+      "intro": "Distinguer tombe, temple, structure porteuse et décor.",
+      "source_pages": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
       "blocks": [
-        {"type": "paragraph", "text": "La brique crue convient à de nombreuses constructions domestiques. La pierre permet une architecture monumentale plus durable, mais ses usages dépendent du lieu, des ressources et de la fonction. Calcaire, grès et granite ne sont pas interchangeables. La masse et la géométrie d'un édifice produisent une impression de permanence ; elles répondent aussi à des choix de structure."},
-        {"type": "heading", "text": "Pyramides et temples : deux fonctions"},
-        {"type": "paragraph", "text": "Une pyramide appartient à un complexe funéraire royal. Le mastaba est une autre forme de tombe à superstructure basse ; la pyramide à degrés de Djéser, à Saqqara, constitue un jalon majeur de l'architecture de pierre. Un temple est d'abord un lieu de culte et de service de la divinité : ses espaces ne doivent pas être confondus avec ceux d'une sépulture."},
-        {"type": "image", "media": "egypte-temple"},
-        {"type": "paragraph", "text": "Dans de nombreux grands temples, on progresse depuis une entrée monumentale vers des espaces de plus en plus réservés. Un [b]pylône[/b] encadre l'accès ; une salle [b]hypostyle[/b] possède un plafond porté par des colonnes. Les cours, salles et sanctuaires varient selon les monuments : un plan type aide à comprendre, mais ne remplace pas l'observation du bâtiment."},
-        {"type": "image", "media": "egypte-colonnes"},
-        {"type": "key_points", "items": ["Le chapiteau termine la colonne ; le fût est son corps vertical.", "Palmiforme : référence au palmier. Lotiforme : au lotus. Papyriforme : au papyrus.", "Campaniforme décrit une silhouette évasée en cloche. Ces formes végétales associent structure et sens symbolique."]},
-        {"type": "callout", "title": "Le regard de l'ébéniste", "text": "Séparez ce qui porte la charge de ce qui décore. Puis observez comment une forme végétale s'organise autour de cette structure : ce raisonnement sera utile devant une colonne comme devant un montant de meuble."}
+        {
+          "type": "paragraph",
+          "text": "La brique crue convient à de nombreuses constructions domestiques. La pierre permet une architecture monumentale plus durable, mais ses usages dépendent du lieu, des ressources et de la fonction. Calcaire, grès et granite ne sont pas interchangeables. La masse et la géométrie d'un édifice produisent une impression de permanence ; elles répondent aussi à des choix de structure."
+        },
+        {
+          "type": "heading",
+          "text": "Pyramides et temples : deux fonctions"
+        },
+        {
+          "type": "paragraph",
+          "text": "Une pyramide appartient à un complexe funéraire royal. Le mastaba est une autre forme de tombe à superstructure basse ; la pyramide à degrés de Djéser, à Saqqara, constitue un jalon majeur de l'architecture de pierre. Un temple est d'abord un lieu de culte et de service de la divinité : ses espaces ne doivent pas être confondus avec ceux d'une sépulture."
+        },
+        {
+          "type": "image",
+          "media": "egypte-temple"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans de nombreux grands temples, on progresse depuis une entrée monumentale vers des espaces de plus en plus réservés. Un [b]pylône[/b] encadre l'accès ; une salle [b]hypostyle[/b] possède un plafond porté par des colonnes. Les cours, salles et sanctuaires varient selon les monuments : un plan type aide à comprendre, mais ne remplace pas l'observation du bâtiment."
+        },
+        {
+          "type": "image",
+          "media": "egypte-colonnes"
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Le chapiteau termine la colonne ; le fût est son corps vertical.",
+            "Palmiforme : référence au palmier. Lotiforme : au lotus. Papyriforme : au papyrus.",
+            "Campaniforme décrit une silhouette évasée en cloche. Ces formes végétales associent structure et sens symbolique."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Le regard de l'ébéniste",
+          "text": "Séparez ce qui porte la charge de ce qui décore. Puis observez comment une forme végétale s'organise autour de cette structure : ce raisonnement sera utile devant une colonne comme devant un montant de meuble."
+        }
       ]
     },
     {
-      "id": "images", "title": "Les codes de la représentation", "intro": "Une image construite pour être comprise et agir, pas une photographie du réel.", "source_pages": [12, 13, 14, 15, 16],
+      "id": "images",
+      "title": "Les codes de la représentation",
+      "intro": "Une image construite pour être comprise et agir, pas une photographie du réel.",
+      "source_pages": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
       "blocks": [
-        {"type": "paragraph", "text": "Dans beaucoup de peintures et reliefs, les parties du corps sont montrées sous l'angle qui les rend le plus lisibles : tête et jambes de profil, œil et épaules plus frontaux. Cette combinaison est une convention. Elle ne signifie pas que l'artisan ignore l'observation du corps ; elle organise la figure pour rendre son identité et son action immédiatement intelligibles."},
-        {"type": "image", "media": "egypte-peinture"},
-        {"type": "paragraph", "text": "Les figures peuvent être réparties en registres, bandes qui ordonnent la scène. L'échelle peut exprimer une importance sociale plutôt qu'une distance. Les gestes, les objets tenus et les inscriptions précisent ce qui se déroule. Pour lire l'image, commencez par décrire ces éléments avant de chercher une émotion ou une profondeur à la manière d'un tableau moderne."},
-        {"type": "paragraph", "text": "La sculpture associe fréquemment frontalité, stabilité et souci de durée. Les œuvres ont aussi pu être peintes : l'aspect minéral actuel ne suffit pas à restituer leur apparence d'origine. Ces tendances ne sont pas des règles sans exception ; les périodes, les ateliers et les usages produisent des variations, parfois très marquées."},
-        {"type": "callout", "title": "Exercice d'observation", "text": "Dans la scène des musiciens, repérez un profil, un geste et un élément d'écriture. Expliquez ce que chacun apporte à la lecture de la scène, sans attribuer une identité précise aux personnes si la légende ne la documente pas."},
-        {"type": "key_points", "items": ["Polychromie : présence de plusieurs couleurs sur un objet ou une architecture.", "Relief : image sculptée qui se détache d'un fond ; son modelé se lit avec la lumière.", "Convention : choix partagé de représentation, à replacer dans sa fonction et son contexte."]}
+        {
+          "type": "paragraph",
+          "text": "Dans beaucoup de peintures et reliefs, les parties du corps sont montrées sous l'angle qui les rend le plus lisibles : tête et jambes de profil, œil et épaules plus frontaux. Cette combinaison est une convention. Elle ne signifie pas que l'artisan ignore l'observation du corps ; elle organise la figure pour rendre son identité et son action immédiatement intelligibles."
+        },
+        {
+          "type": "image",
+          "media": "egypte-peinture"
+        },
+        {
+          "type": "paragraph",
+          "text": "Les figures peuvent être réparties en registres, bandes qui ordonnent la scène. L'échelle peut exprimer une importance sociale plutôt qu'une distance. Les gestes, les objets tenus et les inscriptions précisent ce qui se déroule. Pour lire l'image, commencez par décrire ces éléments avant de chercher une émotion ou une profondeur à la manière d'un tableau moderne."
+        },
+        {
+          "type": "paragraph",
+          "text": "La sculpture associe fréquemment frontalité, stabilité et souci de durée. Les œuvres ont aussi pu être peintes : l'aspect minéral actuel ne suffit pas à restituer leur apparence d'origine. Ces tendances ne sont pas des règles sans exception ; les périodes, les ateliers et les usages produisent des variations, parfois très marquées."
+        },
+        {
+          "type": "callout",
+          "title": "Exercice d'observation",
+          "text": "Dans la scène des musiciens, repérez un profil, un geste et un élément d'écriture. Expliquez ce que chacun apporte à la lecture de la scène, sans attribuer une identité précise aux personnes si la légende ne la documente pas."
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Polychromie : présence de plusieurs couleurs sur un objet ou une architecture.",
+            "Relief : image sculptée qui se détache d'un fond ; son modelé se lit avec la lumière.",
+            "Convention : choix partagé de représentation, à replacer dans sa fonction et son contexte."
+          ]
+        }
       ]
     },
     {
-      "id": "mobilier", "title": "Le mobilier et les métiers du bois", "intro": "Observer ensemble le matériau, l'assemblage, l'usage et le décor.", "source_pages": [17, 18],
+      "id": "mobilier",
+      "title": "Le Mobilier",
+      "intro": "Sièges, coffres et appuis-tête : relier la structure, le décor et les matières de l’ameublement.",
+      "source_pages": [
+        17,
+        18
+      ],
       "blocks": [
-        {"type": "paragraph", "text": "Les meubles conservés et leurs représentations montrent une menuiserie élaborée : sièges, lits, coffres, tabourets et appuis-tête répondent à des usages distincts. La conservation dans certaines tombes et le climat sec expliquent une partie de ce que nous connaissons. Cet ensemble ne représente pas de manière égale le mobilier de toute la population."},
-        {"type": "image", "media": "egypte-siege"},
-        {"type": "paragraph", "text": "Des bois locaux, comme le sycomore ou le tamaris, côtoient des bois importés, dont le cèdre et l'ébène dans certains objets de qualité. Le choix d'une essence dépend de sa disponibilité et de ses qualités. Un revêtement peut masquer le support : une apparence dorée ne signifie pas que toute la pièce est en or, ni qu'un décor imitant l'ébène révèle un bois massif de cette essence."},
-        {"type": "paragraph", "text": "Le tenon et la mortaise relient des éléments de structure. Des chevilles, des collages et différents assemblages complètent les solutions selon les pièces. Une coupe d'onglet désigne une rencontre oblique ; une queue d'aronde, une forme d'assemblage. Pour nommer une technique sur un meuble précis, il faut pouvoir examiner sa construction ou disposer d'une notice fiable."},
-        {"type": "image", "media": "egypte-coffre"},
-        {"type": "paragraph", "text": "Peinture, enduits, dorure, placages et incrustations peuvent enrichir les surfaces. Les pieds à caractère animal, les motifs végétaux et les bandes géométriques donnent une signification et un rythme à la structure. Sur le coffre, distinguez le volume général, le couvercle, les panneaux décorés et le piètement avant de décrire les couleurs."},
-        {"type": "callout", "title": "À retenir", "text": "Un meuble égyptien ne se reconnaît pas à un seul motif. Construisez un faisceau d'indices : type de meuble, structure, matériaux documentés, décor et contexte de découverte."}
-      ]
+        {
+          "type": "paragraph",
+          "text": "Les meubles conservés et leurs représentations montrent une menuiserie élaborée : sièges, lits, coffres, tabourets et appuis-tête répondent à des usages distincts. La conservation dans certaines tombes et le climat sec expliquent une partie de ce que nous connaissons. Cet ensemble ne représente pas de manière égale le mobilier de toute la population."
+        },
+        {
+          "type": "paragraph",
+          "text": "Des bois locaux, comme le sycomore ou le tamaris, côtoient des bois importés, dont le cèdre et l'ébène dans certains objets de qualité. Le choix d'une essence dépend de sa disponibilité et de ses qualités. Un revêtement peut masquer le bois de structure : une apparence dorée ne signifie pas que toute la pièce est en or, ni qu'un décor imitant l'ébène révèle un bois massif de cette essence."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le tenon et la mortaise relient des éléments de structure. Des chevilles, des collages et différents assemblages complètent les solutions selon les pièces. Une coupe d'onglet désigne une rencontre oblique ; une queue d'aronde, une forme d'assemblage. Pour nommer une technique sur un meuble précis, il faut pouvoir examiner sa construction ou disposer d'une notice fiable."
+        },
+        {
+          "type": "paragraph",
+          "text": "Peinture, enduits, dorure, placages et incrustations peuvent enrichir les surfaces. Les pieds à caractère animal, les motifs végétaux et les bandes géométriques donnent une signification et un rythme à la structure. Sur un objet identifié, distinguez le volume général, les ouvertures, les panneaux et le piètement avant de décrire son décor."
+        },
+        {
+          "type": "callout",
+          "title": "À retenir",
+          "text": "Un meuble égyptien ne se reconnaît pas à un seul motif. Construisez un faisceau d'indices : type de meuble, structure, matériaux documentés, décor et contexte de découverte."
+        },
+        {
+          "type": "heading",
+          "text": "Du placage il y a près de quatre millénaires ?"
+        },
+        {
+          "type": "paragraph",
+          "text": "Oui : le placage consiste à recouvrir une structure de pièces d’un autre matériau, pour son aspect ou sa qualité. Il ne suppose pas les machines industrielles actuelles. Les artisans égyptiens travaillent déjà le bois avec des scies, des herminettes et des ciseaux. Les épaisseurs et les procédés anciens ne sont cependant pas ceux des feuilles de placage industrielles modernes."
+        },
+        {
+          "type": "furniture_example",
+          "id": "kemeni",
+          "title": "Le coffret de Kemeni : structure et placage",
+          "media": "egypte-kemeni",
+          "status_label": "Meuble conservé",
+          "description": "Ce coffret de prestige montre comment plusieurs matières donnent des fonctions différentes à un même meuble : contenir, compartimenter, protéger et décorer.",
+          "characteristics": [
+            "Volume rectangulaire : observer l’ouverture, les compartiments et le tiroir, qui organisent le rangement.",
+            "Contraste des surfaces : l’ébène sombre encadre les parties claires en ivoire ; le cèdre constitue une autre matière du coffret.",
+            "Le revêtement habille la construction. Distinguer le placage de surface des éléments de structure et des garnitures métalliques."
+          ],
+          "reference": {
+            "title": "Une preuve conservée : le coffret de Kemeni",
+            "text": "La notice du Met date ce coffret vers 1805 av. J.-C. et décrit du cèdre avec des placages d’ébène et d’ivoire et des garnitures d’argent (inv. 26.7.1438). C’est un exemple documenté de placage de bois sur un autre bois.",
+            "url": "https://www.metmuseum.org/art/collection/search/543955"
+          }
+        },
+        {
+          "type": "source",
+          "title": "Comment le revêtement tenait-il ?",
+          "text": "L’étude Our Egyptian Furniture du Met explique que les placages épais pouvaient être fixés par des chevilles et les plus minces collés (page 5 du PDF). Elle décrit des procédés attestés dans le mobilier égyptien ; elle ne précise pas lequel a été employé pour chaque élément du coffret de Kemeni.",
+          "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_of_Art_Bulletin_v_24_no_4_December_1965.pdf"
+        },
+        {
+          "type": "source",
+          "title": "Placage et incrustation : deux techniques distinctes",
+          "text": "La synthèse de l’UCL présente le placage comme un décor ou un moyen de recouvrir un bois et une construction de moindre qualité. Une incrustation insère au contraire des éléments dans des logements ménagés dans la surface. La même page décrit l’usage des scies, herminettes et ciseaux.",
+          "url": "https://www.ucl.ac.uk/museums-static/digitalegypt/wood/technology.html"
+        },
+        {
+          "type": "heading",
+          "text": "Des exemples pour comparer les formes et les assises"
+        },
+        {
+          "type": "furniture_example",
+          "id": "reniseneb",
+          "title": "La chaise de Reniseneb : pieds animaliers et dossier",
+          "media": "egypte-reniseneb",
+          "status_label": "Meuble conservé",
+          "description": "Un siège permet de comparer la structure porteuse, le dossier décoré et la partie sur laquelle repose le corps.",
+          "characteristics": [
+            "Pieds à caractère animal : repérer les pattes sculptées et la silhouette des jambes.",
+            "Dossier rectangulaire : les montants et la traverse encadrent les éléments en ivoire ; une figure du propriétaire est incisée dans le décor.",
+            "Assise tendue dans un cadre : le tressage visible est restauré. Il faut le distinguer des éléments antiques pour parler des matériaux."
+          ],
+          "reference": {
+            "title": "The Met — La chaise de Reniseneb",
+            "text": "Chaise de Reniseneb, vers 1450 av. J.-C., XVIIIe dynastie. Bois, ébène et ivoire ; provenance : Thèbes. Le tressage de l’assise est une restauration suivant des modèles anciens.",
+            "url": "https://www.metmuseum.org/art/collection/search/547687"
+          }
+        },
+        {
+          "type": "furniture_example",
+          "id": "tabouret",
+          "title": "Le tabouret bas : une assise tressée dans un cadre",
+          "media": "egypte-tabouret",
+          "status_label": "Meuble conservé",
+          "description": "Un exemple plus simple montre que le mobilier égyptien ne se limite pas aux sièges et aux coffrets de prestige.",
+          "characteristics": [
+            "Quatre pieds courts portent un cadre sans dossier ni accoudoirs : la silhouette est celle d’un tabouret bas.",
+            "Les fibres entrecroisées remplissent l’espace entre les traverses. Observer leur direction et les points où elles rejoignent le cadre.",
+            "La notice distingue le bois du roseau : une assise tressée n’est pas, pour cette raison, un tissu cousu ou une garniture rembourrée."
+          ],
+          "reference": {
+            "title": "The Met — Tabouret à assise tressée",
+            "text": "Tabouret en bois et roseau, vers 1991–1450 av. J.-C., de la XIIe au début de la XVIIIe dynastie. Provenance : Thèbes, Assassif. L’assise tressée relie les quatre côtés du cadre.",
+            "url": "https://www.metmuseum.org/art/collection/search/544800"
+          }
+        },
+        {
+          "type": "furniture_example",
+          "id": "appui-tete",
+          "title": "L’appui-tête : une forme adaptée au repos",
+          "media": "egypte-appui-tete",
+          "status_label": "Meuble conservé",
+          "description": "Ce petit meuble de repos se reconnaît à son sommet incurvé. Sa silhouette contraste avec celle d’un oreiller souple.",
+          "characteristics": [
+            "Partie supérieure concave : observer la courbe qui reçoit la tête et ses extrémités relevées.",
+            "Montant vertical : il relie la partie supérieure à la base et concentre la structure porteuse.",
+            "Base horizontale élargie : elle répartit l’appui. La notice identifie le bois, mais ne suffit pas à décrire une éventuelle étoffe ajoutée à l’usage."
+          ],
+          "reference": {
+            "title": "The Met — Appui-tête en bois",
+            "text": "Appui-tête en bois, vers 1550–1300 av. J.-C., XVIIIe dynastie. Provenance : Thèbes, Dra Abou el-Naga, tombe CC37.",
+            "url": "https://www.metmuseum.org/art/collection/search/554347"
+          }
+        },
+        {
+          "type": "heading",
+          "text": "Assises, fibres et textiles : le regard de l’ameublement"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans ces exemples, il faut distinguer la structure en bois, l’assise tressée, un éventuel coussin et le décor de surface. Le roseau est explicitement documenté sur le tabouret ; le tressage de la chaise de Reniseneb est restauré. On ne peut donc pas attribuer à ces deux assises la même matière ni la même ancienneté à partir de leur apparence."
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "À reconnaître : pieds animaliers, cadres et dossiers lisibles, motifs végétaux ou géométriques, contrastes de matières sur les meubles de prestige.",
+            "À comparer : chaise avec dossier, tabouret sans dossier, coffre de rangement et appui-tête ne répondent pas au même besoin.",
+            "À documenter : provenance, date, revêtements, fibres et éventuelles restaurations. La forme seule ne permet pas de déduire un point de couture."
+          ]
+        }
+      ],
+      "section": "mobilier"
     },
     {
-      "id": "synthese", "title": "Observer, expliquer, retenir", "intro": "Passer de la reconnaissance visuelle à une explication construite.", "source_pages": [2, 5, 7, 11, 12, 16, 17, 18],
+      "id": "synthese",
+      "title": "Reconnaître le mobilier égyptien",
+      "intro": "Quels indices chercher sur un siège, un lit ou un coffre ?",
+      "source_pages": [
+        2,
+        5,
+        7,
+        11,
+        12,
+        16,
+        17,
+        18
+      ],
       "blocks": [
-        {"type": "heading", "text": "Une méthode en quatre questions"},
-        {"type": "key_points", "items": ["Que voit-on ? Décrivez la forme, le matériau apparent, le décor et les traces de couleur.", "Comment l'objet fonctionne-t-il ? Recherchez les éléments porteurs, les assemblages et l'usage.", "À quoi sert l'image ou le décor ? Pouvoir, protection, mémoire, rituel ou prestige peuvent se combiner.", "Que sait-on réellement ? Séparez observation, hypothèse et information fournie par une source."]},
-        {"type": "paragraph", "text": "Devant un siège à pieds animaliers, on peut décrire le piètement et la stabilité de l'assise. On peut ensuite le rapprocher d'autres exemples documentés. En revanche, le pied animal seul ne prouve pas une origine égyptienne : les répertoires circulent et seront repris bien plus tard. Une datation sérieuse demande davantage d'indices."},
-        {"type": "callout", "title": "Votre synthèse", "text": "L'Égypte associe une histoire de longue durée, un pouvoir sacralisé et des productions liées à la continuité de l'existence. Géométrie, polychromie et formes végétales ou animales s'expriment dans l'architecture comme dans le mobilier, avec des variations selon les périodes et les fonctions."},
-        {"type": "heading", "text": "Les mots à savoir expliquer"},
-        {"type": "key_points", "items": ["Pharaon : souverain égyptien investi d'une fonction religieuse.", "Pylône : entrée monumentale d'un temple ; hypostyle : espace dont le plafond est porté par des colonnes.", "Polychromie : emploi de plusieurs couleurs ; incrustation : insertion d'un matériau dans un autre.", "Tenon-mortaise : assemblage d'une partie saillante dans un logement correspondant."]},
-        {"type": "paragraph", "text": "Vous êtes prêt à vérifier votre compréhension si vous pouvez relier un exemple visuel à sa fonction et justifier votre réponse avec plusieurs indices. Le quiz suivant sert à repérer ce qui mérite d'être relu ; il ne remplace pas l'observation d'objets documentés."}
+        {
+          "type": "paragraph",
+          "text": "Pour reconnaître le répertoire égyptien, regardez d’abord la silhouette et le piètement, puis les surfaces décorées. Plusieurs caractéristiques réunies orientent l’identification ; les exemples conservés permettent de vérifier ce que l’on observe."
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Pieds animaliers : extrémités sculptées en pattes, parfois prolongées par la forme de la jambe de l’animal. Rechercher leur orientation et leur liaison avec la ceinture du siège.",
+            "Sièges : assise cadrée, dossier souvent rectangulaire, montants et traverses nettement lisibles. Observer les proportions et le contraste entre la structure et les panneaux décorés.",
+            "Décor : lotus, papyrus, motifs géométriques et signes liés au pouvoir ou à la protection ; ils peuvent être peints, sculptés ou incrustés.",
+            "Surfaces : polychromie, bois contrastés, ivoire ou dorure dans certains meubles de prestige. Une surface claire ne suffit pas à identifier son matériau."
+          ]
+        },
+        {
+          "type": "image",
+          "media": "egypte-reniseneb"
+        },
+        {
+          "type": "source",
+          "title": "Un exemple à examiner : la chaise de Reniseneb",
+          "text": "Datée vers 1450 av. J.-C., cette chaise associe des pieds animaliers à un dossier plaqué d’ivoire. Une figure de son propriétaire est incisée dans le dossier. La notice permet de distinguer les éléments anciens du tressage de l’assise restauré. Inventaire : 68.58.",
+          "url": "https://www.metmuseum.org/art/collection/search/547687"
+        },
+        {
+          "type": "callout",
+          "title": "Ce qui permet de conclure",
+          "text": "Une patte animale est un indice, pas une preuve suffisante : elle existe aussi dans les répertoires grec et romain et dans des reprises ultérieures. Croisez la silhouette, les motifs, la construction documentée et la provenance. Une copie moderne de style égyptien conserve une date moderne."
+        },
+        {
+          "type": "paragraph",
+          "text": "Exercez-vous : sur la chaise de Reniseneb, nommez trois éléments visibles qui appartiennent au répertoire étudié. Puis indiquez quelle information vous tirez de la notice plutôt que de la seule photographie."
+        }
       ]
     }
   ],
   "quiz": [
-    {"id": "egypte-q1", "chapter": "nil-reperes", "prompt": "Pourquoi la Basse-Égypte se trouve-t-elle au nord ?", "choices": ["Les termes suivent l'altitude des pyramides.", "Elle correspond à l'aval du Nil et à son delta.", "C'est une autre appellation de la Nubie."], "correct": 1, "explanation": "Haute et Basse se comprennent par rapport au cours du Nil : le fleuve s'écoule vers le delta, au nord. La Nubie est située plus au sud."},
-    {"id": "egypte-q2", "chapter": "architecture", "prompt": "Qu'est-ce qu'une salle hypostyle ?", "choices": ["Une salle dont le plafond est porté par des colonnes.", "Une pyramide à degrés.", "Un type de siège funéraire."], "correct": 0, "explanation": "Hypostyle décrit une organisation porteuse : les colonnes soutiennent la couverture. C'est une notion de structure, pas un synonyme de tombe ou de mobilier."},
-    {"id": "egypte-q3", "chapter": "images", "prompt": "Une figure associe tête de profil et épaules frontales. Quelle explication est la plus juste ?", "choices": ["L'artisan ne sait pas regarder un corps.", "Toutes les œuvres égyptiennes suivent exactement cette pose.", "Une convention rend les parties du corps particulièrement lisibles."], "correct": 2, "explanation": "Le choix d'angles significatifs construit une image intelligible. Il faut le relier à sa fonction et conserver les nuances entre périodes et types d'œuvres."},
-    {"id": "egypte-q4", "chapter": "mobilier", "prompt": "Un meuble possède des pieds animaliers. Que peut-on conclure à partir de ce seul indice ?", "choices": ["Qu'il est forcément égyptien.", "Qu'il présente un motif à comparer avec d'autres indices et avec sa documentation.", "Qu'il est nécessairement en bronze."], "correct": 1, "explanation": "Les pieds animaliers traversent de nombreuses cultures et reprises historiques. Structure, matériaux documentés, provenance et décor doivent être étudiés ensemble."}
+    {
+      "id": "egypte-q1",
+      "chapter": "nil-reperes",
+      "prompt": "Pourquoi la Basse-Égypte se trouve-t-elle au nord ?",
+      "choices": [
+        "Les termes suivent l'altitude des pyramides.",
+        "Elle correspond à l'aval du Nil et à son delta.",
+        "C'est une autre appellation de la Nubie."
+      ],
+      "correct": 1,
+      "explanation": "Haute et Basse se comprennent par rapport au cours du Nil : le fleuve s'écoule vers le delta, au nord. La Nubie est située plus au sud."
+    },
+    {
+      "id": "egypte-q2",
+      "chapter": "architecture",
+      "prompt": "Qu'est-ce qu'une salle hypostyle ?",
+      "choices": [
+        "Une salle dont le plafond est porté par des colonnes.",
+        "Une pyramide à degrés.",
+        "Un type de siège funéraire."
+      ],
+      "correct": 0,
+      "explanation": "Hypostyle décrit une organisation porteuse : les colonnes soutiennent la couverture. C'est une notion de structure, pas un synonyme de tombe ou de mobilier."
+    },
+    {
+      "id": "egypte-q3",
+      "chapter": "images",
+      "prompt": "Une figure associe tête de profil et épaules frontales. Quelle explication est la plus juste ?",
+      "choices": [
+        "L'artisan ne sait pas regarder un corps.",
+        "Toutes les œuvres égyptiennes suivent exactement cette pose.",
+        "Une convention rend les parties du corps particulièrement lisibles."
+      ],
+      "correct": 2,
+      "explanation": "Le choix d'angles significatifs construit une image intelligible. Il faut le relier à sa fonction et conserver les nuances entre périodes et types d'œuvres."
+    },
+    {
+      "id": "egypte-q4",
+      "chapter": "mobilier",
+      "prompt": "Un meuble possède des pieds animaliers. Que peut-on conclure à partir de ce seul indice ?",
+      "choices": [
+        "Qu'il est forcément égyptien.",
+        "Qu'il présente un motif à comparer avec d'autres indices et avec sa documentation.",
+        "Qu'il est nécessairement en bronze."
+      ],
+      "correct": 1,
+      "explanation": "Les pieds animaliers traversent de nombreuses cultures et reprises historiques. Structure, matériaux documentés, provenance et décor doivent être étudiés ensemble."
+    }
   ]
 }

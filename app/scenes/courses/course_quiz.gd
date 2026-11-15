@@ -111,7 +111,7 @@ func _show_result() -> void:
 	score.name = "QuizResult"
 	score.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_content.add_child(score)
-	_content.add_child(CourseBlock.prose("Les chapitres lus et les réponses justes sont deux informations distinctes. Reprenez les notions qui vous ont posé problème, puis essayez à nouveau.", 18))
+	_content.add_child(CourseBlock.prose("Reprenez les notions qui vous ont posé problème, puis essayez à nouveau.", 18))
 	if session.mistakes.is_empty():
 		_content.add_child(CourseBlock.build({"type": "callout", "title": "Les liens sont compris", "text": "Toutes les réponses sont justes. Continuez à les justifier en observant les œuvres et leurs notices."}, repository))
 	else:

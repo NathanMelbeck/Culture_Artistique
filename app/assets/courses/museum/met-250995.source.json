@@ -1,0 +1,108 @@
+{
+  "objectID": 250995,
+  "isHighlight": false,
+  "accessionNumber": "20.246",
+  "accessionYear": "1920",
+  "isPublicDomain": true,
+  "primaryImage": "https://images.metmuseum.org/CRDImages/gr/original/DP212956.jpg",
+  "primaryImageSmall": "https://images.metmuseum.org/CRDImages/gr/web-large/DP212956.jpg",
+  "additionalImages": [
+    "https://images.metmuseum.org/CRDImages/gr/original/DP213168.jpg",
+    "https://images.metmuseum.org/CRDImages/gr/original/DP213170.jpg",
+    "https://images.metmuseum.org/CRDImages/gr/original/DP213171.jpg",
+    "https://images.metmuseum.org/CRDImages/gr/original/DP212954.jpg",
+    "https://images.metmuseum.org/CRDImages/gr/original/DP213167.jpg"
+  ],
+  "constituents": [
+    {
+      "constituentID": 49151,
+      "role": "Artist",
+      "name": "Signed by Hieron",
+      "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500070657",
+      "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q19850963",
+      "gender": ""
+    },
+    {
+      "constituentID": 49106,
+      "role": "Artist",
+      "name": "Attributed to Makron",
+      "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500008500",
+      "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q427706",
+      "gender": ""
+    }
+  ],
+  "department": "Greek and Roman Art",
+  "objectName": "Kylix",
+  "title": "Terracotta kylix (drinking cup)",
+  "culture": "Greek, Attic",
+  "period": "Classical",
+  "dynasty": "",
+  "reign": "",
+  "portfolio": "",
+  "artistRole": "Artist",
+  "artistPrefix": "Signed by",
+  "artistDisplayName": "Hieron",
+  "artistDisplayBio": "",
+  "artistSuffix": "as potter",
+  "artistAlphaSort": "Hieron",
+  "artistNationality": "",
+  "artistBeginDate": "",
+  "artistEndDate": "",
+  "artistGender": "",
+  "artistWikidata_URL": "https://www.wikidata.org/wiki/Q19850963",
+  "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500070657",
+  "objectDate": "ca. 480 BCE",
+  "objectBeginDate": -480,
+  "objectEndDate": -480,
+  "medium": "Terracotta",
+  "dimensions": "H. 5 7/16 in. (13.8 cm)\r\ndiameter  13 1/16 in. (33.2 cm)",
+  "measurements": [
+    {
+      "elementName": "Other",
+      "elementDescription": null,
+      "elementMeasurements": {
+        "Diameter": 33.2
+      }
+    },
+    {
+      "elementName": "Overall",
+      "elementDescription": null,
+      "elementMeasurements": {
+        "Height": 13.79
+      }
+    }
+  ],
+  "creditLine": "Rogers Fund, 1920",
+  "geographyType": "",
+  "city": "",
+  "state": "",
+  "county": "",
+  "country": "",
+  "region": "",
+  "subregion": "",
+  "locale": "",
+  "locus": "",
+  "excavation": "",
+  "river": "",
+  "classification": "Vases",
+  "rightsAndReproduction": "",
+  "linkResource": "",
+  "metadataDate": "2026-07-11T04:54:54.433Z",
+  "repository": "Metropolitan Museum of Art, New York, NY",
+  "objectURL": "https://www.metmuseum.org/art/collection/search/250995",
+  "tags": [
+    {
+      "term": "Maenads",
+      "AAT_URL": null,
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q209599"
+    },
+    {
+      "term": "Satyrs",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300379732",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q163709"
+    }
+  ],
+  "objectWikidata_URL": "https://www.wikidata.org/wiki/Q116291541",
+  "isTimelineWork": false,
+  "GalleryNumber": "157"
+}

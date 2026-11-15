@@ -57,7 +57,6 @@ func _show_reader(chapter_id: String = "") -> void:
 	var page := _replace(READER)
 	mode = "reader"
 	page.repository = repository
-	page.progress_repository = progress_repository
 	page.course = repository.find(selected_id)
 	page.chapter_index = _reader_state.get("chapter", 0)
 	page.scroll_position = _reader_state.get("scroll", 0)

@@ -2,7 +2,7 @@
   "egypte-nil": {
     "path": "res://assets/courses/antiquity/egypte-nil.webp",
     "title": "Vallée du Nil",
-    "caption": "Carte de la vallée du Nil extraite du support. Haute-Égypte en amont, Basse-Égypte dans le delta.",
+    "caption": "Carte de la vallée du Nil. Haute-Égypte en amont, Basse-Égypte dans le delta.",
     "alt": "Carte montrant le Nil, le delta au nord et la Nubie au sud.",
     "source": "documents_support_cours/Antiquité-Egypte.pdf",
     "source_page": 2,
@@ -15,12 +15,14 @@
     "source_image_sha256": "f5244d4b669bff78123f6a462b062428ef95a617d6afa0bde8804ab13759bc4f",
     "credit": "Support fourni par Nathan · page 2 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
     "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin.",
+    "display_credit": "",
+    "full_width": true
   },
   "egypte-temple": {
     "path": "res://assets/courses/antiquity/egypte-temple.webp",
     "title": "Une salle à colonnes",
-    "caption": "Photographie d'une salle à colonnes d'un temple égyptien, issue du support. Le site et l'auteur ne sont pas précisés dans cette page.",
+    "caption": "Salle à colonnes d’un temple égyptien. Les colonnes massives portent le plafond de pierre et accueillent des reliefs.",
     "alt": "Alignements de colonnes massives portant un plafond en pierre, avec des reliefs sur leurs surfaces.",
     "source": "documents_support_cours/Antiquité-Egypte.pdf",
     "source_page": 8,
@@ -33,12 +35,14 @@
     "source_image_sha256": "e96d38337ff935a35f7616d7941878fbeca2db9b76430b0773b361a588c69fe5",
     "credit": "Support fourni par Nathan · page 8 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
     "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin.",
+    "display_credit": "",
+    "full_width": false
   },
   "egypte-colonnes": {
     "path": "res://assets/courses/antiquity/egypte-colonnes.webp",
     "title": "Des chapiteaux végétaux",
-    "caption": "Planche existante du support comparant plusieurs colonnes égyptiennes. Les couleurs relèvent de cette illustration didactique.",
+    "caption": "Colonnes égyptiennes à chapiteaux végétaux. Illustration comparative des formes inspirées du palmier, du lotus et du papyrus.",
     "alt": "Cinq colonnes dessinées avec des chapiteaux inspirés du papyrus, du palmier et du lotus.",
     "source": "documents_support_cours/Antiquité-Egypte.pdf",
     "source_page": 11,
@@ -51,12 +55,14 @@
     "source_image_sha256": "f782137ec4dbe9fa73993b511b0b69d7fdb15f99c610a4dfbeed0df98bc38e65",
     "credit": "Support fourni par Nathan · page 11 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
     "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin.",
+    "display_credit": "",
+    "full_width": true
   },
   "egypte-peinture": {
     "path": "res://assets/courses/antiquity/egypte-peinture.webp",
     "title": "Lire une scène peinte",
-    "caption": "Scène de musiciens reproduite dans le support : observer les profils, les gestes et la relation entre image et écriture. Attribution non précisée dans la page.",
+    "caption": "Scène peinte de musiciens. Les profils, les gestes et les hiéroglyphes organisent la lecture de l’image.",
     "alt": "Trois musiciens peints, accompagnés de signes hiéroglyphiques.",
     "source": "documents_support_cours/Antiquité-Egypte.pdf",
     "source_page": 14,
@@ -69,66 +75,33 @@
     "source_image_sha256": "dc2d589df82a3a1767bd790e0c18c9d7dae552755f2e32e585715a8f5829b273",
     "credit": "Support fourni par Nathan · page 14 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
     "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
-  },
-  "egypte-coffre": {
-    "path": "res://assets/courses/antiquity/egypte-coffre.webp",
-    "title": "Un coffre polychrome",
-    "caption": "Photographie d'un coffre à décor polychrome provenant du support ; attribution et datation non précisées. Observer le volume, les panneaux et les motifs.",
-    "alt": "Coffre sur pieds, à couvercle bombé, décoré de bandes bleues, dorées et de figures.",
-    "source": "documents_support_cours/Antiquité-Egypte.pdf",
-    "source_page": 17,
-    "source_image_index": 0,
-    "original_image_name": "Im32.jpg",
-    "original_size": [
-      640,
-      538
-    ],
-    "source_image_sha256": "be9daba5a2641c36a8a6183db5b88f064ee1dd06611eeb876142ea4ec7ed899a",
-    "credit": "Support fourni par Nathan · page 17 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
-    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
-  },
-  "egypte-siege": {
-    "path": "res://assets/courses/antiquity/egypte-siege.webp",
-    "title": "Observer un siège",
-    "caption": "Photographie de siège extraite du support. Le cours étudie sa structure et ses pieds ; l'attribution n'est pas déduite de l'image seule.",
-    "alt": "Chaise en bois, avec un dossier rectangulaire ajouré et quatre pieds terminés en pattes animales.",
-    "source": "documents_support_cours/Antiquité-Egypte.pdf",
-    "source_page": 18,
-    "source_image_index": 1,
-    "original_image_name": "Im34.jpg",
-    "original_size": [
-      559,
-      768
-    ],
-    "source_image_sha256": "8d5261ed79189ad841524afaa6f024a04f7d4d5dd6758a1ce8739aced52dd198",
-    "credit": "Support fourni par Nathan · page 18 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
-    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin.",
+    "display_credit": "",
+    "full_width": false
   },
   "grece-vase": {
-    "path": "res://assets/courses/antiquity/grece-vase.webp",
-    "title": "Un vase à figures noires",
-    "caption": "Photographie de vase reproduite dans le support. Identification et datation non précisées ; observer la silhouette noire et les détails incisés.",
-    "alt": "Vase grec à deux anses, avec des personnages noirs sur un fond orangé.",
-    "source": "documents_support_cours/Antiquité- Grece.pdf",
-    "source_page": 6,
-    "source_image_index": 0,
-    "original_image_name": "Im7.png",
+    "path": "res://assets/courses/museum/met-250551.jpg",
+    "title": "Amphore attribuée à Exékias",
+    "caption": "Amphore attique à figures noires, attribuée à Exékias, vers 540 av. J.-C. Terre cuite, époque archaïque. Le décor montre notamment un char et des personnages.",
+    "alt": "Amphore à deux anses, personnages et chevaux noirs sur fond orangé, avec détails incisés.",
+    "source": "https://www.metmuseum.org/art/collection/search/250551",
+    "download_url": "https://images.metmuseum.org/CRDImages/gr/original/DP218568.jpg",
+    "metadata_file": "app/assets/courses/museum/met-250551.source.json",
     "original_size": [
-      198,
-      254
+      3208,
+      4000
     ],
-    "source_image_sha256": "e723ba24ff6b59e2a46f9f4cc3114a33f786429aaec67a5e9811f370b7d9961d",
-    "credit": "Support fourni par Nathan · page 6 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
-    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+    "source_image_sha256": "cbf95ae1462bc2d128e2fb833a9643cc33d1fe44e073f9cac6fcce8d27296b11",
+    "credit": "Rogers Fund, 1917",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 17.230.14a, b · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "full_width": false
   },
   "grece-ordres": {
     "path": "res://assets/courses/antiquity/grece-ordres.webp",
     "title": "Comparer les trois ordres",
-    "caption": "Schéma existant extrait du support : dorique, ionique et corinthien. Il présente des types de chapiteaux, pas trois édifices précis.",
+    "caption": "Les ordres dorique, ionique et corinthien. Schéma comparatif des colonnes et de leurs chapiteaux.",
     "alt": "Trois dessins de colonnes : chapiteau simple, volutes, puis feuillage d'acanthe.",
     "source": "documents_support_cours/Antiquité- Grece.pdf",
     "source_page": 8,
@@ -141,12 +114,14 @@
     "source_image_sha256": "457ea3a1ae23d6eb692e479eb1adfb76b48d9c253d4c16c76a0161056ce8fa85",
     "credit": "Support fourni par Nathan · page 8 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
     "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin.",
+    "display_credit": "",
+    "full_width": true
   },
   "grece-motifs": {
     "path": "res://assets/courses/antiquity/grece-motifs.webp",
     "title": "Un répertoire de motifs",
-    "caption": "Planche de motifs décoratifs du support : palmettes, ondes et frises répétées. Illustration documentaire, sans attribution précisée.",
+    "caption": "Répertoire de motifs grecs : palmettes, ondes et frises répétées.",
     "alt": "Bandes verticales de motifs noirs et orangés, comprenant des palmettes et des ondes.",
     "source": "documents_support_cours/Antiquité- Grece.pdf",
     "source_page": 9,
@@ -159,30 +134,14 @@
     "source_image_sha256": "ba0cc08864cfe4cf10c9557202eba855fbe2d60383e96de0dbc8d6aca481bf60",
     "credit": "Support fourni par Nathan · page 9 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
     "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
-  },
-  "grece-klismos": {
-    "path": "res://assets/courses/antiquity/grece-klismos.webp",
-    "title": "Le klismos et ses reprises",
-    "caption": "Réinterprétation postérieure d'un klismos, photographiée dans le support. Ce siège n'est pas présenté comme un original grec antique.",
-    "alt": "Chaise à pieds courbes, montants arrière inclinés et large dossier concave.",
-    "source": "documents_support_cours/Antiquité- Grece.pdf",
-    "source_page": 11,
-    "source_image_index": 0,
-    "original_image_name": "Im20.png",
-    "original_size": [
-      600,
-      775
-    ],
-    "source_image_sha256": "cef3029dab593278316fa28d364ca7bf6d55c2cd16a7f43f58d2d39091b1c610",
-    "credit": "Support fourni par Nathan · page 11 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
-    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin.",
+    "display_credit": "",
+    "full_width": true
   },
   "rome-colisee": {
     "path": "res://assets/courses/antiquity/rome-colisee.webp",
     "title": "Le Colisée",
-    "caption": "Photographie du Colisée de Rome extraite du support. Observer l'association des arcades et des ordres superposés.",
+    "caption": "Le Colisée, à Rome. Les arcades et les ordres superposés rythment la façade.",
     "alt": "Vue extérieure du Colisée avec plusieurs niveaux d'arcades.",
     "source": "documents_support_cours/Antiquité-Rome.pdf",
     "source_page": 1,
@@ -195,12 +154,14 @@
     "source_image_sha256": "41ba5e1469256845ef6460baf2c050797c6022d5d12a4f59c08a31bf8bf832e2",
     "credit": "Support fourni par Nathan · page 1 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
     "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin.",
+    "display_credit": "",
+    "full_width": false
   },
   "rome-mosaique": {
     "path": "res://assets/courses/antiquity/rome-mosaique.webp",
     "title": "Un décor en tesselles",
-    "caption": "Détail de mosaïque reproduit dans le support. Provenance précise non indiquée ; observer les petites unités et leur assemblage en motifs.",
+    "caption": "Détail d’une mosaïque à fleur centrale et cadre géométrique. Les tesselles composent le dessin.",
     "alt": "Mosaïque de tesselles formant une fleur dans un cadre géométrique.",
     "source": "documents_support_cours/Antiquité-Rome.pdf",
     "source_page": 4,
@@ -213,12 +174,14 @@
     "source_image_sha256": "90e7e688ae4e7d66d6de0c34412b3aabd34a46a75a92cfe62de7200302bed4c7",
     "credit": "Support fourni par Nathan · page 4 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
     "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin.",
+    "display_credit": "",
+    "full_width": false
   },
   "rome-peinture": {
     "path": "res://assets/courses/antiquity/rome-peinture.webp",
     "title": "Portrait et vie culturelle",
-    "caption": "Portrait peint d'une femme tenant un stylet et des tablettes, reproduit dans le support. L'identité du modèle ne peut pas être affirmée à partir de ce document.",
+    "caption": "Portrait peint d’une femme tenant un stylet et des tablettes. Ces accessoires évoquent l’écriture et la culture.",
     "alt": "Portrait féminin avec des tablettes dans une main et un stylet près de la bouche.",
     "source": "documents_support_cours/Antiquité-Rome.pdf",
     "source_page": 4,
@@ -231,12 +194,14 @@
     "source_image_sha256": "e5b0bee81816758c31908b56b2ffab05f5c6f7a348fb7e2a0361664094c548f0",
     "credit": "Support fourni par Nathan · page 4 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
     "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin.",
+    "display_credit": "",
+    "full_width": false
   },
   "rome-aqueduc": {
     "path": "res://assets/courses/antiquity/rome-aqueduc.webp",
     "title": "Le pont du Gard",
-    "caption": "Photographie du pont du Gard extraite du support : les niveaux d'arcades portent le canal de l'aqueduc.",
+    "caption": "Le pont du Gard. Trois niveaux d’arcades portent le canal de l’aqueduc.",
     "alt": "Pont-aqueduc en pierre à trois niveaux d'arcades franchissant une rivière.",
     "source": "documents_support_cours/Antiquité-Rome.pdf",
     "source_page": 6,
@@ -249,24 +214,261 @@
     "source_image_sha256": "e3d973babf72a370965ab6ed20967a81adfb28f01a40588ecff88247ed522e09",
     "credit": "Support fourni par Nathan · page 6 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
     "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin.",
+    "display_credit": "",
+    "full_width": false
   },
-  "rome-curule": {
-    "path": "res://assets/courses/antiquity/rome-curule.webp",
-    "title": "Un siège à supports croisés",
-    "caption": "Dessin documentaire existant du support, consacré à un siège de type curule et à ses supports. Il ne représente pas une pièce conservée identifiée.",
-    "alt": "Dessin d'un siège sans dossier, avec des supports en X et des détails de son piètement.",
-    "source": "documents_support_cours/Antiquité-Rome.pdf",
-    "source_page": 7,
-    "source_image_index": 1,
-    "original_image_name": "Im16.png",
+  "egypte-kemeni": {
+    "path": "res://assets/courses/museum/met-543955.jpg",
+    "title": "Le coffret de Kemeni",
+    "caption": "Coffret à cosmétiques de Kemeni, vers 1805 av. J.-C., XIIe dynastie. Cèdre, placages d’ébène et d’ivoire, garnitures d’argent. Provenance : Thèbes, Assassif, Birabi, tombe CC25.",
+    "alt": "Coffret ouvert à surfaces claires et sombres, avec ses compartiments et accessoires.",
+    "source": "https://www.metmuseum.org/art/collection/search/543955",
+    "download_url": "https://images.metmuseum.org/CRDImages/eg/original/DP311793.jpg",
+    "metadata_file": "app/assets/courses/museum/met-543955.source.json",
     "original_size": [
-      330,
-      256
+      3825,
+      3855
     ],
-    "source_image_sha256": "4a23a6710858507c75f9b07025634696e492d87f1ca9817dd44c9a8947189f37",
-    "credit": "Support fourni par Nathan · page 7 · crédits d'origine conservés lorsqu'ils figurent dans l'image.",
-    "rights": "Droits d'origine ; aucune nouvelle licence attribuée.",
-    "modifications": "Image extraite du PDF, conversion WebP et réduction proportionnelle éventuelle ; aucun redessin."
+    "source_image_sha256": "d0425ad5b086161a7b1290fdbeb55e52ae5ee79a93cc608a91ac458fe594f620",
+    "credit": "Purchase, Edward S. Harkness Gift, 1926",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 26.7.1438 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "full_width": false,
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ]
+  },
+  "egypte-reniseneb": {
+    "path": "res://assets/courses/museum/met-547687.jpg",
+    "title": "La chaise de Reniseneb",
+    "caption": "Chaise de Reniseneb, vers 1450 av. J.-C., XVIIIe dynastie. Bois, ébène et ivoire ; provenance : Thèbes. Le tressage de l’assise est une restauration suivant des modèles anciens.",
+    "alt": "Chaise à pieds en pattes animales, dossier orné d’ivoire et assise tressée restaurée.",
+    "source": "https://www.metmuseum.org/art/collection/search/547687",
+    "download_url": "https://images.metmuseum.org/CRDImages/eg/original/DT536.jpg",
+    "metadata_file": "app/assets/courses/museum/met-547687.source.json",
+    "original_size": [
+      2978,
+      3722
+    ],
+    "source_image_sha256": "275ed6dacd42795080f15353195f9fd9fa61d58ee0e9a6f7f875435ee4edae69",
+    "credit": "Purchase, Patricia R. Lassalle Gift, 1968",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 68.58 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "full_width": false,
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ]
+  },
+  "rome-lit": {
+    "path": "res://assets/courses/museum/met-249232.jpg",
+    "title": "Lit et marchepied romains",
+    "caption": "Lit et marchepied romains, Ier–IIe siècle apr. J.-C. Bois, os et verre. Ensemble remonté à partir de fragments : il ne s’agit pas d’un meuble intact découvert sous cette forme.",
+    "alt": "Lit à montants décorés et marchepied, avec panneaux sculptés en os et incrustations colorées.",
+    "source": "https://www.metmuseum.org/art/collection/search/249232",
+    "download_url": "https://images.metmuseum.org/CRDImages/gr/original/DP138722.jpg",
+    "metadata_file": "app/assets/courses/museum/met-249232.source.json",
+    "original_size": [
+      3883,
+      2375
+    ],
+    "source_image_sha256": "31ce735036e3e98e739dfb11b3033fc0da4b63fa3f5fcb2793cc2d95a750c953",
+    "credit": "Gift of J. Pierpont Morgan, 1917",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 17.190.2076 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "full_width": false,
+    "historical_status": "original",
+    "subject_periods": [
+      "rome"
+    ]
+  },
+  "egypte-tabouret": {
+    "path": "res://assets/courses/museum/met-544800.jpg",
+    "title": "Tabouret à assise tressée",
+    "caption": "Tabouret en bois et roseau, vers 1991–1450 av. J.-C., de la XIIe au début de la XVIIIe dynastie. Provenance : Thèbes, Assassif. L’assise tressée relie les quatre côtés du cadre.",
+    "alt": "Petit tabouret bas à quatre pieds de bois et assise en fibres entrecroisées.",
+    "source": "https://www.metmuseum.org/art/collection/search/544800",
+    "download_url": "https://images.metmuseum.org/CRDImages/eg/original/14.10.3_view_4.jpg",
+    "metadata_file": "app/assets/courses/museum/met-544800.source.json",
+    "original_size": [
+      2958,
+      2379
+    ],
+    "source_image_sha256": "f4cfad18c8ea8f9256f28bc454dd33b00d1cbd48dfaab030bd7d53d47b07197a",
+    "credit": "Gift of the Earl of Carnarvon, 1914",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 14.10.3 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "full_width": false,
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ]
+  },
+  "egypte-appui-tete": {
+    "path": "res://assets/courses/museum/met-554347.jpg",
+    "title": "Appui-tête en bois",
+    "caption": "Appui-tête en bois, vers 1550–1300 av. J.-C., XVIIIe dynastie. Provenance : Thèbes, Dra Abou el-Naga, tombe CC37.",
+    "alt": "Appui-tête à sommet incurvé, montant vertical et large base horizontale.",
+    "source": "https://www.metmuseum.org/art/collection/search/554347",
+    "download_url": "https://images.metmuseum.org/CRDImages/eg/original/12.181.308_view_1.jpg",
+    "metadata_file": "app/assets/courses/museum/met-554347.source.json",
+    "original_size": [
+      3201,
+      2048
+    ],
+    "source_image_sha256": "99f401a7a5070cf4caa249546f6975281e6c74dd9253f4db4b6a6bc0f4b3197d",
+    "credit": "Rogers Fund, 1912",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 12.181.308 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "full_width": false,
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ]
+  },
+  "grece-stele-siege": {
+    "path": "res://assets/courses/museum/met-255192.jpg",
+    "title": "Un siège sur une stèle attique",
+    "caption": "Stèle funéraire attique en marbre, vers 375–350 av. J.-C. Une femme assise fait face à une femme debout. Le relief constitue un témoignage antique sur la forme du siège.",
+    "alt": "Relief de deux femmes, avec un siège visible de profil sous le personnage assis.",
+    "source": "https://www.metmuseum.org/art/collection/search/255192",
+    "download_url": "https://images.metmuseum.org/CRDImages/gr/original/DT323837.jpg",
+    "metadata_file": "app/assets/courses/museum/met-255192.source.json",
+    "original_size": [
+      3098,
+      4000
+    ],
+    "source_image_sha256": "139c4c2ef11126c30ca5c3f4c21abd2ad890700f616c32e60ba5a9bcba7fad75",
+    "credit": "Harris Brisbane Dick Fund, 1965",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 65.11.11 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "full_width": false,
+    "historical_status": "period_representation",
+    "subject_periods": [
+      "grece"
+    ]
+  },
+  "grece-banquet-lits": {
+    "path": "res://assets/courses/museum/met-250995-lits.jpg",
+    "title": "Lits de banquet et coussins",
+    "caption": "Vue extérieure d’une coupe attique à figures rouges, signée par Hiéron comme potier et attribuée à Makron, vers 480 av. J.-C. Les convives sont allongés sur des lits de banquet.",
+    "alt": "Vue en dessous d’une coupe montrant les lits à pieds droits, les coussins et le mobilier du banquet.",
+    "source": "https://www.metmuseum.org/art/collection/search/250995",
+    "download_url": "https://images.metmuseum.org/CRDImages/gr/original/DP212954.jpg",
+    "metadata_file": "app/assets/courses/museum/met-250995.source.json",
+    "original_size": [
+      3893,
+      2319
+    ],
+    "source_image_sha256": "921a41d780e6472b698cf945f4e6627b77bcff400b4320a17ba2935039f37d4d",
+    "credit": "Rogers Fund, 1920",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 20.246 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "full_width": false,
+    "historical_status": "period_representation",
+    "subject_periods": [
+      "grece"
+    ]
+  },
+  "grece-banquet-tables": {
+    "path": "res://assets/courses/museum/met-250995-tables.jpg",
+    "title": "Tables basses dans une scène de banquet",
+    "caption": "Autre vue extérieure de la même coupe attique, vers 480 av. J.-C. De petites tables sont placées devant les lits : observer les plateaux et leurs pieds.",
+    "alt": "Scène de banquet peinte avec petites tables à pieds fins devant les lits des convives.",
+    "source": "https://www.metmuseum.org/art/collection/search/250995",
+    "download_url": "https://images.metmuseum.org/CRDImages/gr/original/DP213167.jpg",
+    "metadata_file": "app/assets/courses/museum/met-250995.source.json",
+    "original_size": [
+      3893,
+      2332
+    ],
+    "source_image_sha256": "1345bf93450769d0ddb5abf4285421b5551dd5d17b153ba5b69a856042567fbc",
+    "credit": "Rogers Fund, 1920",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 20.246 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "full_width": false,
+    "historical_status": "period_representation",
+    "subject_periods": [
+      "grece"
+    ]
+  },
+  "rome-table": {
+    "path": "res://assets/courses/museum/met-247464.jpg",
+    "title": "Table en marbre et bronze",
+    "caption": "Table romaine en marbre et bronze, Ier siècle apr. J.-C. Le cadre du plateau présente des incrustations d’argent et de cuivre. Une grande partie du pied et de la base est restaurée.",
+    "alt": "Table à plateau rectangulaire, bordure en bronze et pied central sur une base de pierre.",
+    "source": "https://www.metmuseum.org/art/collection/search/247464",
+    "download_url": "https://images.metmuseum.org/CRDImages/gr/original/DP-14287-082.jpg",
+    "metadata_file": "app/assets/courses/museum/met-247464.source.json",
+    "original_size": [
+      4000,
+      3393
+    ],
+    "source_image_sha256": "67b8f57adb4a1e8980914cd993a0e7798af7181c571c348c409718527a8af448",
+    "credit": "Rogers Fund, 1906",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 06.1021.301 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "full_width": false,
+    "historical_status": "original",
+    "subject_periods": [
+      "rome"
+    ]
+  },
+  "rome-pied-table": {
+    "path": "res://assets/courses/museum/met-251416.jpg",
+    "title": "Pied de table à tête de tigre",
+    "caption": "Pied de table romain en marbre à tête de tigre, Ier–IIe siècle apr. J.-C. Ce fragment permet d’examiner le décor animalier d’un élément porteur.",
+    "alt": "Élément de table en marbre, en forme de pilier surmonté d’une tête de félin.",
+    "source": "https://www.metmuseum.org/art/collection/search/251416",
+    "download_url": "https://images.metmuseum.org/CRDImages/gr/original/DP232662.jpg",
+    "metadata_file": "app/assets/courses/museum/met-251416.source.json",
+    "original_size": [
+      2047,
+      4000
+    ],
+    "source_image_sha256": "33fbba4aea19d25c4e3b05d6ac5614ba4223624049d9ccbc28395802a67bafec",
+    "credit": "Rogers Fund, 1923",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 23.160.83 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "full_width": false,
+    "historical_status": "original",
+    "subject_periods": [
+      "rome"
+    ]
+  },
+  "rome-candelabre": {
+    "path": "res://assets/courses/museum/met-248087.jpg",
+    "title": "Candélabre porte-lampe",
+    "caption": "Candélabre romain en bronze, vers le Ier siècle apr. J.-C. Son sommet recevait une lampe à huile en bronze ou en terre cuite.",
+    "alt": "Haut pied en bronze à fût élancé et base écartée, terminé par un logement pour une lampe.",
+    "source": "https://www.metmuseum.org/art/collection/search/248087",
+    "download_url": "https://images.metmuseum.org/CRDImages/gr/original/5310edited.jpg",
+    "metadata_file": "app/assets/courses/museum/met-248087.source.json",
+    "original_size": [
+      1268,
+      3800
+    ],
+    "source_image_sha256": "1be4e413438e1e1bffb5b3595619d76850f339cba69e3a3a48207035aeb3613a",
+    "credit": "Rogers Fund, 1908",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 08.258.15 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "full_width": false,
+    "historical_status": "original",
+    "subject_periods": [
+      "rome"
+    ]
   }
 }
