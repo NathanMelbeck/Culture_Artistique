@@ -37,6 +37,11 @@
       "title": "The Met — Coupe de Hiéron et Makron",
       "url": "https://www.metmuseum.org/art/collection/search/250995",
       "note": "Mobilier, coussins et étoffes représentés au banquet, vers 480 av. J.-C."
+    },
+    {
+      "title": "The Met — Colonne ionique du temple d’Artémis à Sardes",
+      "url": "https://www.metmuseum.org/art/collection/search/252453",
+      "note": "Éléments anciens, restaurations et montage de musée explicités."
     }
   ],
   "chapters": [
@@ -174,8 +179,8 @@
     },
     {
       "id": "ordres",
-      "title": "L'architecture et les trois ordres",
-      "intro": "Le chapiteau est un indice ; l'ordre est un système plus large.",
+      "title": "Les colonnes et les ordres grecs",
+      "intro": "Reconnaître le dorique, l’ionique et le corinthien à partir de plusieurs détails concordants.",
       "source_pages": [
         7,
         8
@@ -183,32 +188,402 @@
       "blocks": [
         {
           "type": "paragraph",
-          "text": "L'architecture monumentale grecque explore les relations entre supports verticaux et éléments horizontaux. Dans un temple, les colonnes peuvent entourer un espace réservé à la divinité. Les proportions, le rythme des travées et les parties sculptées organisent la perception de l'ensemble. Le temple n'est pas une salle destinée à réunir tous les fidèles comme une église moderne."
+          "text": "Un ordre architectural organise les proportions et les détails de la colonne et des parties qu’elle porte. Le chapiteau est un indice important, mais il ne résume pas l’ensemble. Dans un temple, l’ordre se lit aussi dans la base, le fût, l’entablement et le rythme des colonnes. Les usages varient selon la région, la date et la position dans l’édifice."
+        },
+        {
+          "type": "heading",
+          "text": "Les parties à nommer"
+        },
+        {
+          "type": "paragraph",
+          "text": "L’entablement regroupe, de bas en haut, l’architrave, la frise et la corniche. Le schéma ionique ci-dessous permet de situer ces mots ; les chapiteaux des trois ordres sont ensuite comparés séparément."
+        },
+        {
+          "type": "annotated_image",
+          "media": "anatomie-ionique",
+          "caption": "Schéma pédagogique d’un ordre ionique. Les repères en lettres nomment les éléments ; les proportions dessinées ne servent pas à dater un monument.",
+          "markers": [
+            {
+              "label": "Corniche",
+              "definition": "Couronnement saillant de l’entablement, qui termine la partie haute.",
+              "point": [
+                0.68,
+                0.07
+              ],
+              "label_point": [
+                0.17,
+                0.07
+              ]
+            },
+            {
+              "label": "Frise",
+              "definition": "Bande entre architrave et corniche ; ici, elle porte une scène continue.",
+              "point": [
+                0.7,
+                0.155
+              ],
+              "label_point": [
+                0.17,
+                0.155
+              ]
+            },
+            {
+              "label": "Architrave",
+              "definition": "Première partie horizontale de l’entablement, directement au-dessus du chapiteau.",
+              "point": [
+                0.7,
+                0.22
+              ],
+              "label_point": [
+                0.17,
+                0.22
+              ]
+            },
+            {
+              "label": "Chapiteau",
+              "definition": "Sommet de la colonne ; ici, il se reconnaît aux volutes.",
+              "point": [
+                0.63,
+                0.28
+              ],
+              "label_point": [
+                0.17,
+                0.3
+              ]
+            },
+            {
+              "label": "Fût cannelé",
+              "definition": "Corps de la colonne ; les creux verticaux sont les cannelures.",
+              "point": [
+                0.63,
+                0.57
+              ],
+              "label_point": [
+                0.17,
+                0.57
+              ]
+            },
+            {
+              "label": "Base",
+              "definition": "Moulures individuelles entre le fût et la plate-forme.",
+              "point": [
+                0.63,
+                0.9
+              ],
+              "label_point": [
+                0.17,
+                0.88
+              ]
+            },
+            {
+              "label": "Stylobate",
+              "definition": "Assise supérieure de la plate-forme, distincte de la base moulurée.",
+              "point": [
+                0.76,
+                0.935
+              ],
+              "label_point": [
+                0.17,
+                0.95
+              ]
+            }
+          ],
+          "display_height": 720
+        },
+        {
+          "type": "annotated_image",
+          "media": "anatomie-ionique",
+          "caption": "Détail de la base sur le même schéma : alterner parties bombées et parties creuses permet de lire le profil des moulures.",
+          "markers": [
+            {
+              "label": "Tore",
+              "definition": "Moulure arrondie et convexe : son profil est bombé.",
+              "point": [
+                0.56,
+                0.22
+              ],
+              "label_point": [
+                0.12,
+                0.25
+              ]
+            },
+            {
+              "label": "Scotie",
+              "definition": "Moulure concave : son profil se creuse entre les moulures bombées.",
+              "point": [
+                0.56,
+                0.46
+              ],
+              "label_point": [
+                0.88,
+                0.63
+              ]
+            }
+          ],
+          "display_height": 300,
+          "region": [
+            0.44,
+            0.875,
+            0.35,
+            0.06
+          ]
         },
         {
           "type": "image",
           "media": "grece-ordres"
         },
         {
-          "type": "key_points",
-          "items": [
-            "Dorique : chapiteau sobre, avec une échine sous un abaque ; dans sa forme grecque habituelle, la colonne n'a pas de base distincte. La frise associe triglyphes et métopes.",
-            "Ionique : chapiteau à volutes, colonne généralement pourvue d'une base ; des proportions et un entablement propres accompagnent cette forme.",
-            "Corinthien : chapiteau à feuilles d'acanthe, plus développé. Son emploi se diffuse et prend une grande importance dans le monde romain."
+          "type": "column_example",
+          "id": "dorique",
+          "title": "Dorique · échine et abaque",
+          "description": "Le chapiteau dorique grec associe une échine arrondie ou évasée à un abaque carré. Dans le type grec courant, la colonne n’a pas de base individuelle et repose sur le stylobate.",
+          "media": "grece-ordres",
+          "cues": [
+            "Au sommet de la colonne : repérer l’échine sous l’abaque, sans grandes volutes ni couronne d’acanthes.",
+            "Au-dessus : reconnaître l’alternance des triglyphes, éléments marqués de rainures verticales, et des métopes, panneaux intermédiaires parfois sculptés.",
+            "Sous les parties hautes : des gouttes et des mutules peuvent compléter le décor. Leur place contribue à la lecture de l’ordre ; un seul motif ne remplace pas l’examen de l’ensemble."
+          ],
+          "display_height": 440,
+          "markers": [
+            {
+              "label": "Abaque",
+              "definition": "Tablette carrée au sommet du chapiteau.",
+              "point": [
+                0.5,
+                0.19
+              ],
+              "label_point": [
+                0.82,
+                0.1
+              ]
+            },
+            {
+              "label": "Échine",
+              "definition": "Moulure arrondie ou évasée sous la tablette.",
+              "point": [
+                0.5,
+                0.42
+              ],
+              "label_point": [
+                0.14,
+                0.46
+              ]
+            },
+            {
+              "label": "Cannelures",
+              "definition": "Creux verticaux du fût, séparés ici par des arêtes.",
+              "point": [
+                0.53,
+                0.8
+              ],
+              "label_point": [
+                0.85,
+                0.85
+              ]
+            }
+          ],
+          "caption": "Détail du chapiteau dorique dans le dessin comparatif des trois ordres grecs. Schéma de référence : il ne représente pas un vestige daté.",
+          "region": [
+            0.005,
+            0.015,
+            0.335,
+            0.555
           ]
         },
         {
-          "type": "paragraph",
-          "text": "Un [b]ordre[/b] associe des proportions et des parties architecturales ; ce n'est pas le seul nom du chapiteau. Le fût est le corps de la colonne. L'entablement se place au-dessus des supports et comprend notamment l'architrave, la frise et la corniche. Un fronton est la partie triangulaire qui peut couronner la façade."
+          "type": "annotated_image",
+          "media": "entablement-dorique",
+          "caption": "Schéma pédagogique de l’entablement dorique et du haut des colonnes : les triglyphes alternent avec les métopes. Les lettres et légendes françaises sont ajoutées pour la lecture.",
+          "markers": [
+            {
+              "label": "Triglyphe",
+              "definition": "Élément de frise marqué par des rainures verticales.",
+              "point": [
+                0.64,
+                0.44
+              ],
+              "label_point": [
+                0.81,
+                0.33
+              ]
+            },
+            {
+              "label": "Métope",
+              "definition": "Panneau entre deux triglyphes ; il peut recevoir une sculpture.",
+              "point": [
+                0.49,
+                0.44
+              ],
+              "label_point": [
+                0.49,
+                0.63
+              ]
+            },
+            {
+              "label": "Échine",
+              "definition": "Partie arrondie ou évasée du chapiteau, sous l’abaque.",
+              "point": [
+                0.42,
+                0.85
+              ],
+              "label_point": [
+                0.13,
+                0.86
+              ]
+            },
+            {
+              "label": "Abaque",
+              "definition": "Tablette supérieure du chapiteau, ici représentée de face.",
+              "point": [
+                0.42,
+                0.79
+              ],
+              "label_point": [
+                0.13,
+                0.74
+              ]
+            }
+          ],
+          "display_height": 560
+        },
+        {
+          "type": "column_example",
+          "id": "ionique",
+          "title": "Ionique · les volutes",
+          "description": "Le chapiteau ionique se reconnaît à ses volutes, des enroulements en spirale. Une base moulurée et un fût cannelé complètent habituellement la colonne ; les angles peuvent demander des adaptations.",
+          "media": "grece-colonne-ionique",
+          "cues": [
+            "Chercher les deux enroulements du chapiteau et le traitement de la zone qui les relie.",
+            "Observer la base et la séparation entre les cannelures ; ces détails complètent les volutes.",
+            "Lire l’entablement : une architrave peut être divisée en bandeaux et la frise se développer de manière continue. Les dispositions ne sont pas absolument identiques sur tous les monuments."
+          ],
+          "display_height": 440,
+          "markers": [
+            {
+              "label": "Volute",
+              "definition": "Enroulement en spirale du chapiteau.",
+              "point": [
+                0.39,
+                0.25
+              ],
+              "label_point": [
+                0.16,
+                0.2
+              ]
+            },
+            {
+              "label": "Cannelures",
+              "definition": "Creux longitudinaux séparés par de petits bandeaux plats.",
+              "point": [
+                0.52,
+                0.42
+              ],
+              "label_point": [
+                0.81,
+                0.42
+              ]
+            },
+            {
+              "label": "Base moulurée",
+              "definition": "Sous le fût, les moulures assurent la transition vers le sol. Ce montage comporte des restaurations.",
+              "point": [
+                0.5,
+                0.79
+              ],
+              "label_point": [
+                0.81,
+                0.83
+              ]
+            }
+          ]
+        },
+        {
+          "type": "source",
+          "title": "Sardes : un original ionique, présenté avec ses limites",
+          "text": "Le Met identifie cette colonne du temple d’Artémis comme ionique, vers 300 av. J.-C. Les volutes et les motifs sculptés sont observables. La notice précise que le montage omet une grande partie du fût, comprend des restaurations et une copie de la base profilée sous le tore : on ne lit donc pas sa hauteur exposée comme la hauteur antique complète.",
+          "url": "https://www.metmuseum.org/art/collection/search/252453"
+        },
+        {
+          "type": "column_example",
+          "id": "corinthien",
+          "title": "Corinthien · les feuilles d’acanthe",
+          "description": "Le chapiteau corinthien développe des rangées de feuilles d’acanthe. Des tiges et des enroulements s’élèvent vers les angles de l’abaque, au-dessus du feuillage.",
+          "media": "grece-ordres",
+          "cues": [
+            "Partie basse du chapiteau : rechercher les rangées de feuilles et leur découpe.",
+            "Partie haute : suivre les tiges et les enroulements vers les angles, sous l’abaque.",
+            "Le corinthien apparaît dans le monde grec puis connaît un très grand développement romain. Sa présence seule ne prouve donc pas qu’un édifice est grec."
+          ],
+          "display_height": 440,
+          "markers": [
+            {
+              "label": "Acanthe",
+              "definition": "Feuilles découpées disposées en rangées autour du chapiteau.",
+              "point": [
+                0.46,
+                0.48
+              ],
+              "label_point": [
+                0.11,
+                0.56
+              ]
+            },
+            {
+              "label": "Enroulements",
+              "definition": "Des tiges montent et s’enroulent vers les angles sous l’abaque.",
+              "point": [
+                0.72,
+                0.18
+              ],
+              "label_point": [
+                0.88,
+                0.29
+              ]
+            },
+            {
+              "label": "Abaque",
+              "definition": "Partie supérieure du chapiteau, au-dessus du décor végétal.",
+              "point": [
+                0.5,
+                0.05
+              ],
+              "label_point": [
+                0.14,
+                0.08
+              ]
+            }
+          ],
+          "caption": "Détail du chapiteau corinthien dans le dessin comparatif des trois ordres grecs. Schéma de référence ; le décor d’acanthe existe aussi dans l’architecture romaine.",
+          "region": [
+            0.705,
+            0.04,
+            0.29,
+            0.84
+          ]
+        },
+        {
+          "type": "source",
+          "title": "Les trois ordres dans l’architecture grecque",
+          "text": "La présentation du Met rattache dorique, ionique et corinthien à des systèmes de formes et de proportions. Comparez le chapiteau avec la base et l’entablement. Le terme « ordre » dépasse la désignation du sommet de la colonne.",
+          "url": "https://www.metmuseum.org/essays/architecture-in-ancient-greece"
+        },
+        {
+          "type": "heading",
+          "text": "Comparer sans réduire à un détail"
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Dorique grec courant : pas de base individuelle, chapiteau à échine et abaque, frise à triglyphes et métopes.",
+            "Ionique : volutes, base moulurée, cannelures souvent séparées par des bandeaux ; vérifier la composition de l’entablement.",
+            "Corinthien : couronnement végétal à feuilles d’acanthe, tiges et enroulements sous l’abaque.",
+            "Les cannelures ne sont pas propres à un seul ordre. Un fût isolé ne permet pas toujours de décider."
+          ]
         },
         {
           "type": "callout",
-          "title": "Ne pas confondre",
-          "text": "Les cannelures ne sont pas réservées à l'ionique : des colonnes doriques et corinthiennes peuvent aussi en porter. Pour reconnaître un ordre, combinez le chapiteau, la base, la frise et la composition générale."
-        },
-        {
-          "type": "paragraph",
-          "text": "Ce vocabulaire sera repris sur des édifices et des meubles bien postérieurs. Une armoire à colonnes et fronton ne devient pas pour autant une armoire antique : elle peut citer un répertoire classique à une autre époque."
+          "title": "Le détail, le système et la date",
+          "text": "Décrivez séparément ce qui est visible, le type auquel cela correspond et la datation fournie par la source. Une colonne fragmentaire ou remontée ne donne pas toutes les proportions d’un édifice complet. Cette distinction est également utile pour reconnaître les éléments architecturaux présents dans le décor du mobilier."
         }
       ]
     },
@@ -418,6 +793,18 @@
       ],
       "correct": 1,
       "explanation": "Le klismos associe un dossier courbe à des montants et des pieds incurvés. Comparez ces éléments dans les témoignages grecs d’époque ; ils décrivent un type de siège et non une essence de bois ou un assemblage précis."
+    },
+    {
+      "id": "grece-q5",
+      "chapter": "ordres",
+      "prompt": "Quel ensemble d’indices correspond au dorique grec habituel ?",
+      "choices": [
+        "Grandes volutes, feuilles d’acanthe et chapiteau composite romain.",
+        "Absence de base individuelle, échine sous un abaque et frise à triglyphes et métopes.",
+        "Une colonne qui ne possède jamais de cannelures."
+      ],
+      "correct": 1,
+      "explanation": "L’identification combine la colonne et l’entablement. Le dorique grec habituel n’a pas de base individuelle ; son chapiteau associe échine et abaque et sa frise alterne triglyphes et métopes."
     }
   ]
 }

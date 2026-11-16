@@ -4,15 +4,17 @@ Branche de travail : `feat/cours-antiquite`. Base : `81f4c7b` sur `main`.
 
 ## Intention pédagogique et couverture
 
-Les supports définissent les thèmes ; les textes sont rédigés pour le lecteur. Les chapitres sont rendus avec les mêmes composants Godot : paragraphes sélectionnables, listes, encadrés, figures légendées et références. Les PDF originaux sont inchangés. Les vingt-deux visuels sont des images existantes : dix extractions des documents pédagogiques et douze photographies du Met sous CC0. Aucun objet historique n’est redessiné.
+Règle durable confirmée par Nathan : les cours sont techniques et détaillés. Les mots techniques propres au sujet de chaque section sont souhaités, à condition d’être expliqués clairement et illustrés lorsque c’est utile. L’accessibilité vient de l’explication et des repères, sans supprimer la précision du vocabulaire. Cette règle s’applique à chaque modification et à tous les futurs cours. Les fiches de révision restent une synthèse du minimum essentiel à savoir.
+
+Les supports définissent les thèmes ; les textes sont rédigés pour le lecteur. Les chapitres sont rendus avec les mêmes composants Godot : paragraphes sélectionnables, listes, encadrés, figures légendées et références. Les PDF originaux sont inchangés. Les trente-cinq visuels sont des images existantes : dix extractions des documents pédagogiques, vingt-deux photographies du Met sous CC0 et trois dessins de référence issus de Wikimedia Commons. Aucun objet historique n’est redessiné.
 
 | Cours | Base examinée | Parcours rédigé |
 |---|---|---|
-| Égypte | 18 pages | Nil et repères ; pouvoir, croyances et écriture ; architecture ; conventions des images ; mobilier et bois ; reconnaissance du mobilier égyptien. |
+| Égypte | 18 pages | Nil et repères ; pouvoir, croyances et écriture ; architecture ; colonnes ; conventions des images ; sculpture ; mobilier ; reconnaissance du mobilier égyptien. |
 | Grèce | 11 pages | Cités et chronologie ; mythes et céramique ; sculpture ; ordres ; motifs et mobilier ; reconnaissance du mobilier grec. |
-| Rome | 7 pages | Repères et échanges ; images du pouvoir et du divin ; architecture ; intérieurs et décor ; mobilier ; reconnaissance du mobilier romain. |
+| Rome | 7 pages | Repères et échanges ; images du pouvoir et du divin ; architecture ; colonnes et ordres ; intérieurs et décor ; mobilier ; reconnaissance du mobilier romain. |
 
-Le validateur compte 6 166 mots dans les blocs des trois cours, hors objectifs, introductions, légendes et quiz. Chaque parcours comprend six chapitres et quatre questions avec correction et renvoi au chapitre pertinent. Les pages utilisées sont indiquées dans chaque chapitre JSON.
+Le validateur compte environ 9 300 mots dans les blocs des trois cours, repères techniques compris, hors objectifs, introductions, légendes des photographies et quiz. Le parcours égyptien comprend huit chapitres et sept questions ; la Grèce, six chapitres et cinq questions ; Rome, sept chapitres et cinq questions. Chaque correction renvoie au chapitre pertinent. Les pages utilisées sont indiquées dans chaque chapitre JSON.
 
 Les contenus restent une première proposition à valider avec Nathan. Aucun média vidéo n'a été ajouté : aucun fichier de vidéo pédagogique n'a été fourni pour cette étape.
 
@@ -65,3 +67,29 @@ La chaise américaine de 1825 est retirée, ainsi que sa notice de comparaison e
 ## Règle d’authenticité confirmée
 
 Pour chaque période, les exemples de mobilier doivent être des originaux documentés, des représentations d’époque ou des reproductions fidèles dont le modèle et la fidélité sont sourcés. Les réinterprétations, adaptations et meubles « de style » fabriqués à une autre époque ne servent pas d’exemples de la période étudiée. Les métadonnées des onze visuels de mobilier actuellement retenus indiquent leur statut historique et leur période ; aucune reproduction moderne n’est actuellement utilisée dans les cours. Les parties restaurées ou remontées des objets anciens restent signalées.
+
+## Sculpture et colonnes — 16 novembre 2026
+
+La sculpture égyptienne distingue les trois traitements demandés, puis le relief en creux : faible saillie, forte saillie liée à un fond, volume indépendant d’un fond, représentation sous le niveau de la paroi. Un socle ou un pilier dorsal n’exclut pas automatiquement la ronde-bosse. Les définitions sont étayées par le Getty AAT ([bas-relief](https://www.getty.edu/vow/AATFullDisplay?find=&logic=&note=&page=&subjectid=300184633), [haut-relief](https://www.getty.edu/vow/AATFullDisplay?find=300265019&logic=AND&note=&subjectid=300184782), [ronde-bosse](https://www.getty.edu/vow/AATFullDisplay?find=&logic=AND&note=&subjectid=300047264)). Les quatre photographies originales montrent [un flacon en bas-relief](https://www.metmuseum.org/art/collection/search/553665), [la chouette en haut-relief](https://www.metmuseum.org/art/collection/search/545196), [Hatchepsout assise](https://www.metmuseum.org/art/collection/search/544450) et [Akhenaton en relief en creux](https://www.metmuseum.org/art/collection/search/544056). L’angle du flacon est choisi parmi les vues officielles pour mieux lire le décor.
+
+Le chapitre des colonnes égyptiennes détaille base, fût, col, chapiteau, abaque et architrave. Il distingue papyriforme fermée, papyriforme ouverte/campaniforme, lotiforme, palmiforme, composite végétale et hathorique. « Campaniforme » décrit une silhouette et n’est pas toujours une famille distincte du papyrus ouvert. [Le projet de Karnak de l’université de Memphis](https://www.memphis.edu/hypostyle/about-architecture/) documente les grandes colonnes ouvertes et les colonnes latérales fermées. Les fragments palmiformes, le chapiteau composite d’Hibis et la petite colonne hathorique de Nectanébo Ier sont illustrés par les originaux du Met. Les restaurations des anneaux palmiformes et le doute sur la hauteur du montage sont signalés ; la petite colonne hathorique n’est pas présentée comme une grande colonne de salle hypostyle.
+
+Le cours grec développe le système des ordres et les détails qui l’identifient : stylobate/base, fût/cannelures, échine/abaque, volutes, acanthes et entablement. [La colonne de Sardes](https://www.metmuseum.org/art/collection/search/252453) est un original ionique présenté avec les limites explicites de son montage : fût écourté, parties restaurées et copie de la base profilée sous le tore. Un chapiteau corinthien romain n’est pas présenté comme un original grec.
+
+Rome distingue colonne libre, colonne engagée et pilastre, puis toscan, dorique romain, ionique, corinthien et composite. [Le chapiteau corinthien de pilastre](https://www.metmuseum.org/art/collection/search/252548) et [la colonne composite](https://www.metmuseum.org/art/collection/search/250646) permettent d’observer les détails sur des originaux datés. Le mot « composite » est distingué de son emploi pour les chapiteaux végétaux égyptiens. [Vitruve, livre IV](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Vitruvius/4*.html), est traité comme un témoignage antique prescriptif, et non une règle universelle appliquée à tous les monuments.
+
+Dix photographies CC0 sont ajoutées avec notices brutes, URL de la vue choisie, empreinte et provenance. Les contenus utilisent les blocs existants ; les quiz ajoutent cinq questions, sans modifier les anciens identifiants.
+
+## Une illustration pour chaque type de colonne
+
+Les six types égyptiens, les trois ordres grecs et les cinq types romains sont chacun présentés par un bloc `column_example` : nom, description courte, image individuelle et trois indices de reconnaissance. Les planches existantes sont cadrées dans Godot pour isoler un type ; les fichiers d’origine restent intacts. Les photographies conservent les précautions sur leur restauration et leur montage. L’original composite romain est montré en détail puis en entier.
+
+Les blocs `annotated_image` situent les parties sur des dessins existants. Les lettres A, B… renvoient à des définitions natives lisibles, pour éviter la confusion avec les anciens chiffres imprimés dans certaines planches. Le vocabulaire essentiel est illustré : base, fût, collier, chapiteau, abaque, cannelures, volutes, acanthe, stylobate, architrave, frise, corniche, triglyphe, métope, tore et scotie. Le cadrage et les repères sont conservés dans le zoom ; les détails s’ouvrent en vue entière.
+
+Trois nouvelles sources graphiques sont livrées localement avec leur notice brute, licence et empreinte :
+
+- [Chapiteaux classiques de l’Encyclopédie](https://commons.wikimedia.org/wiki/File:Classical_orders_from_the_Encyclopedie.png), XVIIIe siècle, domaine public : cadrages toscan, dorique et ionique ancien. La version « ionique moderne » de la planche n’est pas utilisée. Ce dessin postérieur sert à lire un vocabulaire ; il n’est pas une preuve archéologique.
+- [Ionic order, F l a n k e r](https://commons.wikimedia.org/wiki/File:Ionic_order.svg), domaine public : anatomie de la colonne et de son entablement, puis détail des moulures de base.
+- [Entablamento dórico, JLVwiki](https://commons.wikimedia.org/wiki/File:Entablamento_d%C3%B3rico.svg), CC BY-SA 4.0 : frise à triglyphes et métopes, échine et abaque. Les repères et légendes de cette illustration sont proposés sous la même licence.
+
+Ces schémas sont explicitement qualifiés de dessins de référence. Les photographies du Met apportent séparément des exemples antiques datés. Les liens « Source et licence » sont facultatifs ; aucune requête réseau n’est faite pendant la lecture.

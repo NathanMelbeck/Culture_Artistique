@@ -8,6 +8,7 @@ var chapter_index := 0
 var scroll_position := 0
 var quiz_resume_available := false
 var _sidebar: VBoxContainer
+var _sidebar_scroll: ScrollContainer
 var _picker: OptionButton
 var _buttons: Array[Button] = []
 var _scroll: ScrollContainer
@@ -37,9 +38,16 @@ func _ready() -> void:
 	body.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	body.add_theme_constant_override("separation", 20)
 	add_child(body)
+	_sidebar_scroll = ScrollContainer.new()
+	_sidebar_scroll.name = "CourseContentsScroll"
+	_sidebar_scroll.custom_minimum_size.x = 251
+	_sidebar_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_sidebar_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	_sidebar_scroll.follow_focus = true
+	body.add_child(_sidebar_scroll)
 	_sidebar = VBoxContainer.new()
-	_sidebar.custom_minimum_size.x = 235
-	body.add_child(_sidebar)
+	_sidebar.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_sidebar_scroll.add_child(_sidebar)
 	_sidebar.add_child(AppTheme.label("Dans ce cours", 23, AppTheme.FOREST, true))
 	for index in course["chapters"].size():
 		var item: Dictionary = course["chapters"][index]
@@ -160,12 +168,13 @@ func _update_navigation() -> void:
 		var active: bool = index == chapter_index
 		button.add_theme_color_override("font_color", AppTheme.SURFACE if active else AppTheme.FOREST)
 		button.add_theme_stylebox_override("normal", AppTheme.box(AppTheme.FOREST if active else Color.TRANSPARENT, Color.TRANSPARENT, 6, 0))
+	_sidebar_scroll.ensure_control_visible.call_deferred(_buttons[chapter_index])
 
 func _adapt() -> void:
 	if not is_instance_valid(_sidebar):
 		return
-	_sidebar.visible = size.x >= 1050
-	_picker.visible = not _sidebar.visible
+	_sidebar_scroll.visible = size.x >= 1050
+	_picker.visible = not _sidebar_scroll.visible
 	var reading_width := _scroll.size.x
 	var inset := maxi(6, int((reading_width - 850) / 2))
 	_scroll_margin.add_theme_constant_override("margin_left", inset)

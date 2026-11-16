@@ -6,7 +6,7 @@ Application locale de culture artistique, développée avec **Godot 4.7.2 et GDS
 
 Dans Godot, importer **`app/project.godot`**, puis appuyer sur **F5**. Le menu propose Cours, Jeux et Crédits. Cours donne accès aux parcours Égypte, Grèce et Rome ; Jeux conserve son écran d'attente. Les crédits sont consultables.
 
-La proposition des premiers cours est développée sur **`feat/cours-antiquite`**. Chaque période comprend six chapitres rédigés, avec sommaire, texte natif sélectionnable, illustrations existantes légendées, agrandissement dans l'application et quiz de quatre questions expliquées. Le catalogue permet de consulter toute l'Antiquité ou de choisir directement une période. Il ne s'agit pas de pages PDF affichées comme images : seuls les visuels sélectionnés sont extraits des supports, puis intégrés à des blocs de cours rédigés séparément.
+La proposition des premiers cours est développée sur **`feat/cours-antiquite`**. Les parcours comportent huit chapitres pour l’Égypte, six pour la Grèce et sept pour Rome, avec sommaire défilant, texte natif sélectionnable, illustrations légendées, zoom intégré et quiz expliqués. Le catalogue permet de consulter toute l'Antiquité ou de choisir directement une période. Il ne s'agit pas de pages PDF affichées comme images : seuls les visuels sélectionnés sont extraits des supports, puis intégrés à des blocs de cours rédigés séparément.
 
 Le bouton **Fiche** dans la barre du haut ouvre les **17 fiches de révision (34 pages)** : choix d'une période, recherche par nom, page précédente/suivante, zoom de 100 à 300 % et retour à la largeur du lecteur. Les fiches sont consultées directement dans l'application, hors ligne. La fiche, sa page et son zoom sont conservés lorsque l'on revient au menu pendant la même session.
 
@@ -43,6 +43,7 @@ app/
   components/destination_card.*  Carte de navigation réutilisable
   components/course_block.gd     Paragraphes, sources et encadrés du lecteur
   components/course_figure.gd    Figures proportionnelles et légendes
+  components/course_marked_texture.gd Repères sur les images et les détails cadrés
   components/course_image_viewer.gd Zoom et défilement intégrés
   services/navigation_service.gd Navigation locale
   services/quiz_session.gd       Règles de session partagées des quiz
@@ -53,7 +54,7 @@ app/
   content/media.json             Notices et crédits des médias
   content/revision_sheets.json   Périodes, ordre, sources et pages de révision
   content/courses/               Catalogue et textes des trois cours
-  content/course_media.json      Provenance des 22 illustrations des cours
+  content/course_media.json      Provenance des 35 illustrations des cours
   assets/                       Photo, polices et icônes embarquées
   theme/app_theme.gd             Couleurs, typographie et styles
   tests/menu_smoke.gd            Parcours d'entrée et captures
@@ -95,7 +96,11 @@ Les fichiers JSON sous `app/content/courses/` constituent la source de vérité 
 
 Le lecteur conserve la position de lecture et le quiz en cours pendant la session, y compris après un retour au menu. Il ne propose aucun statut « lu » et « Continuer » ne sauvegarde aucun statut de lecture. Seul le meilleur score du quiz est enregistré dans `user://learning_progress.json`. Les éventuels anciens champs de lecture sont conservés sur disque mais ignorés par l’application.
 
-Les 22 illustrations comprennent 10 images extraites des documents pédagogiques et 12 photographies du Met en haute définition sous CC0. Les légendes décrivent les images, sans mentionner les documents pédagogiques. Les notices précisent matériaux, datation, provenance et restaurations lorsqu’ils sont connus ; la traçabilité technique reste dans `app/content/course_media.json` et `docs/course-asset-register.csv`.
+Les 35 illustrations comprennent 10 images extraites des documents pédagogiques, 22 photographies du Met en haute définition sous CC0 et 3 dessins de référence existants issus de Wikimedia Commons. Les légendes décrivent les images, sans mentionner les documents pédagogiques. Les notices précisent matériaux, datation, provenance et restaurations lorsqu’ils sont connus ; la traçabilité technique reste dans `app/content/course_media.json` et `docs/course-asset-register.csv`.
+
+L’Égypte possède un chapitre sur les colonnes et un autre sur la sculpture : bas-relief, haut-relief, ronde-bosse et relief en creux. Le cours grec détaille dorique, ionique et corinthien ; Rome possède un chapitre sur ses types de supports et les ordres, dont toscan et composite. Les parties des colonnes, les critères de reconnaissance et les restaurations des exemples sont expliqués. Les quiz totalisent dix-sept questions avec correction et retour au chapitre concerné. Les compteurs du catalogue sont calculés à partir des données.
+
+Chacun des **14 types de colonnes** possède son illustration et trois indices de reconnaissance. Des repères en lettres renvoient à des définitions françaises : base, fût, collier, chapiteau, abaque, volutes, acanthe, architrave, frise, corniche, triglyphe, métope, tore et scotie. Les photographies d’originaux et les dessins pédagogiques sont qualifiés dans les légendes. Les détails sont cadrés dans le lecteur sans retoucher le fichier source ; les repères suivent le zoom. Les trois nouveaux dessins et leurs notices sont sous `app/assets/courses/diagrams/` : planche de l’Encyclopédie et schéma ionique de F l a n k e r dans le domaine public, schéma dorique de JLVwiki sous CC BY-SA 4.0 (repères et légendes associés sous la même licence).
 
 Chaque période possède la rubrique **Le Mobilier**, couvrant structure, décor et parties souples de l’ameublement. Les trois rubriques actuelles comprennent douze études illustrées : sièges, coffret, tabouret, appui-tête, lits, tables, pied sculpté et candélabre. Les exemples grecs utilisent uniquement des représentations antiques ; la chaise de 1825 a été retirée. Pour les futures périodes, le [modèle de rubrique](docs/modele-section-mobilier.md) prévoit aussi tapisserie d’ameublement, garnitures, textiles et couture selon les sources. Le validateur impose cette rubrique, au moins quatre études illustrées et trois caractéristiques par étude.
 

@@ -1,0 +1,2 @@
+# Preserve downloaded source drawings byte for byte: their SHA-256 is checked.
+app/assets/courses/diagrams/*.svg -text

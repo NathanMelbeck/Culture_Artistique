@@ -32,6 +32,28 @@
         "period_representation",
         "faithful_reproduction"
       ]
+    },
+    "column_sections": {
+      "egypte": [
+        "papyriforme-fermee",
+        "papyriforme-ouverte",
+        "lotiforme",
+        "palmiforme",
+        "composite-vegetale",
+        "hathorique"
+      ],
+      "grece": [
+        "dorique",
+        "ionique",
+        "corinthien"
+      ],
+      "rome": [
+        "toscan",
+        "dorique",
+        "ionique",
+        "corinthien",
+        "composite"
+      ]
     }
   }
 }

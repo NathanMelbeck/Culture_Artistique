@@ -3,8 +3,9 @@ extends Window
 
 var texture: Texture2D
 var caption: String
+var markers: Array = []
 var _scroll: ScrollContainer
-var _image: TextureRect
+var _image: CourseMarkedTexture
 var _percentage: Label
 var _scale := 1.0
 var _mode := "width"
@@ -39,12 +40,23 @@ func _ready() -> void:
 	_scroll.name = "ImageZoomScroll"
 	_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	column.add_child(_scroll)
-	_image = TextureRect.new()
+	_scroll.resized.connect(_refit.call_deferred)
+	var canvas := CenterContainer.new()
+	canvas.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	canvas.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_scroll.add_child(canvas)
+	_image = CourseMarkedTexture.new()
+	_image.markers = markers
 	_image.name = "ZoomedCourseImage"
 	_image.texture = texture
 	_image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	_image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	_scroll.add_child(_image)
+	canvas.add_child(_image)
+	if not markers.is_empty():
+		var names := PackedStringArray()
+		for index in markers.size():
+			names.append("%s · %s" % [String.chr(65 + index), markers[index]["label"]])
+		column.add_child(AppTheme.paragraph("   /   ".join(names), 13))
 	column.add_child(AppTheme.paragraph(caption, 13))
 	close_requested.connect(queue_free)
 	size_changed.connect(_refit.call_deferred)
@@ -59,6 +71,8 @@ func fit_width() -> void:
 
 func fit_page() -> void:
 	_mode = "page"
+	if _scroll.size.x <= 20 or _scroll.size.y <= 20:
+		return
 	_set_scale(minf((_scroll.size.x - 20) / texture.get_width(), (_scroll.size.y - 20) / texture.get_height()))
 
 func _actual_size() -> void:

@@ -1,6 +1,6 @@
 # Culture_Artistique — Architecture et feuille de route
 
-Version : 0.8 — 15 novembre 2026
+Version : 0.11 — 16 novembre 2026
 
 Statut : document de référence initial, à faire évoluer avec les décisions du projet.
 
@@ -52,6 +52,8 @@ Menu principal
 | Prototype | Conservé dans `test/` comme référence ; ce dossier ne constitue pas l'architecture définitive. |
 | Visuels des objets et lieux | Utiliser des photographies ou dessins existants et documentés, avec des droits de réutilisation vérifiés ; ne pas recréer les meubles, œuvres ou architectures en illustration. Les petites icônes et formes de l'interface peuvent être originales. |
 | Fidélité historique du mobilier | Pour toutes les périodes, utiliser des originaux documentés, des représentations d’époque ou des reproductions fidèles dont le modèle et la fidélité sont sourcés. Exclure les réinterprétations, adaptations et meubles de style d’une autre époque comme exemples. Identifier les parties restaurées des objets anciens. |
+| Niveau des cours | Contenu technique et détaillé : employer et expliquer les mots techniques propres au sujet de chaque section, avec des illustrations et repères légendés lorsque cela aide à comprendre. Cette règle vaut pour les modifications et tous les futurs cours. |
+| Niveau des fiches de révision | Présenter seulement le minimum essentiel à savoir ; les développements et le vocabulaire technique détaillé appartiennent aux cours. |
 
 L'installation et les mises à jour de l'application doivent elles aussi pouvoir se faire avec des fichiers transmis localement. Le développement peut utiliser Internet ; l'exécution de l'application n'en dépend pas.
 
@@ -299,6 +301,8 @@ Prévoir des blocs typés plutôt qu'un grand texte contenant des commandes spé
 - `paragraph` : paragraphe mis en forme ;
 - `image` : référence à un média et légende ;
 - `furniture_example` : étude de mobilier avec statut, description, image, caractéristiques et source ;
+- `column_example` : type de colonne, description courte, illustration individuelle et trois indices de reconnaissance ;
+- `annotated_image` : image existante avec repères en lettres et définitions françaises ; cadrage normalisé facultatif et hauteur de lecture explicite ;
 - `video` : référence à une vidéo locale ;
 - `callout` : synthèse, définition ou point à retenir ;
 - `internal_link` : lien vers une entité du catalogue ;
@@ -307,6 +311,8 @@ Prévoir des blocs typés plutôt qu'un grand texte contenant des commandes spé
 - `exercise_link` : passage vers une activité avec son contexte.
 
 Le lecteur Godot rend chaque type avec un composant dédié. Un nouveau cours n'exige pas une nouvelle scène ni du code spécifique à son époque.
+
+Pour les deux blocs illustrés ci-dessus, `media` résout la notice commune. `region: [x, y, largeur, hauteur]` utilise des valeurs entre 0 et 1 dans l’image source. Les `markers` donnent un `label`, une `definition`, un `point` et éventuellement un `label_point`, relatifs à l’image affichée après cadrage. Le lecteur applique le cadrage et les repères ; le fichier source reste intact. Les repères restent associés au détail dans le zoom. Les dessins de référence postérieurs sont identifiés comme tels (`visual_role: reference_diagram`), avec auteur et licence, et ne sont pas présentés comme des originaux antiques.
 
 ### 4.5. Dates et validation historique
 
@@ -484,7 +490,11 @@ Ce prototype ne comprend ni l'administration, ni les vidéos intégrées, ni la 
 - [x] Vérifier la navigation aller-retour et la conservation de la lecture pendant la session.
 - [x] Afficher les crédits des ressources réellement utilisées.
 
-La branche de proposition contient trois cours natifs, six chapitres par période, 22 illustrations existantes, douze études de mobilier commentées et une sauvegarde locale des meilleurs scores, sans suivi des chapitres lus. Le texte est rédigé à partir des thèmes des supports et complété par des vérifications muséales ; les supports ne sont pas affichés comme pages de cours. La relecture et la validation pédagogiques par Nathan restent nécessaires avant l'intégration à `main`. Les vidéos et les jeux chronologiques demeurent des étapes distinctes non réalisées.
+La branche de proposition contient trois cours natifs (huit chapitres pour l’Égypte, six pour la Grèce et sept pour Rome), 35 illustrations existantes, douze études de mobilier commentées et une sauvegarde locale des meilleurs scores, sans suivi des chapitres lus. Le texte est rédigé à partir des thèmes des supports et complété par des vérifications muséales ; les supports ne sont pas affichés comme pages de cours. La relecture et la validation pédagogiques par Nathan restent nécessaires avant l'intégration à `main`. Les vidéos et les jeux chronologiques demeurent des étapes distinctes non réalisées.
+
+La sculpture égyptienne et les colonnes égyptiennes disposent de chapitres dédiés ; les ordres grecs sont développés et un chapitre de colonnes romaines est ajouté. Les trois quiz totalisent dix-sept questions. Le catalogue calcule ses compteurs ; le sommaire peut défiler pour conserver les commandes accessibles lorsque les parcours s’allongent. Les identifiants existants des chapitres et des questions sont conservés. Les exemples ajoutés suivent les mêmes règles de provenance, de fidélité et de lisibilité que le mobilier.
+
+Les quatorze types de colonnes sont illustrés individuellement et les termes techniques essentiels sont situés sur des images légendées. Le catalogue déclare les types attendus par période ; le validateur impose une illustration et trois indices pour chacun. Les schémas de référence sont distincts des preuves photographiques d’originaux, et les limites des montages de musée restent signalées.
 
 ### Étape 3 — Vidéo hors ligne et distribution
 

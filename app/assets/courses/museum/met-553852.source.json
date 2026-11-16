@@ -1,0 +1,90 @@
+{
+  "objectID": 553852,
+  "isHighlight": false,
+  "accessionNumber": "28.9.7",
+  "accessionYear": "1928",
+  "isPublicDomain": true,
+  "primaryImage": "https://images.metmuseum.org/CRDImages/eg/original/DP321621.jpg",
+  "primaryImageSmall": "https://images.metmuseum.org/CRDImages/eg/web-large/DP321621.jpg",
+  "additionalImages": [
+    "https://images.metmuseum.org/CRDImages/eg/original/DP322024.jpg",
+    "https://images.metmuseum.org/CRDImages/eg/original/DP321625.jpg",
+    "https://images.metmuseum.org/CRDImages/eg/original/DP310776.jpg",
+    "https://images.metmuseum.org/CRDImages/eg/original/DP321623.jpg",
+    "https://images.metmuseum.org/CRDImages/eg/original/DP321624.jpg",
+    "https://images.metmuseum.org/CRDImages/eg/original/Hathor_column_less_texture.jpg"
+  ],
+  "constituents": null,
+  "department": "Egyptian Art",
+  "objectName": "Column, Hathor-emblem capital, Nectanebo I",
+  "title": "Column with Hathor-emblem capital and names of Nectanebo I on the shaft",
+  "culture": "",
+  "period": "Late Period",
+  "dynasty": "Dynasty 30",
+  "reign": "reign of Nectanebo I",
+  "portfolio": "",
+  "artistRole": "",
+  "artistPrefix": "",
+  "artistDisplayName": "",
+  "artistDisplayBio": "",
+  "artistSuffix": "",
+  "artistAlphaSort": "",
+  "artistNationality": "",
+  "artistBeginDate": "",
+  "artistEndDate": "",
+  "artistGender": "",
+  "artistWikidata_URL": "",
+  "artistULAN_URL": "",
+  "objectDate": "380–362 BCE",
+  "objectBeginDate": -380,
+  "objectEndDate": -362,
+  "medium": "Limestone, paint",
+  "dimensions": "H. 102 × W. 34.3 × D. 34.3 cm, 169.6 kg (40 3/16 × 13 1/2 × 13 1/2 in., 374 lb.); H. with rod: 117.8 cm (46 3/8 in.)",
+  "measurements": [
+    {
+      "elementName": "Overall",
+      "elementDescription": null,
+      "elementMeasurements": {
+        "Depth": 34.29007,
+        "Height": 102,
+        "Weight": 169.6453,
+        "Width": 34.29007
+      }
+    },
+    {
+      "elementName": "Overall",
+      "elementDescription": "height with rod",
+      "elementMeasurements": {
+        "Height": 117.8
+      }
+    }
+  ],
+  "creditLine": "Gift of Edward S. Harkness, 1928",
+  "geographyType": "From",
+  "city": "",
+  "state": "",
+  "county": "",
+  "country": "Egypt",
+  "region": "",
+  "subregion": "",
+  "locale": "",
+  "locus": "",
+  "excavation": "",
+  "river": "",
+  "classification": "",
+  "rightsAndReproduction": "",
+  "linkResource": "",
+  "metadataDate": "2026-05-13T04:56:47.627Z",
+  "repository": "Metropolitan Museum of Art, New York, NY",
+  "objectURL": "https://www.metmuseum.org/art/collection/search/553852",
+  "tags": [
+    {
+      "term": "Hathor",
+      "AAT_URL": "http://vocab.getty.edu/page/ia/901001394",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q133343"
+    }
+  ],
+  "objectWikidata_URL": "https://www.wikidata.org/wiki/Q116245294",
+  "isTimelineWork": false,
+  "GalleryNumber": "134"
+}

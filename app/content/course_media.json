@@ -470,5 +470,301 @@
     "subject_periods": [
       "rome"
     ]
+  },
+  "egypte-bas-relief": {
+    "path": "res://assets/courses/museum/met-553665.jpg",
+    "title": "Une scène en bas-relief",
+    "caption": "Fragment de flacon en faïence, vers 1080–664 av. J.-C. Un homme manœuvre une embarcation devant des papyrus ; la notice identifie le décor principal comme un bas-relief.",
+    "alt": "Fragment de faïence portant une scène peu saillante avec un personnage, une embarcation et des plantes.",
+    "source": "https://www.metmuseum.org/art/collection/search/553665",
+    "download_url": "https://images.metmuseum.org/CRDImages/eg/original/DP-29170-002.jpg",
+    "metadata_file": "app/assets/courses/museum/met-553665.source.json",
+    "original_size": [
+      3542,
+      4000
+    ],
+    "source_image_sha256": "868739bbf3b1f0239ec3ca89227e95c03351d08f13b4e66156fc712d832d4b90",
+    "credit": "Purchase, Edward S. Harkness Gift, 1926",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 26.7.978 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ],
+    "full_width": false
+  },
+  "egypte-haut-relief": {
+    "path": "res://assets/courses/museum/met-545196.jpg",
+    "title": "Un visage de chouette en haut-relief",
+    "caption": "Plaquette en calcaire représentant le visage du hiéroglyphe de la chouette, 400–30 av. J.-C. La tête se projette fortement hors du fond ; la notice la décrit en haut-relief.",
+    "alt": "Tête de chouette fortement saillante sur une plaquette carrée de calcaire.",
+    "source": "https://www.metmuseum.org/art/collection/search/545196",
+    "download_url": "https://images.metmuseum.org/CRDImages/eg/original/DP243859.jpg",
+    "metadata_file": "app/assets/courses/museum/met-545196.source.json",
+    "original_size": [
+      4000,
+      3000
+    ],
+    "source_image_sha256": "09fe519d0ca5d199856eedce0991f9829cba32fcc1505335a14351d281df6b8d",
+    "credit": "Rogers Fund, 1907",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 07.228.11 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ],
+    "full_width": false
+  },
+  "egypte-ronde-bosse": {
+    "path": "res://assets/courses/museum/met-544450.jpg",
+    "title": "Hatchepsout assise, en ronde-bosse",
+    "caption": "Statue assise d’Hatchepsout, vers 1473–1458 av. J.-C. Calcaire dur et peinture ; provenance : Deir el-Bahari et Assassif, Thèbes. Des cassures et des raccords restent visibles.",
+    "alt": "Statue indépendante d’Hatchepsout assise sur un siège, avec un volume sculpté de face, de côté et au revers.",
+    "source": "https://www.metmuseum.org/art/collection/search/544450",
+    "download_url": "https://images.metmuseum.org/CRDImages/eg/original/DP-24215-002.jpg",
+    "metadata_file": "app/assets/courses/museum/met-544450.source.json",
+    "original_size": [
+      3000,
+      4000
+    ],
+    "source_image_sha256": "f29901513bb031c257b9924adb0ca2c27d83f85c4c53eb168b3ce3c6e033c64d",
+    "credit": "Rogers Fund, 1929",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 29.3.2 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ],
+    "full_width": false
+  },
+  "egypte-relief-creux": {
+    "path": "res://assets/courses/museum/met-544056.jpg",
+    "title": "Le relief en creux à l’époque d’Akhenaton",
+    "caption": "Akhenaton présentant un canard, vers 1347–1330 av. J.-C. Relief de temple en calcaire peint. Les contours sont creusés dans la surface ; ce relief en creux est identifié par la notice.",
+    "alt": "Fragment de relief montrant Akhenaton de profil et un canard, avec des contours incisés sous le niveau du fond.",
+    "source": "https://www.metmuseum.org/art/collection/search/544056",
+    "download_url": "https://images.metmuseum.org/CRDImages/eg/original/DT545.jpg",
+    "metadata_file": "app/assets/courses/museum/met-544056.source.json",
+    "original_size": [
+      3811,
+      3049
+    ],
+    "source_image_sha256": "298c4e2c72abad52bafd2637fcddd109b335cec0b8a72ac3b35134cfbd46062d",
+    "credit": "Gift of Norbert Schimmel, 1985",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 1985.328.2 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ],
+    "full_width": false
+  },
+  "egypte-colonne-palmiforme": {
+    "path": "res://assets/courses/museum/met-551092.jpg",
+    "title": "Fragments d’une colonne palmiforme",
+    "caption": "Fragments d’une colonne palmiforme en granite, vers 2353–2323 av. J.-C. Le chapiteau conserve des feuilles nervurées. Les anneaux manquants du col ont été reconstitués ; la hauteur du montage moderne ne restitue pas celle de la colonne antique.",
+    "alt": "Chapiteau à feuilles de palmier et fragment de fût réunis dans un montage de musée.",
+    "source": "https://www.metmuseum.org/art/collection/search/551092",
+    "download_url": "https://images.metmuseum.org/CRDImages/eg/original/07.229.2_DA-3.jpg",
+    "metadata_file": "app/assets/courses/museum/met-551092.source.json",
+    "original_size": [
+      3294,
+      5616
+    ],
+    "source_image_sha256": "409908f7ad2061e2c10a5f487369ff30df1ce736e1d44ea35d0516b137073b49",
+    "credit": "Rogers Fund, 1907",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 07.229.2a, b · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ],
+    "full_width": false
+  },
+  "egypte-chapiteau-composite": {
+    "path": "res://assets/courses/museum/met-551898.jpg",
+    "title": "Un chapiteau papyriforme composite",
+    "caption": "Chapiteau du kiosque d’entrée du temple d’Amon à Hibis, oasis de Kharga, 380–343 av. J.-C. Grès peint. La composition combine papyrus et une autre espèce de cypéracée ; des couleurs anciennes subsistent.",
+    "alt": "Chapiteau végétal évasé portant plusieurs étages de tiges et de fleurs, avec des restes de peinture.",
+    "source": "https://www.metmuseum.org/art/collection/search/551898",
+    "download_url": "https://images.metmuseum.org/CRDImages/eg/original/10.177.2_EGDP018080.jpg",
+    "metadata_file": "app/assets/courses/museum/met-551898.source.json",
+    "original_size": [
+      4000,
+      3125
+    ],
+    "source_image_sha256": "325aca6fbb4fdb7a9c7a9ad90afad69f168b45ac10bee9110f60e538b75c924c",
+    "credit": "Rogers Fund, 1910",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 10.177.2 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ],
+    "full_width": false
+  },
+  "egypte-colonne-hathorique": {
+    "path": "res://assets/courses/museum/met-553852.jpg",
+    "title": "Une colonne à emblèmes d’Hathor",
+    "caption": "Colonne portant les noms de Nectanébo Ier, 380–362 av. J.-C. Calcaire peint, provenant du Delta d’après les renseignements de découverte transmis lors de l’acquisition. Le chapiteau porte l’emblème d’Hathor ; les yeux étaient incrustés.",
+    "alt": "Petite colonne égyptienne dont le sommet comporte une face d’Hathor sous un élément en forme de sanctuaire.",
+    "source": "https://www.metmuseum.org/art/collection/search/553852",
+    "download_url": "https://images.metmuseum.org/CRDImages/eg/original/DP321621.jpg",
+    "metadata_file": "app/assets/courses/museum/met-553852.source.json",
+    "original_size": [
+      2329,
+      4000
+    ],
+    "source_image_sha256": "c44965557306346a51cc4398ff61f6e99a12832de1b2510b3e5d6a8d65d97e3b",
+    "credit": "Gift of Edward S. Harkness, 1928",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 28.9.7 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ],
+    "full_width": false
+  },
+  "grece-colonne-ionique": {
+    "path": "res://assets/courses/museum/met-252453.jpg",
+    "title": "Une colonne ionique du temple d’Artémis à Sardes",
+    "caption": "Éléments de colonne ionique grecque en marbre, vers 300 av. J.-C., temple d’Artémis à Sardes, en actuelle Turquie. Le montage omet la majeure partie du fût ; certaines parties sont restaurées et la base profilée sous le tore est une copie de l’original.",
+    "alt": "Montage de fragments d’une colonne grecque : grandes volutes, fût cannelé écourté et base décorée.",
+    "source": "https://www.metmuseum.org/art/collection/search/252453",
+    "download_url": "https://images.metmuseum.org/CRDImages/gr/original/DP144130.jpg",
+    "metadata_file": "app/assets/courses/museum/met-252453.source.json",
+    "original_size": [
+      3738,
+      3790
+    ],
+    "source_image_sha256": "2307ca270b7ad3362f5949490eb92357a738f51ba0dbbb7104f04a48b9544827",
+    "credit": "Gift of The American Society for the Excavation of Sardis, 1926",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 26.59.1 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "historical_status": "original",
+    "subject_periods": [
+      "grece"
+    ],
+    "full_width": false
+  },
+  "rome-colonne-composite": {
+    "path": "res://assets/courses/museum/met-250646.jpg",
+    "title": "Une colonne romaine à chapiteau composite",
+    "caption": "Colonne romaine en marbre avec base et chapiteau, vers 117–138 apr. J.-C. Le chapiteau associe de grandes volutes à des rangées de feuilles d’acanthe.",
+    "alt": "Colonne romaine cannelée, avec base et chapiteau combinant volutes et feuillages.",
+    "source": "https://www.metmuseum.org/art/collection/search/250646",
+    "download_url": "https://images.metmuseum.org/CRDImages/gr/original/DP-14287-095.jpg",
+    "metadata_file": "app/assets/courses/museum/met-250646.source.json",
+    "original_size": [
+      1352,
+      4000
+    ],
+    "source_image_sha256": "3027fb6d721781d04935f3f58e646d07e649f6801c6f69fd343e11495aed78e7",
+    "credit": "Rogers Fund, 1917",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 17.230.119 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "historical_status": "original",
+    "subject_periods": [
+      "rome"
+    ],
+    "full_width": false
+  },
+  "rome-chapiteau-corinthien": {
+    "path": "res://assets/courses/museum/met-252548.jpg",
+    "title": "Un chapiteau corinthien de pilastre",
+    "caption": "Chapiteau romain de pilastre, première moitié du Ier siècle apr. J.-C. Marbre. Les feuilles d’acanthe et les enroulements composent un décor corinthien destiné à un élément vertical plat.",
+    "alt": "Chapiteau de pilastre en marbre, à feuilles d’acanthe et enroulements sous l’abaque.",
+    "source": "https://www.metmuseum.org/art/collection/search/252548",
+    "download_url": "https://images.metmuseum.org/CRDImages/gr/original/DP-14287-096.jpg",
+    "metadata_file": "app/assets/courses/museum/met-252548.source.json",
+    "original_size": [
+      4000,
+      3017
+    ],
+    "source_image_sha256": "4ec5e942639af73324aa14f34fc31c79e53eb24f94c3331fd2237199e0e5ba01",
+    "credit": "Fletcher Fund, 1926",
+    "display_credit": "The Metropolitan Museum of Art, New York · inv. 26.60.84 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "modifications": "Photographie du musée conservée sans retouche.",
+    "historical_status": "original",
+    "subject_periods": [
+      "rome"
+    ],
+    "full_width": false
+  },
+  "ordres-encyclopedie": {
+    "path": "res://assets/courses/diagrams/ordres-encyclopedie.png",
+    "title": "Chapiteaux des ordres classiques — Encyclopédie",
+    "caption": "Planche de référence de l’Encyclopédie, XVIIIe siècle : schémas des chapiteaux classiques. Ce dessin postérieur explique des formes ; ce n’est pas un vestige antique.",
+    "alt": "Planche gravée de chapiteaux toscan, dorique, ionique, corinthien et composite.",
+    "source": "https://commons.wikimedia.org/wiki/File:Classical_orders_from_the_Encyclopedie.png",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Classical_orders_from_the_Encyclopedie.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "metadata_file": "app/assets/courses/diagrams/ordres-encyclopedie.source.json",
+    "original_size": [
+      853,
+      1342
+    ],
+    "source_image_sha256": "608ef16ebbc6303b4afc36a4e90198e0e0b036ae14be452aab3b0c6a683acdd3",
+    "credit": "Encyclopédie de Diderot et d’Alembert, vol. XVIII, Architecture, pl. VII · exemplaire numérisé ARTFL, université de Chicago · conversion PNG : stw · domaine public",
+    "display_credit": "Encyclopédie de Diderot et d’Alembert, vol. XVIII, Architecture, pl. VII · exemplaire numérisé ARTFL, université de Chicago · conversion PNG : stw · domaine public",
+    "rights": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "modifications": "Fichier original conservé. Cadrage et repères superposés dans le lecteur ; aucun redessin du sujet.",
+    "provider": "wikimedia",
+    "visual_role": "reference_diagram",
+    "full_width": true
+  },
+  "anatomie-ionique": {
+    "path": "res://assets/courses/diagrams/Ionic_order.svg",
+    "title": "Lire une colonne et son entablement",
+    "caption": "Schéma pédagogique d’un ordre ionique. Les repères en lettres nomment les éléments ; les proportions dessinées ne servent pas à dater un monument.",
+    "alt": "Colonne ionique cannelée sur une plate-forme à degrés, avec base, volutes et entablement.",
+    "source": "https://commons.wikimedia.org/wiki/File:Ionic_order.svg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Ionic_order.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "metadata_file": "app/assets/courses/diagrams/Ionic_order.svg.source.json",
+    "original_size": [
+      900,
+      1800
+    ],
+    "source_image_sha256": "7f06a4ba075903d553810854c0a6ded7e2507fb7b575d0be0ae905bf310af285",
+    "credit": "F l a n k e r · Ionic order · Wikimedia Commons · domaine public",
+    "display_credit": "F l a n k e r · Ionic order · Wikimedia Commons · domaine public",
+    "rights": "Public domain",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "modifications": "Fichier original conservé. Cadrage et repères superposés dans le lecteur ; aucun redessin du sujet.",
+    "provider": "wikimedia",
+    "visual_role": "reference_diagram",
+    "full_width": true
+  },
+  "entablement-dorique": {
+    "path": "res://assets/courses/diagrams/entablement-dorique.svg",
+    "title": "Les détails de l’ordre dorique",
+    "caption": "Schéma pédagogique de l’entablement dorique et du haut des colonnes : les triglyphes alternent avec les métopes. Les lettres et légendes françaises sont ajoutées pour la lecture.",
+    "alt": "Dessin de frise dorique à triglyphes et métopes sculptées, au-dessus de chapiteaux à échine et abaque.",
+    "source": "https://commons.wikimedia.org/wiki/File:Entablamento_d%C3%B3rico.svg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Entablamento_d%C3%B3rico.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "metadata_file": "app/assets/courses/diagrams/entablement-dorique.source.json",
+    "original_size": [
+      1000,
+      800
+    ],
+    "source_image_sha256": "335125a7113c1a6c093f299e5c112125f9e08567982e5987a463ecf0842d2fe1",
+    "credit": "JLVwiki · Entablamento dórico (2026) · Wikimedia Commons · CC BY-SA 4.0 · repères et légendes ajoutés : même licence",
+    "display_credit": "JLVwiki · Entablamento dórico (2026) · Wikimedia Commons · CC BY-SA 4.0 · repères et légendes ajoutés : même licence",
+    "rights": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "modifications": "Fichier original conservé. Cadrage et repères superposés dans le lecteur ; aucun redessin du sujet.",
+    "provider": "wikimedia",
+    "visual_role": "reference_diagram",
+    "full_width": true
   }
 }

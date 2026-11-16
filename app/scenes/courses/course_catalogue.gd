@@ -15,7 +15,10 @@ func _ready() -> void:
 	add_child(AppTheme.paragraph("Des cours rédigés pour apprendre à observer : repères historiques, arts, architecture et mobilier.", 17))
 	var row := HBoxContainer.new()
 	add_child(row)
-	var count := AppTheme.label("3 cours · 6 chapitres par période · Quiz expliqués", 13, AppTheme.MUTED)
+	var chapters := 0
+	for course in _courses:
+		chapters += course["chapters"].size()
+	var count := AppTheme.label("%d cours · %d chapitres · Quiz expliqués" % [_courses.size(), chapters], 13, AppTheme.MUTED)
 	count.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	row.add_child(count)
 	_filter = OptionButton.new()
@@ -65,6 +68,7 @@ func _show_courses() -> void:
 		column.add_child(image)
 		column.add_child(AppTheme.eyebrow("ANTIQUITÉ / %02d" % (index + 1)))
 		column.add_child(AppTheme.label(course["title"], 30, AppTheme.FOREST, true))
+		column.add_child(AppTheme.label("%d chapitres · %d questions" % [course["chapters"].size(), course["quiz"].size()], 12, AppTheme.MUTED))
 		var summary := AppTheme.paragraph(course["summary"], 16)
 		summary.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		column.add_child(summary)

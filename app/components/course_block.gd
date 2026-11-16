@@ -25,6 +25,10 @@ static func prose(value: String, size: int = 18, color: Color = AppTheme.FOREST)
 
 static func build(block: Dictionary, repository: CourseRepository) -> Control:
 	match block.get("type", ""):
+		"column_example":
+			return _column_example(block, repository)
+		"annotated_image":
+			return _figure(block.get("media", ""), repository, block)
 		"furniture_example":
 			return _furniture_example(block, repository)
 		"paragraph":
@@ -74,11 +78,37 @@ static func _furniture_example(block: Dictionary, repository: CourseRepository) 
 	column.add_child(_source(reference))
 	return column
 
-static func _figure(id: String, repository: CourseRepository) -> Control:
+static func _column_example(block: Dictionary, repository: CourseRepository) -> Control:
+	var column := VBoxContainer.new()
+	column.name = "ColumnExample_" + block["id"]
+	column.add_theme_constant_override("separation", 16)
+	column.add_child(AppTheme.divider())
+	var heading := AppTheme.label(block["title"], 29, AppTheme.FOREST, true)
+	heading.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	column.add_child(heading)
+	column.add_child(prose(block["description"]))
+	column.add_child(_figure(block["media"], repository, block))
+	column.add_child(AppTheme.eyebrow("POUR RECONNAÎTRE CE TYPE"))
+	for cue in block["cues"]:
+		column.add_child(prose("•  " + cue, 17))
+	return column
+
+static func _figure(id: String, repository: CourseRepository, options: Dictionary = {}) -> Control:
 	var figure := CourseFigure.new()
 	figure.media_id = id
-	figure.media = repository.get_media(id)
+	figure.media = repository.get_media(id).duplicate(true)
 	figure.texture = repository.get_texture(id)
+	if options.has("region") and figure.texture != null:
+		var region: Array = options["region"]
+		var atlas := AtlasTexture.new()
+		atlas.atlas = figure.texture
+		atlas.region = Rect2(region[0] * figure.texture.get_width(), region[1] * figure.texture.get_height(), region[2] * figure.texture.get_width(), region[3] * figure.texture.get_height())
+		figure.texture = atlas
+	if options.has("caption"):
+		figure.media["caption"] = options["caption"]
+		figure.media["alt"] = options.get("alt", options["caption"])
+	figure.markers = options.get("markers", [])
+	figure.display_height = options.get("display_height", 0.0)
 	return figure
 
 static func _source(block: Dictionary) -> Control:

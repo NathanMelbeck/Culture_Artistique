@@ -10,7 +10,9 @@
   "objectives": [
     "Situer les grands moments de l'Égypte pharaonique.",
     "Expliquer le lien entre pouvoir, culte et production artistique.",
-    "Observer une architecture, une image et un meuble avec un vocabulaire précis."
+    "Observer une architecture, une image et un meuble avec un vocabulaire précis.",
+    "Distinguer bas-relief, haut-relief, ronde-bosse et relief en creux.",
+    "Reconnaître les principales familles de colonnes et leurs parties."
   ],
   "references": [
     {
@@ -42,6 +44,11 @@
       "title": "The Met — Our Egyptian Furniture (1965)",
       "url": "https://resources.metmuseum.org/resources/metpublications/pdf/The_Metropolitan_Museum_of_Art_Bulletin_v_24_no_4_December_1965.pdf",
       "note": "Étude des techniques ; placages chevillés ou collés, page 5 du fichier PDF. En anglais."
+    },
+    {
+      "title": "Université de Memphis — Les colonnes de la salle hypostyle de Karnak",
+      "url": "https://www.memphis.edu/hypostyle/about-architecture/",
+      "note": "Papyrus ouverts et fermés, organisation porteuse et éclairage."
     }
   ],
   "chapters": [
@@ -161,21 +168,336 @@
           "text": "Dans de nombreux grands temples, on progresse depuis une entrée monumentale vers des espaces de plus en plus réservés. Un [b]pylône[/b] encadre l'accès ; une salle [b]hypostyle[/b] possède un plafond porté par des colonnes. Les cours, salles et sanctuaires varient selon les monuments : un plan type aide à comprendre, mais ne remplace pas l'observation du bâtiment."
         },
         {
+          "type": "paragraph",
+          "text": "Le chapitre « Les colonnes égyptiennes » détaille les parties des supports, leurs formes végétales et les colonnes à emblèmes d’Hathor. La sculpture fait ensuite l’objet d’un chapitre consacré au relief et à la ronde-bosse."
+        }
+      ]
+    },
+    {
+      "id": "colonnes",
+      "title": "Les colonnes égyptiennes",
+      "intro": "Base, fût, chapiteau et abaque : reconnaître les formes et comprendre ce qui les distingue.",
+      "source_pages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Une colonne est un support vertical qui transmet des charges vers le sol. Dans les grands temples égyptiens, les colonnes portent notamment des blocs horizontaux, les architraves, qui participent au support de la couverture. Leur forme et leur décor donnent aussi une signification à l’espace. Un décor végétal peut évoquer les plantes du Nil et un monde vivant dans un édifice de pierre."
+        },
+        {
+          "type": "heading",
+          "text": "Lire une colonne de bas en haut"
+        },
+        {
+          "type": "annotated_image",
+          "media": "egypte-colonnes",
+          "caption": "Lecture des parties d’une colonne égyptienne sur le type palmiforme de la planche comparative. Dessin de référence ; les lettres identifient les parties, les chiffres imprimés appartiennent à la planche.",
+          "markers": [
+            {
+              "label": "Base",
+              "definition": "Partie basse qui reçoit le fût ; ici, un socle en disque.",
+              "point": [
+                0.47,
+                0.965
+              ],
+              "label_point": [
+                0.88,
+                0.91
+              ]
+            },
+            {
+              "label": "Fût",
+              "definition": "Corps vertical de la colonne, entre la base et le chapiteau.",
+              "point": [
+                0.47,
+                0.62
+              ],
+              "label_point": [
+                0.88,
+                0.61
+              ]
+            },
+            {
+              "label": "Collier",
+              "definition": "Bandeaux sous le chapiteau, évoquant des ligatures.",
+              "point": [
+                0.47,
+                0.295
+              ],
+              "label_point": [
+                0.88,
+                0.33
+              ]
+            },
+            {
+              "label": "Chapiteau",
+              "definition": "Couronnement élargi ; les feuilles de palmier en déterminent ici la forme.",
+              "point": [
+                0.47,
+                0.12
+              ],
+              "label_point": [
+                0.1,
+                0.17
+              ]
+            },
+            {
+              "label": "Abaque",
+              "definition": "Bloc supérieur posé au-dessus du chapiteau, sous l’architrave.",
+              "point": [
+                0.47,
+                0.025
+              ],
+              "label_point": [
+                0.1,
+                0.04
+              ]
+            }
+          ],
+          "display_height": 600,
+          "region": [
+            0.43,
+            0.025,
+            0.17,
+            0.915
+          ]
+        },
+        {
           "type": "image",
           "media": "egypte-colonnes"
         },
         {
-          "type": "key_points",
-          "items": [
-            "Le chapiteau termine la colonne ; le fût est son corps vertical.",
-            "Palmiforme : référence au palmier. Lotiforme : au lotus. Papyriforme : au papyrus.",
-            "Campaniforme décrit une silhouette évasée en cloche. Ces formes végétales associent structure et sens symbolique."
+          "type": "callout",
+          "title": "Lire le schéma",
+          "text": "Cette planche compare des types de colonnes : papyriforme fermée, campaniforme, palmiforme, composite et lotiforme. Les couleurs et les numéros appartiennent au document illustratif. Pour identifier une colonne réelle, comparez sa silhouette et ses détails aux objets et monuments documentés ci-dessous."
+        },
+        {
+          "type": "column_example",
+          "id": "papyriforme-fermee",
+          "title": "Papyriforme fermée · le bouton resserré",
+          "description": "Le chapiteau évoque un bouton de papyrus fermé. Il reste resserré, au-dessus d’un fût qui peut rappeler des tiges réunies.",
+          "media": "egypte-colonnes",
+          "cues": [
+            "Cherchez un sommet serré, évoquant un bouton de papyrus fermé.",
+            "Suivez les lignes verticales du fût : elles peuvent évoquer des tiges réunies.",
+            "Repérez les bandeaux sous le chapiteau ; confirmez l’identification avec la notice du monument."
+          ],
+          "display_height": 440,
+          "markers": [],
+          "caption": "Type papyriforme fermé, isolé dans la planche comparative. Dessin de référence : bouton resserré, col et fût évoquant un faisceau.",
+          "region": [
+            0.025,
+            0.055,
+            0.115,
+            0.88
           ]
         },
         {
-          "type": "callout",
-          "title": "Le regard de l'ébéniste",
-          "text": "Séparez ce qui porte la charge de ce qui décore. Puis observez comment une forme végétale s'organise autour de cette structure : ce raisonnement sera utile devant une colonne comme devant un montant de meuble."
+          "type": "column_example",
+          "id": "papyriforme-ouverte",
+          "title": "Papyriforme ouverte · la cloche évasée",
+          "description": "Le chapiteau s’épanouit vers le haut, comme une corolle ouverte. « Campaniforme » signifie en forme de cloche : ce mot décrit la silhouette et peut qualifier un papyrus ouvert.",
+          "media": "egypte-colonnes",
+          "cues": [
+            "Suivez le profil : il s’élargit fortement vers le haut.",
+            "« Campaniforme » décrit la silhouette en cloche, « papyriforme » la référence au papyrus.",
+            "À Karnak, comparez les grands papyrus ouverts de l’axe central aux boutons fermés des côtés."
+          ],
+          "display_height": 440,
+          "markers": [],
+          "caption": "Type campaniforme isolé dans la planche comparative. Le dessin sert à repérer la silhouette évasée ; l’identification botanique d’un monument exige sa documentation.",
+          "region": [
+            0.23,
+            0.055,
+            0.14,
+            0.88
+          ]
+        },
+        {
+          "type": "source",
+          "title": "Karnak : comparer les formes dans un même édifice",
+          "text": "Le projet de l’université de Memphis identifie les douze grandes colonnes de l’axe central comme des papyrus ouverts, et les cent vingt-deux colonnes latérales comme des papyrus en bouton fermé. Leur différence de hauteur permet une couverture centrale surélevée et un éclairage par des fenêtres hautes.",
+          "url": "https://www.memphis.edu/hypostyle/about-architecture/"
+        },
+        {
+          "type": "column_example",
+          "id": "lotiforme",
+          "title": "Lotiforme · le bouton de lotus",
+          "description": "« Lotiforme » renvoie au lotus ou nénuphar dans le vocabulaire artistique égyptien. Le type fermé illustré ici évoque un bouton dont les pétales restent serrés.",
+          "media": "egypte-colonnes",
+          "cues": [
+            "Dans ce type fermé, repérez le bouton et le dessin des pétales.",
+            "Comparez avec le papyrus fermé : une silhouette resserrée seule ne suffit pas.",
+            "Sur un monument, vérifiez la désignation et la provenance dans une notice documentée."
+          ],
+          "display_height": 440,
+          "markers": [],
+          "caption": "Type lotiforme fermé isolé dans la planche comparative. Les pétales et le bouton constituent les indices à observer.",
+          "region": [
+            0.875,
+            0.055,
+            0.12,
+            0.88
+          ]
+        },
+        {
+          "type": "column_example",
+          "id": "palmiforme",
+          "title": "Palmiforme · la couronne de palmes",
+          "description": "Le chapiteau évoque une couronne de feuilles de palmier. De longues palmes nervurées se redressent au-dessus d’un col marqué de bandeaux.",
+          "media": "egypte-colonne-palmiforme",
+          "cues": [
+            "Repérez les longues feuilles dressées et leurs nervures.",
+            "Le sommet n’est pas un bouquet de petites fleurs : il organise une couronne de palmes.",
+            "Ce montage de musée comporte des parties restaurées ; sa hauteur n’est pas celle d’une colonne antique complète."
+          ],
+          "display_height": 440,
+          "markers": [
+            {
+              "label": "Palmes nervurées",
+              "definition": "Les longues feuilles et leurs nervures caractérisent ce chapiteau.",
+              "point": [
+                0.5,
+                0.32
+              ],
+              "label_point": [
+                0.15,
+                0.25
+              ]
+            },
+            {
+              "label": "Collier restauré",
+              "definition": "Les anneaux sont reconstitués par comparaison, comme l’indique la notice du musée.",
+              "point": [
+                0.49,
+                0.89
+              ],
+              "label_point": [
+                0.85,
+                0.85
+              ]
+            }
+          ],
+          "caption": "Fragments d’une colonne palmiforme en granite, vers 2353–2323 av. J.-C. Le chapiteau conserve des feuilles nervurées. Les anneaux manquants du col ont été reconstitués ; la hauteur du montage moderne ne restitue pas celle de la colonne antique. Détail du couronnement et du col.",
+          "region": [
+            0.12,
+            0.015,
+            0.73,
+            0.69
+          ]
+        },
+        {
+          "type": "source",
+          "title": "Un original fragmentaire à lire avec sa restauration",
+          "text": "La notice du Met décrit les feuilles nervurées et l’abaque carré de ces fragments de l’Ancien Empire. Les anneaux du col ont été reconstitués par comparaison. Elle avertit que la hauteur totale du montage moderne paraît excessive : on étudie ici les éléments anciens conservés, pas une élévation antique complète.",
+          "url": "https://www.metmuseum.org/art/collection/search/551092"
+        },
+        {
+          "type": "column_example",
+          "id": "composite-vegetale",
+          "title": "Composite végétale · plusieurs plantes réunies",
+          "description": "Un chapiteau composite végétal combine plusieurs formes de plantes. Sur cet original d’Hibis, observez les étages de végétaux et les traces de peinture.",
+          "media": "egypte-chapiteau-composite",
+          "cues": [
+            "Observez plusieurs étages et plusieurs formes végétales dans le même chapiteau.",
+            "À Hibis, la notice identifie deux espèces de cypéracées, dont le papyrus.",
+            "Ne confondez pas cette combinaison égyptienne avec l’ordre composite romain."
+          ],
+          "display_height": 440,
+          "markers": [
+            {
+              "label": "Étage supérieur",
+              "definition": "Les ombelles évasées forment le couronnement végétal.",
+              "point": [
+                0.48,
+                0.3
+              ],
+              "label_point": [
+                0.15,
+                0.22
+              ]
+            },
+            {
+              "label": "Étage inférieur",
+              "definition": "D’autres formes végétales et des traces de peinture complètent la composition.",
+              "point": [
+                0.53,
+                0.55
+              ],
+              "label_point": [
+                0.85,
+                0.67
+              ]
+            }
+          ]
+        },
+        {
+          "type": "source",
+          "title": "Hibis : une composition végétale identifiée",
+          "text": "Le Met rattache ce chapiteau au kiosque du temple d’Amon à Hibis. La notice identifie deux espèces de cypéracées, dont le papyrus, dans la composition. Le grès conserve des restes de peinture : la polychromie fait partie de son état ancien documenté.",
+          "url": "https://www.metmuseum.org/art/collection/search/551898"
+        },
+        {
+          "type": "column_example",
+          "id": "hathorique",
+          "title": "Hathorique · le visage d’Hathor",
+          "description": "Le signe distinctif est le visage de la déesse Hathor, avec des oreilles bovines. Le nombre de faces et l’organisation du couronnement varient selon le monument et sa date.",
+          "media": "egypte-colonne-hathorique",
+          "cues": [
+            "Cherchez un visage divin et ses oreilles bovines, plutôt qu’un seul décor végétal.",
+            "Le couronnement peut évoquer un petit sanctuaire, appelé naos.",
+            "Cet objet de petit format n’est pas une grande colonne de salle hypostyle."
+          ],
+          "display_height": 440,
+          "markers": [
+            {
+              "label": "Visage d’Hathor",
+              "definition": "La face divine et les oreilles bovines sont les principaux indices figurés.",
+              "point": [
+                0.51,
+                0.5
+              ],
+              "label_point": [
+                0.16,
+                0.49
+              ]
+            },
+            {
+              "label": "Naos",
+              "definition": "Le petit sanctuaire figuré couronne ici l’emblème d’Hathor.",
+              "point": [
+                0.52,
+                0.27
+              ],
+              "label_point": [
+                0.85,
+                0.2
+              ]
+            }
+          ]
+        },
+        {
+          "type": "source",
+          "title": "La colonne de Nectanébo Ier",
+          "text": "La notice du Met décrit les emblèmes d’Hathor, la peinture conservée et les yeux autrefois incrustés. Elle précise que ce petit format a pu appartenir à une petite structure ou servir d’emblème cultuel ; il ne faut pas lui attribuer automatiquement la fonction d’une grande colonne de salle hypostyle.",
+          "url": "https://www.metmuseum.org/art/collection/search/553852"
+        },
+        {
+          "type": "heading",
+          "text": "Distinguer support, décor et contexte"
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Un pilier à section carrée, éventuellement associé à une figure osiriaque, ne devient pas une colonne à chapiteau végétal.",
+            "Un fût facetté ne suffit pas à reconnaître un ordre grec : la forme du chapiteau et l’organisation des éléments horizontaux doivent aussi être étudiées.",
+            "Pour identifier une colonne : observer le sommet, le col, le fût et la base ; relever ensuite matériau, couleur, inscriptions et provenance.",
+            "Le chapiteau égyptien, le chapiteau corinthien grec et le chapiteau composite romain peuvent tous employer des formes végétales. Leur organisation précise permet de les distinguer."
+          ]
         }
       ]
     },
@@ -219,6 +541,134 @@
             "Relief : image sculptée qui se détache d'un fond ; son modelé se lit avec la lumière.",
             "Convention : choix partagé de représentation, à replacer dans sa fonction et son contexte."
           ]
+        }
+      ]
+    },
+    {
+      "id": "sculpture",
+      "title": "La sculpture égyptienne",
+      "intro": "Bas-relief, haut-relief et ronde-bosse : comprendre le rapport entre le volume sculpté et son fond.",
+      "source_pages": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les trois termes décrivent la manière dont une forme occupe l’espace. Ils ne correspondent ni à trois périodes, ni à trois matériaux. Un relief reste lié à un fond ; une ronde-bosse est un volume indépendant d’un fond continu. Une même œuvre peut associer plusieurs traitements. En Égypte, il faut aussi connaître le relief en creux, très important dans le décor des monuments."
+        },
+        {
+          "type": "heading",
+          "text": "Le bas-relief : une faible saillie"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans un [b]bas-relief[/b], les formes émergent faiblement du fond. Le sculpteur ou le modeleur rend les volumes avec une profondeur réduite, tout en conservant des contours et des détails lisibles. Les ombres restent généralement peu profondes. Ce terme décrit le résultat en volume ; il ne signifie pas que le décor est simplement peint ou uniquement dessiné."
+        },
+        {
+          "type": "image",
+          "media": "egypte-bas-relief"
+        },
+        {
+          "type": "source",
+          "title": "Un bas-relief documenté sur un objet égyptien",
+          "text": "La notice du Met identifie le décor principal de ce fragment de flacon comme un bas-relief : un personnage se déplace en embarcation parmi les papyrus. L’objet est en faïence. Un bas-relief peut donc être étudié sur un objet aussi bien que sur une paroi de pierre.",
+          "url": "https://www.metmuseum.org/art/collection/search/553665"
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Chercher le plan du fond et la faible épaisseur des formes devant lui.",
+            "Distinguer les traits peints des volumes réellement saillants.",
+            "Une scène détaillée ou une couleur vive ne transforme pas, à elle seule, un bas-relief en haut-relief."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Le haut-relief : des volumes fortement saillants"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans un [b]haut-relief[/b], une grande partie du volume se projette devant le fond. Les ombres et les vues de côté rendent cette saillie plus évidente ; certaines parties peuvent être dégagées. L’œuvre reste pourtant attachée à son support. Une forte saillie ne la rend donc pas automatiquement indépendante comme une ronde-bosse."
+        },
+        {
+          "type": "image",
+          "media": "egypte-haut-relief"
+        },
+        {
+          "type": "source",
+          "title": "Une tête de chouette qui se détache du fond",
+          "text": "Le Met décrit explicitement cette face du hiéroglyphe de la chouette comme un haut-relief. Regardez la tête qui avance et les zones qui restent liées à la plaquette. Il s’agit d’un objet égyptien ancien ; son format de petite plaque ne limite pas l’importance de la saillie.",
+          "url": "https://www.metmuseum.org/art/collection/search/545196"
+        },
+        {
+          "type": "source",
+          "title": "Le vocabulaire de la saillie",
+          "text": "Le Getty distingue les reliefs peu profonds des hauts-reliefs, dans lesquels une part importante du volume naturel est projetée devant le fond. La taille totale de l’objet et le sujet représenté ne définissent pas la catégorie.",
+          "url": "https://www.getty.edu/vow/AATFullDisplay?find=&logic=AND&note=&subjectid=300184782"
+        },
+        {
+          "type": "heading",
+          "text": "La ronde-bosse : un volume indépendant du fond"
+        },
+        {
+          "type": "paragraph",
+          "text": "La [b]ronde-bosse[/b] possède un volume sculpté dans l’espace, avec une face, des côtés et un revers. On peut étudier la sculpture sous plusieurs angles. Elle peut cependant conserver un socle, un siège, un pilier dorsal ou des masses de liaison : ces éléments ne suffisent pas à la transformer en relief. « Indépendante d’un fond » ne signifie pas que chaque membre est entièrement détaché."
+        },
+        {
+          "type": "image",
+          "media": "egypte-ronde-bosse"
+        },
+        {
+          "type": "source",
+          "title": "Hatchepsout assise : lire un volume sous plusieurs angles",
+          "text": "Cette statue assise d’Hatchepsout permet d’observer le volume du corps et du siège. La notice précise le matériau, les restes de couleur et la provenance. Les cassures et raccords appartiennent à l’histoire de l’œuvre ; elle demeure un original antique.",
+          "url": "https://www.metmuseum.org/art/collection/search/544450"
+        },
+        {
+          "type": "source",
+          "title": "Définir la ronde-bosse",
+          "text": "Le Getty définit la ronde-bosse par des formes travaillées autour de leur circonférence, plutôt que projetées depuis une surface continue ou creusées dans celle-ci. Il s’agit d’une définition de volume, distincte de l’emplacement d’exposition.",
+          "url": "https://www.getty.edu/vow/AATFullDisplay?find=&logic=AND&note=&subjectid=300047264"
+        },
+        {
+          "type": "heading",
+          "text": "Le relief en creux : un cas essentiel en Égypte"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dans le [b]relief en creux[/b], les contours et le modelé sont taillés sous le niveau de la surface qui les entoure. Le plan général de la paroi reste donc en avant de la représentation. Ce procédé peut produire des ombres nettes et des volumes très lisibles. Il faut comparer le sujet au niveau de la paroi, et non conclure « haut-relief » parce que les lignes paraissent profondes."
+        },
+        {
+          "type": "image",
+          "media": "egypte-relief-creux"
+        },
+        {
+          "type": "source",
+          "title": "Akhenaton et le canard : une technique identifiée",
+          "text": "La notice du Met indique que les contours de la représentation ont été creusés dans la surface. Observez le profil d’Akhenaton et le contour du canard. Le bloc conserve aussi de la peinture : sculpture et couleur peuvent agir ensemble.",
+          "url": "https://www.metmuseum.org/art/collection/search/544056"
+        },
+        {
+          "type": "heading",
+          "text": "Reconnaître les traitements"
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Faible saillie devant le fond : bas-relief.",
+            "Forte projection mais maintien d’un lien au fond : haut-relief.",
+            "Volume sculpté indépendant d’un fond continu : ronde-bosse.",
+            "Représentation sous le niveau de la surface voisine : relief en creux."
+          ]
+        },
+        {
+          "type": "callout",
+          "title": "Pour les métiers de l’ameublement",
+          "text": "La distinction sert aussi à décrire un panneau sculpté, une figure adossée ou un ornement de meuble. Décrivez d’abord la profondeur et le rapport au fond ; identifiez ensuite la technique et le matériau lorsqu’ils sont documentés. Le vocabulaire décrit la forme, sans attribuer automatiquement un objet à une époque."
         }
       ]
     },
@@ -465,6 +915,42 @@
       ],
       "correct": 1,
       "explanation": "Les pieds animaliers traversent de nombreuses cultures et reprises historiques. Structure, matériaux documentés, provenance et décor doivent être étudiés ensemble."
+    },
+    {
+      "id": "egypte-q5",
+      "chapter": "sculpture",
+      "prompt": "Une figure se projette fortement hors d’une plaque mais reste liée au fond. Comment la décrire ?",
+      "choices": [
+        "Comme un bas-relief uniquement parce que la plaque est petite.",
+        "Comme un haut-relief.",
+        "Comme une peinture sans volume."
+      ],
+      "correct": 1,
+      "explanation": "Le haut-relief présente une forte saillie et reste lié à un fond. La dimension de la plaque ne définit pas la catégorie."
+    },
+    {
+      "id": "egypte-q6",
+      "chapter": "sculpture",
+      "prompt": "Quel indice permet de reconnaître un relief en creux ?",
+      "choices": [
+        "La représentation est taillée sous le niveau de la surface qui l’entoure.",
+        "Le sujet est obligatoirement une chouette.",
+        "La sculpture est indépendante de tout fond."
+      ],
+      "correct": 0,
+      "explanation": "Dans le relief en creux, les contours et le modelé sont abaissés par rapport à la paroi voisine. Une ronde-bosse est au contraire un volume indépendant d’un fond continu."
+    },
+    {
+      "id": "egypte-q7",
+      "chapter": "colonnes",
+      "prompt": "Quel rapprochement est correct ?",
+      "choices": [
+        "Campaniforme signifie que le chapiteau porte obligatoirement une face d’Hathor.",
+        "Palmiforme signifie que le chapiteau possède des volutes ioniques.",
+        "Un chapiteau papyriforme ouvert peut avoir une silhouette campaniforme."
+      ],
+      "correct": 2,
+      "explanation": "Campaniforme décrit la forme en cloche ; papyriforme précise la référence au papyrus. À Karnak, les grandes colonnes centrales portent des papyrus ouverts, tandis que les colonnes latérales montrent des boutons fermés."
     }
   ]
 }

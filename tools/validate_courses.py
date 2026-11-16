@@ -3,6 +3,7 @@ from pathlib import Path
 import json
 import re
 import hashlib
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 APP = ROOT / "app"
@@ -30,6 +31,7 @@ def main():
     course_ids = set()
     chapter_count = question_count = 0
     used_media = set()
+    column_count = 0
     for path in manifest["courses"]:
         course = json.loads((APP / path.removeprefix("res://")).read_text(encoding="utf-8"))
         assert course["id"] not in course_ids, "Duplicate course id"
@@ -53,24 +55,46 @@ def main():
         used_media.add(course["cover_media"])
         chapter_ids = set()
         words = []
+        column_examples = []
         for chapter in course["chapters"]:
             assert chapter["id"] not in chapter_ids, "Duplicate chapter id"
             chapter_ids.add(chapter["id"])
             if "source_pages" in chapter:
                 assert chapter["source_pages"] and all(isinstance(n, int) and n > 0 for n in chapter["source_pages"])
             for block in chapter["blocks"]:
-                assert block["type"] in {"paragraph", "heading", "image", "key_points", "callout", "source", "furniture_example"}
+                assert block["type"] in {"paragraph", "heading", "image", "key_points", "callout", "source", "furniture_example", "column_example", "annotated_image"}
                 if block["type"] == "source":
                     assert block["title"] and block["text"] and block["url"].startswith("https://")
-                if block["type"] in {"image", "furniture_example"}:
+                if block["type"] in {"image", "furniture_example", "column_example", "annotated_image"}:
                     used_media.add(block["media"])
                     item = media[block["media"]]
                     if "historical_status" in item:
                         validate_furniture_visual(item, course["period_id"], allowed_types)
+                    if "region" in block:
+                        x, y, width, height = block["region"]
+                        assert 0 <= x < 1 and 0 <= y < 1 and width > 0 and height > 0
+                        assert x + width <= 1 and y + height <= 1, "Crop outside source image"
+                    for marker in block.get("markers", []):
+                        assert marker["label"].strip() and marker["definition"].strip()
+                        for point in [marker["point"], marker.get("label_point", marker["point"])]:
+                            assert len(point) == 2 and all(0 <= value <= 1 for value in point), "Pointer outside displayed image"
+                    assert "support" not in block.get("caption", "").lower()
+                if block["type"] == "column_example":
+                    assert block["title"] and block["description"] and len(block["cues"]) >= 3
+                    assert all(cue.strip() for cue in block["cues"])
+                    assert block["display_height"] >= 350
+                    column_examples.append(block["id"])
+                    words.extend((block["description"] + " " + " ".join(block["cues"])).split())
                 if block["type"] == "furniture_example":
                     words.extend((block["description"] + " " + " ".join(block["characteristics"]) + " " + block["reference"]["text"]).split())
                 elif block["type"] != "image":
                     words.extend(re.sub(r"\[/?b\]", "", block.get("text", " ".join(block.get("items", [])))).split())
+                for marker in block.get("markers", []):
+                    words.extend((marker["label"] + " " + marker["definition"]).split())
+        expected_columns = manifest["editorial_requirements"]["column_sections"][course["period_id"]]
+        assert len(column_examples) == len(set(column_examples)), "Duplicate column type"
+        assert set(column_examples) == set(expected_columns), f'{course["id"]}: each column type needs its own illustrated example'
+        column_count += len(column_examples)
         for question in course["quiz"]:
             assert question["chapter"] in chapter_ids
             assert len(question["choices"]) >= 2
@@ -87,10 +111,21 @@ def main():
         assert (APP / item["path"].removeprefix("res://")).stat().st_size > 0
         if item["source"].startswith("https://"):
             assert (ROOT / item["metadata_file"]).is_file()
-            assert item["display_credit"] and item["rights"].startswith("CC0")
+            assert item["display_credit"]
             original = json.loads((ROOT / item["metadata_file"]).read_text(encoding="utf-8-sig"))
-            assert original["isPublicDomain"] and original["objectURL"] == item["source"]
-            assert item["download_url"] in [original["primaryImage"], *original["additionalImages"]]
+            if item.get("provider") == "wikimedia":
+                assert item["visual_role"] == "reference_diagram", "Modern reference drawing must be identified"
+                assert original["descriptionurl"] == item["source"] and original["url"] == item["download_url"]
+                assert item["rights"] == original["extmetadata"]["LicenseShortName"]["value"]
+                assert item["rights"] in {"Public domain", "CC BY-SA 4.0"}
+                assert item["license_url"].startswith("https://creativecommons.org/")
+                if item["rights"] == "CC BY-SA 4.0":
+                    assert item["license_url"] == original["extmetadata"]["LicenseUrl"]["value"]
+                    assert "JLVwiki" in item["display_credit"] and "même licence" in item["display_credit"]
+            else:
+                assert item["rights"].startswith("CC0")
+                assert original["isPublicDomain"] and original["objectURL"] == item["source"]
+                assert item["download_url"] in [original["primaryImage"], *original["additionalImages"]]
             assert hashlib.sha256((APP / item["path"].removeprefix("res://")).read_bytes()).hexdigest() == item["source_image_sha256"]
         else:
             assert (ROOT / item["source"]).is_file(), item["source"]
@@ -98,10 +133,17 @@ def main():
         assert item["caption"] and item["alt"]
         assert "support" not in item["caption"].lower()
         assert "support" not in item.get("display_credit", "").lower()
+        if item["path"].endswith(".svg"):
+            drawing = ET.parse(APP / item["path"].removeprefix("res://"))
+            for element in drawing.iter():
+                assert element.tag.rsplit("}", 1)[-1] not in {"script", "foreignObject"}
+                for attribute, value in element.attrib.items():
+                    if attribute.rsplit("}", 1)[-1] in {"href", "src"}:
+                        assert value.startswith(("#", "data:image/")), "SVG must not fetch external content"
     for group in manifest["groups"]:
         assert set(group["periods"]).issubset(course_ids)
     assert used_media == set(media), "Unreferenced or missing illustrations"
-    print(f'VALID: {len(course_ids)} courses / {chapter_count} chapters / {question_count} questions / {len(used_media)} existing illustrations')
+    print(f'VALID: {len(course_ids)} courses / {chapter_count} chapters / {question_count} questions / {len(used_media)} existing illustrations / {column_count} individually illustrated column types')
 
 
 if __name__ == "__main__":

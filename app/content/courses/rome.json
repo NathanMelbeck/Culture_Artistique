@@ -10,7 +10,8 @@
   "objectives": [
     "Situer les grands régimes de Rome et ses échanges artistiques.",
     "Distinguer un principe de construction d'un décor architectural.",
-    "Relier peinture, mosaïque et mobilier aux usages de l'espace."
+    "Relier peinture, mosaïque et mobilier aux usages de l'espace.",
+    "Distinguer les types de colonnes romaines et les chapiteaux corinthien et composite."
   ],
   "references": [
     {
@@ -37,6 +38,16 @@
       "title": "Turismo Roma — Le Panthéon",
       "url": "https://turismoroma.it/en/node/1107",
       "note": "Notice du service touristique de Rome sur la coupole et la composition du monument."
+    },
+    {
+      "title": "The Met — Colonne à chapiteau composite",
+      "url": "https://www.metmuseum.org/art/collection/search/250646",
+      "note": "Un exemple romain original, avec base, fût et chapiteau."
+    },
+    {
+      "title": "Vitruve — De architectura, livre IV",
+      "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Vitruvius/4*.html",
+      "note": "Texte antique en traduction anglaise : ordres et temples toscans."
     }
   ],
   "chapters": [
@@ -151,6 +162,467 @@
           "type": "callout",
           "title": "Ne pas confondre les édifices",
           "text": "Un théâtre possède une scène et un espace de spectateurs généralement en demi-cercle. Un amphithéâtre, comme le Colisée, entoure une arène. Le mot « romain » ne suffit pas à préciser leur fonction."
+        }
+      ]
+    },
+    {
+      "id": "colonnes",
+      "title": "Les colonnes et les ordres romains",
+      "intro": "Formes héritées, variantes romaines, toscan et composite : reconnaître le rôle et le décor des supports.",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Les architectes romains emploient et transforment les répertoires dorique, ionique et corinthien. Ils associent aussi colonnes, arcs et murs dans des compositions où tous les éléments n’ont pas le même rôle porteur. Pour étudier une colonne, observez sa base, son fût, son chapiteau et son rapport à la construction."
+        },
+        {
+          "type": "heading",
+          "text": "Colonne libre, colonne engagée et pilastre"
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Colonne libre : support détaché du mur, dont le volume se lit tout autour.",
+            "Colonne engagée : colonne liée à un mur et partiellement saillante. Sa fonction porteuse ou décorative doit être étudiée dans le bâtiment.",
+            "Pilastre : support ou élément de décor plat, de section généralement rectangulaire, appliqué à une paroi. Il peut posséder base et chapiteau.",
+            "Piédestal : soubassement sous une colonne ou un autre élément. Il ne doit pas être confondu avec les moulures de la base de la colonne elle-même."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Les éléments de détail"
+        },
+        {
+          "type": "paragraph",
+          "text": "Le fût peut être lisse ou cannelé. Les bases sont composées de moulures, souvent avec des tores et des parties concaves. Le chapiteau termine le fût sous l’abaque. L’entablement, lorsqu’il est présent, organise l’architrave, la frise et la corniche au-dessus. Le matériau visible peut être différent de celui d’un revêtement ou d’un stuc aujourd’hui disparu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le vocabulaire des parties est commun à plusieurs ordres. Le schéma ionique sert de repère de lecture ; chaque type romain possède ensuite sa propre illustration."
+        },
+        {
+          "type": "annotated_image",
+          "media": "anatomie-ionique",
+          "caption": "Schéma pédagogique d’un ordre ionique. Les repères en lettres nomment les éléments ; les proportions dessinées ne servent pas à dater un monument.",
+          "markers": [
+            {
+              "label": "Corniche",
+              "definition": "Couronnement saillant de l’entablement, qui termine la partie haute.",
+              "point": [
+                0.68,
+                0.07
+              ],
+              "label_point": [
+                0.17,
+                0.07
+              ]
+            },
+            {
+              "label": "Frise",
+              "definition": "Bande entre architrave et corniche ; ici, elle porte une scène continue.",
+              "point": [
+                0.7,
+                0.155
+              ],
+              "label_point": [
+                0.17,
+                0.155
+              ]
+            },
+            {
+              "label": "Architrave",
+              "definition": "Première partie horizontale de l’entablement, directement au-dessus du chapiteau.",
+              "point": [
+                0.7,
+                0.22
+              ],
+              "label_point": [
+                0.17,
+                0.22
+              ]
+            },
+            {
+              "label": "Chapiteau",
+              "definition": "Sommet de la colonne ; ici, il se reconnaît aux volutes.",
+              "point": [
+                0.63,
+                0.28
+              ],
+              "label_point": [
+                0.17,
+                0.3
+              ]
+            },
+            {
+              "label": "Fût cannelé",
+              "definition": "Corps de la colonne ; les creux verticaux sont les cannelures.",
+              "point": [
+                0.63,
+                0.57
+              ],
+              "label_point": [
+                0.17,
+                0.57
+              ]
+            },
+            {
+              "label": "Base",
+              "definition": "Moulures individuelles entre le fût et la plate-forme.",
+              "point": [
+                0.63,
+                0.9
+              ],
+              "label_point": [
+                0.17,
+                0.88
+              ]
+            },
+            {
+              "label": "Stylobate",
+              "definition": "Assise supérieure de la plate-forme, distincte de la base moulurée.",
+              "point": [
+                0.76,
+                0.935
+              ],
+              "label_point": [
+                0.17,
+                0.95
+              ]
+            }
+          ],
+          "display_height": 720
+        },
+        {
+          "type": "annotated_image",
+          "media": "anatomie-ionique",
+          "caption": "Détail de la base sur le même schéma : alterner parties bombées et parties creuses permet de lire le profil des moulures.",
+          "markers": [
+            {
+              "label": "Tore",
+              "definition": "Moulure arrondie et convexe : son profil est bombé.",
+              "point": [
+                0.56,
+                0.22
+              ],
+              "label_point": [
+                0.12,
+                0.25
+              ]
+            },
+            {
+              "label": "Scotie",
+              "definition": "Moulure concave : son profil se creuse entre les moulures bombées.",
+              "point": [
+                0.56,
+                0.46
+              ],
+              "label_point": [
+                0.88,
+                0.63
+              ]
+            }
+          ],
+          "display_height": 300,
+          "region": [
+            0.44,
+            0.875,
+            0.35,
+            0.06
+          ]
+        },
+        {
+          "type": "column_example",
+          "id": "toscan",
+          "title": "Toscan · un vocabulaire sobre",
+          "description": "Le toscan associe généralement une base individuelle, un fût lisse et un chapiteau simple à échine et abaque. Pour l’identifier, examinez ces éléments ensemble.",
+          "media": "ordres-encyclopedie",
+          "cues": [
+            "Sur le dessin, repérez le fût lisse et le chapiteau simple.",
+            "Sur une colonne complète, recherchez aussi la base individuelle ; elle est hors de ce cadrage.",
+            "La sobriété seule ne permet pas de dater un édifice : confirmez avec le contexte antique."
+          ],
+          "display_height": 440,
+          "markers": [
+            {
+              "label": "Abaque",
+              "definition": "Tablette au sommet du chapiteau.",
+              "point": [
+                0.53,
+                0.09
+              ],
+              "label_point": [
+                0.86,
+                0.1
+              ]
+            },
+            {
+              "label": "Échine",
+              "definition": "Moulure bombée sous l’abaque.",
+              "point": [
+                0.52,
+                0.25
+              ],
+              "label_point": [
+                0.12,
+                0.28
+              ]
+            }
+          ],
+          "caption": "Chapiteau toscan, détail de la planche de l’Encyclopédie (XVIIIe siècle). Dessin de référence du vocabulaire classique, pas un objet antique ni une preuve de datation. Le cadrage montre le chapiteau et le haut du fût.",
+          "region": [
+            0.165,
+            0.119,
+            0.3,
+            0.175
+          ]
+        },
+        {
+          "type": "column_example",
+          "id": "dorique",
+          "title": "Dorique romain · un héritage adapté",
+          "description": "Le dorique romain reprend l’échine et l’abaque du dorique grec, avec des adaptations. Une base peut être présente ; l’entablement et ses triglyphes et métopes aident à reconnaître l’ordre.",
+          "media": "ordres-encyclopedie",
+          "cues": [
+            "Retrouvez échine et abaque au sommet.",
+            "Le dessin illustre un fût cannelé ; les variantes antiques exigent l’examen de l’ensemble.",
+            "Dans la composition complète, une base peut être présente et la frise aide à confirmer l’ordre."
+          ],
+          "display_height": 440,
+          "markers": [
+            {
+              "label": "Abaque",
+              "definition": "Tablette au sommet du chapiteau.",
+              "point": [
+                0.53,
+                0.09
+              ],
+              "label_point": [
+                0.86,
+                0.1
+              ]
+            },
+            {
+              "label": "Échine",
+              "definition": "Moulure bombée sous l’abaque.",
+              "point": [
+                0.52,
+                0.25
+              ],
+              "label_point": [
+                0.12,
+                0.28
+              ]
+            }
+          ],
+          "caption": "Chapiteau dorique, détail de la planche de l’Encyclopédie (XVIIIe siècle). Dessin de référence du vocabulaire classique, pas un objet antique ni une preuve de datation. Le cadrage montre le chapiteau et le haut du fût.",
+          "region": [
+            0.54,
+            0.119,
+            0.3,
+            0.175
+          ]
+        },
+        {
+          "type": "source",
+          "title": "Un texte antique sur les formes et les proportions",
+          "text": "Dans le livre IV de De architectura, Vitruve distingue les colonnes doriques et corinthiennes et décrit aussi les dispositions des temples toscans. Ses prescriptions sont un témoignage antique à confronter aux édifices conservés, et non une règle appliquée sans variation à toute l’architecture romaine.",
+          "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Vitruvius/4*.html"
+        },
+        {
+          "type": "column_example",
+          "id": "ionique",
+          "title": "Ionique · les enroulements en spirale",
+          "description": "L’ionique romain conserve les volutes et la base moulurée. La disposition des enroulements peut être adaptée pour que le chapiteau se lise sur plusieurs faces.",
+          "media": "ordres-encyclopedie",
+          "cues": [
+            "Repérez les grandes volutes sur les faces principales du chapiteau.",
+            "Observez le traitement des faces et des angles sur le monument réel.",
+            "La base et l’entablement complètent l’identification ; ils sont hors de ce cadrage."
+          ],
+          "display_height": 440,
+          "markers": [
+            {
+              "label": "Volute",
+              "definition": "Grand enroulement latéral en spirale.",
+              "point": [
+                0.17,
+                0.28
+              ],
+              "label_point": [
+                0.12,
+                0.66
+              ]
+            },
+            {
+              "label": "Abaque",
+              "definition": "Couronnement supérieur, au-dessus des enroulements.",
+              "point": [
+                0.53,
+                0.07
+              ],
+              "label_point": [
+                0.84,
+                0.08
+              ]
+            }
+          ],
+          "caption": "Chapiteau ionique, détail de la planche de l’Encyclopédie (XVIIIe siècle). Dessin de référence du vocabulaire classique, pas un objet antique ni une preuve de datation. Le cadrage montre le chapiteau et le haut du fût.",
+          "region": [
+            0.14,
+            0.354,
+            0.34,
+            0.19
+          ]
+        },
+        {
+          "type": "column_example",
+          "id": "corinthien",
+          "title": "Corinthien · un feuillage organisé",
+          "description": "Très employé à Rome, le corinthien organise des feuilles d’acanthe, des tiges et des enroulements sous l’abaque. Ce vocabulaire se retrouve sur des colonnes et sur des pilastres.",
+          "media": "rome-chapiteau-corinthien",
+          "cues": [
+            "Recherchez les feuilles d’acanthe disposées en rangées.",
+            "Suivez les tiges et les enroulements jusqu’au couronnement.",
+            "L’exemple photographié est plat : c’est un chapiteau de pilastre, pas une colonne complète."
+          ],
+          "display_height": 440,
+          "markers": [
+            {
+              "label": "Acanthe",
+              "definition": "Feuillage profondément découpé dans la partie basse.",
+              "point": [
+                0.52,
+                0.6
+              ],
+              "label_point": [
+                0.15,
+                0.76
+              ]
+            },
+            {
+              "label": "Enroulements",
+              "definition": "Éléments courbes sous les angles du couronnement.",
+              "point": [
+                0.72,
+                0.35
+              ],
+              "label_point": [
+                0.85,
+                0.27
+              ]
+            },
+            {
+              "label": "Abaque",
+              "definition": "Couronnement du chapiteau.",
+              "point": [
+                0.37,
+                0.2
+              ],
+              "label_point": [
+                0.15,
+                0.13
+              ]
+            }
+          ]
+        },
+        {
+          "type": "source",
+          "title": "Un chapiteau de pilastre, pas une colonne complète",
+          "text": "Ce chapiteau romain de marbre est identifié comme corinthien par le Met. Sa forme plate correspond à un pilastre. Repérez les feuilles et les enroulements ; la photographie ne documente pas, à elle seule, le fût et la base qui lui étaient associés.",
+          "url": "https://www.metmuseum.org/art/collection/search/252548"
+        },
+        {
+          "type": "column_example",
+          "id": "composite",
+          "title": "Composite · grandes volutes et acanthes",
+          "description": "Le composite romain associe de grandes volutes d’inspiration ionique à des rangées d’acanthe de tradition corinthienne. C’est leur combinaison qui le distingue du corinthien.",
+          "media": "rome-colonne-composite",
+          "cues": [
+            "Partie haute : grandes volutes d’inspiration ionique.",
+            "Partie basse : rangées de feuilles d’acanthe de tradition corinthienne.",
+            "Cherchez cette association organisée ; un simple enroulement ne suffit pas."
+          ],
+          "display_height": 440,
+          "markers": [
+            {
+              "label": "Grandes volutes",
+              "definition": "Les enroulements développés occupent la partie haute.",
+              "point": [
+                0.23,
+                0.28
+              ],
+              "label_point": [
+                0.08,
+                0.14
+              ]
+            },
+            {
+              "label": "Acanthe",
+              "definition": "Les feuilles se disposent sous les grandes volutes.",
+              "point": [
+                0.52,
+                0.52
+              ],
+              "label_point": [
+                0.88,
+                0.57
+              ]
+            }
+          ],
+          "caption": "Colonne romaine en marbre avec base et chapiteau, vers 117–138 apr. J.-C. Le chapiteau associe de grandes volutes à des rangées de feuilles d’acanthe. Détail du chapiteau ; la colonne entière est montrée ensuite.",
+          "region": [
+            0.2,
+            0.025,
+            0.62,
+            0.18
+          ]
+        },
+        {
+          "type": "image",
+          "media": "rome-colonne-composite"
+        },
+        {
+          "type": "source",
+          "title": "Un original romain d’époque hadrianique",
+          "text": "La notice du Met identifie ce chapiteau comme composite et décrit les volutes ioniques au-dessus des rangées d’acanthes. La colonne conserve aussi une base et un fût à cannelures étroites. Cet objet permet de relier le détail du chapiteau à l’ensemble du support.",
+          "url": "https://www.metmuseum.org/art/collection/search/250646"
+        },
+        {
+          "type": "callout",
+          "title": "Deux sens du mot « composite »",
+          "text": "Dans le chapitre égyptien, un chapiteau composite végétal combine plusieurs formes de plantes. Dans l’ordre composite romain, le mot désigne une composition particulière de volutes et d’acanthes. Ces deux désignations ne rendent pas les objets interchangeables."
+        },
+        {
+          "type": "heading",
+          "text": "Lire une façade : le cas du Colisée"
+        },
+        {
+          "type": "image",
+          "media": "rome-colisee"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sur cette façade, les arcades et les colonnes engagées se lisent ensemble. Les niveaux superposent des traitements de plus en plus élaborés, avec un registre inférieur couramment décrit comme toscan ou dorique romain, puis ionique et corinthien. Le dernier étage associe un mur à des pilastres. La photographie générale sert à comprendre la composition ; un détail rapproché reste nécessaire pour examiner chaque chapiteau."
+        },
+        {
+          "type": "source",
+          "title": "Le Colisée et les ordres superposés",
+          "text": "Le site du Parc archéologique du Colisée permet de replacer la façade dans son monument et son histoire. La lecture des ordres complète celle des arcs et des niveaux ; elle n’autorise pas à confondre amphithéâtre et temple.",
+          "url": "https://colosseo.it/en/area/colosseo/"
+        },
+        {
+          "type": "heading",
+          "text": "Les indices de reconnaissance"
+        },
+        {
+          "type": "key_points",
+          "items": [
+            "Toscan : base, fût généralement lisse et couronnement simple ; vérifier l’ensemble.",
+            "Dorique romain : échine et abaque, avec des variantes comprenant une base ; l’entablement aide à confirmer.",
+            "Ionique : volutes et base moulurée ; examiner les faces et les angles.",
+            "Corinthien : rangées d’acanthes et enroulements organisés sous l’abaque.",
+            "Composite : grandes volutes ioniques développées au-dessus des rangées d’acanthes.",
+            "Toujours distinguer une colonne, un pilastre et un chapiteau isolé, puis identifier la date et les restaurations dans la documentation."
+          ]
         }
       ]
     },
@@ -404,6 +876,18 @@
       ],
       "correct": 2,
       "explanation": "Les matériaux et les éléments d'un meuble peuvent être associés. Un fragment conservé ne suffit ni à reconstruire toute la matière de l'objet, ni à lui attribuer un propriétaire."
+    },
+    {
+      "id": "rome-q5",
+      "chapter": "colonnes",
+      "prompt": "Quelle combinaison caractérise un chapiteau composite romain ?",
+      "choices": [
+        "Un simple disque sans décor ni volutes.",
+        "Des grandes volutes au-dessus de rangées de feuilles d’acanthe.",
+        "Un bouton de papyrus fermé, sans référence au répertoire classique."
+      ],
+      "correct": 1,
+      "explanation": "Le composite romain associe de grandes volutes ioniques à des rangées d’acanthes de tradition corinthienne. Il ne doit pas être confondu avec les chapiteaux composites végétaux égyptiens."
     }
   ]
 }
