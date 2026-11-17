@@ -112,7 +112,13 @@ func _run() -> void:
 	await click("Boundary_" + str(int(games.session.start_period["start"])))
 	check(games.session.phase == "end" and games.session.hand.is_empty(), "La seconde question demande la fin avant de distribuer")
 	await click("Boundary_" + str(int(games.session.end_period["end"])))
-	check(games.session.phase == "placement" and games.session.hand.size() == 7 and games.session.draw_pile.size() == games.session.events.size() - 7, "La main de sept cartes et la pioche sont affichées")
+	check(games.session.phase == "placement" and games.session.period_stage_active() and games.session.hand.size() == 4 and games.session.drawable_count() == 0, "La phase des périodes distribue seulement quatre cartes sans compléter la main")
+	var opening_count := 0
+	for index in 4:
+		if games.session.event(games.session.hand[index]).get("kind") == "period_boundary":
+			opening_count += 1
+	check(opening_count == 4 and games.session.events.size() == 23, "La main initiale commence par les quatre repères de période restant à placer")
+	check(app.find_child("FriezeSlot_period-boundary-egypte-start", true, false) == null and app.find_child("FriezeSlot_period-boundary-rome-end", true, false) == null, "Les bornes déjà trouvées n’ont aucun emplacement vide supplémentaire")
 	check(app.find_child("ValidateFrieze", true, false) == null, "Le bouton de validation est absent tant que des cartes restent à poser")
 	var dates_hidden := true
 	for card in app.find_children("HandCard_*", "Button", true, false):
@@ -121,36 +127,72 @@ func _run() -> void:
 	await capture("frise-main-1440.png")
 	var first: String = games.session.hand[0]
 	await drag_card(app.find_child("HandCard_" + first, true, false), app.find_child("FriezeSlot_egy-unification", true, false))
-	check(games.session.placements.get("egy-unification") == first and games.session.hand.size() == 7 and games.session.draw_pile.size() == games.session.events.size() - 8, "Le vrai glisser-déposer place une carte et complète automatiquement la main")
-	var second: String = games.session.hand[0]
-	await drag_card(app.find_child("HandCard_" + second, true, false), app.find_child("FriezeSlot_egy-kemeni", true, false))
-	await drag_card(app.find_child("FriezeSlot_egy-unification", true, false), app.find_child("FriezeSlot_egy-kemeni", true, false))
-	check(games.session.placements.get("egy-unification") == second and games.session.placements.get("egy-kemeni") == first, "Le vrai glisser-déposer échange deux cartes déjà placées")
-	await drag_card(app.find_child("HandCard_" + games.session.hand[0], true, false), app.find_child("FriezeProgress", true, false))
-	check(games.session.placements.size() == 2 and games.session.hand.size() == 7, "Un dépôt hors des emplacements ne perd aucune carte")
-	var edge_board := app.find_child("FriezeBoardScroll", true, false) as ScrollContainer
-	await drag_at_edge(app.find_child("HandCard_" + games.session.hand[0], true, false), edge_board)
-	check(edge_board.scroll_horizontal > 0 and games.session.placements.size() == 2, "Maintenir une carte au bord fait défiler la frise sans la placer")
-	edge_board.scroll_horizontal = 0
-	var keyboard_card: String = games.session.hand[0]
-	(app.find_child("HandCard_" + keyboard_card, true, false) as Button).grab_focus()
-	await key(KEY_SPACE)
-	check(games.selected_card == keyboard_card and root.gui_get_focus_owner() == app.find_child("HandCard_" + keyboard_card, true, false), "Espace sélectionne une carte et conserve le focus")
-	(app.find_child("FriezeSlot_egy-hatshepsout", true, false) as Button).grab_focus()
-	await key(KEY_ENTER)
-	check(games.session.placements.get("egy-hatshepsout") == keyboard_card, "Entrée associe la carte sélectionnée à la date au clavier")
-	var discard: String = games.session.hand[0]
-	await click("HandCard_" + discard)
-	await click("DiscardFriezeCard")
-	check(discard in games.session.draw_pile and discard not in games.session.hand and games.session.hand.size() == 7, "La défausse sélectionnée retourne dans la pioche et reçoit une remplaçante")
+	var bad_slot := app.find_child("FriezeSlot_egy-unification", true, false) as Button
+	check(games.session.period_status("egy-unification") == "wrong" and games.session.hand.size() == 3 and bad_slot.text.begins_with("✕ ") and bad_slot.get_theme_color("font_color") == games.BAD and app.find_child("RecyclePeriod_" + first, true, false) != null, "Un mauvais repère devient immédiatement rouge avec son bouton de retour")
+	await capture("periode-erreur-1440.png")
+	await click("RecyclePeriod_" + first)
+	check(first in games.session.draw_pile and first not in games.session.hand and not games.session.placements.has("egy-unification") and app.find_child("DrawFriezeCard", true, false) != null, "Le petit bouton libère l’emplacement et conserve la carte en pioche")
+	await click("DrawFriezeCard")
+	check(first in games.session.hand and games.session.hand.size() == 4 and games.session.period_stage_active(), "Piocher reprend le repère recyclé sans distribuer d’événement")
+	var correct_card: String = games.session.hand[0]
+	var correct_slot := app.find_child("FriezeSlot_" + correct_card, true, false) as Control
+	(app.find_child("FriezeBoardScroll", true, false) as ScrollContainer).ensure_control_visible(correct_slot)
+	await frames(5)
+	await drag_card(app.find_child("HandCard_" + correct_card, true, false), correct_slot)
+	var correct_date := app.find_child("FriezeDate_" + correct_card, true, false) as Label
+	check(correct_date.text.begins_with("✓ ") and correct_date.get_theme_color("font_color") == games.GOOD and app.find_child("RecyclePeriod_" + correct_card, true, false) == null, "Un bon repère colore immédiatement la date en vert sans bouton d’erreur")
+	await capture("periode-validee-1440.png")
 	await click("HomeButton")
 	await click("GamesNav")
 	games = app._page
-	check(games.session.placements.size() == 3 and games.session.phase == "placement", "Retourner au menu puis aux jeux conserve la partie")
+	check(games.session.correct_period_count() == 1 and games.session.period_stage_active() and games.session.hand.size() == 3, "Le retour au menu conserve la phase des périodes et ses validations")
 	root.size = Vector2i(960, 640)
 	await frames(10)
 	var hand := app.find_child("FriezeHandPanel", true, false) as Control
 	check(root.get_visible_rect().encloses(hand.get_global_rect()), "La main reste entièrement dans la petite fenêtre")
+	var keyboard_card: String = games.session.hand[0]
+	(app.find_child("HandCard_" + keyboard_card, true, false) as Button).grab_focus()
+	await frames(3)
+	await key(KEY_SPACE)
+	check(games.selected_card == keyboard_card and root.gui_get_focus_owner() == app.find_child("HandCard_" + keyboard_card, true, false), "Espace sélectionne une carte et conserve le focus")
+	(app.find_child("FriezeSlot_egy-kemeni", true, false) as Button).grab_focus()
+	await frames(4)
+	await key(KEY_ENTER)
+	check(games.session.placements.get("egy-kemeni") == keyboard_card, "Entrée associe la carte sélectionnée à la date au clavier")
+	var recycle := app.find_child("RecyclePeriod_" + keyboard_card, true, false) as Control
+	check(recycle != null and (app.find_child("FriezeSlot_egy-kemeni", true, false) as Control).get_global_rect().encloses(recycle.get_global_rect()), "Le bouton de retour rouge reste dans la carte à 960 × 640")
+	await capture("periode-erreur-960.png")
+	await click("RecyclePeriod_" + keyboard_card)
+	await click("DrawFriezeCard")
+	for id in games.session.hand.duplicate():
+		games._place(id, id)
+		await frames(3)
+	var only_events := true
+	for id in games.session.hand:
+		only_events = only_events and not games.session.is_period_card(id)
+	check(not games.session.period_stage_active() and games.session.correct_period_count() == 4 and games.session.hand.size() == 7 and only_events, "La dernière bonne date débloque et distribue automatiquement les événements")
+	# Check the event interactions after the period phase has completed.
+	(app.find_child("FriezeBoardScroll", true, false) as ScrollContainer).scroll_horizontal = 0
+	await frames(4)
+	first = games.session.hand[0]
+	await drag_card(app.find_child("HandCard_" + first, true, false), app.find_child("FriezeSlot_egy-unification", true, false))
+	check(games.session.placements.get("egy-unification") == first and games.session.hand.size() == 7, "Le glisser-déposer d’un événement complète automatiquement la main")
+	check(not (app.find_child("FriezeSlot_egy-unification", true, false) as Button).text.begins_with("✓ ") and not (app.find_child("FriezeSlot_egy-unification", true, false) as Button).text.begins_with("✕ ") and (app.find_child("FriezeDate_egy-unification", true, false) as Label).get_theme_color("font_color") == AppTheme.FOREST, "Un événement ne révèle aucune correction avant la validation finale")
+	var second: String = games.session.hand[0]
+	await drag_card(app.find_child("HandCard_" + second, true, false), app.find_child("FriezeSlot_egy-kemeni", true, false))
+	await drag_card(app.find_child("FriezeSlot_egy-unification", true, false), app.find_child("FriezeSlot_egy-kemeni", true, false))
+	check(games.session.placements.get("egy-unification") == second and games.session.placements.get("egy-kemeni") == first, "Le glisser-déposer échange deux événements déjà placés")
+	await drag_card(app.find_child("HandCard_" + games.session.hand[0], true, false), app.find_child("FriezeProgress", true, false))
+	check(games.session.placements.size() == 6 and games.session.hand.size() == 7, "Un dépôt hors des emplacements ne perd aucune carte")
+	var edge_board := app.find_child("FriezeBoardScroll", true, false) as ScrollContainer
+	await drag_at_edge(app.find_child("HandCard_" + games.session.hand[0], true, false), edge_board)
+	check(edge_board.scroll_horizontal > 0 and games.session.placements.size() == 6, "Maintenir une carte au bord fait défiler la frise sans la placer")
+	edge_board.scroll_horizontal = 0
+	var discard: String = games.session.hand[0]
+	await click("HandCard_" + discard)
+	await click("DiscardFriezeCard")
+	check(discard in games.session.draw_pile and discard not in games.session.hand and games.session.hand.size() == 7, "La défausse d’un événement retourne dans la pioche et reçoit une remplaçante")
+	hand = app.find_child("FriezeHandPanel", true, false) as Control
 	var cards_fit := true
 	for card in app.find_children("HandCard_*", "Button", true, false):
 		cards_fit = cards_fit and hand.get_global_rect().encloses(card.get_global_rect())
@@ -175,6 +217,24 @@ func _run() -> void:
 	var green := app.find_child("FriezeSlot_egy-kemeni", true, false) as Button
 	check(red.text.begins_with("✕ ") and green.text.begins_with("✓ ") and red.get_theme_color("font_color") != green.get_theme_color("font_color"), "Les réponses sont distinguées par une couleur et un symbole")
 	await capture("correction-960.png")
+	# The first wrong answer can now be a boundary card: open its local sheet.
+	var boundary_slot := ""
+	var boundary_sheet := ""
+	for event in games.session.events:
+		var placed: Dictionary = games.session.event(games.session.placements[event["id"]])
+		if placed.get("kind") == "period_boundary":
+			boundary_slot = event["id"]
+			boundary_sheet = placed["source"]["sheet_id"]
+			break
+	games._slot_clicked(boundary_slot)
+	await frames(6)
+	await click("ReviewFriezeSheet")
+	check(app.navigation.current_route == "revision" and app._page.selected_id == boundary_sheet, "Une carte de période renvoie à sa fiche intégrée hors ligne")
+	await click("GamesNav")
+	games = app._page
+	check(games.session.phase == "result" and games.session.score() == games.session.events.size() - 2, "La partie est conservée après consultation de la fiche")
+	games._slot_clicked("egy-kemeni")
+	await frames(6)
 	await click("ReviewFriezeCourse")
 	check(app.navigation.current_route == "courses" and app._page.mode == "reader", "La correction ouvre le cours associé dans l’application")
 	await click("GamesNav")
@@ -191,8 +251,16 @@ func _run() -> void:
 	await click("StartFrieze")
 	await click("Boundary_-4000")
 	await click("Boundary_-400")
-	check(games.session.phase == "placement" and games.session.hand.size() == 5 and games.session.draw_pile.is_empty() and app.find_children("HandCard_*", "Button", true, false).size() == 5, "La sélection Égypte seule suit les bornes de la fiche et affiche cinq cartes sans pioche")
+	check(games.session.phase == "placement" and games.session.hand.size() == 5 and games.session.draw_pile.is_empty() and app.find_children("HandCard_*", "Button", true, false).size() == 5 and app.find_child("FriezeSlot_period-boundary-egypte-start", true, false) == null and app.find_child("FriezeSlot_period-boundary-egypte-end", true, false) == null, "Égypte seule ne distribue pas de carte pour ses bornes déjà trouvées")
 	await capture("egypte-bornes-fiche.png")
+	await click("ChangePeriods")
+	await click("ClearPeriods")
+	await click("SelectPeriod_grece")
+	await click("StartFrieze")
+	await click("Boundary_-1100")
+	await click("Boundary_-100")
+	check(games.session.phase == "placement" and games.session.hand.size() == 7 and games.session.draw_pile.is_empty() and app.find_children("FriezeSlot_period-boundary-*", "Button", true, false).is_empty(), "Grèce seule exclut bien début Grèce et fin Grèce selon son propre preset")
+	await capture("grece-bornes-fiche.png")
 	print("FRIEZE UI RESULT: %d failures" % failures)
 	app.queue_free()
 	await frames()

@@ -56,6 +56,45 @@ func events_for(selection: Array) -> Array:
 	)
 	return result
 
+func boundary_cards_for(selection: Array) -> Array:
+	var result: Array = []
+	if selection.is_empty():
+		return result
+	var first := int(selection[0]["start"])
+	var last := int(selection[0]["end"])
+	for period in selection:
+		first = mini(first, int(period["start"]))
+		last = maxi(last, int(period["end"]))
+	for period in selection:
+		for boundary in ["start", "end"]:
+			var year := int(period[boundary])
+			# Both outer dates were already found before dealing. Exclude every
+			# period marker matching either date, including shared boundaries.
+			if year == first or year == last:
+				continue
+			var beginning: bool = boundary == "start"
+			result.append({
+				"id": "period-boundary-" + period["id"] + "-" + boundary,
+				"kind": "period_boundary",
+				"boundary": boundary,
+				"periods": [period["id"]],
+				"year": year,
+				"title": ("Début de la période : " if beginning else "Fin de la période : ") + period["title"],
+				"explanation": period["start_note" if beginning else "end_note"],
+				"source": {"kind": "revision_sheet", "sheet_id": period["bounds_source"]["sheet_id"], "title": "Fiche de révision — " + period["title"]}
+			})
+	return result
+
+func cards_for(selection: Array) -> Array:
+	var result := events_for(selection)
+	result.append_array(boundary_cards_for(selection))
+	result.sort_custom(func(a: Dictionary, b: Dictionary) -> bool:
+		if a["year"] == b["year"]:
+			return a["id"] < b["id"]
+		return a["year"] < b["year"]
+	)
+	return result
+
 static func date_label(year: int, approximate: bool = false) -> String:
 	var digits := str(absi(year))
 	if digits.length() > 3:

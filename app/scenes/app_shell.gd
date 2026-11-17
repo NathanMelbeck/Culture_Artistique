@@ -156,6 +156,10 @@ func _show_route(route: String) -> void:
 		_page = GAMES.instantiate()
 		_page.repository = chronology_repository
 		_page.view_state = _view_states.get("games", {})
+		_page.revision_requested.connect(func(sheet_id: String) -> void:
+			_view_states["revision"] = {"sheet_id": sheet_id, "page": 0, "zoom": 1.0}
+			navigation.navigate("revision")
+		)
 		_page.course_requested.connect(func(course_id: String, chapter_id: String) -> void:
 			var course := course_repository.find(course_id)
 			var index := 0

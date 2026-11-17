@@ -2,6 +2,7 @@ extends VBoxContainer
 
 signal destination_requested(route: String)
 signal course_requested(course_id: String, chapter_id: String)
+signal revision_requested(sheet_id: String)
 var repository: ChronologyRepository
 var view_state: Dictionary = {}
 var session: FriezeSession
@@ -61,7 +62,7 @@ func _render() -> void:
 	elif session.phase in ["placement", "result"]:
 		_play()
 	else:
-		_content.add_child(AppTheme.paragraph("Aucun événement disponible pour cette sélection."))
+		_content.add_child(AppTheme.paragraph("Aucune carte disponible pour cette sélection."))
 		_content.add_child(_button("Changer de sélection", "ChangePeriods", _show_setup))
 	if not focus_name.is_empty():
 		_restore_focus.call_deferred(focus_name)
@@ -125,6 +126,7 @@ func _catalogue() -> void:
 	card.add_child(AppTheme.label("Frise à remplir", 38, AppTheme.FOREST, true))
 	card.add_child(AppTheme.paragraph("Retrouvez les bornes d’une époque, puis replacez les événements sur leurs dates. Une main de sept cartes, une pioche et votre mémoire pour reconstruire l’histoire.", 19, AppTheme.FOREST))
 	card.add_child(AppTheme.paragraph("1 · Choisir les périodes      2 · Retrouver les bornes      3 · Placer les cartes", 15))
+	card.add_child(AppTheme.paragraph("Placez d’abord tous les repères de période : leur correction est immédiate. Les événements se débloquent une fois ces repères validés. Les deux bornes déjà trouvées sont exclues du paquet.", 14, AppTheme.FOREST))
 	card.add_child(_button("Choisir les périodes  →", "OpenFrieze", _show_setup, true))
 	column.add_child(AppTheme.paragraph("Les quiz de chaque période restent accessibles à la fin des cours. La frise fonctionne entièrement hors ligne.", 14))
 
@@ -165,8 +167,8 @@ func _setup() -> void:
 		note.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 		row.add_child(note)
 		column.add_child(row)
-	var count := repository.events_for(selection).size()
-	var summary := AppTheme.paragraph("Sélectionnez au moins une période." if count == 0 else "%d période(s) · %d événements · 7 cartes maximum en main" % [selection.size(), count], 16, AppTheme.FOREST)
+	var count := repository.cards_for(selection).size()
+	var summary := AppTheme.paragraph("Sélectionnez au moins une période." if count == 0 else "%d période(s) · %d repères de période + %d événements · 7 cartes maximum en main" % [selection.size(), repository.boundary_cards_for(selection).size(), repository.events_for(selection).size()], 16, AppTheme.FOREST)
 	summary.name = "SelectionSummary"
 	column.add_child(summary)
 	if not _message.is_empty():
@@ -195,7 +197,7 @@ func _toggle_period(checked: bool, id: String) -> void:
 
 func _start_game() -> void:
 	var selection := repository.resolve_periods(anchors)
-	var cards := repository.events_for(selection)
+	var cards := repository.cards_for(selection)
 	if cards.is_empty():
 		return
 	session = FriezeSession.new(selection, cards)
@@ -262,7 +264,10 @@ func _answer_boundary(year: int) -> void:
 func _play() -> void:
 	var result := session.phase == "result"
 	var row := _heading("Frise à remplir", "← Périodes", _show_setup, "ChangePeriods")
-	var progress := AppTheme.label("%d / %d bien placées" % [session.score(), session.events.size()] if result else "%d / %d cartes posées" % [session.placements.size(), session.events.size()], 14, GOOD if result else AppTheme.MUTED)
+	var progress_text := "%d / %d bien placées" % [session.score(), session.events.size()] if result else "%d / %d cartes posées" % [session.placements.size(), session.events.size()]
+	if session.period_stage_active():
+		progress_text = "%d / %d repères validés" % [session.correct_period_count(), session.period_count()]
+	var progress := AppTheme.label(progress_text, 14, GOOD if result else AppTheme.MUTED)
 	progress.name = "FriezeProgress"
 	row.add_child(progress)
 	if session.can_validate():
@@ -270,6 +275,8 @@ func _play() -> void:
 	if result:
 		row.add_child(_button("Rejouer", "ReplayFrieze", _start_game, true))
 	var help := "Cliquez sur une carte de la frise pour lire sa correction." if result else "Glissez une carte sur une date, ou sélectionnez puis cliquez. Les espacements ne représentent pas les durées."
+	if session.period_stage_active():
+		help = "Placez les repères de période : contrôle immédiat. Les événements seront distribués quand tous les repères seront validés."
 	_content.add_child(AppTheme.paragraph(help, 13, AppTheme.FOREST))
 	_build_board()
 	if result:
@@ -298,6 +305,7 @@ func _build_board() -> void:
 		column.add_theme_constant_override("separation", 8)
 		track.add_child(column)
 		var date := AppTheme.label(ChronologyRepository.event_date(event), 14, AppTheme.FOREST)
+		date.name = "FriezeDate_" + event["id"]
 		date.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		column.add_child(date)
 		column.add_child(AppTheme.spacer(8))
@@ -314,6 +322,12 @@ func _build_board() -> void:
 		slot.card_dropped.connect(_place)
 		slot.pressed.connect(_slot_clicked.bind(event["id"]))
 		column.add_child(slot)
+		var status := session.period_status(event["id"])
+		if status == "correct":
+			date.text = "✓ " + date.text
+			date.add_theme_color_override("font_color", GOOD)
+		if session.phase == "placement" and not status.is_empty():
+			_style_checked_period(slot, status)
 		if session.phase == "result":
 			var correct := session.slot_correct(event["id"])
 			var color := GOOD if correct else BAD
@@ -322,6 +336,41 @@ func _build_board() -> void:
 			slot.add_theme_color_override("font_color", color)
 	_add_bound(track, "FIN", ChronologyRepository.date_label(int(session.end_period["end"])))
 	_restore_board.call_deferred()
+
+func _style_checked_period(slot: FriezeSlot, status: String) -> void:
+	var correct := status == "correct"
+	var color := GOOD if correct else BAD
+	slot.text = ("✓ " if correct else "✕ ") + slot.text
+	var style := AppTheme.box(Color("e3efdf") if correct else Color("f7e5df"), color, 10, 2)
+	style.content_margin_left = 12
+	style.content_margin_right = 12
+	style.content_margin_top = 10
+	style.content_margin_bottom = 12 if correct else 40
+	slot.add_theme_stylebox_override("normal", style)
+	slot.add_theme_stylebox_override("hover", style.duplicate())
+	slot.add_theme_color_override("font_color", color)
+	slot.add_theme_color_override("font_hover_color", color)
+	if not correct:
+		var recycle := Button.new()
+		recycle.name = "RecyclePeriod_" + slot.card_id
+		recycle.text = "↶ Pioche"
+		recycle.tooltip_text = "Renvoyer cette carte dans la pioche mélangée"
+		recycle.add_theme_font_size_override("font_size", 11)
+		var small_style := AppTheme.box(AppTheme.SURFACE, BAD, 5)
+		small_style.content_margin_left = 8
+		small_style.content_margin_right = 8
+		small_style.content_margin_top = 4
+		small_style.content_margin_bottom = 4
+		for state in ["normal", "hover", "pressed"]:
+			recycle.add_theme_stylebox_override(state, small_style.duplicate())
+		recycle.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		recycle.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT)
+		recycle.offset_left = -100
+		recycle.offset_top = -34
+		recycle.offset_right = -8
+		recycle.offset_bottom = -6
+		recycle.pressed.connect(_recycle_wrong_period.bind(slot.card_id))
+		slot.add_child(recycle)
 
 func _add_bound(track: HBoxContainer, heading: String, date: String) -> void:
 	var column := VBoxContainer.new()
@@ -352,16 +401,20 @@ func _build_hand() -> void:
 	var row := HBoxContainer.new()
 	row.add_theme_constant_override("separation", 12)
 	column.add_child(row)
-	var label := AppTheme.label("VOTRE MAIN · %d / 7" % session.hand.size(), 12, AppTheme.IVORY)
+	var label := AppTheme.label(("PÉRIODES" if session.period_stage_active() else "VOTRE MAIN") + " · %d / 7" % session.hand.size(), 12, AppTheme.IVORY)
 	label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	row.add_child(label)
-	var deck := AppTheme.label("PIOCHE · %d" % session.draw_pile.size(), 12, AppTheme.LIGHT_TEXT)
+	var deck := AppTheme.label("PIOCHE · %d" % session.drawable_count(), 12, AppTheme.LIGHT_TEXT)
 	deck.name = "DrawPileCount"
 	row.add_child(deck)
+	if session.can_draw():
+		var draw := _button("Piocher", "DrawFriezeCard", _draw_card)
+		draw.add_theme_color_override("font_color", AppTheme.IVORY)
+		row.add_child(draw)
 	var discard := _button("Défausser la sélection", "DiscardFriezeCard", _discard)
 	discard.add_theme_color_override("font_color", AppTheme.IVORY)
-	discard.disabled = selected_card not in session.hand or session.draw_pile.is_empty()
-	discard.tooltip_text = "La carte retourne dans la pioche mélangée ; une autre prend sa place." if not session.draw_pile.is_empty() else "Pioche vide : placez ou échangez les cartes restantes."
+	discard.disabled = not session.can_discard(selected_card)
+	discard.tooltip_text = "La carte retourne dans la pioche mélangée ; une autre prend sa place." if session.drawable_count() > 0 else "Aucune carte disponible pour renouveler la main. Placez les cartes ou reprenez une carte rouge."
 	row.add_child(discard)
 	var hand := FriezeHand.new()
 	hand.name = "FriezeHand"
@@ -371,8 +424,9 @@ func _build_hand() -> void:
 	hand.card_returned.connect(_return_card)
 	column.add_child(hand)
 	if session.hand.is_empty():
-		hand.add_child(AppTheme.paragraph("Toutes les cartes sont placées. Vous pouvez encore les échanger avant de valider.", 15, AppTheme.IVORY))
-	var hint := AppTheme.paragraph(_message if not _message.is_empty() else "Une carte piochée après chaque pose · Défausse remélangée · Vous pouvez échanger les cartes déjà posées", 11, AppTheme.LIGHT_TEXT)
+		hand.add_child(AppTheme.paragraph("Corrigez les repères rouges : déplacez-les ou renvoyez-les dans la pioche." if session.period_stage_active() else "Toutes les cartes sont placées. Vous pouvez encore les échanger avant de valider.", 15, AppTheme.IVORY))
+	var default_hint := "Les événements restent en réserve jusqu’à la validation de tous les repères." if session.period_stage_active() else "Une carte piochée après chaque pose · Défausse remélangée · Vous pouvez échanger les cartes déjà posées"
+	var hint := AppTheme.paragraph(_message if not _message.is_empty() else default_hint, 11, AppTheme.LIGHT_TEXT)
 	hint.name = "HandFeedback"
 	column.add_child(hint)
 
@@ -398,9 +452,26 @@ func _slot_clicked(id: String) -> void:
 		_refresh()
 
 func _place(card_id: String, slot_id: String) -> void:
+	var was_period_stage := session.period_stage_active()
 	if session.place(card_id, slot_id):
 		selected_card = ""
-		_message = "Carte placée. Les réponses seront vérifiées à la validation finale."
+		if was_period_stage and not session.period_stage_active():
+			_message = "Tous les repères sont validés. Les événements sont maintenant distribués."
+		elif session.is_period_card(card_id):
+			_message = "Repère validé : la date est verte." if session.slot_correct(slot_id) else "Ce repère est mal placé. Déplacez-le ou utilisez son bouton ↶ Pioche."
+		else:
+			_message = "Événement placé. Il sera corrigé à la validation finale."
+		_refresh()
+
+func _recycle_wrong_period(id: String) -> void:
+	if session.return_wrong_period_to_pile(id):
+		selected_card = ""
+		_message = "Carte renvoyée dans la pioche mélangée. Utilisez Piocher ou placez une autre carte pour la reprendre."
+		_refresh()
+
+func _draw_card() -> void:
+	if session.draw_one():
+		_message = "Carte piochée."
 		_refresh()
 
 func _return_card(id: String) -> void:
@@ -450,8 +521,12 @@ func _build_correction() -> void:
 	column.add_child(AppTheme.paragraph("Repère attendu : " + expected + ("." if correct else ". Votre emplacement : " + ChronologyRepository.event_date(session.event(selected_result)) + "."), 15, AppTheme.FOREST))
 	column.add_child(AppTheme.paragraph(actual["explanation"], 15, AppTheme.FOREST))
 	var links := HFlowContainer.new()
-	links.add_child(_button("Revoir le cours", "ReviewFriezeCourse", func() -> void: course_requested.emit(actual["course_id"], actual["chapter"])))
-	links.add_child(_button("Source · Internet requis ↗", "FriezeSource", func() -> void: OS.shell_open(actual["source"]["url"])))
+	if actual.get("kind") == "period_boundary":
+		column.add_child(AppTheme.paragraph(actual["source"]["title"], 13))
+		links.add_child(_button("Revoir la fiche · Hors ligne", "ReviewFriezeSheet", func() -> void: revision_requested.emit(actual["source"]["sheet_id"])))
+	else:
+		links.add_child(_button("Revoir le cours", "ReviewFriezeCourse", func() -> void: course_requested.emit(actual["course_id"], actual["chapter"])))
+		links.add_child(_button("Source · Internet requis ↗", "FriezeSource", func() -> void: OS.shell_open(actual["source"]["url"])))
 	column.add_child(links)
 	column.add_child(AppTheme.paragraph("Borne de début : " + session.start_period["start_note"] + "\nBorne de fin : " + session.end_period["end_note"], 12))
 
