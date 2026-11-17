@@ -1,0 +1,481 @@
+{
+  "version": 1,
+  "groups": [
+    {
+      "id": "antiquite",
+      "title": "Toute l’Antiquité",
+      "periods": [
+        "egypte",
+        "grece",
+        "rome"
+      ]
+    }
+  ],
+  "periods": [
+    {
+      "id": "egypte",
+      "title": "Égypte antique",
+      "order": 0,
+      "start": -4000,
+      "end": -400,
+      "start_approximate": false,
+      "start_choices": [
+        -4500,
+        -4000,
+        -3500,
+        -3200,
+        -3100
+      ],
+      "end_choices": [
+        -650,
+        -500,
+        -400,
+        -332,
+        -30
+      ],
+      "scope": "Style égyptien : périmètre défini par la fiche de révision.",
+      "start_note": "Cette borne reprend le début du style indiqué dans l’en-tête de la fiche de révision. C’est le repère demandé dans ce jeu, pas la date précise de naissance de la civilisation.",
+      "end_note": "Cette borne reprend la fin du style indiquée dans l’en-tête de la fiche de révision. Les dates historiques des événements restent celles de leurs sources ; les cartes hors de cet intervalle sont exclues de la partie.",
+      "end_approximate": false,
+      "bounds_source": {
+        "sheet_id": "egypte",
+        "page": 1,
+        "heading": "Style Égyptien | -4000 à -400"
+      }
+    },
+    {
+      "id": "grece",
+      "title": "Grèce antique",
+      "order": 1,
+      "start": -1100,
+      "end": -100,
+      "start_approximate": false,
+      "start_choices": [
+        -1500,
+        -1200,
+        -1100,
+        -800,
+        -700
+      ],
+      "end_choices": [
+        -480,
+        -323,
+        -146,
+        -100,
+        -31
+      ],
+      "scope": "Style grec : périmètre défini par la fiche de révision.",
+      "start_note": "Cette borne reprend le début du style indiqué dans l’en-tête de la fiche de révision. C’est le repère demandé dans ce jeu, pas la date précise de naissance de la civilisation.",
+      "end_note": "Cette borne reprend la fin du style indiquée dans l’en-tête de la fiche de révision. Les dates historiques des événements restent celles de leurs sources ; les cartes hors de cet intervalle sont exclues de la partie.",
+      "end_approximate": false,
+      "bounds_source": {
+        "sheet_id": "grece",
+        "page": 1,
+        "heading": "Style Grec | -1100 à -100"
+      }
+    },
+    {
+      "id": "rome",
+      "title": "Rome antique",
+      "order": 2,
+      "start": -800,
+      "end": 400,
+      "start_approximate": false,
+      "start_choices": [
+        -1100,
+        -900,
+        -800,
+        -753,
+        -509
+      ],
+      "end_choices": [
+        284,
+        330,
+        395,
+        400,
+        476
+      ],
+      "scope": "Style romain : périmètre défini par la fiche de révision.",
+      "start_note": "Cette borne reprend le début du style indiqué dans l’en-tête de la fiche de révision. C’est le repère demandé dans ce jeu, pas la date précise de naissance de la civilisation.",
+      "end_note": "Cette borne reprend la fin du style indiquée dans l’en-tête de la fiche de révision. Les dates historiques des événements restent celles de leurs sources ; les cartes hors de cet intervalle sont exclues de la partie.",
+      "end_approximate": false,
+      "bounds_source": {
+        "sheet_id": "rome",
+        "page": 1,
+        "heading": "Style Romain | -800 à 400"
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "egy-unification",
+      "periods": [
+        "egypte"
+      ],
+      "year": -3100,
+      "title": "Unification du royaume égyptien",
+      "explanation": "Ce repère conventionnel désigne la formation d’un royaume unifié. Il ne correspond pas à la naissance soudaine de toutes les traditions égyptiennes.",
+      "source": {
+        "title": "NMEC — Historical Timeline",
+        "url": "https://nmec.gov.eg/historical-timeline/"
+      },
+      "course_id": "egypte",
+      "chapter": "nil-reperes",
+      "approximate": true
+    },
+    {
+      "id": "egy-kemeni",
+      "periods": [
+        "egypte"
+      ],
+      "year": -1805,
+      "title": "Fabrication du coffret de Kemeni",
+      "explanation": "Ce coffret du Moyen Empire associe cèdre, placages d’ébène et d’ivoire et garnitures d’argent. La notice du musée fournit une datation approximative.",
+      "source": {
+        "title": "The Met — Coffret de Kemeni, inv. 26.7.1438",
+        "url": "https://www.metmuseum.org/art/collection/search/543955"
+      },
+      "course_id": "egypte",
+      "chapter": "mobilier",
+      "approximate": true
+    },
+    {
+      "id": "egy-hatshepsout",
+      "periods": [
+        "egypte"
+      ],
+      "year": -1473,
+      "title": "Début du règne d’Hatchepsout comme pharaon",
+      "explanation": "Le règne d’Hatchepsout comme pharaon est traditionnellement situé de 1473 à 1458 avant notre ère. Sa statuaire adapte les signes de la royauté.",
+      "source": {
+        "title": "The Met — Hatchepsout assise",
+        "url": "https://www.metmuseum.org/art/collection/search/544450"
+      },
+      "course_id": "egypte",
+      "chapter": "sculpture",
+      "approximate": true
+    },
+    {
+      "id": "egy-reniseneb",
+      "periods": [
+        "egypte"
+      ],
+      "year": -1450,
+      "title": "Fabrication de la chaise de Reniseneb",
+      "explanation": "La chaise de la XVIIIe dynastie possède des pieds animaliers et un décor d’ivoire. Le tressage visible aujourd’hui est restauré.",
+      "source": {
+        "title": "The Met — Chaise de Reniseneb, inv. 68.58",
+        "url": "https://www.metmuseum.org/art/collection/search/547687"
+      },
+      "course_id": "egypte",
+      "chapter": "mobilier",
+      "approximate": true
+    },
+    {
+      "id": "egy-akhenaton",
+      "periods": [
+        "egypte"
+      ],
+      "year": -1353,
+      "title": "Début du règne d’Amenhotep IV, futur Akhenaton",
+      "explanation": "Ce règne transforme le culte royal et les représentations artistiques. Le nom Akhenaton est adopté pendant le règne, pas nécessairement dès l’accession au trône.",
+      "source": {
+        "title": "The Met — The Royal Women of Amarna",
+        "url": "https://www.metmuseum.org/pt/met-publications/the-royal-women-of-amarna-images-of-beauty-from-ancient-egypt"
+      },
+      "course_id": "egypte",
+      "chapter": "images",
+      "approximate": true
+    },
+    {
+      "id": "egy-alexandre",
+      "periods": [
+        "egypte"
+      ],
+      "year": -332,
+      "title": "Alexandre le Grand conquiert l’Égypte",
+      "explanation": "La conquête précède l’époque des souverains lagides. Elle s’inscrit dans l’expansion macédonienne en Méditerranée orientale.",
+      "source": {
+        "title": "NMEC — Historical Timeline",
+        "url": "https://nmec.gov.eg/historical-timeline/"
+      },
+      "course_id": "egypte",
+      "chapter": "nil-reperes"
+    },
+    {
+      "id": "egy-rosette",
+      "periods": [
+        "egypte"
+      ],
+      "year": -196,
+      "title": "Décret inscrit sur la pierre de Rosette",
+      "explanation": "Le décret est rédigé sous Ptolémée V. La stèle le conserve en hiéroglyphes, en démotique et en grec : sa fabrication antique ne doit pas être confondue avec son déchiffrement moderne.",
+      "source": {
+        "title": "British Museum — Hieroglyphs, guide de l’exposition",
+        "url": "https://www.britishmuseum.org/sites/default/files/2022-10/Hieroglyphs_unlocking_ancient_Egypt_large_print_guide_The_British_Museum_2.pdf"
+      },
+      "course_id": "egypte",
+      "chapter": "images"
+    },
+    {
+      "id": "egy-romaine",
+      "periods": [
+        "egypte"
+      ],
+      "year": -30,
+      "title": "L’Égypte passe sous domination romaine",
+      "explanation": "Cette transition politique sert de borne de fin pour la période égyptienne de ce jeu. Les pratiques et les formes artistiques égyptiennes se poursuivent.",
+      "source": {
+        "title": "NMEC — Historical Timeline",
+        "url": "https://nmec.gov.eg/historical-timeline/"
+      },
+      "course_id": "egypte",
+      "chapter": "nil-reperes"
+    },
+    {
+      "id": "gre-kouros",
+      "periods": [
+        "grece"
+      ],
+      "year": -590,
+      "title": "Sculpture du kouros attique conservé au Met",
+      "explanation": "Le musée date cet original de marbre vers 590–580 avant notre ère. La frise conserve cet intervalle au lieu d’inventer une année exacte.",
+      "source": {
+        "title": "The Met — Kouros de marbre, inv. 32.11.1",
+        "url": "https://www.metmuseum.org/art/collection/search/253370"
+      },
+      "course_id": "grece",
+      "chapter": "sculpture",
+      "approximate": true,
+      "year_end": -580
+    },
+    {
+      "id": "gre-exekias",
+      "periods": [
+        "grece"
+      ],
+      "year": -540,
+      "title": "Fabrication de l’amphore attribuée à Exékias",
+      "explanation": "Cette amphore attique à figures noires est datée approximativement par le musée. Les détails sont notamment rendus par incision dans le décor sombre.",
+      "source": {
+        "title": "The Met — Amphore attribuée à Exékias",
+        "url": "https://www.metmuseum.org/art/collection/search/250551"
+      },
+      "course_id": "grece",
+      "chapter": "mythes-images",
+      "approximate": true
+    },
+    {
+      "id": "gre-hieron",
+      "periods": [
+        "grece"
+      ],
+      "year": -480,
+      "title": "Fabrication de la coupe de Hiéron et Makron",
+      "explanation": "La coupe attique à figures rouges constitue un témoignage d’époque sur le banquet, les lits, les coussins, les étoffes et les tables.",
+      "source": {
+        "title": "The Met — Coupe de Hiéron et Makron",
+        "url": "https://www.metmuseum.org/art/collection/search/250995"
+      },
+      "course_id": "grece",
+      "chapter": "motifs-mobilier",
+      "approximate": true
+    },
+    {
+      "id": "gre-parthenon-debut",
+      "periods": [
+        "grece"
+      ],
+      "year": -447,
+      "title": "Début de la construction du Parthénon",
+      "explanation": "Le programme architectural de Périclès transforme l’Acropole. Le chantier du temple commence avant son achèvement et avant la fin de certains décors sculptés.",
+      "source": {
+        "title": "Musée de l’Acropole — Galerie du Parthénon",
+        "url": "https://www.theacropolismuseum.gr/en/exhibit-halls/parthenon-gallery"
+      },
+      "course_id": "grece",
+      "chapter": "ordres"
+    },
+    {
+      "id": "gre-parthenon-fin",
+      "periods": [
+        "grece"
+      ],
+      "year": -432,
+      "title": "Achèvement de la construction du Parthénon",
+      "explanation": "Le chantier commence quinze ans plus tôt. Distinguer début du chantier, construction du bâtiment et réalisation des ensembles sculptés évite de confondre leurs repères.",
+      "source": {
+        "title": "Musée de l’Acropole — Galerie du Parthénon",
+        "url": "https://www.theacropolismuseum.gr/en/exhibit-halls/parthenon-gallery"
+      },
+      "course_id": "grece",
+      "chapter": "ordres"
+    },
+    {
+      "id": "gre-alexandre",
+      "periods": [
+        "grece"
+      ],
+      "year": -323,
+      "title": "Mort d’Alexandre le Grand",
+      "explanation": "La mort d’Alexandre sert de repère pour le début de l’époque hellénistique. Ses successeurs développent plusieurs royaumes et centres artistiques.",
+      "source": {
+        "title": "The Met — Art of the Hellenistic Age",
+        "url": "https://www.metmuseum.org/essays/art-of-the-hellenistic-age-and-the-hellenistic-tradition"
+      },
+      "course_id": "grece",
+      "chapter": "cites-reperes"
+    },
+    {
+      "id": "gre-sardes",
+      "periods": [
+        "grece"
+      ],
+      "year": -300,
+      "title": "Création des éléments ioniques du temple d’Artémis à Sardes",
+      "explanation": "La notice situe les éléments anciens vers cette date. Le montage de musée comporte un fût écourté, des restaurations et une copie de certaines moulures de base.",
+      "source": {
+        "title": "The Met — Colonne ionique de Sardes",
+        "url": "https://www.metmuseum.org/art/collection/search/252453"
+      },
+      "course_id": "grece",
+      "chapter": "ordres",
+      "approximate": true
+    },
+    {
+      "id": "gre-actium",
+      "periods": [
+        "grece"
+      ],
+      "year": -31,
+      "title": "Bataille d’Actium",
+      "explanation": "La victoire d’Octavien sur Antoine et Cléopâtre sert de borne conventionnelle à l’époque hellénistique. L’annexion de l’Égypte intervient l’année suivante.",
+      "source": {
+        "title": "The Met — Art of the Hellenistic Age",
+        "url": "https://www.metmuseum.org/essays/art-of-the-hellenistic-age-and-the-hellenistic-tradition"
+      },
+      "course_id": "grece",
+      "chapter": "cites-reperes"
+    },
+    {
+      "id": "rom-fondation",
+      "periods": [
+        "rome"
+      ],
+      "year": -753,
+      "title": "Fondation traditionnelle de Rome",
+      "explanation": "La tradition attribue la fondation à Romulus. Il faut distinguer ce récit légendaire de l’installation progressive des communautés attestées par l’archéologie.",
+      "source": {
+        "title": "MIT OpenCourseWare — Roman History Timeline, p. 2",
+        "url": "https://ocw.mit.edu/courses/21h-336-the-making-of-a-roman-emperor-spring-2023/mit21h_336_s23_lec01.pdf"
+      },
+      "course_id": "rome",
+      "chapter": "reperes"
+    },
+    {
+      "id": "rom-republique",
+      "periods": [
+        "rome"
+      ],
+      "year": -509,
+      "title": "Début traditionnel de la République romaine",
+      "explanation": "Ce repère marque, dans la tradition romaine, le passage de la royauté à la République. Il ne correspond pas à l’établissement d’une démocratie moderne.",
+      "source": {
+        "title": "MIT OpenCourseWare — Roman History Timeline, p. 2",
+        "url": "https://ocw.mit.edu/courses/21h-336-the-making-of-a-roman-emperor-spring-2023/mit21h_336_s23_lec01.pdf"
+      },
+      "course_id": "rome",
+      "chapter": "reperes"
+    },
+    {
+      "id": "rom-auguste",
+      "periods": [
+        "rome"
+      ],
+      "year": -27,
+      "title": "Octavien reçoit le titre d’Auguste",
+      "explanation": "Ce repère sert à situer le début du Principat. Les formes républicaines ne disparaissent pas toutes, mais le pouvoir se concentre autour d’Auguste.",
+      "source": {
+        "title": "MIT OpenCourseWare — Roman History Timeline, p. 2",
+        "url": "https://ocw.mit.edu/courses/21h-336-the-making-of-a-roman-emperor-spring-2023/mit21h_336_s23_lec01.pdf"
+      },
+      "course_id": "rome",
+      "chapter": "reperes"
+    },
+    {
+      "id": "rom-colisee",
+      "periods": [
+        "rome"
+      ],
+      "year": 80,
+      "title": "Inauguration du Colisée sous Titus",
+      "explanation": "L’amphithéâtre flavien est inauguré sous Titus. Son organisation associe arcades, colonnes engagées et ordres superposés.",
+      "source": {
+        "title": "Parc archéologique du Colisée — Carta della qualità dei servizi, p. 2",
+        "url": "https://colosseo.it/sito/wp-content/uploads/2020/07/Carta-della-qualita-dei-servizi-Colosseo.pdf"
+      },
+      "course_id": "rome",
+      "chapter": "architecture"
+    },
+    {
+      "id": "rom-trajane",
+      "periods": [
+        "rome"
+      ],
+      "year": 113,
+      "title": "Inauguration de la colonne Trajane",
+      "explanation": "Le monument commémore les campagnes de Trajan en Dacie. Son relief historié s’enroule en spirale autour du fût.",
+      "source": {
+        "title": "Turismo Roma — The Trajan’s Column",
+        "url": "https://www.turismoroma.it/en/places/trajan%E2%80%99s-column"
+      },
+      "course_id": "rome",
+      "chapter": "pouvoir-images"
+    },
+    {
+      "id": "rom-diocletien",
+      "periods": [
+        "rome"
+      ],
+      "year": 284,
+      "title": "Dioclétien devient empereur",
+      "explanation": "Son accession précède les réformes de la fin de l’Empire et l’organisation tétrarchique. Ne pas confondre le début du règne et la mise en place ultérieure de la tétrarchie.",
+      "source": {
+        "title": "MIT OpenCourseWare — Roman History Timeline, p. 2",
+        "url": "https://ocw.mit.edu/courses/21h-336-the-making-of-a-roman-emperor-spring-2023/mit21h_336_s23_lec01.pdf"
+      },
+      "course_id": "rome",
+      "chapter": "reperes"
+    },
+    {
+      "id": "rom-constantinople",
+      "periods": [
+        "rome"
+      ],
+      "year": 330,
+      "title": "Constantinople devient une capitale impériale",
+      "explanation": "Constantin développe l’ancienne Byzance comme Nouvelle Rome. Ce transfert de centre politique aide à comprendre la continuité de l’Empire en Orient.",
+      "source": {
+        "title": "The Met — Byzantium, ca. 330–1453",
+        "url": "https://www.metmuseum.org/fr/essays/byzantium-ca-330-1453"
+      },
+      "course_id": "rome",
+      "chapter": "reperes"
+    },
+    {
+      "id": "rom-occident",
+      "periods": [
+        "rome"
+      ],
+      "year": 476,
+      "title": "Déposition de Romulus Augustule",
+      "explanation": "Cette déposition sert de repère conventionnel pour la fin de l’Empire romain d’Occident. L’Empire d’Orient continue ; toute la culture romaine ne disparaît pas soudainement.",
+      "source": {
+        "title": "MIT OpenCourseWare — Roman History Timeline, p. 2",
+        "url": "https://ocw.mit.edu/courses/21h-336-the-making-of-a-roman-emperor-spring-2023/mit21h_336_s23_lec01.pdf"
+      },
+      "course_id": "rome",
+      "chapter": "reperes"
+    }
+  ]
+}

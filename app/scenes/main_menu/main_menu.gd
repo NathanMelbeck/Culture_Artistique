@@ -111,6 +111,8 @@ func _add_card(route: String, heading: String, description: String, kicker: Stri
 	_cards.add_child(card)
 
 func _adapt() -> void:
+	if not is_inside_tree():
+		return
 	if not is_instance_valid(_hero):
 		return
 	var compact := size.x < 1000

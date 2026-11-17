@@ -1,6 +1,6 @@
 # Culture_Artistique — Architecture et feuille de route
 
-Version : 0.11 — 16 novembre 2026
+Version : 0.13 — 17 novembre 2026
 
 Statut : document de référence initial, à faire évoluer avec les décisions du projet.
 
@@ -188,13 +188,19 @@ Les `+` représentent les quatre positions possibles autour de trois cartes. La 
 
 #### Frise à remplir
 
-- **FRI-01 — Frise incomplète** : afficher une frise déjà structurée avec des éléments manquants.
-- **FRI-02 — Éléments possibles** : compléter des noms de périodes, dates, événements ou caractéristiques selon la consigne.
-- **FRI-03 — Interaction** : commencer avec une banque de réponses à sélectionner ou déplacer ; la saisie libre reste une extension possible.
-- **FRI-04 — Correction** : donner la solution attendue, son explication et un lien vers le contenu utile.
-- **FRI-05 — Résultat et reprise** : afficher le résultat et permettre une nouvelle tentative.
+- **FRI-01 — Périodes** : choisir un regroupement (Antiquité), une période ou plusieurs périodes. La sélection inclut automatiquement toutes les périodes intermédiaires selon l’ordre pédagogique du catalogue ; choisir Égypte et Art nouveau inclura donc toutes celles ajoutées entre ces deux périodes. Les périodes peuvent se chevaucher.
+- **FRI-02 — Bornes** : reprendre les dates de début et de fin indiquées dans les en-têtes des fiches de révision correspondantes, pour les périodes actuelles et futures. Commencer par une frise vide. Demander le début le plus ancien de la sélection, puis sa fin la plus tardive, avec cinq propositions pour chaque question. Une erreur permet de réessayer jusqu’à obtenir la bonne réponse ; aucune carte n’est distribuée avant les deux bonnes réponses. Les bornes des styles sont distinctes des dates historiques des événements : les cartes hors de leur intervalle de style sont exclues de la partie, sans modifier leur datation.
+- **FRI-03 — Association** : afficher des emplacements vides portant leurs dates et des cartes décrivant des événements précis sans date visible. Le joueur glisse chaque carte sur un emplacement. Une sélection puis un clic sur la date fournit aussi une interaction au clavier et à la souris.
+- **FRI-04 — Main et pioche** : disposer la main en bas de l’écran, avec au maximum sept cartes. Distribuer jusqu’à sept cartes après les bornes, puis piocher automatiquement après chaque placement depuis la main ou chaque défausse, tant que la pioche contient des cartes.
+- **FRI-05 — Défausse recyclée** : la carte défaussée retourne dans la pioche, qui est remélangée ; aucun événement n’est éliminé. Piocher sa remplaçante avant de la remettre dans le paquet évite de recevoir immédiatement la même carte. Lorsque la pioche est vide, il n’y a plus de renouvellement possible par défausse.
+- **FRI-06 — Déplacements et échanges** : autoriser les corrections avant validation. Une carte de la main posée sur une carte occupée rend la précédente à la main ; déplacer une carte du plateau sur une autre échange les deux. Reprendre une carte en main est possible s’il reste une place. Ces manipulations ne créent ni ne suppriment de carte.
+- **FRI-07 — Validation finale** : le bouton Valider apparaît seulement lorsque toutes les cartes sont sur la frise. Marquer les bonnes associations en vert et les mauvaises en rouge, avec des symboles pour ne pas dépendre de la couleur seule. Ne pas révéler la correction pendant les placements.
+- **FRI-08 — Correction et reprise** : afficher le nombre d’associations correctes et, au clic sur une carte, son repère attendu, son explication sourcée et un lien vers le cours associé. Permettre une nouvelle tentative, qui recommence par les bornes. Conserver la partie lors des changements de rubrique pendant la session.
+- **FRI-09 — Chronologie et lisibilité** : qualifier les dates approximatives, les intervalles, les dates traditionnelles et les bornes conventionnelles. Accepter les emplacements de dates équivalentes. Afficher les dates dans l’ordre avec un espacement de lecture non proportionnel aux durées, une frise défilante et un défilement au bord pendant le glisser-déposer.
 
-La différence avec Timeline est pédagogique : Timeline demande de piocher puis d'insérer successivement des cartes dans un ordre chronologique dont les dates restent cachées ; la frise à remplir demande de compléter une structure existante. Les dates éventuellement affichées ou demandées dans ce second jeu suivent sa propre consigne.
+La différence avec Timeline est pédagogique : Timeline demande de piocher puis d’insérer successivement des cartes dans un ordre dont les dates restent cachées ; la frise à remplir demande d’associer une main de cartes sans date à des emplacements datés, après avoir retrouvé les bornes. Leurs règles de pioche et de validation sont indépendantes.
+
+Première version locale : Égypte, Grèce et Rome. Le catalogue conserve vingt-quatre événements sourcés ; dix-neuf entrent dans les bornes des fiches (cinq égyptiens, sept grecs et sept romains). Les bornes sont respectivement −4000 à −400, −1100 à −100 et −800 à 400. Le catalogue `app/content/games/chronology.json` contient périodes, ordre pédagogique, bornes, provenance de l’en-tête, choix, événements et sources. `tools/validate_chronology.py` compare les bornes aux PDF originaux et vérifie leur empreinte par rapport au catalogue des fiches. `ChronologyRepository` résout la sélection et filtre les événements ; `FriezeSession` gère les bornes, la main, la pioche, les échanges et le résultat ; les composants de carte, de main et d’emplacement gèrent l’interaction Godot. L’ajout de périodes et d’événements se fait dans les données, sans créer une scène par période. La partie et son résultat sont conservés en mémoire pendant la session ; leur persistance après fermeture reste à ajouter.
 
 ### 3.6. Progression locale
 
@@ -353,7 +359,8 @@ Les scènes affichent les données et transmettent les actions. Elles ne lisent 
 | `SearchService` | Normaliser la requête, consulter l'index local et classer les résultats. |
 | `QuizSession` | Choisir les questions, suivre une session et calculer son résultat. |
 | `TimelineSession` | Gérer la pioche, la carte du tour, le plateau ordonné et les phases du tour ; vérifier chaque insertion avec les dates réelles des cartes voisines, sans les transmettre aux composants visuels. |
-| `FillTimelineSession` | Gérer les emplacements manquants et la correction de la frise à remplir, indépendamment des règles de pioche de Timeline. |
+| `FriezeSession` | Gérer les bornes, la main de sept cartes, la pioche, les emplacements et la correction de la frise à remplir, indépendamment de Timeline. |
+| `ChronologyRepository` | Charger les périodes et événements sourcés, inclure les périodes intermédiaires et formater les repères chronologiques. |
 | `ChronologyService` | Centraliser les dates, intervalles, affichages et règles temporelles communes. |
 | `ProgressRepository` | Lire, valider et enregistrer la progression locale. |
 | `NavigationService` | Gérer les écrans, l'historique et le contexte de période/cours/exercice. |
@@ -482,7 +489,7 @@ Ce prototype ne comprend ni l'administration, ni les vidéos intégrées, ni la 
 - [ ] Définir les liens vers notions, personnes et périodes pour préparer la recherche.
 - [ ] Mettre en place le dépôt de progression locale.
 
-### Étape 2 — Parcours complet cours → quiz : proposition sur `feat/cours-antiquite`
+### Étape 2 — Parcours complet cours → quiz : cours d’Antiquité intégrés à `main`
 
 - [x] Construire le moteur de quiz textuel et visuel (choix unique).
 - [x] Relier la fin de période à son ensemble de questions : Égypte, Grèce, Rome, quatre questions chacune.
@@ -490,7 +497,7 @@ Ce prototype ne comprend ni l'administration, ni les vidéos intégrées, ni la 
 - [x] Vérifier la navigation aller-retour et la conservation de la lecture pendant la session.
 - [x] Afficher les crédits des ressources réellement utilisées.
 
-La branche de proposition contient trois cours natifs (huit chapitres pour l’Égypte, six pour la Grèce et sept pour Rome), 35 illustrations existantes, douze études de mobilier commentées et une sauvegarde locale des meilleurs scores, sans suivi des chapitres lus. Le texte est rédigé à partir des thèmes des supports et complété par des vérifications muséales ; les supports ne sont pas affichés comme pages de cours. La relecture et la validation pédagogiques par Nathan restent nécessaires avant l'intégration à `main`. Les vidéos et les jeux chronologiques demeurent des étapes distinctes non réalisées.
+Les trois cours natifs intégrés à `main` comprennent huit chapitres pour l’Égypte, six pour la Grèce et sept pour Rome, 35 illustrations existantes, douze études de mobilier commentées et une sauvegarde locale des meilleurs scores, sans suivi des chapitres lus. Le texte est rédigé à partir des thèmes des supports et complété par des vérifications muséales ; les supports ne sont pas affichés comme pages de cours. Les futurs enrichissements restent à relire avec Nathan. Les vidéos et le jeu Timeline ne sont pas encore réalisés ; la première frise à remplir est détaillée à l’étape 4.
 
 La sculpture égyptienne et les colonnes égyptiennes disposent de chapitres dédiés ; les ordres grecs sont développés et un chapitre de colonnes romaines est ajouté. Les trois quiz totalisent dix-sept questions. Le catalogue calcule ses compteurs ; le sommaire peut défiler pour conserver les commandes accessibles lorsque les parcours s’allongent. Les identifiants existants des chapitres et des questions sont conservés. Les exemples ajoutés suivent les mêmes règles de provenance, de fidélité et de lisibilité que le mobilier.
 
@@ -511,10 +518,12 @@ La vidéo est une fonctionnalité obligatoire de l'application prévue ; son pos
 - [ ] Implémenter Timeline : une carte piochée par tour, puis insertion avant, après ou entre les cartes du plateau.
 - [ ] Conserver les dates réelles pour la validation et vérifier qu'elles restent absentes de toute l'interface de Timeline.
 - [ ] Gérer la succession des tours et la stabilité des cartes déjà validées.
-- [ ] Implémenter la frise à remplir comme jeu distinct.
-- [ ] Prévoir les explications et les liens vers les contenus de révision.
-- [ ] Vérifier les interactions à la souris et au clavier.
-- [ ] Tester les intervalles, approximations et réponses multiples acceptables.
+- [x] Implémenter la frise à remplir comme jeu distinct : sélection, bornes, main de sept cartes, pioche automatique et défausse recyclée.
+- [x] Pour la frise : explications, sources et liens vers les cours, reprise de session et nouvelle tentative.
+- [x] Pour la frise : vérifier le glisser-déposer réel et la sélection par clic/clavier.
+- [x] Pour la frise : tester les intervalles, approximations et dates équivalentes.
+- [ ] Réaliser ces mêmes vérifications pour le futur jeu Timeline.
+- [ ] Enregistrer les résultats de frise après fermeture de l’application.
 
 ### Étape 5 — Recherche et filtres avancés
 
@@ -577,7 +586,7 @@ Ces points ne remettent pas en cause les fonctionnalités demandées ; ils préc
 | Quiz | Définir le nombre de questions par session et le mode de présentation de la correction. |
 | Validation des connaissances | Définir s'il existe un seuil de réussite ; ne pas bloquer l'accès aux cours par défaut. |
 | Timeline | Définir le plateau initial, la conséquence d'une erreur et la condition de fin de partie. La pioche successive, l'insertion avant/après/entre et les dates cachées sont confirmées. |
-| Frise à remplir | Confirmer la forme des blancs et les éléments affichés ou demandés dans ce jeu distinct. |
+| Frise à remplir | Règles validées le 17 novembre 2026 : bornes avec nouvelles tentatives, emplacements datés, main de sept cartes, pioche automatique et défausse remélangée. Étendre ensuite le catalogue d’événements aux nouvelles périodes. |
 | Vidéos | Choisir les premiers contenus, leur qualité, leur taille et les sous-titres/transcriptions disponibles. |
 | Progression | Choisir le mode de stockage par défaut et l'éventuel export/import manuel. |
 | Mise à jour des contenus | Choisir entre nouvelle distribution complète et import de paquets. |
@@ -601,3 +610,5 @@ Une fonctionnalité n'est marquée terminée qu'après vérification de son comp
 |---|---|---|
 | 15 novembre 2026 | 0.1 | Création du cadrage fonctionnel, du modèle de connaissances, de l'architecture et de la feuille de route. |
 | 15 novembre 2026 | 0.2 | Précision des règles de Timeline : pioche carte par carte, insertion dans le plateau existant et validation par dates réelles non affichées. Adaptation du modèle, des services et des critères de validation. |
+| 17 novembre 2026 | 0.12 | Règles validées et première version de la frise à remplir : sélection avec périodes intermédiaires, bornes à retrouver, main de sept cartes et pioche/défausse recyclée ; vingt-quatre événements sourcés et correction intégrée. |
+| 17 novembre 2026 | 0.13 | Bornes des styles reprises des en-têtes des fiches de révision ; provenance PDF vérifiée et cartes hors intervalle exclues sans changement de datation. Dix-neuf événements jouables. |

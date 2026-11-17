@@ -9,5 +9,6 @@ builds/
 docs/validation/menu/
 docs/validation/revision/
 docs/validation/courses/
+docs/validation/frieze/
 .tmp/
 __pycache__/

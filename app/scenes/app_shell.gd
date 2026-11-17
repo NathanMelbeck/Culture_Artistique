@@ -5,10 +5,12 @@ const SECTION := preload("res://scenes/section_preview/section_preview.tscn")
 const CREDITS := preload("res://scenes/credits/credits.tscn")
 const REVISION := preload("res://scenes/revision_sheets/revision_sheets.tscn")
 const COURSES := preload("res://scenes/courses/courses.tscn")
+const GAMES := preload("res://scenes/games/games.tscn")
 var navigation := NavigationService.new()
 var media_repository := MediaRepository.new()
 var revision_repository := RevisionRepository.new()
 var course_repository := CourseRepository.new()
+var chronology_repository := ChronologyRepository.new()
 var progress_repository := ProgressRepository.new()
 var _view_states: Dictionary = {}
 var _page: Control
@@ -131,8 +133,10 @@ func _show_route(route: String) -> void:
 		was_keyboard = get_viewport().gui_get_focus_owner() != null
 		_page_host.remove_child(_page)
 		_page.queue_free()
-	_back_button.visible = route not in ["home", "revision", "courses"]
-	_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED if route in ["revision", "courses"] else ScrollContainer.SCROLL_MODE_AUTO
+	_back_button.visible = route not in ["home", "revision", "courses", "games"]
+	_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED if route in ["revision", "courses", "games"] else ScrollContainer.SCROLL_MODE_AUTO
+	_body_margin.add_theme_constant_override("margin_top", 12 if route == "games" else 28)
+	_body_margin.add_theme_constant_override("margin_bottom", 12 if route == "games" else 24)
 	if route == "home":
 		_page = HOME.instantiate()
 		_page.media_repository = media_repository
@@ -148,6 +152,20 @@ func _show_route(route: String) -> void:
 		_page.repository = course_repository
 		_page.progress_repository = progress_repository
 		_page.view_state = _view_states.get("courses", {})
+	elif route == "games":
+		_page = GAMES.instantiate()
+		_page.repository = chronology_repository
+		_page.view_state = _view_states.get("games", {})
+		_page.course_requested.connect(func(course_id: String, chapter_id: String) -> void:
+			var course := course_repository.find(course_id)
+			var index := 0
+			for chapter in course.get("chapters", []):
+				if chapter["id"] == chapter_id:
+					break
+				index += 1
+			_view_states["courses"] = {"mode": "reader", "course": course_id, "reader": {"chapter": index, "scroll": 0}}
+			navigation.navigate("courses")
+		)
 	else:
 		_page = SECTION.instantiate()
 		_page.route = route
@@ -168,7 +186,7 @@ func _restore_view(with_focus: bool) -> void:
 			var first := _page.find_child("CoursesCard", true, false) as Button
 			if first != null:
 				first.grab_focus()
-		elif navigation.current_route in ["revision", "courses"]:
+		elif navigation.current_route in ["revision", "courses", "games"]:
 			_nav_buttons[navigation.current_route].grab_focus()
 		else:
 			_back_button.grab_focus()

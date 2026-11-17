@@ -4,9 +4,9 @@ Application locale de culture artistique, développée avec **Godot 4.7.2 et GDS
 
 ## Démarrer le lecteur
 
-Dans Godot, importer **`app/project.godot`**, puis appuyer sur **F5**. Le menu propose Cours, Jeux et Crédits. Cours donne accès aux parcours Égypte, Grèce et Rome ; Jeux conserve son écran d'attente. Les crédits sont consultables.
+Dans Godot, importer **`app/project.godot`**, puis appuyer sur **F5**. Le menu propose Cours, Jeux et Crédits. Cours donne accès aux parcours Égypte, Grèce et Rome ; Jeux propose désormais le premier jeu **Frise à remplir**. Les crédits sont consultables.
 
-La proposition des premiers cours est développée sur **`feat/cours-antiquite`**. Les parcours comportent huit chapitres pour l’Égypte, six pour la Grèce et sept pour Rome, avec sommaire défilant, texte natif sélectionnable, illustrations légendées, zoom intégré et quiz expliqués. Le catalogue permet de consulter toute l'Antiquité ou de choisir directement une période. Il ne s'agit pas de pages PDF affichées comme images : seuls les visuels sélectionnés sont extraits des supports, puis intégrés à des blocs de cours rédigés séparément.
+Les premiers cours d’Antiquité ont été intégrés à **`main`** après validation. Les parcours comportent huit chapitres pour l’Égypte, six pour la Grèce et sept pour Rome, avec sommaire défilant, texte natif sélectionnable, illustrations légendées, zoom intégré et quiz expliqués. Le catalogue permet de consulter toute l'Antiquité ou de choisir directement une période. Il ne s'agit pas de pages PDF affichées comme images : seuls les visuels sélectionnés sont extraits des supports, puis intégrés à des blocs de cours rédigés séparément.
 
 Le bouton **Fiche** dans la barre du haut ouvre les **17 fiches de révision (34 pages)** : choix d'une période, recherche par nom, page précédente/suivante, zoom de 100 à 300 % et retour à la largeur du lecteur. Les fiches sont consultées directement dans l'application, hors ligne. La fiche, sa page et son zoom sont conservés lorsque l'on revient au menu pendant la même session.
 
@@ -36,7 +36,8 @@ app/
   project.godot
   scenes/app_shell.*             Coquille, en-tête et pied de page
   scenes/main_menu/              Menu principal
-  scenes/section_preview/        Écran d'attente Jeux
+  scenes/games/                  Choix des périodes, frise et correction
+  scenes/section_preview/        Ancien écran d’attente conservé
   scenes/courses/                Catalogue, lecteur et quiz des cours
   scenes/credits/                Sources et licences hors ligne
   scenes/revision_sheets/        Lecteur de fiches intégré au lecteur Godot
@@ -45,8 +46,11 @@ app/
   components/course_figure.gd    Figures proportionnelles et légendes
   components/course_marked_texture.gd Repères sur les images et les détails cadrés
   components/course_image_viewer.gd Zoom et défilement intégrés
+  components/frieze_*.gd         Cartes, main et emplacements de la frise
   services/navigation_service.gd Navigation locale
   services/quiz_session.gd       Règles de session partagées des quiz
+  services/frieze_session.gd     Bornes, pioche, échanges et correction de frise
+  repositories/chronology_repository.gd Catalogue chronologique et sélection
   repositories/media_repository.gd Résolution des médias locaux
   repositories/revision_repository.gd Catalogue des fiches et pages locales
   repositories/course_repository.gd Cours et notices des illustrations
@@ -55,17 +59,21 @@ app/
   content/revision_sheets.json   Périodes, ordre, sources et pages de révision
   content/courses/               Catalogue et textes des trois cours
   content/course_media.json      Provenance des 35 illustrations des cours
+  content/games/chronology.json  Périodes, bornes et événements sourcés
   assets/                       Photo, polices et icônes embarquées
   theme/app_theme.gd             Couleurs, typographie et styles
   tests/menu_smoke.gd            Parcours d'entrée et captures
   tests/revision_smoke.gd        Navigation, recherche, zoom et 34 pages
   tests/courses_smoke.gd         Cours, sommaire, corrections et reprise
   tests/course_data_test.gd      Scores et sauvegarde locale isolée
+  tests/frieze_data_test.gd      Règles et conservation des cartes de frise
+  tests/frieze_smoke.gd          Parcours réel et glisser-déposer Godot
 fiche_revision/                 Fiches PDF originales fournies par Nathan
 documents_support_cours/        Supports pédagogiques sources inchangés
 tools/import_revision_sheets.py Préparation des pages pour Godot
 tools/extract_course_assets.py  Extraction des illustrations existantes
 tools/validate_courses.py       Validation du catalogue et de ses relations
+tools/validate_chronology.py    Validation des dates, sources et renvois aux cours
 docs/asset-register.csv          Provenance des ressources
 design/maquette-v1/              Sources de conception et lien Figma
 test/                           Ancien prototype indépendant
@@ -82,6 +90,8 @@ $godot = '..\Godot\Godot_v4.7.2-stable_win64_console.exe'
 & $godot --path '.\app' --script 'res://tests/revision_smoke.gd'
 & $godot --headless --path '.\app' --script 'res://tests/course_data_test.gd'
 & $godot --path '.\app' --script 'res://tests/courses_smoke.gd'
+& $godot --headless --path '.\app' --script 'res://tests/frieze_data_test.gd'
+& $godot --path '.\app' --script 'res://tests/frieze_smoke.gd'
 ```
 
 Le second parcours injecte de vrais événements souris et clavier, vérifie la navigation et le redimensionnement et écrit des captures dans `docs/validation/menu/` (exclues de Git). Il demande un affichage graphique. Aucun export autonome du nouveau lecteur n'est encore fourni.
@@ -89,6 +99,18 @@ Le second parcours injecte de vrais événements souris et clavier, vérifie la 
 Le parcours des fiches vérifie aussi les 34 ressources locales, les bornes de pagination, les changements de période, le zoom, les recherches sans accent, les résultats vides et la reprise de lecture. Ses captures sont dans `docs/validation/revision/` (exclues de Git).
 
 Les tests des cours emploient une progression en mémoire et un fichier temporaire unique, sans modifier la progression personnelle. La validation des JSON peut être lancée avec `python tools/validate_courses.py`.
+
+## Jouer à la frise à remplir
+
+Ouvrir **Jeux → Frise à remplir → Choisir les périodes**. Choisir une période, plusieurs périodes ou toute l’Antiquité. Les périodes intermédiaires sont ajoutées automatiquement : Égypte + Rome inclut Grèce. Le jeu utilise les bornes des en-têtes des fiches de révision : Égypte −4000 à −400, Grèce −1100 à −100 et Rome −800 à 400. Dix-neuf événements entrent dans ces intervalles : cinq pour l’Égypte, sept pour la Grèce et sept pour Rome. Les cinq autres événements du catalogue restent conservés, avec leur datation historique, mais ne sont pas distribués.
+
+Retrouver le début le plus ancien puis la fin la plus tardive, avec cinq choix et autant de tentatives que nécessaire. La main apparaît ensuite en bas, avec sept cartes maximum. Glisser une carte sur une date, ou la sélectionner puis cliquer sur un emplacement. Chaque pose depuis la main entraîne une pioche, jusqu’à épuisement du paquet. Sélectionner une carte puis **Défausser la sélection** la remplace par une autre et la remet dans la pioche mélangée. La carte écartée ne revient pas immédiatement ; lorsqu’il n’y a plus de pioche, la défausse ne renouvelle plus la main.
+
+Les cartes peuvent être déplacées et échangées avant validation. Le bouton **Valider la frise** apparaît quand toutes sont placées. La correction utilise vert/rouge et des symboles ; cliquer sur une carte donne sa date attendue, une explication, sa source et un lien vers le cours. **Rejouer** recommence les bornes et la distribution. Les dates des emplacements sont visibles, celles des cartes sont cachées avant correction. Les espacements ne représentent pas les durées.
+
+La frise défile horizontalement avec sa barre ; faire glisser une carte près d’un bord fait aussi défiler le plateau. La main et les commandes restent visibles à 960 × 640. La partie est conservée lorsque l’on change de rubrique ou que l’on relit un cours pendant la même session. Elle n’est pas encore sauvegardée après fermeture de l’application.
+
+Les événements, repères approximatifs et sources sont dans `app/content/games/chronology.json`. Chaque période indique la fiche et l’en-tête utilisés pour ses bornes. Le découpage des styles suit les fiches ; les dates historiques des événements restent celles de leurs sources. Le validateur compare les bornes aux en-têtes des PDF, sans que l’application ait à lire les PDF à l’exécution. Les sources externes s’ouvrent seulement sur demande ; aucune image ni requête réseau n’est nécessaire au jeu. Vérifier les données avec `python tools/validate_chronology.py` (dépendance de préparation : `pypdf`). Les tests et limites sont détaillés dans [docs/frise-validation.md](docs/frise-validation.md).
 
 ## Les cours d'Antiquité
 
