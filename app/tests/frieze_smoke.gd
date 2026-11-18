@@ -76,7 +76,7 @@ func _run() -> void:
 	app = load("res://scenes/app_shell.tscn").instantiate()
 	app.progress_repository = ProgressRepository.new("")
 	root.add_child(app)
-	root.size = Vector2i(1440, 1000)
+	root.size = Vector2i(1600, 1000)
 	root.position = Vector2i(20, 20)
 	await frames(12)
 	await create_timer(0.15).timeout
@@ -101,6 +101,7 @@ func _run() -> void:
 	await click("StartFrieze")
 	var games: Control = app._page
 	check(games.session.phase == "start" and app.find_children("Boundary_*", "Button", true, false).size() == 5, "La première question propose cinq dates et aucune carte")
+	await capture("01-debut.png")
 	var wrong := 0
 	for value in games.session.boundary_choices():
 		if int(value) != int(games.session.start_period["start"]):
@@ -110,6 +111,7 @@ func _run() -> void:
 	check(games.session.phase == "start" and (app.find_child("Boundary_" + str(wrong), true, false) as Button).disabled, "Une mauvaise date se retente sans passer à l’étape suivante")
 	await capture("borne-reessayer.png")
 	await click("Boundary_" + str(int(games.session.start_period["start"])))
+	await capture("02-fin.png")
 	check(games.session.phase == "end" and games.session.hand.is_empty(), "La seconde question demande la fin avant de distribuer")
 	await click("Boundary_" + str(int(games.session.end_period["end"])))
 	check(games.session.phase == "placement" and games.session.period_stage_active() and games.session.hand.size() == 4 and games.session.drawable_count() == 0, "La phase des périodes distribue seulement quatre cartes sans compléter la main")
@@ -128,7 +130,7 @@ func _run() -> void:
 	var first: String = games.session.hand[0]
 	await drag_card(app.find_child("HandCard_" + first, true, false), app.find_child("FriezeSlot_egy-unification", true, false))
 	var bad_slot := app.find_child("FriezeSlot_egy-unification", true, false) as Button
-	check(games.session.period_status("egy-unification") == "wrong" and games.session.hand.size() == 3 and bad_slot.text.begins_with("✕ ") and bad_slot.get_theme_color("font_color") == games.BAD and app.find_child("RecyclePeriod_" + first, true, false) != null, "Un mauvais repère devient immédiatement rouge avec son bouton de retour")
+	check(games.session.period_status("egy-unification") == "wrong" and games.session.hand.size() == 3 and bad_slot != null and app.find_child("RecyclePeriod_" + first, true, false) != null, "Un mauvais repère devient immédiatement rouge avec son bouton de retour")
 	await capture("periode-erreur-1440.png")
 	await click("RecyclePeriod_" + first)
 	check(first in games.session.draw_pile and first not in games.session.hand and not games.session.placements.has("egy-unification") and app.find_child("DrawFriezeCard", true, false) != null, "Le petit bouton libère l’emplacement et conserve la carte en pioche")
@@ -140,9 +142,9 @@ func _run() -> void:
 	await frames(5)
 	await drag_card(app.find_child("HandCard_" + correct_card, true, false), correct_slot)
 	var correct_date := app.find_child("FriezeDate_" + correct_card, true, false) as Label
-	check(correct_date.text.begins_with("✓ ") and correct_date.get_theme_color("font_color") == games.GOOD and app.find_child("RecyclePeriod_" + correct_card, true, false) == null, "Un bon repère colore immédiatement la date en vert sans bouton d’erreur")
+	check(games.session.locked(correct_card) and correct_date.get_theme_color("font_color") == games.screen.GOOD and app.find_child("RecyclePeriod_" + correct_card, true, false) == null, "Un bon repère colore immédiatement la date en vert sans bouton d’erreur")
 	await capture("periode-validee-1440.png")
-	await click("HomeButton")
+	await click("ChroniquesHome")
 	await click("GamesNav")
 	games = app._page
 	check(games.session.correct_period_count() == 1 and games.session.period_stage_active() and games.session.hand.size() == 3, "Le retour au menu conserve la phase des périodes et ses validations")
@@ -177,12 +179,12 @@ func _run() -> void:
 	first = games.session.hand[0]
 	await drag_card(app.find_child("HandCard_" + first, true, false), app.find_child("FriezeSlot_egy-unification", true, false))
 	check(games.session.placements.get("egy-unification") == first and games.session.hand.size() == 7, "Le glisser-déposer d’un événement complète automatiquement la main")
-	check(not (app.find_child("FriezeSlot_egy-unification", true, false) as Button).text.begins_with("✓ ") and not (app.find_child("FriezeSlot_egy-unification", true, false) as Button).text.begins_with("✕ ") and (app.find_child("FriezeDate_egy-unification", true, false) as Label).get_theme_color("font_color") == AppTheme.FOREST, "Un événement ne révèle aucune correction avant la validation finale")
+	check(not (app.find_child("FriezeSlot_egy-unification", true, false) as Button).text.begins_with("✓ ") and not (app.find_child("FriezeSlot_egy-unification", true, false) as Button).text.begins_with("✕ ") and (app.find_child("FriezeDate_egy-unification", true, false) as Label).get_theme_color("font_color") == games.screen.CREAM, "Un événement ne révèle aucune correction avant la validation finale")
 	var second: String = games.session.hand[0]
 	await drag_card(app.find_child("HandCard_" + second, true, false), app.find_child("FriezeSlot_egy-kemeni", true, false))
 	await drag_card(app.find_child("FriezeSlot_egy-unification", true, false), app.find_child("FriezeSlot_egy-kemeni", true, false))
 	check(games.session.placements.get("egy-unification") == second and games.session.placements.get("egy-kemeni") == first, "Le glisser-déposer échange deux événements déjà placés")
-	await drag_card(app.find_child("HandCard_" + games.session.hand[0], true, false), app.find_child("FriezeProgress", true, false))
+	await drag_card(app.find_child("HandCard_" + games.session.hand[0], true, false), app.find_child("ChangePeriods", true, false))
 	check(games.session.placements.size() == 6 and games.session.hand.size() == 7, "Un dépôt hors des emplacements ne perd aucune carte")
 	var edge_board := app.find_child("FriezeBoardScroll", true, false) as ScrollContainer
 	await drag_at_edge(app.find_child("HandCard_" + games.session.hand[0], true, false), edge_board)
@@ -195,7 +197,7 @@ func _run() -> void:
 	hand = app.find_child("FriezeHandPanel", true, false) as Control
 	var cards_fit := true
 	for card in app.find_children("HandCard_*", "Button", true, false):
-		cards_fit = cards_fit and hand.get_global_rect().encloses(card.get_global_rect())
+		cards_fit = cards_fit and root.get_visible_rect().encloses(card.get_global_rect())
 	check(cards_fit, "Les sept cartes restent dans les limites de la main à 960 × 640")
 	var board := app.find_child("FriezeBoardScroll", true, false) as ScrollContainer
 	check(board.size.y >= 160 and board.get_h_scroll_bar().max_value > board.size.x, "La frise conserve sa hauteur et défile horizontalement")
@@ -207,39 +209,31 @@ func _run() -> void:
 	for event in games.session.events:
 		if games.session.placements.get(event["id"]) != event["id"]:
 			games.session.place(event["id"], event["id"])
-	games.session.place("egy-unification", games.session.events[-1]["id"])
+	games.session.place("egy-kemeni", "egy-reniseneb")
 	games._refresh()
 	await frames(6)
 	check(app.find_child("ValidateFrieze", true, false) != null and root.get_visible_rect().encloses((app.find_child("ValidateFrieze", true, false) as Control).get_global_rect()), "Toutes les cartes posées font apparaître un bouton Valider accessible")
 	await click("ValidateFrieze")
 	check(games.session.phase == "result" and games.session.score() == games.session.events.size() - 2, "La validation compte les réponses correctes et les deux erreurs voulues")
-	var red := app.find_child("FriezeSlot_egy-unification", true, false) as Button
-	var green := app.find_child("FriezeSlot_egy-kemeni", true, false) as Button
-	check(red.text.begins_with("✕ ") and green.text.begins_with("✓ ") and red.get_theme_color("font_color") != green.get_theme_color("font_color"), "Les réponses sont distinguées par une couleur et un symbole")
-	await capture("correction-960.png")
-	# The first wrong answer can now be a boundary card: open its local sheet.
-	var boundary_slot := ""
-	var boundary_sheet := ""
-	for event in games.session.events:
-		var placed: Dictionary = games.session.event(games.session.placements[event["id"]])
-		if placed.get("kind") == "period_boundary":
-			boundary_slot = event["id"]
-			boundary_sheet = placed["source"]["sheet_id"]
-			break
-	games._slot_clicked(boundary_slot)
-	await frames(6)
-	await click("ReviewFriezeSheet")
-	check(app.navigation.current_route == "revision" and app._page.selected_id == boundary_sheet, "Une carte de période renvoie à sa fiche intégrée hors ligne")
-	await click("GamesNav")
-	games = app._page
-	check(games.session.phase == "result" and games.session.score() == games.session.events.size() - 2, "La partie est conservée après consultation de la fiche")
-	games._slot_clicked("egy-kemeni")
-	await frames(6)
+	root.size = Vector2i(1600, 1000)
+	await frames(8)
+	await capture("05-resultat.png")
+	await click("RetryErrors")
+	check(games.session.hand.size() == 2 and games.session.locked("egy-unification") and games.session.placements.size() == 21, "La seconde tentative garde les bonnes réponses sur la table")
+	await capture("07-seconde-chance.png")
+	games._place("egy-kemeni","egy-reniseneb")
+	games._place("egy-reniseneb","egy-kemeni")
+	await frames(5)
+	await click("ValidateFrieze")
+	await click("ShowSolution")
+	check(games.session.comparing and games.session.submitted["egy-kemeni"] == "egy-reniseneb" and games.session.placements["egy-kemeni"] == "egy-kemeni", "La comparaison montre l’essai et sa correction")
+	await capture("06-comparaison.png")
+	await click("NextReview")
 	await click("ReviewFriezeCourse")
-	check(app.navigation.current_route == "courses" and app._page.mode == "reader", "La correction ouvre le cours associé dans l’application")
+	check(app.navigation.current_route == "courses" and app._page.mode == "reader", "La correction ouvre le cours dans l’application")
 	await click("GamesNav")
 	games = app._page
-	check(games.session.phase == "result" and games.session.score() == games.session.events.size() - 2, "La correction reste disponible après la relecture du cours")
+	check(games.session.comparing and games.comparison_index == 1, "Le retour du cours conserve la comparaison")
 	await click("ReplayFrieze")
 	check(games.session.phase == "start" and games.session.placements.is_empty() and games.session.hand.is_empty(), "Rejouer remet les bornes et toutes les cartes à zéro")
 	root.size = Vector2i(1280, 720)

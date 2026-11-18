@@ -79,8 +79,7 @@ func _init() -> void:
 	var correct_card: String = gated.hand[0]
 	gated.place(correct_card, correct_card)
 	check(gated.period_status(correct_card) == "correct" and not gated.return_wrong_period_to_pile(correct_card) and gated.period_stage_active(), "Un bon repère est validé immédiatement et ne propose pas de retour d’erreur")
-	gated.return_to_hand(correct_card)
-	check(gated.period_status(correct_card).is_empty() and gated.correct_period_count() == 0 and gated.period_stage_active(), "Déplacer un repère annule son état vert sur l’ancien emplacement")
+	check(not gated.return_to_hand(correct_card) and gated.locked(correct_card) and gated.correct_period_count() == 1, "Un repère validé reste verrouillé")
 	for id in gated.hand.duplicate():
 		gated.place(id, id)
 	var only_events := true
@@ -93,8 +92,7 @@ func _init() -> void:
 	while not gated.hand.is_empty():
 		var id: String = gated.hand[0]
 		gated.place(id, id)
-	gated.place(correct_card, ordinary_id)
-	check(gated.period_status(ordinary_id) == "wrong" and not gated.period_stage_active() and not gated.can_validate() and gated.return_wrong_period_to_pile(correct_card) and gated.can_draw() and ownership(gated), "Un repère déplacé après le déblocage reste contrôlé et empêche une validation finale incorrecte")
+	check(not gated.place(correct_card, ordinary_id) and not gated.place(ordinary_id, correct_card) and gated.can_validate() and ownership(gated), "Les repères validés restent protégés des échanges dans les deux sens")
 	var empty_hand := FriezeSession.new(selection, repository.cards_for(selection), 9)
 	begin(empty_hand)
 	var wrong_slots := repository.events_for(selection)
@@ -187,6 +185,15 @@ func _init() -> void:
 	perfect.place(perfect.events[0]["id"], perfect.events[-1]["id"])
 	check(perfect.score() == perfect.events.size() - 2 and perfect.validate() and perfect.phase == "result", "Une erreur d’échange donne deux mauvaises associations puis un résultat final")
 	check(not perfect.place(perfect.events[0]["id"], perfect.events[0]["id"]) and not perfect.validate() and ownership(perfect), "Un résultat validé ne peut plus être modifié ni validé deux fois")
+	var first_wrong: String = perfect.events[0].id
+	var last_wrong: String = perfect.events[-1].id
+	check(perfect.retry_errors() and perfect.hand.size() == 2 and perfect.retained_slots.size() == 6 and ownership(perfect), "La seconde chance ne redistribue que les erreurs")
+	check(not perfect.place(first_wrong, perfect.events[1].id), "Les bonnes réponses conservées restent verrouillées")
+	perfect.place(first_wrong, last_wrong)
+	perfect.place(last_wrong, first_wrong)
+	perfect.validate()
+	perfect.show_solution()
+	check(perfect.submitted[first_wrong] == last_wrong and perfect.placements[first_wrong] == first_wrong and perfect.score() == 8 and not perfect.retry_errors() and ownership(perfect), "La comparaison conserve la copie initiale et corrige toutes les erreurs")
 	var equal := FriezeSession.new(egypt, [{"id": "a", "year": -100}, {"id": "b", "year": -100}], 4)
 	begin(equal)
 	equal.place("a", "b")

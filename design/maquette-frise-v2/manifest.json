@@ -1,0 +1,56 @@
+{
+  "screens": [
+    {
+      "id": "01-choix-debut",
+      "title": "Choix de la borne de début",
+      "note": "TFT · Cinq cartes centrales, fond assombri et survol doré.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "id": "02-choix-fin",
+      "title": "Choix de la borne de fin",
+      "note": "La seconde borne reprend le même rituel de sélection.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "id": "03-reperes",
+      "title": "Les repères de période",
+      "note": "Validation immédiate, repère juste verrouillé, erreur rouge et événements en réserve.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "id": "04-plateau",
+      "title": "Le plateau et la main",
+      "note": "Balatro + Hearthstone · Main de sept cartes, pioche et périodes colorées superposées.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "id": "05-resultat",
+      "title": "Choisir sa correction",
+      "note": "Deux voies : voir les erreurs ou rejouer seulement les mauvaises cartes.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "id": "06-comparaison",
+      "title": "Voir les erreurs",
+      "note": "Correction automatique avec comparaison avant/après et cartes changées signalées.",
+      "width": 1600,
+      "height": 1000
+    },
+    {
+      "id": "07-seconde-chance",
+      "title": "Refaire les mauvaises",
+      "note": "Seulement les deux mauvaises cartes reviennent ; les bonnes réponses sont conservées.",
+      "width": 1600,
+      "height": 1000
+    }
+  ],
+  "figma_file": "https://www.figma.com/design/tO1OXFLEch1doEVcahuLRJ",
+  "figma_status": "Fichier créé et ouvert, mais vide : limite d’appels du connecteur Starter atteinte avant la création des écrans.",
+  "application_changed": false
+}

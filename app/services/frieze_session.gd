@@ -17,6 +17,12 @@ var _by_id: Dictionary = {}
 var _random := RandomNumberGenerator.new()
 var _opening_pending: Array[String] = []
 var _period_cards: Array[String] = []
+# Capture the submitted board before offering either correction path.
+var submitted: Dictionary = {}
+var wrong_slots: Array[String] = []
+var retained_slots: Dictionary = {}
+var comparing := false
+var retrying := false
 var periods_completed := false
 
 func _init(selection: Array, cards: Array, seed_value: int = -1) -> void:
@@ -161,8 +167,11 @@ func placed_slot(card_id: String) -> String:
 			return slot_id
 	return ""
 
+func locked(slot_id: String) -> bool:
+	return retained_slots.has(slot_id) or period_status(slot_id) == "correct"
+
 func can_place(card_id: String, slot_id: String) -> bool:
-	return phase == "placement" and _by_id.has(slot_id) and (card_id in hand or not placed_slot(card_id).is_empty()) and (not period_stage_active() or is_period_card(card_id))
+	return phase == "placement" and not locked(slot_id) and not locked(placed_slot(card_id)) and _by_id.has(slot_id) and (card_id in hand or not placed_slot(card_id).is_empty()) and (not period_stage_active() or is_period_card(card_id))
 
 func place(card_id: String, slot_id: String) -> bool:
 	if not can_place(card_id, slot_id):
@@ -189,7 +198,7 @@ func return_to_hand(card_id: String) -> bool:
 	if phase != "placement" or hand.size() >= HAND_LIMIT:
 		return false
 	var slot_id := placed_slot(card_id)
-	if slot_id.is_empty():
+	if slot_id.is_empty() or locked(slot_id):
 		return false
 	placements.erase(slot_id)
 	hand.append(card_id)
@@ -233,8 +242,42 @@ func can_validate() -> bool:
 func validate() -> bool:
 	if not can_validate():
 		return false
+	submitted = placements.duplicate()
+	wrong_slots.clear()
+	for card in events:
+		var slot_id: String = card.id
+		if not slot_correct(slot_id):
+			wrong_slots.append(slot_id)
 	phase = "result"
+	comparing = false
 	return true
+
+func retry_errors() -> bool:
+	if phase != "result" or comparing or wrong_slots.is_empty():
+		return false
+	for slot_id in wrong_slots:
+		draw_pile.append(placements[slot_id])
+		placements.erase(slot_id)
+	retained_slots = placements.duplicate()
+	_shuffle(draw_pile)
+	retrying = true
+	phase = "placement"
+	_fill_hand()
+	return true
+
+func show_solution() -> void:
+	if phase != "result" or comparing:
+		return
+	# Keep correct placements, including cards on equivalent dates.
+	var missing := wrong_slots.duplicate()
+	for old_slot in wrong_slots:
+		var id: String = submitted[old_slot]
+		for target in missing:
+			if ChronologyRepository.same_date(event(id), event(target)):
+				placements[target] = id
+				missing.erase(target)
+				break
+	comparing = true
 
 func slot_correct(slot_id: String) -> bool:
 	if not placements.has(slot_id):

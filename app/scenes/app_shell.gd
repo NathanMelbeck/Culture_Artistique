@@ -23,6 +23,7 @@ var _nav_buttons: Dictionary = {}
 var _home_button: Button
 var _back_button: Button
 var _offline: Label
+var immersive := false
 var _scroll_positions: Dictionary = {}
 
 func _ready() -> void:
@@ -125,6 +126,7 @@ func _build_shell() -> void:
 	footer.add_child(quit_button)
 
 func _show_route(route: String) -> void:
+	_set_immersive(false)
 	var was_keyboard := false
 	if is_instance_valid(_page):
 		if _page.has_method("get_view_state"):
@@ -154,6 +156,7 @@ func _show_route(route: String) -> void:
 		_page.view_state = _view_states.get("courses", {})
 	elif route == "games":
 		_page = GAMES.instantiate()
+		_page.immersive_changed.connect(_set_immersive)
 		_page.repository = chronology_repository
 		_page.view_state = _view_states.get("games", {})
 		_page.revision_requested.connect(func(sheet_id: String) -> void:
@@ -190,16 +193,30 @@ func _restore_view(with_focus: bool) -> void:
 			var first := _page.find_child("CoursesCard", true, false) as Button
 			if first != null:
 				first.grab_focus()
+		elif immersive:
+			var back := _page.find_child("ChroniquesHome", true, false) as Button
+			if back != null and back.focus_mode != Control.FOCUS_NONE:
+				back.grab_focus()
 		elif navigation.current_route in ["revision", "courses", "games"]:
 			_nav_buttons[navigation.current_route].grab_focus()
 		else:
 			_back_button.grab_focus()
 
+func _set_immersive(active: bool) -> void:
+	immersive = active
+	for child in _header_margin.get_parent().get_children():
+		if child != _scroll:
+			child.visible = not active
+	var margin := 0 if active else 12
+	_body_margin.add_theme_constant_override("margin_top", margin)
+	_body_margin.add_theme_constant_override("margin_bottom", margin)
+	_adapt()
+
 func _adapt() -> void:
 	var side := maxi(28, int((size.x - 1312) / 2))
 	for container in [_header_margin, _body_margin, _footer_margin]:
-		container.add_theme_constant_override("margin_left", side)
-		container.add_theme_constant_override("margin_right", side)
+		container.add_theme_constant_override("margin_left", 0 if immersive else side)
+		container.add_theme_constant_override("margin_right", 0 if immersive else side)
 	_offline.custom_minimum_size.x = 170 if size.x < 1200 else 230
 
 func _unhandled_key_input(event: InputEvent) -> void:

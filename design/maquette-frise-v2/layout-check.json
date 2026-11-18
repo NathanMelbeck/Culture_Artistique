@@ -1,0 +1,72 @@
+[
+  {
+    "screen": "01-choix-debut",
+    "texts": 49,
+    "images": 0,
+    "outside": [],
+    "fonts": {
+      "lora": true,
+      "manrope": true
+    }
+  },
+  {
+    "screen": "02-choix-fin",
+    "texts": 49,
+    "images": 0,
+    "outside": [],
+    "fonts": {
+      "lora": true,
+      "manrope": true
+    }
+  },
+  {
+    "screen": "03-reperes",
+    "texts": 46,
+    "images": 0,
+    "outside": [],
+    "fonts": {
+      "lora": true,
+      "manrope": true
+    }
+  },
+  {
+    "screen": "04-plateau",
+    "texts": 85,
+    "images": 5,
+    "outside": [],
+    "fonts": {
+      "lora": true,
+      "manrope": true
+    }
+  },
+  {
+    "screen": "05-resultat",
+    "texts": 67,
+    "images": 1,
+    "outside": [],
+    "fonts": {
+      "lora": true,
+      "manrope": true
+    }
+  },
+  {
+    "screen": "06-comparaison",
+    "texts": 45,
+    "images": 4,
+    "outside": [],
+    "fonts": {
+      "lora": true,
+      "manrope": true
+    }
+  },
+  {
+    "screen": "07-seconde-chance",
+    "texts": 53,
+    "images": 3,
+    "outside": [],
+    "fonts": {
+      "lora": true,
+      "manrope": true
+    }
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "key": "grece-vase",
+    "title": "Amphore attribuée à Exékias",
+    "source": "https://www.metmuseum.org/art/collection/search/250551",
+    "credit": "The Metropolitan Museum of Art, New York · inv. 17.230.14a, b · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "original": "res://assets/courses/museum/met-250551.jpg",
+    "presentation": "Photographie originale réduite proportionnellement pour la maquette ; aucune recréation de l’objet."
+  },
+  {
+    "key": "egypte-kemeni",
+    "title": "Le coffret de Kemeni",
+    "source": "https://www.metmuseum.org/art/collection/search/543955",
+    "credit": "The Metropolitan Museum of Art, New York · inv. 26.7.1438 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "original": "res://assets/courses/museum/met-543955.jpg",
+    "presentation": "Photographie originale réduite proportionnellement pour la maquette ; aucune recréation de l’objet."
+  },
+  {
+    "key": "egypte-ronde-bosse",
+    "title": "Hatchepsout assise, en ronde-bosse",
+    "source": "https://www.metmuseum.org/art/collection/search/544450",
+    "credit": "The Metropolitan Museum of Art, New York · inv. 29.3.2 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "original": "res://assets/courses/museum/met-544450.jpg",
+    "presentation": "Photographie originale réduite proportionnellement pour la maquette ; aucune recréation de l’objet."
+  },
+  {
+    "key": "egypte-reniseneb",
+    "title": "La chaise de Reniseneb",
+    "source": "https://www.metmuseum.org/art/collection/search/547687",
+    "credit": "The Metropolitan Museum of Art, New York · inv. 68.58 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "original": "res://assets/courses/museum/met-547687.jpg",
+    "presentation": "Photographie originale réduite proportionnellement pour la maquette ; aucune recréation de l’objet."
+  },
+  {
+    "key": "grece-colonne-ionique",
+    "title": "Une colonne ionique du temple d’Artémis à Sardes",
+    "source": "https://www.metmuseum.org/art/collection/search/252453",
+    "credit": "The Metropolitan Museum of Art, New York · inv. 26.59.1 · image CC0",
+    "rights": "CC0 · The Met Open Access",
+    "original": "res://assets/courses/museum/met-252453.jpg",
+    "presentation": "Photographie originale réduite proportionnellement pour la maquette ; aucune recréation de l’objet."
+  }
+]
