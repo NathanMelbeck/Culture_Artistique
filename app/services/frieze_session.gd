@@ -2,6 +2,16 @@ class_name FriezeSession
 extends RefCounted
 
 const HAND_LIMIT := 7
+var game_mode := "classic"
+var years_placed := {}
+var submitted_years := {}
+var first_try := {}
+var rewarded := false
+var normals_at_start: Dictionary = {}
+var new_normals: Array = []
+var marks_gained: Dictionary = {}
+var pack_opened := false
+var new_gold := []
 var phase := "start"
 var periods: Array
 var events: Array
@@ -25,7 +35,8 @@ var comparing := false
 var retrying := false
 var periods_completed := false
 
-func _init(selection: Array, cards: Array, seed_value: int = -1) -> void:
+func _init(selection: Array, cards: Array, seed_value: int = -1, variant_name := "classic") -> void:
+	game_mode = variant_name
 	periods = selection.duplicate(true)
 	events = cards.duplicate(true)
 	if seed_value < 0:
@@ -58,6 +69,10 @@ func _init(selection: Array, cards: Array, seed_value: int = -1) -> void:
 		_choices["end"].append(int(value))
 	_shuffle(_choices["start"])
 	_shuffle(_choices["end"])
+	if game_mode != "classic":
+		phase = "placement"
+		_advance_period_stage()
+		_fill_hand()
 
 func _shuffle(values: Array) -> void:
 	for index in range(values.size() - 1, 0, -1):
@@ -149,6 +164,8 @@ func answer_boundary(year: int) -> bool:
 		if year not in wrong_choices:
 			wrong_choices.append(year)
 		return false
+	var asked_period := start_period if phase == "start" else end_period
+	first_try["period-boundary-" + asked_period.id + "-" + phase] = boundary_attempts[phase] == 1
 	wrong_choices.clear()
 	if phase == "start":
 		phase = "end"
@@ -171,6 +188,7 @@ func locked(slot_id: String) -> bool:
 	return retained_slots.has(slot_id) or period_status(slot_id) == "correct"
 
 func can_place(card_id: String, slot_id: String) -> bool:
+	if game_mode != "classic" and (card_id != slot_id or not years_placed.has(card_id)): return false
 	return phase == "placement" and not locked(slot_id) and not locked(placed_slot(card_id)) and _by_id.has(slot_id) and (card_id in hand or not placed_slot(card_id).is_empty()) and (not period_stage_active() or is_period_card(card_id))
 
 func place(card_id: String, slot_id: String) -> bool:
@@ -190,6 +208,8 @@ func place(card_id: String, slot_id: String) -> bool:
 		if not displaced.is_empty():
 			placements[from_slot] = displaced
 	placements[slot_id] = card_id
+	if is_period_card(card_id) and not first_try.has(card_id):
+		first_try[card_id] = slot_correct(slot_id)
 	_advance_period_stage()
 	_fill_hand()
 	return true
@@ -201,6 +221,7 @@ func return_to_hand(card_id: String) -> bool:
 	if slot_id.is_empty() or locked(slot_id):
 		return false
 	placements.erase(slot_id)
+	years_placed.erase(card_id)
 	hand.append(card_id)
 	return true
 
@@ -243,9 +264,12 @@ func validate() -> bool:
 	if not can_validate():
 		return false
 	submitted = placements.duplicate()
+	submitted_years = years_placed.duplicate()
 	wrong_slots.clear()
 	for card in events:
 		var slot_id: String = card.id
+		var id: String = placements[slot_id]
+		if not first_try.has(id): first_try[id] = slot_correct(slot_id)
 		if not slot_correct(slot_id):
 			wrong_slots.append(slot_id)
 	phase = "result"
@@ -257,6 +281,7 @@ func retry_errors() -> bool:
 		return false
 	for slot_id in wrong_slots:
 		draw_pile.append(placements[slot_id])
+		years_placed.erase(placements[slot_id])
 		placements.erase(slot_id)
 	retained_slots = placements.duplicate()
 	_shuffle(draw_pile)
@@ -267,6 +292,10 @@ func retry_errors() -> bool:
 
 func show_solution() -> void:
 	if phase != "result" or comparing:
+		return
+	if game_mode == "free":
+		for slot in wrong_slots: years_placed[slot] = int(_by_id[slot].year)
+		comparing = true
 		return
 	# Keep correct placements, including cards on equivalent dates.
 	var missing := wrong_slots.duplicate()
@@ -282,6 +311,8 @@ func show_solution() -> void:
 func slot_correct(slot_id: String) -> bool:
 	if not placements.has(slot_id):
 		return false
+	if game_mode != "classic":
+		return ChronologyRepository.accepts_year(_by_id[slot_id], years_placed.get(slot_id, 0))
 	return ChronologyRepository.same_date(event(slot_id), event(placements[slot_id]))
 
 func score() -> int:
@@ -290,3 +321,40 @@ func score() -> int:
 		if slot_correct(slot_id):
 			count += 1
 	return count
+
+func assign_year(id: String, year: int) -> bool:
+	if phase != "placement" or not _by_id.has(id) or year == 0: return false
+	if id not in hand and placed_slot(id).is_empty(): return false
+	if game_mode == "classic":
+		var matches := slots_at(year)
+		for slot in matches:
+			if not placements.has(slot) and can_place(id, slot): return place(id, slot)
+		for slot in matches:
+			if can_place(id, slot): return place(id, slot)
+		return false
+	if game_mode == "markers":
+		var correct := ChronologyRepository.accepts_year(_by_id[id], year)
+		if not first_try.has(id): first_try[id] = correct
+		if not correct: return false
+	if year < int(start_period.start) or year > int(end_period.end) or locked(id): return false
+	years_placed[id] = year
+	if placements.has(id): return true
+	return place(id, id)
+
+func slots_at(year: int) -> Array:
+	return events.filter(func(e): return ChronologyRepository.accepts_year(e, year)).map(func(e): return e.id)
+
+func suggestions(digits: String, before: bool) -> Array:
+	var result := []
+	if not digits.is_valid_int() or int(digits) <= 0: return result
+	var year := int(digits) * (-1 if before else 1)
+	var seen := {}
+	for card in events:
+		var start := int(card.year)
+		if (start < 0) != before: continue
+		if not str(absi(start)).begins_with(digits) and not ChronologyRepository.accepts_year(card, year): continue
+		var caption := ChronologyRepository.event_date(card)
+		if not seen.has(caption):
+			seen[caption] = true
+			result.append({"caption": caption, "year": year if ChronologyRepository.accepts_year(card, year) else start})
+	return result

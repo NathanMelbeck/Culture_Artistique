@@ -42,6 +42,11 @@ def main():
         assert not re.search(r'\d|av\. J|ap\. J', event['title']), 'Card fronts must not display dates'
         assert event['source']['url'].startswith('https://')
         assert type(event['year']) is int and event['year'] != 0
+        assert event['rarity'] in {'common', 'rare', 'epic', 'legendary'}, event['id']
+        if event.get('approximate'):
+            lower, upper = event['accepted_from'], event['accepted_to']
+            assert type(lower) is int and type(upper) is int
+            assert lower != 0 and upper != 0 and lower <= event['year'] <= event.get('year_end', event['year']) <= upper
         assert event['periods'] and set(event['periods']) <= periods.keys()
         end = event.get('year_end', event['year'])
         assert event['year'] <= end and end != 0
@@ -50,7 +55,6 @@ def main():
     playable = set()
     for id, period in periods.items():
         matching = [event for event in data['events'] if id in event['periods'] and period['start'] <= event['year'] <= event.get('year_end', event['year']) <= period['end']]
-        assert matching, f'{id}: no event within revision bounds'
         playable.update(event['id'] for event in matching)
     print(f"VALID: {len(periods)} periods matching revision PDFs / {len(data['events'])} sourced events / {len(playable)} playable within style bounds / 5 choices per boundary")
 

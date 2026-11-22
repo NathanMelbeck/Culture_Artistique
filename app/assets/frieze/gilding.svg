@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="500" viewBox="0 0 360 500">
+  <defs>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="0.8" gradientUnits="objectBoundingBox">
+      <stop stop-color="#c99944"/>
+      <stop offset=".21" stop-color="#f1d88b"/>
+      <stop offset=".42" stop-color="#f9eabe"/>
+      <stop offset=".63" stop-color="#e3bd68"/>
+      <stop offset=".8" stop-color="#f5dfa1"/>
+      <stop offset="1" stop-color="#c99a48"/>
+    </linearGradient>
+    <g id="corner" fill="none" stroke="#997230" stroke-width="1.8">
+      <path d="M25 84V36Q25 25 36 25H83 M33 66V40Q33 33 40 33H65 M25 61L59 27"/>
+      <path fill="#ffedb3" d="M27 46l6 6-6 6-6-6z"/>
+    </g>
+  </defs>
+  <rect x="13" y="13" width="334" height="474" rx="15" fill="url(#leaf)" stroke="#926622" stroke-width="3"/>
+  <rect x="18" y="18" width="324" height="464" rx="12" fill="none" stroke="#fff2c7" stroke-width="3"/>
+  <use href="#corner" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#corner"/>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#corner" transform="translate(360 0) scale(-1 1)"/>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#corner" transform="translate(0 500) scale(1 -1)"/>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#corner" transform="translate(360 500) scale(-1 -1)"/>
+</svg>

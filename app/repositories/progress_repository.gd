@@ -2,6 +2,7 @@ class_name ProgressRepository
 extends RefCounted
 
 const DEFAULT_PATH := "user://learning_progress.json"
+const GOLD_THRESHOLD := 7
 var _path: String
 var _data: Dictionary = {"version": 1, "courses": {}}
 
@@ -53,3 +54,68 @@ func _save() -> void:
 	var error := DirAccess.rename_absolute(ProjectSettings.globalize_path(temporary), ProjectSettings.globalize_path(_path))
 	if error != OK:
 		push_warning("La progression n'a pas pu être remplacée : %s" % error_string(error))
+
+func collectible(id: String) -> Dictionary:
+	var collection: Variant = _data.get("collection", {})
+	var card: Variant = collection.get(id, {}) if collection is Dictionary else {}
+	if not card is Dictionary: card = {}
+	var normal: bool = card.get("normal") == true
+	var points: Variant = card.get("marks", card.get("wins", 0))
+	var marks := int(points) if points is int or points is float else 0
+	if not card.has("marks") and marks >= 3:
+		# Preserve an already awarded legacy gold and supply its base card.
+		normal = true
+		marks = GOLD_THRESHOLD
+	return {"normal":normal, "review":card.get("review") == true,
+		"marks":clampi(marks,0,GOLD_THRESHOLD) if normal else 0}
+
+func owned_normals() -> Dictionary:
+	var owned := {}
+	var collection: Variant = _data.get("collection", {})
+	if collection is Dictionary:
+		for id in collection:
+			if collectible(id).normal: owned[id] = true
+	return owned
+
+func _store_card(id: String, card: Dictionary) -> void:
+	if not _data.get("collection") is Dictionary: _data.collection = {}
+	_data.collection[id] = card
+
+func review_ids() -> Array:
+	var collection: Variant = _data.get("collection", {})
+	if not collection is Dictionary: return []
+	return collection.keys().filter(func(id): return collectible(id).review)
+
+func toggle_review(id: String) -> void:
+	var card := collectible(id)
+	card.review = not card.review
+	_store_card(id, card)
+	_save()
+
+static func pack_size(worked: int) -> int:
+	if worked <= 0: return 0
+	if worked <= 5: return 1
+	return 1 + floori(worked / 5.0)
+
+func finish_frieze(game: FriezeSession) -> void:
+	if game.rewarded or game.phase != "result": return
+	game.rewarded = true
+	var unseen := []
+	var value := 1 if game.game_mode == "classic" else 2
+	for id in game.first_try:
+		var card := collectible(id)
+		if not card.normal:
+			unseen.append(id)
+		elif game.normals_at_start.has(id) and game.first_try[id] and card.marks < GOLD_THRESHOLD:
+			var gained := mini(value, GOLD_THRESHOLD - int(card.marks))
+			card.marks += gained
+			game.marks_gained[id] = gained
+			_store_card(id, card)
+			if card.marks == GOLD_THRESHOLD: game.new_gold.append(id)
+	unseen.shuffle()
+	game.new_normals = unseen.slice(0, pack_size(game.first_try.size()))
+	for id in game.new_normals:
+		var card := collectible(id)
+		card.normal = true
+		_store_card(id, card)
+	_save()

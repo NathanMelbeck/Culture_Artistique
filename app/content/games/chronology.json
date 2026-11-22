@@ -109,6 +109,9 @@
   "events": [
     {
       "id": "egy-unification",
+      "accepted_from": -3100,
+      "accepted_to": -3100,
+      "rarity": "legendary",
       "periods": [
         "egypte"
       ],
@@ -125,6 +128,9 @@
     },
     {
       "id": "egy-kemeni",
+      "accepted_from": -1805,
+      "accepted_to": -1805,
+      "rarity": "common",
       "periods": [
         "egypte"
       ],
@@ -141,6 +147,9 @@
     },
     {
       "id": "egy-hatshepsout",
+      "accepted_from": -1473,
+      "accepted_to": -1473,
+      "rarity": "epic",
       "periods": [
         "egypte"
       ],
@@ -157,6 +166,9 @@
     },
     {
       "id": "egy-reniseneb",
+      "accepted_from": -1450,
+      "accepted_to": -1450,
+      "rarity": "rare",
       "periods": [
         "egypte"
       ],
@@ -173,6 +185,9 @@
     },
     {
       "id": "egy-akhenaton",
+      "accepted_from": -1353,
+      "accepted_to": -1353,
+      "rarity": "epic",
       "periods": [
         "egypte"
       ],
@@ -189,6 +204,7 @@
     },
     {
       "id": "egy-alexandre",
+      "rarity": "epic",
       "periods": [
         "egypte"
       ],
@@ -204,6 +220,7 @@
     },
     {
       "id": "egy-rosette",
+      "rarity": "legendary",
       "periods": [
         "egypte"
       ],
@@ -219,6 +236,7 @@
     },
     {
       "id": "egy-romaine",
+      "rarity": "epic",
       "periods": [
         "egypte"
       ],
@@ -234,6 +252,9 @@
     },
     {
       "id": "gre-kouros",
+      "accepted_from": -590,
+      "accepted_to": -580,
+      "rarity": "rare",
       "periods": [
         "grece"
       ],
@@ -251,6 +272,9 @@
     },
     {
       "id": "gre-exekias",
+      "accepted_from": -540,
+      "accepted_to": -540,
+      "rarity": "rare",
       "periods": [
         "grece"
       ],
@@ -267,6 +291,9 @@
     },
     {
       "id": "gre-hieron",
+      "accepted_from": -480,
+      "accepted_to": -480,
+      "rarity": "common",
       "periods": [
         "grece"
       ],
@@ -283,6 +310,7 @@
     },
     {
       "id": "gre-parthenon-debut",
+      "rarity": "rare",
       "periods": [
         "grece"
       ],
@@ -298,6 +326,7 @@
     },
     {
       "id": "gre-parthenon-fin",
+      "rarity": "legendary",
       "periods": [
         "grece"
       ],
@@ -313,6 +342,7 @@
     },
     {
       "id": "gre-alexandre",
+      "rarity": "epic",
       "periods": [
         "grece"
       ],
@@ -328,6 +358,9 @@
     },
     {
       "id": "gre-sardes",
+      "accepted_from": -300,
+      "accepted_to": -280,
+      "rarity": "common",
       "periods": [
         "grece"
       ],
@@ -344,6 +377,7 @@
     },
     {
       "id": "gre-actium",
+      "rarity": "epic",
       "periods": [
         "grece"
       ],
@@ -359,6 +393,7 @@
     },
     {
       "id": "rom-fondation",
+      "rarity": "legendary",
       "periods": [
         "rome"
       ],
@@ -374,6 +409,7 @@
     },
     {
       "id": "rom-republique",
+      "rarity": "epic",
       "periods": [
         "rome"
       ],
@@ -389,6 +425,7 @@
     },
     {
       "id": "rom-auguste",
+      "rarity": "legendary",
       "periods": [
         "rome"
       ],
@@ -404,6 +441,7 @@
     },
     {
       "id": "rom-colisee",
+      "rarity": "epic",
       "periods": [
         "rome"
       ],
@@ -419,6 +457,7 @@
     },
     {
       "id": "rom-trajane",
+      "rarity": "rare",
       "periods": [
         "rome"
       ],
@@ -434,6 +473,7 @@
     },
     {
       "id": "rom-diocletien",
+      "rarity": "common",
       "periods": [
         "rome"
       ],
@@ -449,6 +489,7 @@
     },
     {
       "id": "rom-constantinople",
+      "rarity": "epic",
       "periods": [
         "rome"
       ],
@@ -464,6 +505,7 @@
     },
     {
       "id": "rom-occident",
+      "rarity": "legendary",
       "periods": [
         "rome"
       ],

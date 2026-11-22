@@ -1,6 +1,6 @@
 # Culture_Artistique — Architecture et feuille de route
 
-Version : 0.19 — 17 novembre 2026
+Version : 0.31 — 22 novembre 2026
 
 Statut : document de référence initial, à faire évoluer avec les décisions du projet.
 
@@ -9,6 +9,8 @@ Ce document décrit l'application à construire. Il ne signifie pas que les fonc
 ## 1. Vision du projet
 
 Créer une application de culture artistique permettant de comprendre les époques, de reconnaître leurs caractéristiques et de vérifier ses connaissances par des jeux. L’application est spécialisée dans les métiers de l’ameublement : ébénisterie, menuiserie, tapisserie d’ameublement et confection/couture. Les cours relient histoire, arts, architecture, mobilier, décors, matériaux et techniques.
+
+Le catalogue a vocation à couvrir progressivement toutes les périodes de l’Antiquité à l’époque contemporaine, avec un premier horizon autour de 2020. Le Moyen Âge et la Renaissance sont les prochaines étapes. Des périodes et des événements postérieurs à 2020 pourront rejoindre les cours, les fiches, les jeux et la collection au fil des années.
 
 L'application doit permettre d'apprendre à partir d'une période, mais aussi de retrouver une période à partir d'un objet, d'un artiste, d'un terme ou d'un détail caractéristique.
 
@@ -209,8 +211,55 @@ Les `+` représentent les quatre positions possibles autour de trois cartes. La 
 
 - **FRI-12 — Choix après validation finale** : en présence d'erreurs, proposer deux actions distinctes. **« Voir les erreurs »** corrige automatiquement le placement des cartes incorrectes, conserve les bonnes cartes et distingue visuellement toutes les cartes déplacées par cette correction. Conserver le placement initial pour permettre de comparer ce que le joueur avait fait à la réponse exacte ; ne pas remplacer silencieusement son essai par la solution. **« Refaire uniquement les mauvaises »** conserve les bonnes cartes en place et permet de replacer seulement les mauvaises, sans refaire les questions de bornes ni révéler automatiquement leur solution. Permettre ensuite de valider cette nouvelle tentative. Le choix doit précéder toute correction automatique.
 - **FRI-13 — Repères verrouillés et périodes en couleur** : dès qu'un repère de période est correctement placé, le verrouiller : il ne peut plus être déplacé, échangé, repris en main ni renvoyé en pioche. Attribuer un code couleur identifiable à chaque période et surligner son intervalle complet sur la frise. Lorsque des périodes se chevauchent, afficher leurs couleurs en bandes superposées verticalement, les unes au-dessus des autres, en conservant chaque couleur visible. Les noms ou une légende permettent d'associer les bandes aux périodes ; distinguer ces couleurs des états de réponse verte ou rouge.
-- **FRI-14 — Partie courte, réalisation ultérieure** : proposer une partie courte en plus du paquet complet, sur la base de huit à dix événements selon le contenu disponible, tout en conservant les repères des périodes choisies. Le principe est validé ; sa réalisation est reportée à plus tard. Le nombre définitif d'événements sera ajusté avec Nathan lors des essais.
+- **FRI-14 — Taille du paquet.** Le réglage initial propose dix événements, dans les limites de la sélection. Le joueur peut modifier ce nombre ou choisir « Tous ».
+
+  **Préparation du paquet.** L’écran présente le nombre d’événements disponibles. Si les périodes retenues offrent moins d’événements que le nombre demandé, afficher le nombre disponible. Avant la distribution, tirer ce nombre d’événements distincts parmi les cartes éligibles. Seuls ces événements et leurs emplacements datés entrent dans la partie. Les deux questions de bornes et les repères intérieurs suivent leurs règles habituelles. Le récapitulatif affiche le total à poser, par exemple « 10 événements + 8 repères = 18 cartes à poser », et présente séparément les deux questions de bornes. Les récompenses de collection portent sur les cartes rencontrées dans cette partie.
 - **FRI-15 — Refonte visuelle en véritable jeu de cartes** : revoir presque entièrement l'apparence de la frise pour lui donner l'immersion d'un jeu à part entière, tout en la conservant intégrée à l'application. Les références choisies avec Nathan sont **TFT (Teamfight Tactics), Balatro et Hearthstone**. Travailler ensemble le plateau, la main, la pioche, les cartes, leurs contours et leur relief, les boutons, la typographie, les couleurs, les transitions, les animations et les retours de sélection, de réussite et d'erreur. Cette direction est validée, mais sa réalisation nécessite l'accord préalable avant de coder.
+
+**Écran de préparation à refondre.** Donner au choix des périodes la même direction artistique que le plateau de Chroniques. Piste de maquette : présenter les périodes sous forme de cartes sélectionnables, reprendre leurs couleurs et réserver un emplacement au réglage du nombre d’événements. Le bouton de lancement récapitule le défi. Les périodes incluses automatiquement doivent être reconnaissables.
+
+Construire le sélecteur à partir des grandes époques et des périodes du catalogue, avec un accès direct à chaque période. Déduire de la sélection courante les périodes intermédiaires, les bornes issues des fiches et le nombre de cartes disponibles. Ainsi, l’ajout d’une période contemporaine actualise aussi le sélecteur, le calcul du paquet et la collection. Les identifiants stables des cartes permettent de conserver les exemplaires normaux et dorés déjà acquis.
+
+**Répartition des événements entre périodes.** Soit N le nombre d’événements à placer et P le nombre de périodes retenues ayant des événements jouables. Les repères de période sont comptés séparément. Viser deux événements distincts par période retenue. Lorsqu’une période ne contient qu’une seule carte, le minimum devient la somme des stocks de chaque période plafonnés à deux. Une carte commune à plusieurs périodes ne compte qu’une fois dans la répartition et dans le paquet.
+
+1. Calculer la moyenne N/P. Réserver à chaque période 70 % de cette moyenne, arrondis à l’entier inférieur, avec un minimum de deux événements dans la limite du stock.
+2. Répartir les places restantes une à une par tirage. Donner à chaque période un poids égal au nombre de places qu’il lui reste jusqu’à 130 % de la moyenne, arrondis à l’entier supérieur, ou jusqu’à épuisement de son stock.
+3. Si toutes les périodes ont atteint leur plafond ou épuisé leur stock avant d’atteindre le total, attribuer la place suivante à une période encore disponible ayant le moins de cartes attribuées. Tirer au sort en cas d’égalité et poursuivre jusqu’à N.
+
+Pour 30 événements sur trois périodes suffisamment fournies, chaque période reçoit de 7 à 13 cartes. Des répartitions comme 7/12/11, 9/10/11 ou 10/10/10 sont possibles. Avec seulement 5 événements disponibles dans la première période, 5/12/13 devient possible. Les seuils de 70 % et 130 % sont des valeurs à essayer en jeu.
+
+**Cas à vérifier sur l’écran de préparation.** Pour une demande de 50 événements et des stocks de 5, 30 et 30 événements distincts, une répartition possible est 5/22/23. La première période apporte ses cinq cartes. Les deux autres absorbent le complément, quitte à dépasser le plafond d’équilibrage pour atteindre 50. Si les stocks sont de 5, 12 et 20, le maximum jouable est 37. Si le joueur avait réglé 50 avant de changer sa sélection, ramener le réglage à 37 et lui indiquer « 37 événements disponibles pour ces périodes » avant le lancement. Il peut jouer les 37 ou élargir sa sélection. Pour une période qui ne compte qu’un seul événement jouable, l’inclure discrètement et répartir le complément entre les autres périodes. Afficher le total global à poser. Le cas d’une période sans événement reste distinct. Le mode consacré aux seules bornes est indépendant de ce minimum.
+
+**Modes jouables dans Godot**
+
+- **Frise classique.** Le joueur associe les cartes aux emplacements datés préparés pour la partie. Il peut aussi déposer une carte dans la zone « Saisir une date » du plateau pour entrer son année.
+- **Repères de périodes.** Le paquet contient exclusivement le début et la fin de chaque période choisie, bornes extérieures comprises. Les dates viennent des fiches de révision. Un clic sur une carte en main l’agrandit au centre. Le joueur saisit l’année et choisit « avant J.-C. » ou « après J.-C. », avec « après J.-C. » par défaut.
+- **Frise libre.** L’axe commence sans cases de réponse prédéfinies. Déposer une carte sur l’axe lui attribue l’année indiquée au point de dépôt. Passer par la zone de saisie lui attribue l’année entrée. Dans les deux cas, la carte crée son emplacement à cette date. Ce mode distribue les événements choisis et utilise les bornes des fiches comme extrémités de l’axe. La déplacer ensuite actualise sa position et libère complètement l’ancien endroit. Si d’autres cartes occupent encore l’ancienne année, elles y restent. Vérifier qu’une carte déplacée plusieurs fois figure une seule fois sur la frise et ne laisse aucune case vide.
+
+**Précisions validées pour la saisie des dates**
+
+- En mode Repères, distribuer les cartes dès le début. Révéler chaque borne après une réponse correcte, puis afficher la bande de la période une fois ses deux bornes retrouvées.
+- En frise libre, afficher l’année visée pendant le glissement. Après le dépôt, permettre de la modifier au clavier par un clic sur l’année. Corriger les événements à la validation finale.
+- Pour une date exacte, accepter l’année de référence. Pour un intervalle, accepter chacune des années comprises entre ses deux bornes incluses. Pour une datation approximative, définir dans le catalogue la plage acceptée selon la source. Appliquer le même critère historique au clavier et par glissement. Le catalogue porte les années admises dans `accepted_from` et `accepted_to`. Quand la source ne donne qu’une année de référence, le jeu utilise cette année. Pour les éléments ioniques de Sardes, la notice locale du Met (252453) indique de 300 à 280 av. J.-C.
+
+**Autocomplétion de la frise classique.** Suggérer les dates des emplacements de la partie à partir de la saisie et de l’ère choisie. Pour une même saisie, les suggestions sont identiques quelle que soit la carte en main. Une année comprise dans un intervalle du plateau permet de retrouver cet emplacement. Si aucune date ne correspond à la saisie confirmée, garder la carte ouverte et afficher « Aucune date correspondante sur cette frise. » Une date existante reçoit la carte selon les règles habituelles de placement et de correction.
+
+Au bilan, le joueur peut marquer une carte **« À revoir »**. Une prochaine partie compatible peut reprendre une ou deux cartes marquées parmi les événements demandés.
+
+**FRI-16 — Rareté des cartes Événement**
+
+Le bandeau supérieur d’un **repère de période** garde la couleur de sa période. Sur une **carte Événement**, ce même bandeau affiche la couleur de sa rareté pour que la carte garde son époque à deviner. La palette s’inspire de Hearthstone et s’applique au bandeau existant.
+
+| Rareté | Couleur | Critère de classement |
+|---|---|---|
+| Commune | Gris argenté | L’événement donne du contexte à la frise. |
+| Rare | Bleu | C’est un exemple précis que le joueur devrait reconnaître, comme la fabrication de la chaise de Reniseneb. |
+| Épique | Violet | C’est une référence à laquelle le cours revient pour expliquer un sujet, comme l’inauguration du Colisée. |
+| Légendaire | Orange | C’est un événement phare du chapitre, emblématique dans la culture générale ou dans l’histoire de l’ameublement, comme le début de la réalisation de *La Joconde* pour la Renaissance. |
+
+Attribuer une rareté fixe à **l’événement formulé sur chaque carte**. Pour choisir le rang, considérer sa notoriété culturelle, sa place dans les métiers de l’ameublement et le moment que le cours veut faire retenir. Pour le Parthénon, le **début de la construction est rare** et **l’achèvement est légendaire** : le monument abouti sert de référence pour étudier ses proportions, ses colonnes et son décor. Pour un autre chantier, le début pourrait porter le rang supérieur si l’introduction d’une technique constitue le fait marquant.
+
+Le rang figure dans les données de l’événement et s’applique à chaque apparition de la carte, quels que soient les autres événements sélectionnés et la difficulté de la partie. Toutes les cartes du paquet restent à placer selon les règles de pioche habituelles.
 
 | Référence visuelle validée pour la frise | Apport retenu |
 |---|---|
@@ -225,6 +274,18 @@ La différence avec Timeline est pédagogique : Timeline demande de piocher puis
 Première version locale : Égypte, Grèce et Rome. Le catalogue conserve vingt-quatre événements sourcés ; dix-neuf entrent dans les bornes des fiches (cinq égyptiens, sept grecs et sept romains). Quatre repères intérieurs de début et fin de période complètent le paquet pour toute l’Antiquité, soit vingt-trois cartes à placer, après exclusion des deux bornes déjà trouvées. Les bornes sont respectivement −4000 à −400, −1100 à −100 et −800 à 400. Le catalogue `app/content/games/chronology.json` contient périodes, ordre pédagogique, bornes, provenance de l’en-tête, choix, événements et sources. `tools/validate_chronology.py` compare les bornes aux PDF originaux et vérifie leur empreinte par rapport au catalogue des fiches. `ChronologyRepository` résout la sélection, filtre les événements et produit les repères intérieurs de période à partir des bornes du preset ; `FriezeSession` gère les bornes, la main, la priorité d’ouverture de pioche, les échanges et le résultat ; les composants de carte, de main et d’emplacement gèrent l’interaction Godot. L’ajout de périodes et d’événements se fait dans les données, sans créer une scène par période. La partie et son résultat sont conservés en mémoire pendant la session ; leur persistance après fermeture reste à ajouter.
 
 ### 3.6. Progression locale
+
+**PRO-07 — Collection de cartes de Chroniques**
+
+La collection recense les événements et les repères de période. Chaque carte possède deux finitions à collectionner, normale et dorée, dans l’esprit de Hearthstone. Les deux partagent le même événement ou repère. Ainsi, le début du chantier du Parthénon peut être **rare et doré** et son achèvement **légendaire et normal**. Le bandeau continue de porter l’information prévue par FRI-16. Les acquisitions sont enregistrées localement avec l’identifiant stable de la carte.
+
+**Lots de normales.** Le premier bilan d’une partie terminée attribue automatiquement des normales inédites tirées au hasard parmi les cartes travaillées, même si le joueur a fait une erreur. De 1 à 5 cartes travaillées, le lot contient au maximum 1 normale, de 6 à 9 il en contient 2, de 10 à 14 il en contient 3 et de 15 à 19 il en contient 4. À partir de 20, chaque tranche de 5 ajoute une normale. Les deux questions extérieures du classique comptent. Chaque carte compte une fois. Si les découvertes possibles sont moins nombreuses, le joueur les reçoit toutes.
+
+**Maîtrise.** Une normale possédée au début de la partie devient dorée à 7 marques. En classique, la première réponse correcte à une borne, la première pose correcte d’un repère ou un événement juste à la première validation rapporte 1 marque. En frise libre et en mode Repères, la réussite correspondante rapporte 2 marques. Une erreur conserve le solde. Le total est plafonné à 7. Les nouvelles normales commencent à zéro et pourront progresser à la partie suivante. Le bilan détaille les gains et peut être consulté de nouveau. Refaire les erreurs conserve les récompenses initiales.
+
+**Anciennes collections.** Une dorée déjà acquise conserve sa finition et donne accès à sa normale. Pour une ancienne normale en cours de progression, chaque réussite enregistrée vaut une marque. Une carte encore cachée débute à zéro lors de son acquisition.
+
+Pour que la collection soit complétable, chaque carte annoncée comme disponible doit avoir une occasion de jeu ou un autre moyen d’obtention indiqué. En particulier, les questions de bornes offrent une occasion d’obtenir les repères extérieurs qui sont exclus de la pioche. Le catalogue peut signaler séparément les cartes dont le contenu jouable est encore à venir.
 
 - **PRO-01 — Lecture** : retrouver le chapitre et sa position pendant la session ; ne pas enregistrer de statut « lu ».
 - **PRO-02 — Résultats** : conserver le meilleur résultat et les notions à retravailler pour les activités réalisées.
@@ -565,12 +626,21 @@ La vidéo est une fonctionnalité obligatoire de l'application prévue ; son pos
 
 Cette étape désigne l'interface d'administration aboutie. Une méthode d'ajout de contenu structurée et reproductible est nécessaire dès l'étape 1.
 
-### Prochaine reprise — priorités exprimées le 17 novembre 2026
+### Prochaine reprise — priorités mises à jour le 22 novembre 2026
+
+- [ ] Discuter de la navigation au bilan de la frise. « Quitter » permet de sortir du jeu une fois la partie terminée. « Voir la collection » quitte la frise et ouvre directement la collection.
+- [ ] Prévoir un bouton « Quitter » accessible en permanence pendant la partie, dès le choix des bornes. Préciser ensemble la destination et le devenir d’une partie interrompue.
 
 - [ ] Avant toute modification du code, demander confirmation explicite à Nathan et attendre son accord, conformément à sa consigne du 17 novembre 2026.
 - [x] Intégrer FRI-12 et FRI-13 dans Godot avec le choix de correction, la seconde tentative, le verrouillage des repères et les bandes de périodes.
 - [x] Intégrer les sept écrans de la maquette FRI-15 dans le parcours de la frise.
-- [ ] Garder le mode partie courte FRI-14 dans les évolutions validées à réaliser plus tard.
+- [x] Intégrer les récompenses normales et dorées, le suivi local de la maîtrise et la sélection « À revoir ».
+- [x] Collection · Le dos commun Marqueterie masque les cartes à découvrir, y compris au survol. La normale acquise révèle la carte. En partie, les cartes sont lisibles dès la pioche.
+- [x] Finition dorée · Une normale qui atteint 7 marques passe en doré dans la collection, en main et sur la frise. Le bandeau garde sa couleur de rareté ou de période.
+- [ ] Ajuster avec Nathan le rythme d’acquisition après essai.
+- [x] Intégrer la préparation de Chroniques, le choix du mode, la taille du paquet et le tirage pondéré avec redistribution.
+- [x] Attribuer les raretés du catalogue et distinguer le bandeau des événements de celui des repères de période.
+- [x] Proposer dix événements par défaut et le choix du paquet complet (FRI-14).
 - [ ] Enrichir les cours existants avec les nouvelles ressources que Nathan fournira : comparer les apports au contenu actuel, compléter les explications et les exemples, vérifier les sources et la lisibilité des illustrations.
 - [ ] Préparer puis ajouter les cours du Moyen Âge et de la Renaissance à partir des ressources disponibles et à recevoir. Conserver des cours techniques et détaillés, la rubrique « Le Mobilier », les exemples authentiques sourcés et le fonctionnement hors ligne. Les fiches de révision restent centrées sur l'essentiel.
 
@@ -579,7 +649,7 @@ Cette étape désigne l'interface d'administration aboutie. Une méthode d'ajout
 | Statut | Évolution | Effet recherché et critère d'essai |
 |---|---|---|
 | Implémenté dans Godot | FRI-12 : choisir entre voir la correction automatique et refaire seulement les mauvaises cartes. | Vérifier que le choix est proposé avant de montrer la solution ; que les bonnes cartes restent en place ; que la correction automatique identifie les cartes changées et permet de comparer l'essai initial à la solution ; que la nouvelle tentative ne révèle pas les réponses attendues. |
-| Validé, à faire plus tard | FRI-14 : partie courte en plus du paquet complet. | Réduire la longueur des premières parties. Mesurer la durée et recueillir le ressenti de Nathan avant de fixer le nombre définitif. |
+| Implémenté dans Godot | FRI-14 : partie courte en plus du paquet complet. | Réduire la longueur des premières parties. Mesurer la durée et recueillir le ressenti de Nathan avant de fixer le nombre définitif. |
 | Implémenté dans Godot | FRI-13 : verrouiller les repères validés et surligner chaque période avec sa couleur ; empiler les bandes dans les zones de chevauchement. | Vérifier qu'un bon repère ne peut plus être déplacé, que chaque intervalle est identifiable et que toutes les couleurs des périodes simultanées restent visibles. |
 | Implémenté dans Godot | FRI-15 : refonte visuelle inspirée de TFT, Balatro et Hearthstone. | Vérifier les choix de bornes au centre sur des cartes avec fond assombri, la cohérence du plateau et de la main, la lisibilité des états et la fluidité des manipulations ; recueillir le ressenti de Nathan sur l'immersion. |
 | Proposition non validée | Faciliter le repérage sur les longues frises : vue d'ensemble et accès rapide à une zone ou à un emplacement libre. | Réduire les allers-retours de défilement ; vérifier qu'une carte peut être placée loin dans la frise sans perdre sa position. Les chevauchements entre périodes restent visibles. |
@@ -662,3 +732,14 @@ Une fonctionnalité n'est marquée terminée qu'après vérification de son comp
 | 17 novembre 2026 | 0.18 | Validation du choix entre correction automatique avec comparaison et nouvelle tentative limitée aux erreurs ; verrouillage des repères et bandes colorées superposées pour les périodes ; mode court validé mais reporté. Confirmation explicite à demander avant toute prochaine modification du code. Aucune de ces évolutions n'est encore implémentée. |
 | 17 novembre 2026 | 0.19 | Direction visuelle de la frise validée autour de TFT, Balatro et Hearthstone, dont les choix de bornes sous forme de cartes centrales sur fond assombri. Consigne durable : choisir ensemble les jeux de référence pour chaque jeu et documenter leurs apports au gameplay, aux graphismes et à la fluidité. Documentation uniquement. |
 | 18 novembre 2026 | 0.20 | Intégration des sept écrans de Chroniques dans Godot. Correction comparative et seconde tentative testées sur la frise de toute la période antique. |
+| 19 novembre 2026 | 0.21 | Règle FRI-16 validée. Classement des événements par caractère emblématique et couleurs de rareté prévus pour la prochaine session. |
+| 19 novembre 2026 | 0.22 | Ajout de la collection de cartes normales et dorées. Proposition de progression par découverte et réussites répétées, à valider. |
+| 19 novembre 2026 | 0.23 | Précision de FRI-14 pour limiter la taille du paquet de chaque partie à mesure que le catalogue grandit. |
+| 19 novembre 2026 | 0.24 | Refonte demandée pour l’écran de préparation et proposition de répartition variable des événements entre les périodes. |
+| 19 novembre 2026 | 0.25 | Couverture progressive de toutes les périodes jusqu’aux environs de 2020, avec extension possible au-delà. Sélecteur, répartition des événements et collection alimentés par le catalogue. |
+| 19 novembre 2026 | 0.26 | Exemples de répartition pour 50 événements et comportement prévu lorsque le stock total de la sélection devient insuffisant. |
+| 19 novembre 2026 | 0.27 | Distinction entre frise classique, entraînement aux bornes et frise libre à emplacements créés par les cartes. Minimum de deux événements par période dans les parties avec événements, total à poser et cartes à revoir. |
+| 19 novembre 2026 | 0.28 | Révélation des bornes, placement libre et critères de datation validés. Exception pour un stock d’une carte et autocomplétion classique proposées. |
+| 19 novembre 2026 | 0.29 | Préparation, trois modes jouables, saisie des années, tirage ajustable, raretés et collection locale intégrés dans Godot. |
+| 22 novembre 2026 | 0.30 | Intégration du dos Marqueterie et de la finition dorée commune à la collection et au plateau. Le dos `app/assets/frieze/marquetry.png` reprend le dessin central de la planche de trois propositions générée pour Chroniques et choisie par Nathan. |
+| 22 novembre 2026 | 0.31 | Lots de normales selon la taille de partie et dorure à sept marques sur les cartes déjà possédées. |

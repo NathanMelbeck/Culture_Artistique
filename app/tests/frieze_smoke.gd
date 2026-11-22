@@ -70,8 +70,32 @@ func drag_at_edge(source: Control, board: ScrollContainer) -> void:
 	Input.parse_input_event(release)
 	await frames(6)
 
+func widget(id: String) -> Control:
+	return app.find_child(id,true,false) as Control
+
+func move_pointer(point: Vector2) -> void:
+	var motion := InputEventMouseMotion.new()
+	motion.position = point
+	Input.parse_input_event(motion)
+	await frames(3)
+
+func lit_boundaries() -> int:
+	var count := 0
+	for button in app.find_children("Boundary_*","Button",true,false):
+		for label in button.find_children("*","Label",false,false):
+			if label.text.contains("Choisir"):
+				count += 1
+	return count
+
+func capture(filename: String) -> void:
+	# Capture the settled composition. Hover behaviour is checked before capture.
+	await create_timer(0.46).timeout
+	await super.capture(filename)
+
 func _run() -> void:
 	output_directory = ProjectSettings.globalize_path("res://../docs/validation/frieze")
+	if OS.has_environment("CHRONIQUES_CAPTURE_DIR"):
+		output_directory = OS.get_environment("CHRONIQUES_CAPTURE_DIR")
 	DirAccess.make_dir_recursive_absolute(output_directory)
 	app = load("res://scenes/app_shell.tscn").instantiate()
 	app.progress_repository = ProgressRepository.new("")
@@ -98,9 +122,16 @@ func _run() -> void:
 	await click("SelectPeriod_grece")
 	check((app.find_child("SelectPeriod_grece", true, false) as CheckBox).button_pressed, "Une période intermédiaire obligatoire reste cochée")
 	await click("Group_antiquite")
+	await click("AllEvents")
 	await click("StartFrieze")
 	var games: Control = app._page
 	check(games.session.phase == "start" and app.find_children("Boundary_*", "Button", true, false).size() == 5, "La première question propose cinq dates et aucune carte")
+	await move_pointer(Vector2(20,150))
+	check(lit_boundaries() == 0 and games.session.boundary_attempts.start == 0, "Les cinq bornes sont neutres avant le premier geste")
+	await key(KEY_RIGHT)
+	check(lit_boundaries() == 1, "La première navigation au clavier éclaire une seule borne")
+	await move_pointer(widget("Boundary_"+str(games.session.boundary_choices().back())).get_global_rect().get_center())
+	check(lit_boundaries() == 1, "Le survol prend le relais du focus sans doubler le halo")
 	await capture("01-debut.png")
 	var wrong := 0
 	for value in games.session.boundary_choices():
@@ -109,6 +140,8 @@ func _run() -> void:
 			break
 	await click("Boundary_" + str(wrong))
 	check(games.session.phase == "start" and (app.find_child("Boundary_" + str(wrong), true, false) as Button).disabled, "Une mauvaise date se retente sans passer à l’étape suivante")
+	await move_pointer(widget("Boundary_"+str(wrong)).get_global_rect().get_center())
+	check(lit_boundaries() == 0, "Une réponse éliminée ne propose plus Choisir")
 	await capture("borne-reessayer.png")
 	await click("Boundary_" + str(int(games.session.start_period["start"])))
 	await capture("02-fin.png")
@@ -124,7 +157,8 @@ func _run() -> void:
 	check(app.find_child("ValidateFrieze", true, false) == null, "Le bouton de validation est absent tant que des cartes restent à poser")
 	var dates_hidden := true
 	for card in app.find_children("HandCard_*", "Button", true, false):
-		dates_hidden = dates_hidden and not card.text.contains("J.-C.")
+		for face_label in card.find_children("*","Label",true,false):
+			dates_hidden = dates_hidden and not face_label.text.contains("J.-C.")
 	check(dates_hidden, "Les faces des cartes ne révèlent aucune date")
 	await capture("frise-main-1440.png")
 	var first: String = games.session.hand[0]
@@ -134,13 +168,19 @@ func _run() -> void:
 	await capture("periode-erreur-1440.png")
 	await click("RecyclePeriod_" + first)
 	check(first in games.session.draw_pile and first not in games.session.hand and not games.session.placements.has("egy-unification") and app.find_child("DrawFriezeCard", true, false) != null, "Le petit bouton libère l’emplacement et conserve la carte en pioche")
+	await click("HandCard_"+games.session.hand[0])
+	check(widget("DiscardFriezeCard").is_visible_in_tree() and not widget("DiscardFriezeCard").disabled, "Le repère recyclé rend la défausse disponible")
 	await click("DrawFriezeCard")
 	check(first in games.session.hand and games.session.hand.size() == 4 and games.session.period_stage_active(), "Piocher reprend le repère recyclé sans distribuer d’événement")
 	var correct_card: String = games.session.hand[0]
 	var correct_slot := app.find_child("FriezeSlot_" + correct_card, true, false) as Control
 	(app.find_child("FriezeBoardScroll", true, false) as ScrollContainer).ensure_control_visible(correct_slot)
 	await frames(5)
-	await drag_card(app.find_child("HandCard_" + correct_card, true, false), correct_slot)
+	if games.selected_card != correct_card:
+		await click("HandCard_" + correct_card)
+	await click("FriezeDate_" + correct_card)
+	var locked_skin := widget("FriezeSlot_"+correct_card).get_node("FaceSkin") as TextureRect
+	check(locked_skin.texture.resource_path == "res://assets/frieze/right.png", "Le repère garde son contour vert après la pose par clic")
 	var correct_date := app.find_child("FriezeDate_" + correct_card, true, false) as Label
 	check(games.session.locked(correct_card) and correct_date.get_theme_color("font_color") == games.screen.GOOD and app.find_child("RecyclePeriod_" + correct_card, true, false) == null, "Un bon repère colore immédiatement la date en vert sans bouton d’erreur")
 	await capture("periode-validee-1440.png")
@@ -181,7 +221,10 @@ func _run() -> void:
 	check(games.session.placements.get("egy-unification") == first and games.session.hand.size() == 7, "Le glisser-déposer d’un événement complète automatiquement la main")
 	check(not (app.find_child("FriezeSlot_egy-unification", true, false) as Button).text.begins_with("✓ ") and not (app.find_child("FriezeSlot_egy-unification", true, false) as Button).text.begins_with("✕ ") and (app.find_child("FriezeDate_egy-unification", true, false) as Label).get_theme_color("font_color") == games.screen.CREAM, "Un événement ne révèle aucune correction avant la validation finale")
 	var second: String = games.session.hand[0]
-	await drag_card(app.find_child("HandCard_" + second, true, false), app.find_child("FriezeSlot_egy-kemeni", true, false))
+	var steady_board := widget("FriezeBoardScroll")
+	await click("HandCard_" + second)
+	await click("FriezeDate_egy-kemeni")
+	check(games.session.placements.get("egy-kemeni") == second and steady_board == widget("FriezeBoardScroll"), "Le texte de la date accepte la carte sans recréer le plateau")
 	await drag_card(app.find_child("FriezeSlot_egy-unification", true, false), app.find_child("FriezeSlot_egy-kemeni", true, false))
 	check(games.session.placements.get("egy-unification") == second and games.session.placements.get("egy-kemeni") == first, "Le glisser-déposer échange deux événements déjà placés")
 	await drag_card(app.find_child("HandCard_" + games.session.hand[0], true, false), app.find_child("ChangePeriods", true, false))
@@ -193,6 +236,8 @@ func _run() -> void:
 	var discard: String = games.session.hand[0]
 	await click("HandCard_" + discard)
 	await click("DiscardFriezeCard")
+	var focus_after_discard := root.gui_get_focus_owner()
+	check(focus_after_discard != null and str(focus_after_discard.name).begins_with("HandCard_"), "Le focus revient à la main après une défausse")
 	check(discard in games.session.draw_pile and discard not in games.session.hand and games.session.hand.size() == 7, "La défausse d’un événement retourne dans la pioche et reçoit une remplaçante")
 	hand = app.find_child("FriezeHandPanel", true, false) as Control
 	var cards_fit := true
@@ -213,6 +258,13 @@ func _run() -> void:
 	games._refresh()
 	await frames(6)
 	check(app.find_child("ValidateFrieze", true, false) != null and root.get_visible_rect().encloses((app.find_child("ValidateFrieze", true, false) as Control).get_global_rect()), "Toutes les cartes posées font apparaître un bouton Valider accessible")
+	var full_titles := true
+	for e in games.session.events:
+		var card: String = games.session.placements[e.id]
+		for item in widget("FriezeSlot_"+e.id).get_children():
+			if item is Label and item.text == games.session.event(card).title:
+				full_titles = full_titles and item.get_visible_line_count() == item.get_line_count()
+	check(full_titles, "Tous les titres posés sont lisibles en entier à 960 × 640")
 	await click("ValidateFrieze")
 	check(games.session.phase == "result" and games.session.score() == games.session.events.size() - 2, "La validation compte les réponses correctes et les deux erreurs voulues")
 	root.size = Vector2i(1600, 1000)
@@ -227,6 +279,20 @@ func _run() -> void:
 	await click("ValidateFrieze")
 	await click("ShowSolution")
 	check(games.session.comparing and games.session.submitted["egy-kemeni"] == "egy-reniseneb" and games.session.placements["egy-kemeni"] == "egy-kemeni", "La comparaison montre l’essai et sa correction")
+	await click("Original_egy-kemeni")
+	var caption := widget("ReviewEventTitle") as Label
+	check(caption.text == games.session.event("egy-reniseneb").title, "La carte initiale ouvre l’explication de la chaise sélectionnée")
+	await click("ReviewScope")
+	var marker: String = games.session.events.filter(func(e): return e.get("kind")=="period_boundary")[0].id
+	for step in games.session.events.size():
+		if widget("Correction_"+marker) != null: break
+		await click("NextReview")
+	await click("Correction_"+marker)
+	await click("ReviewFriezeSheet")
+	check(app.navigation.current_route == "revision", "Une fiche de repère reste accessible après une partie imparfaite")
+	await click("GamesNav")
+	games = app._page
+	await click("ReviewScope")
 	await capture("06-comparaison.png")
 	await click("NextReview")
 	await click("ReviewFriezeCourse")
@@ -239,6 +305,11 @@ func _run() -> void:
 	root.size = Vector2i(1280, 720)
 	await frames(8)
 	await capture("bornes-1280.png")
+	var resumed: FriezeSession = games.session
+	await click("ChangePeriods")
+	await click("ClearPeriods")
+	await click("ResumeFrieze")
+	check(games.session == resumed and games.anchors.size() == 3, "Annuler une nouvelle sélection conserve la partie et ses périodes")
 	await click("ChangePeriods")
 	await click("ClearPeriods")
 	await click("SelectPeriod_egypte")
@@ -255,7 +326,37 @@ func _run() -> void:
 	await click("Boundary_-100")
 	check(games.session.phase == "placement" and games.session.hand.size() == 7 and games.session.draw_pile.is_empty() and app.find_children("FriezeSlot_period-boundary-*", "Button", true, false).is_empty(), "Grèce seule exclut bien début Grèce et fin Grèce selon son propre preset")
 	await capture("grece-bornes-fiche.png")
+	await verify_large_retry(games)
 	print("FRIEZE UI RESULT: %d failures" % failures)
 	app.queue_free()
 	await frames()
 	quit(1 if failures else 0)
+
+func verify_large_retry(games: Control) -> void:
+	await click("ChangePeriods")
+	await click("Group_antiquite")
+	await click("StartFrieze")
+	await click("Boundary_-4000")
+	await click("Boundary_400")
+	var session: FriezeSession = games.session
+	while not session.hand.is_empty():
+		session.place(session.hand[0],session.hand[0])
+	var events := session.events.filter(func(e): return not session.is_period_card(e.id))
+	for index in range(1,10):
+		session.place(events[0].id,events[index].id)
+	games._refresh()
+	await frames(5)
+	await click("ValidateFrieze")
+	await click("RetryErrors")
+	var chosen := session.hand[0]
+	await click("HandCard_"+chosen)
+	check(session.hand.size()==7 and session.draw_pile.size()==3 and games.screen.deck_art.is_visible_in_tree(), "La seconde chance montre les trois cartes en pioche après dix erreurs")
+	await click("DiscardFriezeCard")
+	check(chosen in session.draw_pile and chosen not in session.hand, "La défausse reste jouable en seconde chance")
+	while not session.hand.is_empty():
+		session.place(session.hand[0],session.hand[0])
+	games._refresh()
+	await frames(4)
+	await click("ValidateFrieze")
+	await click("ShowSolution")
+	check(games.review_all and widget("ReviewScope")==null and session.wrong_slots.is_empty(), "Un sans-faute ouvre directement la frise complète")

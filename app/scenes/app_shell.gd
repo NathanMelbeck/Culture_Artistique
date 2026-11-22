@@ -158,6 +158,7 @@ func _show_route(route: String) -> void:
 		_page = GAMES.instantiate()
 		_page.immersive_changed.connect(_set_immersive)
 		_page.repository = chronology_repository
+		_page.progress_repository = progress_repository
 		_page.view_state = _view_states.get("games", {})
 		_page.revision_requested.connect(func(sheet_id: String) -> void:
 			_view_states["revision"] = {"sheet_id": sheet_id, "page": 0, "zoom": 1.0}
