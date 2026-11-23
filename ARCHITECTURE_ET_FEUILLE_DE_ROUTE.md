@@ -1,6 +1,6 @@
 # Culture_Artistique — Architecture et feuille de route
 
-Version : 0.31 — 22 novembre 2026
+Version : 0.33 — 23 novembre 2026
 
 Statut : document de référence initial, à faire évoluer avec les décisions du projet.
 
@@ -90,6 +90,8 @@ L'accès futur à l'outil d'édition sera séparé de ces trois destinations des
 
 **COU-10 — Le Mobilier** : chaque période actuelle ou future comprend une rubrique portant exactement ce titre. Elle couvre tous les métiers de l’ameublement, avec des exemples variés et leurs caractéristiques illustrées et sourcées. La validation exige au moins quatre études d’exemple, chacune avec une image, trois caractéristiques et une notice correspondante. Les parties textiles, garnitures et coutures sont développées selon leur documentation et leur importance à l’époque. Le [modèle de rubrique](docs/modele-section-mobilier.md) décrit la préparation et le format réutilisable.
 
+**COU-11 — Catalogue.** Dans chaque cours, la section « Catalogue » prolonge les études détaillées de « Le Mobilier » par une galerie que l’on peut enrichir au fil des découvertes. Elle permet de parcourir et de comparer de nombreux meubles de la période. Chaque notice associe une photographie ou un dessin consultable hors ligne au nom du meuble, à sa datation et à sa provenance documentées. Lorsque la source identifie le créateur ou l’atelier, indiquer son nom et son rôle s’il est précisé (dessin, ébénisterie, tapisserie). Conserver les formulations telles que « attribué à » ou « atelier de ». Une courte légende attire l’attention sur un détail observable, par exemple le piètement, l’assemblage, la garniture ou le décor. Indiquer la source du visuel et signaler explicitement toute reproduction fidèle. Lorsqu’une page en ligne documente la pièce, afficher un lien « Voir la source » qui ouvre cette page dans le navigateur. Privilégier la notice de l’objet publiée par le musée ou la collection qui le conserve. Le texte et l’image restent consultables hors ligne.
+
 Pour un regroupement comme Antiquité, un récapitulatif pourra conduire à un quiz couvrant ses périodes. Un cours consacré à Rome devra conduire en priorité aux questions pertinentes pour Rome.
 
 Le plan de cours recommandé, adaptable selon les sujets, comprend :
@@ -99,9 +101,10 @@ Le plan de cours recommandé, adaptable selon les sujets, comprend :
 3. Caractéristiques artistiques.
 4. Architecture, œuvres et personnes de référence.
 5. **Le Mobilier** : rubrique obligatoire de chaque période, avec structure, décor, matériaux, assises, garnitures, textiles et couture selon les sources.
-6. Motifs et indices de reconnaissance visuelle.
-7. Synthèse, dates et notions essentielles.
-8. Exercices et références.
+6. **Catalogue** de meubles de la période.
+7. Motifs et indices de reconnaissance visuelle.
+8. Synthèse, dates et notions essentielles.
+9. Exercices et références.
 
 ### 3.3. Recherche par spécificité — évolution prévue
 
@@ -626,7 +629,9 @@ La vidéo est une fonctionnalité obligatoire de l'application prévue ; son pos
 
 Cette étape désigne l'interface d'administration aboutie. Une méthode d'ajout de contenu structurée et reproductible est nécessaire dès l'étape 1.
 
-### Prochaine reprise — priorités mises à jour le 22 novembre 2026
+### Prochaine reprise — priorités mises à jour le 23 novembre 2026
+
+- [ ] Prévoir un catalogue de mobilier dans chacun des cours d’Égypte, de Grèce et de Rome. Intégrer celui du roman et celui du gothique dès la création de ces deux cours.
 
 - [ ] Discuter de la navigation au bilan de la frise. « Quitter » permet de sortir du jeu une fois la partie terminée. « Voir la collection » quitte la frise et ouvre directement la collection.
 - [ ] Prévoir un bouton « Quitter » accessible en permanence pendant la partie, dès le choix des bornes. Préciser ensemble la destination et le devenir d’une partie interrompue.
@@ -642,7 +647,9 @@ Cette étape désigne l'interface d'administration aboutie. Une méthode d'ajout
 - [x] Attribuer les raretés du catalogue et distinguer le bandeau des événements de celui des repères de période.
 - [x] Proposer dix événements par défaut et le choix du paquet complet (FRI-14).
 - [ ] Enrichir les cours existants avec les nouvelles ressources que Nathan fournira : comparer les apports au contenu actuel, compléter les explications et les exemples, vérifier les sources et la lisibilité des illustrations.
-- [ ] Préparer puis ajouter les cours du Moyen Âge et de la Renaissance à partir des ressources disponibles et à recevoir. Conserver des cours techniques et détaillés, la rubrique « Le Mobilier », les exemples authentiques sourcés et le fonctionnement hors ligne. Les fiches de révision restent centrées sur l'essentiel.
+- [ ] **Prochaine session de code · Moyen Âge.** Créer deux cours distincts, « Roman » et « Gothique », regroupés sous « Moyen Âge ». Rédiger chaque cours à partir du [support commun](<documents_support_cours/moyen age roman et gothique.pdf>), avec vocabulaire technique expliqué, rubrique « Le Mobilier », illustrations authentiques légendées et sourcées et quiz de fin de période avec explications. Relier les fiches déjà intégrées, [Style Roman](<fiche_revision/Style Roman.pdf>) et [Style Gothique](<fiche_revision/Style Gothique.pdf>).
+- [ ] **Chroniques · Moyen Âge.** Permettre de choisir le Moyen Âge entier, le roman seul et le gothique seul. Reprendre les bornes de chaque style dans l’en-tête de sa fiche et créer des cartes d’événements sourcées, rattachées au bon chapitre. Vérifier les trois modes, les sélections traversant plusieurs époques, les repères et couleurs de période, les raretés des événements, leur apparition dans la collection et les renvois depuis la correction.
+- [ ] **Étape ultérieure · Renaissance.** Appliquer la même règle d’intégration aux cours et aux jeux à partir des ressources disponibles à cette étape.
 
 **Frise — décisions et piste restante :** le joueur choisit une carte, l'associe à un repère puis utilise le retour du jeu pour ajuster son raisonnement. La réussite doit donner envie de poursuivre ; une erreur doit permettre une correction compréhensible sans imposer de refaire tout le début de partie.
 
@@ -743,3 +750,5 @@ Une fonctionnalité n'est marquée terminée qu'après vérification de son comp
 | 19 novembre 2026 | 0.29 | Préparation, trois modes jouables, saisie des années, tirage ajustable, raretés et collection locale intégrés dans Godot. |
 | 22 novembre 2026 | 0.30 | Intégration du dos Marqueterie et de la finition dorée commune à la collection et au plateau. Le dos `app/assets/frieze/marquetry.png` reprend le dessin central de la planche de trois propositions générée pour Chroniques et choisie par Nathan. |
 | 22 novembre 2026 | 0.31 | Lots de normales selon la taille de partie et dorure à sept marques sur les cartes déjà possédées. |
+| 23 novembre 2026 | 0.32 | Prochaine session consacrée au roman et au gothique. L’ajout de chaque période couvre les cours et les jeux concernés. |
+| 23 novembre 2026 | 0.33 | Section « Catalogue » prévue dans chaque cours pour comparer de nombreux meubles de la période. |
