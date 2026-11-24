@@ -225,64 +225,8 @@
     {
       "id": "catalogue",
       "title": "Catalogue",
-      "intro": "Sélectionnez une image pour en examiner les détails. Chaque notice donne accès à la collection du musée.",
-      "blocks": [
-        {
-          "type": "catalogue_item",
-          "media": "cma-1931.462",
-          "title": "Autel portatif de la comtesse Gertrude",
-          "date": "Vers 1045",
-          "origin": "Allemagne, peut-être Basse-Saxe",
-          "observation": "L’autel se transporte comme un coffret. Sur le dessus, une dalle de porphyre délimite la surface de célébration.",
-          "status_label": "Objet conservé",
-          "maker": "Commanditaire : la comtesse Gertrude de Brunswick."
-        },
-        {
-          "type": "catalogue_item",
-          "title": "Le trône de la Vierge en majesté",
-          "date": "Vers 1150–1200",
-          "origin": "Auvergne, France",
-          "observation": "La vue de profil dégage le bord de l’assise sous le manteau. Cette sculpture en noyer polychrome montre un siège roman tel qu’il a été représenté.",
-          "media": "cma-2012.52",
-          "status_label": "Siège représenté dans une sculpture romane"
-        },
-        {
-          "type": "catalogue_item",
-          "media": "cma-1953.362",
-          "title": "Coffret en buis sculpté",
-          "date": "Vers 1050",
-          "origin": "Angleterre, peut-être les West Midlands",
-          "observation": "La petite surface de chaque paroi accueille plusieurs épisodes de la vie du Christ. Sa fonction de reliquaire reste une hypothèse.",
-          "status_label": "Objet conservé"
-        },
-        {
-          "type": "catalogue_item",
-          "media": "cma-1949.16",
-          "title": "Plaques médiévales d’un coffret émaillé",
-          "date": "Peut-être 1100–1150",
-          "origin": "Peut-être Allemagne du Nord",
-          "observation": "Les plaques médiévales sont montées sur une âme en bois moderne. Une radiographie suggère que l’objet a pu servir de pied de croix.",
-          "status_label": "Plaques médiévales sur une âme moderne"
-        },
-        {
-          "type": "catalogue_item",
-          "media": "cma-1922.359",
-          "title": "Plaque de la Crucifixion pour un autel portatif",
-          "date": "1050–1100",
-          "origin": "Basse vallée du Rhin",
-          "observation": "Cette plaque constitue un fragment de parement. Son format et son relief expliquent comment un autel transportable pouvait porter un cycle sculpté sur ses flancs.",
-          "status_label": "Fragment original"
-        },
-        {
-          "type": "catalogue_item",
-          "media": "cma-1952.152",
-          "title": "Lampas aux griffons du reliquaire de sainte Librada",
-          "date": "1100–1150",
-          "origin": "Almería, Espagne",
-          "observation": "Cette étoffe issue d’un atelier de l’Espagne islamique témoigne de la circulation des soieries dans les trésors chrétiens.",
-          "status_label": "Étoffe conservée"
-        }
-      ]
+      "intro": "Choisissez une œuvre pour examiner son image, sa datation et sa provenance.",
+      "blocks": []
     },
     {
       "id": "identifier",

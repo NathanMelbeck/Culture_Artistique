@@ -67,7 +67,9 @@ func capture(filename: String) -> void:
 	check(result == OK, "Capture : " + filename)
 
 func _run() -> void:
-	output_directory = ProjectSettings.globalize_path("res://../docs/validation/menu")
+	output_directory = OS.get_environment("MENU_CAPTURE_DIR")
+	if output_directory.is_empty():
+		output_directory = ProjectSettings.globalize_path("res://../docs/validation/menu")
 	DirAccess.make_dir_recursive_absolute(output_directory)
 	app = load("res://scenes/app_shell.tscn").instantiate()
 	root.add_child(app)
@@ -78,7 +80,7 @@ func _run() -> void:
 	var photo := app.find_child("MuseumPhotograph", true, false) as TextureRect
 	check(photo != null and photo.texture != null, "La photographie locale est chargée")
 	await capture("menu-1440.png")
-	for item in [["CoursesCard", "courses"], ["GamesCard", "games"], ["CreditsCard", "credits"]]:
+	for item in [["CoursesCard", "courses"], ["GamesCard", "games"], ["CatalogueCard", "catalogue"], ["CreditsCard", "credits"]]:
 		await click(item[0])
 		check(app.navigation.current_route == item[1], "La carte ouvre : " + item[1])
 		if item[1] == "credits":
@@ -87,7 +89,7 @@ func _run() -> void:
 			var license_text := app.find_child("LicenseText", true, false) as TextEdit
 			check(license_text != null and license_text.text.contains("GODOT ENGINE") and license_text.text.contains("SIL OPEN FONT LICENSE"), "Les licences sont lisibles dans l’application")
 			await key(KEY_ESCAPE)
-		await click("HomeButton" if item[1] == "courses" else "BackHome")
+		await click("HomeButton" if item[1] in ["courses", "catalogue"] else "BackHome")
 		check(app.navigation.current_route == "home", "Retour au menu depuis " + item[1])
 	await click("CoursesNav")
 	check(app.navigation.current_route == "courses", "La navigation supérieure ouvre les cours")
@@ -113,12 +115,12 @@ func _run() -> void:
 	root.size = Vector2i(1280, 900)
 	await frames(8)
 	var card_copy_fits := true
-	for card_name in ["CoursesCard", "GamesCard", "CreditsCard"]:
+	for card_name in ["CoursesCard", "GamesCard", "CatalogueCard", "CreditsCard"]:
 		var target := app.find_child(card_name, true, false) as Button
 		for label in target.find_children("*", "Label", true, false):
 			var copy_rect: Rect2 = label.get_global_rect()
 			card_copy_fits = card_copy_fits and target.get_global_rect().encloses(copy_rect)
-	check(card_copy_fits, "Les textes des trois cartes restent dans leurs limites à 1280 px")
+	check(card_copy_fits, "Les textes des quatre cartes restent dans leurs limites à 1280 px")
 	await capture("menu-1280.png")
 	root.size = Vector2i(960, 640)
 	await frames(8)

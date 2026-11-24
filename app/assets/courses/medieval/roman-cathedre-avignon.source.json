@@ -1,0 +1,73 @@
+{
+  "size": 199121,
+  "width": 639,
+  "height": 852,
+  "thumburl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Chaire.episcopale.cathedrale.Avignon.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "thumbwidth": 1280,
+  "thumbheight": 1707,
+  "thumbattribs": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Chaire.episcopale.cathedrale.Avignon.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "decoding": "async",
+    "loading": "lazy",
+    "width": 1280,
+    "height": 1707
+  },
+  "url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Chaire.episcopale.cathedrale.Avignon.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Chaire.episcopale.cathedrale.Avignon.png",
+  "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/353445",
+  "extmetadata": {
+    "DateTime": {
+      "value": "2005-10-03 18:57:13",
+      "source": "mediawiki-metadata",
+      "hidden": ""
+    },
+    "ObjectName": {
+      "value": "Chaire.episcopale.cathedrale.Avignon",
+      "source": "mediawiki-metadata"
+    },
+    "CommonsMetadataExtension": {
+      "value": 1.2,
+      "source": "extension",
+      "hidden": ""
+    },
+    "Categories": {
+      "value": "Files with no machine-readable author|Files with no machine-readable source|Media missing infobox template|PD-old-100-expired|PD Viollet-le-Duc|Cathedras in France|CC-PD-Mark|12th-century furniture|PD-old missing SDC copyright status|Church (Viollet-le-Duc)|Historical documents of Cathédrale Notre-Dame des Doms d'Avignon",
+      "source": "commons-categories",
+      "hidden": ""
+    },
+    "Assessments": {
+      "value": "",
+      "source": "commons-categories",
+      "hidden": ""
+    },
+    "LicenseShortName": {
+      "value": "Public domain",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "UsageTerms": {
+      "value": "Public domain",
+      "source": "commons-desc-page"
+    },
+    "AttributionRequired": {
+      "value": "false",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "Copyrighted": {
+      "value": "False",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "Restrictions": {
+      "value": "",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "License": {
+      "value": "pd",
+      "source": "commons-templates",
+      "hidden": ""
+    }
+  }
+}

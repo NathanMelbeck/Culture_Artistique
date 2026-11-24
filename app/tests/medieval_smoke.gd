@@ -7,7 +7,8 @@ func _run() -> void:
 	app.progress_repository = ProgressRepository.new("")
 	root.add_child(app)
 	root.size = Vector2i(1280, 800)
-	await frames(8)
+	root.position = Vector2i(20, 20)
+	await frames(15)
 	await click("CoursesNav")
 	var filter := widget("CoursePeriodFilter") as OptionButton
 	for i in filter.item_count:
@@ -20,8 +21,8 @@ func _run() -> void:
 	await frames()
 	await key(KEY_ENTER)
 	await click("Chapter_catalogue")
-	var gallery := widget("FurnitureGallery") as GridContainer
-	check(gallery != null and gallery.get_child_count() >= 5, "Galerie médiévale avec cinq notices illustrées")
+	var gallery := widget("CourseArtworks") as ArtworkGallery
+	check(gallery != null and gallery.find_children("Artwork_*", "TextureButton", true, false).size() >= 5, "Galerie médiévale avec cinq notices illustrées")
 	await capture("catalogue-gothique.png")
 	await click("CourseRevision")
 	check(app._page.selected_id == "gothique", "Lien direct du cours à sa fiche intégrée")

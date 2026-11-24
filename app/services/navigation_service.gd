@@ -2,7 +2,7 @@ class_name NavigationService
 extends RefCounted
 
 signal route_changed(route: String)
-const ROUTES := ["home", "courses", "revision", "games", "credits"]
+const ROUTES := ["home", "courses", "revision", "catalogue", "games", "credits"]
 var current_route := "home"
 
 func navigate(route: String) -> void:

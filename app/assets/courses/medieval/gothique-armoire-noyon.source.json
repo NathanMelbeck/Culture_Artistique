@@ -1,0 +1,97 @@
+{
+  "size": 706187,
+  "width": 2736,
+  "height": 3648,
+  "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Noyon_%2860%29%2C_cath%C3%A9drale_Notre-Dame%2C_chapelle_du_Saint-S%C3%A9pulcre%2C_armoire_du_XIIIe_si%C3%A8cle.jpg/1280px-Noyon_%2860%29%2C_cath%C3%A9drale_Notre-Dame%2C_chapelle_du_Saint-S%C3%A9pulcre%2C_armoire_du_XIIIe_si%C3%A8cle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "thumbwidth": 1280,
+  "thumbheight": 1707,
+  "responsiveUrls": {
+    "2": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Noyon_%2860%29%2C_cath%C3%A9drale_Notre-Dame%2C_chapelle_du_Saint-S%C3%A9pulcre%2C_armoire_du_XIIIe_si%C3%A8cle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "thumbattribs": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Noyon_%2860%29%2C_cath%C3%A9drale_Notre-Dame%2C_chapelle_du_Saint-S%C3%A9pulcre%2C_armoire_du_XIIIe_si%C3%A8cle.jpg/1280px-Noyon_%2860%29%2C_cath%C3%A9drale_Notre-Dame%2C_chapelle_du_Saint-S%C3%A9pulcre%2C_armoire_du_XIIIe_si%C3%A8cle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "decoding": "async",
+    "loading": "lazy",
+    "width": 1280,
+    "height": 1707,
+    "srcset": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Noyon_%2860%29%2C_cath%C3%A9drale_Notre-Dame%2C_chapelle_du_Saint-S%C3%A9pulcre%2C_armoire_du_XIIIe_si%C3%A8cle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+  },
+  "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Noyon_%2860%29%2C_cath%C3%A9drale_Notre-Dame%2C_chapelle_du_Saint-S%C3%A9pulcre%2C_armoire_du_XIIIe_si%C3%A8cle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "descriptionurl": "https://commons.wikimedia.org/wiki/File:Noyon_(60),_cath%C3%A9drale_Notre-Dame,_chapelle_du_Saint-S%C3%A9pulcre,_armoire_du_XIIIe_si%C3%A8cle.jpg",
+  "descriptionshorturl": "https://commons.wikimedia.org/wiki/Special:Redirect/page/71052034",
+  "extmetadata": {
+    "DateTime": {
+      "value": "2018-07-22 15:42:51",
+      "source": "mediawiki-metadata",
+      "hidden": ""
+    },
+    "ObjectName": {
+      "value": "Noyon (60), cathédrale Notre-Dame, chapelle du Saint-Sépulcre, armoire du XIIIe siècle",
+      "source": "mediawiki-metadata"
+    },
+    "CommonsMetadataExtension": {
+      "value": 1.2,
+      "source": "extension",
+      "hidden": ""
+    },
+    "Categories": {
+      "value": "Objets monuments historiques in Oise (pieces of furniture)|Wardrobes in Hauts-de-France|Palissy|Self-published work|Objets monuments historiques classés|Cultural heritage monument objects in France with known IDs|Palissy with PM parameter|Mobilier de la cathédrale Notre-Dame de Noyon|Noyon cathedral (Palissy protection)",
+      "source": "commons-categories",
+      "hidden": ""
+    },
+    "Assessments": {
+      "value": "",
+      "source": "commons-categories",
+      "hidden": ""
+    },
+    "ImageDescription": {
+      "value": "Mobilier de la cathédrale - voir le titre du fichier.",
+      "source": "commons-desc-page"
+    },
+    "DateTimeOriginal": {
+      "value": "2018-07-19",
+      "source": "commons-desc-page"
+    },
+    "Credit": {
+      "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+      "source": "commons-desc-page"
+    },
+    "Artist": {
+      "value": "<a href=\"//commons.wikimedia.org/wiki/User:P.poschadel\" title=\"User:P.poschadel\">Pierre Poschadel</a>",
+      "source": "commons-desc-page"
+    },
+    "LicenseShortName": {
+      "value": "CC BY-SA 4.0",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "UsageTerms": {
+      "value": "Creative Commons Attribution-Share Alike 4.0",
+      "source": "commons-desc-page"
+    },
+    "AttributionRequired": {
+      "value": "true",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "LicenseUrl": {
+      "value": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "commons-desc-page"
+    },
+    "Copyrighted": {
+      "value": "True",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "Restrictions": {
+      "value": "",
+      "source": "commons-desc-page",
+      "hidden": ""
+    },
+    "License": {
+      "value": "cc-by-sa-4.0",
+      "source": "commons-templates",
+      "hidden": ""
+    }
+  }
+}

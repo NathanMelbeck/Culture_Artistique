@@ -5,6 +5,7 @@ const CATALOGUE := "res://content/courses/catalogue.json"
 const MEDIA := "res://content/course_media.json"
 var _courses: Array[Dictionary] = []
 var groups: Array = []
+var artworks := ArtworkCatalogue.new()
 var _media: Dictionary = {}
 
 func _init() -> void:

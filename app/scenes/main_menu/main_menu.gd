@@ -26,7 +26,8 @@ func _ready() -> void:
 	add_child(_cards)
 	_add_card("courses", "Les cours", "Des civilisations aux styles : comprendre les formes et leurs histoires.", "01 / APPRENDRE", "book", true)
 	_add_card("games", "Les jeux", "Quiz, cartes et frises pour transformer vos découvertes en connaissances.", "02 / S’ENTRAÎNER", "game")
-	_add_card("credits", "Les crédits", "Le projet, les sources et les personnes qui le font vivre.", "03 / DÉCOUVRIR", "info")
+	_add_card("catalogue", "Catalogue", "Explorer les meubles, l’architecture et les objets d’art.", "03 / EXPLORER", "catalogue")
+	_add_card("credits", "Les crédits", "Le projet, les sources et les personnes qui le font vivre.", "04 / DÉCOUVRIR", "info")
 	var note := AppTheme.paragraph("À votre rythme, sans compte et sans connexion. Seuls les liens vers des sites externes nécessitent Internet.", 13)
 	note.name = "OfflineNote"
 	add_child(note)
@@ -121,7 +122,7 @@ func _adapt() -> void:
 	_intro.size_flags_stretch_ratio = 1.48 if not compact else 1.0
 	_intro.add_theme_constant_override("separation", 14 if short_window else 20)
 	_title.add_theme_font_size_override("font_size", 52 if short_window else (58 if size.x < 1220 else 66))
-	_cards.columns = 1 if compact else 3
+	_cards.columns = 4 if size.x >= 1200 else (2 if size.x >= 660 else 1)
 	_photo.custom_minimum_size.y = 250 if compact else (210 if short_window else 300)
 	for card in _cards.get_children():
 		card.custom_minimum_size.y = 230

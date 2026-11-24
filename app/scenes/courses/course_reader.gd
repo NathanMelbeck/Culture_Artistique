@@ -17,7 +17,7 @@ var _blocks: VBoxContainer
 var _previous: Button
 var _next: Button
 var _scroll_margin: MarginContainer
-var _gallery: GridContainer
+var _gallery: ArtworkGallery
 var _chapter_heading: Label
 
 func _ready() -> void:
@@ -131,17 +131,20 @@ func show_chapter(index: int) -> void:
 	_blocks.add_child(CourseBlock.prose(chapter["intro"], 20, AppTheme.MUTED))
 	if chapter_index == 0:
 		_blocks.add_child(CourseBlock.build({"type": "callout", "title": "Ce que vous allez apprendre", "text": "\n".join(course["objectives"])}, repository))
-	var parent: Container = _blocks
-	_gallery = null
 	if chapter.id == "catalogue":
-		_gallery = GridContainer.new()
-		_gallery.name = "FurnitureGallery"
-		_gallery.add_theme_constant_override("h_separation", 22)
-		_gallery.add_theme_constant_override("v_separation", 22)
+		_gallery = ArtworkGallery.new()
+		_gallery.name = "CourseArtworks"
+		_gallery.repository = repository
+		_gallery.course_period = course.period_id
+		_gallery.course_requested.connect(func(_period, chapter_id):
+			for i in course.chapters.size():
+				if course.chapters[i].id == chapter_id:
+					show_chapter(i)
+					return)
 		_blocks.add_child(_gallery)
-		parent = _gallery
+		_gallery.display(repository.artworks.select({"periods": course.period_id}), true)
 	for block in chapter["blocks"]:
-		parent.add_child(CourseBlock.build(block, repository))
+		_blocks.add_child(CourseBlock.build(block, repository))
 	if chapter_index == course["chapters"].size() - 1:
 		_add_references()
 	_picker.select(chapter_index)
@@ -190,8 +193,6 @@ func _adapt() -> void:
 		return
 	_sidebar_scroll.visible = size.x >= 1050
 	_picker.visible = not _sidebar_scroll.visible
-	if is_instance_valid(_gallery):
-		_gallery.columns = 2 if _scroll.size.x >= 700 else 1
 	var reading_width := _scroll.size.x
 	var inset := maxi(6, int((reading_width - 850) / 2))
 	_scroll_margin.add_theme_constant_override("margin_left", inset)

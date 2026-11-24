@@ -75,7 +75,7 @@ func _build_shell() -> void:
 	nav.alignment = BoxContainer.ALIGNMENT_CENTER
 	nav.add_theme_constant_override("separation", 18)
 	header.add_child(nav)
-	for item in [["courses", "Cours"], ["revision", "Fiche"], ["games", "Jeux"], ["credits", "Crédits"]]:
+	for item in [["courses", "Cours"], ["revision", "Fiche"], ["catalogue", "Catalogue"], ["games", "Jeux"], ["credits", "Crédits"]]:
 		var button := AppTheme.quiet_button(item[1])
 		button.name = item[0].capitalize() + "Nav"
 		button.custom_minimum_size.x = 78
@@ -135,10 +135,10 @@ func _show_route(route: String) -> void:
 		was_keyboard = get_viewport().gui_get_focus_owner() != null
 		_page_host.remove_child(_page)
 		_page.queue_free()
-	_back_button.visible = route not in ["home", "revision", "courses", "games"]
-	_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED if route in ["revision", "courses", "games"] else ScrollContainer.SCROLL_MODE_AUTO
-	_body_margin.add_theme_constant_override("margin_top", 12 if route == "games" else 28)
-	_body_margin.add_theme_constant_override("margin_bottom", 12 if route == "games" else 24)
+	_back_button.visible = route not in ["home", "revision", "courses", "games", "catalogue"]
+	_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED if route in ["revision", "courses", "games", "catalogue"] else ScrollContainer.SCROLL_MODE_AUTO
+	_body_margin.add_theme_constant_override("margin_top", 12 if route in ["games", "catalogue"] else 28)
+	_body_margin.add_theme_constant_override("margin_bottom", 12 if route in ["games", "catalogue"] else 24)
 	if route == "home":
 		_page = HOME.instantiate()
 		_page.media_repository = media_repository
@@ -160,19 +160,15 @@ func _show_route(route: String) -> void:
 		_page.repository = chronology_repository
 		_page.progress_repository = progress_repository
 		_page.view_state = _view_states.get("games", {})
-		_page.course_requested.connect(func(course_id: String, chapter_id: String) -> void:
-			var course := course_repository.find(course_id)
-			var index := 0
-			for chapter in course.get("chapters", []):
-				if chapter["id"] == chapter_id:
-					break
-				index += 1
-			_view_states["courses"] = {"mode": "reader", "course": course_id, "reader": {"chapter": index, "scroll": 0}}
-			navigation.navigate("courses")
-		)
+	elif route == "catalogue":
+		_page = preload("res://scenes/catalogue/catalogue.gd").new()
+		_page.repository = course_repository
+		_page.view_state = _view_states.get("catalogue", {})
 	else:
 		_page = SECTION.instantiate()
 		_page.route = route
+	if route in ["games", "catalogue"]:
+		_page.course_requested.connect(_open_course_chapter)
 	if route in ["courses", "games"]:
 		_page.revision_requested.connect(func(sheet_id: String) -> void:
 			_view_states["revision"] = {"sheet_id": sheet_id, "page": 0, "zoom": 1.0}
@@ -187,6 +183,14 @@ func _show_route(route: String) -> void:
 		button.add_theme_stylebox_override("normal", AppTheme.box(AppTheme.SAGE if key == route else Color.TRANSPARENT, Color.TRANSPARENT, 6, 0))
 	_restore_view.call_deferred(was_keyboard)
 
+func _open_course_chapter(course_id: String, chapter_id: String) -> void:
+	var course := course_repository.find(course_id)
+	for index in course.get("chapters", []).size():
+		if course.chapters[index].id == chapter_id:
+			_view_states["courses"] = {"mode": "reader", "course": course_id, "reader": {"chapter": index, "scroll": 0}}
+			navigation.navigate("courses")
+			return
+
 func _restore_view(with_focus: bool) -> void:
 	await get_tree().process_frame
 	_scroll.scroll_vertical = _scroll_positions.get(_page.name, 0)
@@ -199,7 +203,7 @@ func _restore_view(with_focus: bool) -> void:
 			var back := _page.find_child("ChroniquesHome", true, false) as Button
 			if back != null and back.focus_mode != Control.FOCUS_NONE:
 				back.grab_focus()
-		elif navigation.current_route in ["revision", "courses", "games"]:
+		elif navigation.current_route in ["revision", "courses", "games", "catalogue"]:
 			_nav_buttons[navigation.current_route].grab_focus()
 		else:
 			_back_button.grab_focus()
@@ -219,7 +223,8 @@ func _adapt() -> void:
 	for container in [_header_margin, _body_margin, _footer_margin]:
 		container.add_theme_constant_override("margin_left", 0 if immersive else side)
 		container.add_theme_constant_override("margin_right", 0 if immersive else side)
-	_offline.custom_minimum_size.x = 170 if size.x < 1200 else 230
+	_offline.custom_minimum_size.x = 140 if size.x < 1200 else 230
+	_home_button.custom_minimum_size.x = 160 if size.x < 1100 else 230
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel") and navigation.current_route != "home":

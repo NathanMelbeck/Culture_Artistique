@@ -1201,5 +1201,227 @@
     "subject_periods": [
       "roman"
     ]
+  },
+  "roman-cathedre-avignon": {
+    "path": "res://assets/courses/medieval/roman-cathedre-avignon.webp",
+    "title": "Cathèdre de Notre-Dame des Doms",
+    "caption": "Cathèdre de Notre-Dame des Doms. XIIe siècle.",
+    "alt": "Les accotoirs sont taillés dans deux joues de marbre blanc. Sur la joue visible, un lion ailé représente saint Marc. Cette vue de trois quarts permet de suivre d’un seul regard le dossier, l’assise et la découpe des accotoirs.",
+    "metadata_file": "app/assets/courses/medieval/roman-cathedre-avignon.source.json",
+    "historical_status": "original",
+    "subject_periods": [
+      "roman"
+    ],
+    "source_image_sha256": "c8acc09e82b91467a83cb2aaf214a514b36197495f67599e6b284411971c0c89",
+    "provider": "commons_collection",
+    "source": "https://www.diocese-avignon.fr/paroisse/metropole-notre-dame-des-doms/",
+    "visual_role": "documentary_drawing",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Chaire.episcopale.cathedrale.Avignon.png",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Chaire.episcopale.cathedrale.Avignon.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "rights": "Public domain",
+    "credit": "Eugène Viollet-le-Duc",
+    "display_credit": "Dessin d’Eugène Viollet-le-Duc, Dictionnaire raisonné de l’architecture française, article « Chaire », fig. 2 · Domaine public · https://commons.wikimedia.org/?curid=353445",
+    "modifications": "Conversion en WebP sans recadrage.",
+    "drawing_source": "https://fr.wikisource.org/wiki/Dictionnaire_raisonn%C3%A9_de_l%E2%80%99architecture_fran%C3%A7aise_du_XIe_au_XVIe_si%C3%A8cle/Chaire_(si%C3%A8ge_%C3%A9piscopal)"
+  },
+  "roman-table-saint-sernin": {
+    "path": "res://assets/courses/medieval/roman-table-saint-sernin.webp",
+    "title": "Table d’autel de Saint-Sernin",
+    "caption": "Table d’autel de Saint-Sernin. Consacrée en 1096.",
+    "alt": "Observez la tranche du plateau en marbre. Le relief se lit sur cette faible épaisseur, au-dessus du vide entre les appuis. La pièce datée et signée est la table elle-même.",
+    "metadata_file": "app/assets/courses/medieval/roman-table-saint-sernin.source.json",
+    "historical_status": "original",
+    "subject_periods": [
+      "roman"
+    ],
+    "source_image_sha256": "c983f69f6d91714839431e749481d90ef541dd236617a127cd86086ead3fd0b3",
+    "provider": "commons_collection",
+    "source": "https://pop.culture.gouv.fr/notice/palissy/PM31000779",
+    "visual_role": "object_photograph",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Autel_st_Sernin_4248_(cropped).jpg",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Autel_st_Sernin_4248_%28cropped%29.jpg/1280px-Autel_st_Sernin_4248_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "rights": "CC BY-SA 4.0",
+    "credit": "Luistxo",
+    "display_credit": "Photo de Luistxo · CC BY-SA 4.0 · conversion WebP sous la même licence · https://creativecommons.org/licenses/by-sa/4.0 · https://commons.wikimedia.org/?curid=166905148",
+    "modifications": "Conversion en WebP sans recadrage.",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "attribution_source": "https://www.persee.fr/doc/jds_0021-8103_1959_num_3_1_3286_t1_0137_0000_2"
+  },
+  "roman-autel-avenas": {
+    "path": "res://assets/courses/medieval/roman-autel-avenas.webp",
+    "title": "Autel sculpté d’Avenas",
+    "caption": "Autel sculpté d’Avenas. XIIe siècle.",
+    "alt": "La table déborde légèrement de la caisse en pierre. Vue de côté, sa rive forme une corniche au-dessus du bas-relief. Comparez ce volume fermé avec le plateau porté sur des appuis à Saint-Sernin.",
+    "metadata_file": "app/assets/courses/medieval/roman-autel-avenas.source.json",
+    "historical_status": "original",
+    "subject_periods": [
+      "roman"
+    ],
+    "source_image_sha256": "9eafd8cdf18ea3c18a2fe5c234e05b0f7c9e9387458864ebcf49d1e929868e67",
+    "provider": "commons_collection",
+    "source": "https://pop.culture.gouv.fr/notice/palissy/PM69000055",
+    "visual_role": "object_photograph",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Autel_%C3%A9glise_Avenas.jpg",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Autel_%C3%A9glise_Avenas.jpg/1280px-Autel_%C3%A9glise_Avenas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "rights": "CC BY 2.0",
+    "credit": "yves Tennevin",
+    "display_credit": "Photo de yves Tennevin · CC BY 2.0 · conversion WebP · https://creativecommons.org/licenses/by/2.0 · https://commons.wikimedia.org/?curid=3884668",
+    "modifications": "Conversion en WebP sans recadrage.",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  "roman-chasse-champagnat": {
+    "path": "res://assets/courses/medieval/roman-chasse-champagnat.webp",
+    "title": "Châsse de Champagnat",
+    "caption": "Châsse de Champagnat. Vers 1150.",
+    "alt": "Les longs côtés du coffret et ses deux pignons composent un petit édifice à toit en bâtière, c’est-à-dire à deux versants. Le cuivre doré sépare les couleurs de l’émail champlevé dans les figures.",
+    "metadata_file": "app/assets/courses/medieval/roman-chasse-champagnat.source.json",
+    "historical_status": "original",
+    "subject_periods": [
+      "roman"
+    ],
+    "source_image_sha256": "263a43f8992c372e10de9c6e60051da77e2341a9e9ca6e201efd766cdd77e5a4",
+    "provider": "met",
+    "source": "https://www.metmuseum.org/art/collection/search/464559",
+    "download_url": "https://images.metmuseum.org/CRDImages/md/original/DP-16607-014.jpg",
+    "rights": "CC0",
+    "credit": "The Metropolitan Museum of Art",
+    "display_credit": "The Metropolitan Museum of Art · 17.190.685–87, .695, .710–.711 · CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "gothique-armoire-noyon": {
+    "path": "res://assets/courses/medieval/gothique-armoire-noyon.webp",
+    "title": "Armoire à pentures de la cathédrale de Noyon",
+    "caption": "Armoire à pentures de la cathédrale de Noyon. XIIIe siècle.",
+    "alt": "Repérez les deux registres de battants. Les pentures, longues bandes de fer articulées, se ramifient en volutes sur les planches. Leurs alignements permettent de distinguer les ouvrants même lorsque l’armoire est fermée.",
+    "metadata_file": "app/assets/courses/medieval/gothique-armoire-noyon.source.json",
+    "historical_status": "original",
+    "subject_periods": [
+      "gothique"
+    ],
+    "source_image_sha256": "fb1e492458513e7d5bcd4dd6678bb062ddfe96573361c07990764220572ec8d9",
+    "provider": "commons_collection",
+    "source": "https://pop.culture.gouv.fr/notice/palissy/PM60003513",
+    "visual_role": "object_photograph",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Noyon_(60),_cath%C3%A9drale_Notre-Dame,_chapelle_du_Saint-S%C3%A9pulcre,_armoire_du_XIIIe_si%C3%A8cle.jpg",
+    "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Noyon_%2860%29%2C_cath%C3%A9drale_Notre-Dame%2C_chapelle_du_Saint-S%C3%A9pulcre%2C_armoire_du_XIIIe_si%C3%A8cle.jpg/1280px-Noyon_%2860%29%2C_cath%C3%A9drale_Notre-Dame%2C_chapelle_du_Saint-S%C3%A9pulcre%2C_armoire_du_XIIIe_si%C3%A8cle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "rights": "CC BY-SA 4.0",
+    "credit": "Pierre Poschadel",
+    "display_credit": "Photo de Pierre Poschadel · CC BY-SA 4.0 · conversion WebP sous la même licence · https://creativecommons.org/licenses/by-sa/4.0 · https://commons.wikimedia.org/?curid=71052034",
+    "modifications": "Conversion en WebP sans recadrage.",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "gothique-siege-noyer": {
+    "path": "res://assets/courses/medieval/gothique-siege-noyer.webp",
+    "title": "Siège en noyer à dossier enveloppant",
+    "caption": "Siège en noyer à dossier enveloppant. XVe siècle.",
+    "alt": "Le dossier incurvé enveloppe l’assise et rejoint les montants latéraux. De petites arcatures sculptées rythment la façade sous le siège. Comparez cette assise fermée avec le piètement ouvert du siège en fer.",
+    "metadata_file": "app/assets/courses/medieval/gothique-siege-noyer.source.json",
+    "historical_status": "original",
+    "subject_periods": [
+      "gothique"
+    ],
+    "source_image_sha256": "4509a302d67bab5bfc9b067836d68025cb2732fa0ba4c7625b2a0d6aae96a5b2",
+    "provider": "met",
+    "source": "https://www.metmuseum.org/art/collection/search/467697",
+    "download_url": "https://images.metmuseum.org/CRDImages/md/original/tem41100125.jpg",
+    "rights": "CC0",
+    "credit": "The Metropolitan Museum of Art",
+    "display_credit": "The Metropolitan Museum of Art · 41.100.125 · CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "gothique-coffre-arcatures": {
+    "path": "res://assets/courses/medieval/gothique-coffre-arcatures.webp",
+    "title": "Coffre en bois à façade sculptée",
+    "caption": "Coffre en bois à façade sculptée. Fin du XVe siècle.",
+    "alt": "Sous le couvercle plat, le décor de façade combine courbes, pointes et petites arcatures. Les panneaux s’inscrivent entre des montants qui descendent jusqu’au sol. Le côté reçoit son propre décor.",
+    "metadata_file": "app/assets/courses/medieval/gothique-coffre-arcatures.source.json",
+    "historical_status": "original",
+    "subject_periods": [
+      "gothique"
+    ],
+    "source_image_sha256": "84c923e868d8137bbe5bc31ef9fbd56785213ae36ee21f32c3086d908b19fea3",
+    "provider": "met",
+    "source": "https://www.metmuseum.org/art/collection/search/471835",
+    "download_url": "https://images.metmuseum.org/CRDImages/cl/original/cdi57-144-3.jpg",
+    "rights": "CC0",
+    "credit": "The Metropolitan Museum of Art",
+    "display_credit": "The Metropolitan Museum of Art · 57.144.3 · CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "gothique-siege-fer": {
+    "path": "res://assets/courses/medieval/gothique-siege-fer.webp",
+    "title": "Siège en fer à piètement croisé",
+    "caption": "Siège en fer à piètement croisé. Fin du XIVe – début du XVe siècle.",
+    "alt": "Suivez les tiges de fer depuis le sol jusqu’aux extrémités relevées. Elles se croisent sous l’assise et dégagent l’espace entre les pieds. Le musée identifie aussi de la soie sur cette pièce.",
+    "metadata_file": "app/assets/courses/medieval/gothique-siege-fer.source.json",
+    "historical_status": "original",
+    "subject_periods": [
+      "gothique"
+    ],
+    "source_image_sha256": "c66bc3b108266bf164126d782c09777ae5753ec1b02732f087414c4cdd7e373a",
+    "provider": "met",
+    "source": "https://www.metmuseum.org/art/collection/search/468241",
+    "download_url": "https://images.metmuseum.org/CRDImages/cl/original/sf47-101-77s1.jpg",
+    "rights": "CC0",
+    "credit": "The Metropolitan Museum of Art",
+    "display_credit": "The Metropolitan Museum of Art · 47.101.77a, b · CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "gothique-stalles-dais": {
+    "path": "res://assets/courses/medieval/gothique-stalles-dais.webp",
+    "title": "Trois stalles en chêne sous un dais",
+    "caption": "Trois stalles en chêne sous un dais. XVe siècle.",
+    "alt": "Le dais, ou couronnement en surplomb, réunit les trois places. Sous ce toit commun, chaque dossier présente un réseau d’arcatures aveugles sculptées dans le bois. Les assises sont ici abaissées.",
+    "metadata_file": "app/assets/courses/medieval/gothique-stalles-dais.source.json",
+    "historical_status": "original",
+    "subject_periods": [
+      "gothique"
+    ],
+    "source_image_sha256": "14fe6be14deca34d04ffdb891f5594a70a68d181e21578a8304520f7dfdcc0b5",
+    "provider": "met",
+    "source": "https://www.metmuseum.org/art/collection/search/463833",
+    "download_url": "https://images.metmuseum.org/CRDImages/md/original/DP279507.jpg",
+    "rights": "CC0",
+    "credit": "The Metropolitan Museum of Art",
+    "display_credit": "The Metropolitan Museum of Art · 16.32.23 · CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "gothique-coffret-fer": {
+    "path": "res://assets/courses/medieval/gothique-coffret-fer.webp",
+    "title": "Coffret à enveloppe de fer",
+    "caption": "Coffret à enveloppe de fer. XVe siècle.",
+    "alt": "Le fer ajouré laisse lire le réseau de losanges devant l’âme en bois. Une poignée annulaire se détache sur le côté. La notice précise que l’intérieur est garni de tissu et de cuir.",
+    "metadata_file": "app/assets/courses/medieval/gothique-coffret-fer.source.json",
+    "historical_status": "original",
+    "subject_periods": [
+      "gothique"
+    ],
+    "source_image_sha256": "348960f9ca2d991b764791057a8a952b84f3d1b0c80d25f150a059f691380f71",
+    "provider": "met",
+    "source": "https://www.metmuseum.org/art/collection/search/470126",
+    "download_url": "https://images.metmuseum.org/CRDImages/cl/original/sf47-100-75abs05.jpg",
+    "rights": "CC0",
+    "credit": "The Metropolitan Museum of Art",
+    "display_credit": "The Metropolitan Museum of Art · 47.100.75a, b · CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  },
+  "gothique-stalles-misericordes": {
+    "path": "res://assets/courses/medieval/gothique-stalles-misericordes.webp",
+    "title": "Deux stalles à miséricordes sculptées",
+    "caption": "Deux stalles à miséricordes sculptées. XVe siècle.",
+    "alt": "Les deux assises sont relevées. Le relief visible sous chacune est une miséricorde, petite console sur laquelle on pouvait prendre appui debout. Comparez cette position avec les assises abaissées des trois stalles à dais.",
+    "metadata_file": "app/assets/courses/medieval/gothique-stalles-misericordes.source.json",
+    "historical_status": "original",
+    "subject_periods": [
+      "gothique"
+    ],
+    "source_image_sha256": "2b983dbf99e15c5c4c8a8cc36cf713386bf6019a4b81a3cb73be93c2f53eafee",
+    "provider": "met",
+    "source": "https://www.metmuseum.org/art/collection/search/463747",
+    "download_url": "https://images.metmuseum.org/CRDImages/md/original/DP-14824-013.jpg",
+    "rights": "CC0",
+    "credit": "The Metropolitan Museum of Art",
+    "display_credit": "The Metropolitan Museum of Art · 16.32.15 · CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
   }
 }

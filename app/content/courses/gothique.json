@@ -218,54 +218,8 @@
     {
       "id": "catalogue",
       "title": "Catalogue",
-      "intro": "Sélectionnez une image pour en examiner les détails. Chaque notice donne accès à la collection du musée.",
-      "blocks": [
-        {
-          "type": "catalogue_item",
-          "media": "cma-1971.270",
-          "title": "Panneaux de stalles de Pedralbes",
-          "date": "Vers 1330–1340",
-          "origin": "Monastère de Pedralbes, Catalogne",
-          "observation": "Ces panneaux en noyer appartenaient à des sièges de chœur. Leur présentation actuelle rassemble des pièces dont la disposition d’origine différait.",
-          "status_label": "Panneaux originaux de stalles"
-        },
-        {
-          "type": "catalogue_item",
-          "media": "cma-1999.211",
-          "title": "Coffret de cuir aux scènes courtoises",
-          "date": "Vers 1350–1400",
-          "origin": "France",
-          "observation": "Sous le cuir décoré se trouve une âme en bois. Le gainage enveloppe un volume rigide et reçoit le sujet figuré.",
-          "status_label": "Objet conservé"
-        },
-        {
-          "type": "catalogue_item",
-          "media": "cma-1954.600",
-          "title": "Coffret domestique peint et doré",
-          "date": "Fin du XIVe siècle",
-          "origin": "Italie, peut-être Sienne",
-          "observation": "Un coffret de cette taille pouvait recevoir bijoux, peignes ou sceaux. Sa finition précieuse participe à l’ameublement d’un intérieur privé.",
-          "status_label": "Objet conservé"
-        },
-        {
-          "type": "catalogue_item",
-          "media": "cma-1915.535",
-          "title": "Coffre de mariage catalan",
-          "date": "Vers 1500",
-          "origin": "Catalogne, peut-être Barcelone",
-          "observation": "Ce coffre se situe à la limite du cours. Le musée rattache sa forme à une production barcelonaise apparue à la fin du XVe siècle.",
-          "status_label": "Objet conservé"
-        },
-        {
-          "type": "catalogue_item",
-          "media": "cma-1978.36",
-          "title": "Broderie de parement d’autel",
-          "date": "Années 1330 ou 1340",
-          "origin": "Florence, Italie",
-          "observation": "La bande brodée surmontait un grand parement textile. Le décor d’un meuble liturgique pouvait ainsi varier avec les étoffes.",
-          "status_label": "Parement textile conservé"
-        }
-      ]
+      "intro": "Choisissez une œuvre pour examiner son image, sa datation et sa provenance.",
+      "blocks": []
     },
     {
       "id": "identifier",

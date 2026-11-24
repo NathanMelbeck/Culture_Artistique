@@ -1,0 +1,84 @@
+{
+  "objectID": 463747,
+  "isHighlight": false,
+  "accessionNumber": "16.32.15",
+  "accessionYear": "1916",
+  "isPublicDomain": true,
+  "primaryImage": "https://images.metmuseum.org/CRDImages/md/original/DP-14824-013.jpg",
+  "primaryImageSmall": "https://images.metmuseum.org/CRDImages/md/web-large/DP-14824-013.jpg",
+  "additionalImages": [
+    "https://images.metmuseum.org/CRDImages/md/original/cdi16-32-15.jpg",
+    "https://images.metmuseum.org/CRDImages/md/original/DP-14824-014.jpg",
+    "https://images.metmuseum.org/CRDImages/md/original/DP-14824-027.jpg"
+  ],
+  "constituents": null,
+  "department": "Medieval Art",
+  "objectName": "Double choir stall",
+  "title": "Choir Stalls",
+  "culture": "French",
+  "period": "",
+  "dynasty": "",
+  "reign": "",
+  "portfolio": "",
+  "artistRole": "",
+  "artistPrefix": "",
+  "artistDisplayName": "",
+  "artistDisplayBio": "",
+  "artistSuffix": "",
+  "artistAlphaSort": "",
+  "artistNationality": "",
+  "artistBeginDate": "",
+  "artistEndDate": "",
+  "artistGender": "",
+  "artistWikidata_URL": "",
+  "artistULAN_URL": "",
+  "objectDate": "15th century",
+  "objectBeginDate": 1400,
+  "objectEndDate": 1499,
+  "medium": "Oak",
+  "dimensions": "Overall: 42 3/4 x 59 1/2 x 23 3/4 in. (108.6 x 151.1 x 60.3 cm)",
+  "measurements": [
+    {
+      "elementName": "Overall",
+      "elementDescription": null,
+      "elementMeasurements": {
+        "Depth": 60.32512,
+        "Height": 108.58522,
+        "Width": 151.1303
+      }
+    }
+  ],
+  "creditLine": "Gift of J. Pierpont Morgan, 1916",
+  "geographyType": "",
+  "city": "",
+  "state": "",
+  "county": "",
+  "country": "",
+  "region": "",
+  "subregion": "",
+  "locale": "",
+  "locus": "",
+  "excavation": "",
+  "river": "",
+  "classification": "Woodwork-Furniture",
+  "rightsAndReproduction": "",
+  "linkResource": "",
+  "metadataDate": "2025-12-18T09:36:43.22Z",
+  "repository": "Metropolitan Museum of Art, New York, NY",
+  "objectURL": "https://www.metmuseum.org/art/collection/search/463747",
+  "tags": [
+    {
+      "term": "Human Figures",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300404114",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q5937779"
+    },
+    {
+      "term": "Faces",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300251798",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q37017"
+    }
+  ],
+  "objectWikidata_URL": "https://www.wikidata.org/wiki/Q116410361",
+  "isTimelineWork": false,
+  "GalleryNumber": "016"
+}

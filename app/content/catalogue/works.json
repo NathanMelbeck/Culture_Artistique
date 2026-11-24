@@ -1,0 +1,1199 @@
+{
+  "categories": {
+    "mobilier": "Mobilier",
+    "architecture": "Architecture",
+    "peinture": "Peinture",
+    "sculpture": "Sculpture",
+    "textiles": "Textiles et tapisseries",
+    "objets": "Objets et arts décoratifs"
+  },
+  "works": [
+    {
+      "title": "Le coffret de Kemeni : structure et placage",
+      "media": "egypte-kemeni",
+      "date": "Vers 1805 av. J.-C.",
+      "origin": "Thèbes, Assassif, Birabi · tombe CC 25 · Metropolitan Museum of Art, 26.7.1438",
+      "observation": "Volume rectangulaire : observer l’ouverture, les compartiments et le tiroir, qui organisent le rangement.",
+      "status_label": "Meuble conservé",
+      "id": "egypte-kemeni",
+      "category": "objets",
+      "kind": "Coffrets",
+      "periods": [
+        "egypte"
+      ],
+      "course_chapters": {
+        "egypte": "mobilier"
+      },
+      "provenance": "Égypte",
+      "sort_year": -1805,
+      "materials": [
+        "Bois",
+        "Ébène",
+        "Ivoire",
+        "Argent"
+      ],
+      "techniques": [
+        "Placage"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/egypte-kemeni.webp"
+    },
+    {
+      "title": "La chaise de Reniseneb : pieds animaliers et dossier",
+      "media": "egypte-reniseneb",
+      "date": "Vers 1450 av. J.-C.",
+      "origin": "Haute-Égypte, Thèbes · Metropolitan Museum of Art, 68.58",
+      "observation": "Pieds à caractère animal : repérer les pattes sculptées et la silhouette des jambes.",
+      "status_label": "Meuble conservé",
+      "id": "egypte-reniseneb",
+      "category": "mobilier",
+      "kind": "Sièges",
+      "periods": [
+        "egypte"
+      ],
+      "course_chapters": {
+        "egypte": "mobilier"
+      },
+      "provenance": "Égypte",
+      "sort_year": -1450,
+      "materials": [
+        "Bois",
+        "Ébène",
+        "Ivoire"
+      ],
+      "techniques": [
+        "Incrustation"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/egypte-reniseneb.webp"
+    },
+    {
+      "title": "Le tabouret bas : une assise tressée dans un cadre",
+      "media": "egypte-tabouret",
+      "date": "Vers 1991–1450 av. J.-C.",
+      "origin": "Thèbes, Assassif · Metropolitan Museum of Art, 14.10.3",
+      "observation": "Quatre pieds courts portent un cadre sans dossier ni accoudoirs : la silhouette est celle d’un tabouret bas.",
+      "status_label": "Meuble conservé",
+      "id": "egypte-tabouret",
+      "category": "mobilier",
+      "kind": "Sièges",
+      "periods": [
+        "egypte"
+      ],
+      "course_chapters": {
+        "egypte": "mobilier"
+      },
+      "provenance": "Égypte",
+      "sort_year": -1991,
+      "materials": [
+        "Bois",
+        "Roseau"
+      ],
+      "techniques": [
+        "Tressage"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/egypte-tabouret.webp"
+    },
+    {
+      "title": "L’appui-tête : une forme adaptée au repos",
+      "media": "egypte-appui-tete",
+      "date": "Vers 1550–1300 av. J.-C.",
+      "origin": "Thèbes, Dra Abou el-Naga · tombe CC 37 · Metropolitan Museum of Art, 12.181.308",
+      "observation": "Partie supérieure concave : observer la courbe qui reçoit la tête et ses extrémités relevées.",
+      "status_label": "Meuble conservé",
+      "id": "egypte-appui-tete",
+      "category": "mobilier",
+      "kind": "Appuis-tête",
+      "periods": [
+        "egypte"
+      ],
+      "course_chapters": {
+        "egypte": "mobilier"
+      },
+      "provenance": "Égypte",
+      "sort_year": -1550,
+      "materials": [
+        "Bois"
+      ],
+      "techniques": [],
+      "thumbnail": "res://assets/catalogue/thumbnails/egypte-appui-tete.webp"
+    },
+    {
+      "title": "Tabouret d’enfant en bois",
+      "date": "1295–1188 av. J.-C.",
+      "origin": "Égypte, XIXe dynastie",
+      "observation": "Comparer la hauteur des pieds à la largeur de l’assise. Ce petit siège conserve la silhouette d’un tabouret malgré son échelle.",
+      "media": "cma-1914.805",
+      "status_label": "Meuble conservé",
+      "id": "cma-1914.805",
+      "category": "mobilier",
+      "kind": "Sièges",
+      "periods": [
+        "egypte"
+      ],
+      "course_chapters": {
+        "egypte": "catalogue"
+      },
+      "provenance": "Égypte",
+      "sort_year": -1295,
+      "materials": [
+        "Bois"
+      ],
+      "techniques": [],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1914.805.webp"
+    },
+    {
+      "title": "Appui-tête funéraire d’Irout",
+      "date": "Vers 2454–2140 av. J.-C.",
+      "origin": "Égypte, Ancien Empire",
+      "observation": "Le travertin transpose en pierre la forme d’un appui-tête. Une inscription sur la colonne nomme Irout, destinataire du mobilier funéraire.",
+      "media": "cma-1914.626",
+      "status_label": "Objet funéraire antique",
+      "id": "cma-1914.626",
+      "category": "mobilier",
+      "kind": "Appuis-tête",
+      "periods": [
+        "egypte"
+      ],
+      "course_chapters": {
+        "egypte": "catalogue"
+      },
+      "provenance": "Égypte",
+      "sort_year": -2454,
+      "materials": [
+        "Travertin"
+      ],
+      "techniques": [],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1914.626.webp"
+    },
+    {
+      "media": "egypte-ronde-bosse",
+      "title": "Statue assise d’Hatchepsout",
+      "date": "Vers 1473–1458 av. J.-C.",
+      "origin": "Thèbes, Égypte",
+      "observation": "Statue assise d’Hatchepsout, vers 1473–1458 av. J.-C. Calcaire dur et peinture ; provenance : Deir el-Bahari et Assassif, Thèbes. Des cassures et des raccords restent visibles.",
+      "status_label": "Œuvre conservée",
+      "id": "egypte-ronde-bosse",
+      "category": "sculpture",
+      "kind": "Statues",
+      "periods": [
+        "egypte"
+      ],
+      "course_chapters": {
+        "egypte": "sculpture"
+      },
+      "provenance": "Égypte",
+      "sort_year": -1473,
+      "materials": [
+        "Calcaire"
+      ],
+      "techniques": [
+        "Ronde-bosse",
+        "Polychromie"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/egypte-ronde-bosse.webp"
+    },
+    {
+      "title": "Un siège représenté sur une stèle grecque",
+      "media": "grece-stele-siege",
+      "date": "Vers 375–350 av. J.-C.",
+      "origin": "Grèce, Attique · Metropolitan Museum of Art, 65.11.11",
+      "observation": "Le dossier se lit derrière le dos du personnage : suivre sa ligne jusqu’à l’assise.",
+      "status_label": "Représentation antique",
+      "id": "grece-stele-siege",
+      "category": "mobilier",
+      "kind": "Sièges",
+      "periods": [
+        "grece"
+      ],
+      "course_chapters": {
+        "grece": "motifs-mobilier"
+      },
+      "provenance": "Grèce",
+      "sort_year": -375,
+      "materials": [
+        "Marbre"
+      ],
+      "techniques": [
+        "Relief"
+      ],
+      "materials_note": "Matériau de la représentation antique.",
+      "thumbnail": "res://assets/catalogue/thumbnails/grece-stele-siege.webp"
+    },
+    {
+      "title": "La klinè : cadre de lit et coussins du banquet",
+      "media": "grece-banquet-lits",
+      "date": "Vers 480 av. J.-C.",
+      "origin": "Grèce, Attique · Metropolitan Museum of Art, 20.246",
+      "observation": "Cadre rectangulaire surélevé : repérer les traverses et les pieds droits sous la surface où reposent les convives.",
+      "status_label": "Mobilier peint sur une coupe",
+      "maker": "Coupe signée par Hiéron, potier. Peinture attribuée à Makron.",
+      "id": "grece-banquet-lits",
+      "category": "mobilier",
+      "kind": "Lits",
+      "periods": [
+        "grece"
+      ],
+      "course_chapters": {
+        "grece": "motifs-mobilier"
+      },
+      "provenance": "Grèce",
+      "sort_year": -480,
+      "materials": [
+        "Terre cuite"
+      ],
+      "techniques": [
+        "Figures rouges"
+      ],
+      "materials_note": "Matériau de la représentation antique.",
+      "thumbnail": "res://assets/catalogue/thumbnails/grece-banquet-lits.webp"
+    },
+    {
+      "title": "Les tables de service : un mobilier lié au banquet",
+      "media": "grece-banquet-tables",
+      "date": "Vers 480 av. J.-C.",
+      "origin": "Grèce, Attique · Metropolitan Museum of Art, 20.246",
+      "observation": "Plateau étroit, présenté devant les convives : rechercher le rapport entre sa hauteur et celle du lit.",
+      "status_label": "Mobilier peint sur une coupe",
+      "maker": "Coupe signée par Hiéron, potier. Peinture attribuée à Makron.",
+      "id": "grece-banquet-tables",
+      "category": "mobilier",
+      "kind": "Tables",
+      "periods": [
+        "grece"
+      ],
+      "course_chapters": {
+        "grece": "motifs-mobilier"
+      },
+      "provenance": "Grèce",
+      "sort_year": -480,
+      "materials": [
+        "Terre cuite"
+      ],
+      "techniques": [
+        "Figures rouges"
+      ],
+      "materials_note": "Matériau de la représentation antique.",
+      "thumbnail": "res://assets/catalogue/thumbnails/grece-banquet-tables.webp"
+    },
+    {
+      "title": "Tête de mule pour un lit de banquet",
+      "date": "200–100 av. J.-C.",
+      "origin": "Grèce hellénistique",
+      "observation": "Cette garniture en bronze appartenait à l’extrémité relevée d’un lit. La crinière et les oreilles rejetées en arrière animent le profil du meuble.",
+      "media": "cma-1943.68",
+      "status_label": "Garniture originale",
+      "id": "cma-1943.68",
+      "category": "mobilier",
+      "kind": "Garnitures de lit",
+      "periods": [
+        "grece"
+      ],
+      "course_chapters": {
+        "grece": "catalogue"
+      },
+      "provenance": "Grèce",
+      "sort_year": -200,
+      "materials": [
+        "Bronze"
+      ],
+      "techniques": [],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1943.68.webp"
+    },
+    {
+      "title": "Plaque à tête de Gorgone",
+      "date": "Vers 525–475 av. J.-C.",
+      "origin": "Monde grec, Italie méridionale",
+      "observation": "La tête en terre cuite a été moulée. Le musée propose une fixation sur un cercueil en bois ou sur un autre meuble funéraire. Cette destination reste hypothétique.",
+      "media": "cma-1994.8",
+      "status_label": "Applique antique",
+      "id": "cma-1994.8",
+      "category": "objets",
+      "kind": "Appliques",
+      "periods": [
+        "grece"
+      ],
+      "course_chapters": {
+        "grece": "catalogue"
+      },
+      "provenance": "Italie",
+      "sort_year": -525,
+      "materials": [
+        "Terre cuite"
+      ],
+      "techniques": [
+        "Moulage"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1994.8.webp"
+    },
+    {
+      "media": "grece-colonne-ionique",
+      "title": "Colonne ionique du temple d’Artémis",
+      "date": "Vers 300 av. J.-C.",
+      "origin": "Sardes, actuelle Turquie",
+      "observation": "Éléments de colonne ionique grecque en marbre, vers 300 av. J.-C., temple d’Artémis à Sardes, en actuelle Turquie. Le montage omet la majeure partie du fût ; certaines parties sont restaurées et la base profilée sous le tore est une copie de l’original.",
+      "status_label": "Éléments antiques et parties restaurées",
+      "id": "grece-colonne-ionique",
+      "category": "architecture",
+      "kind": "Colonnes",
+      "periods": [
+        "grece"
+      ],
+      "course_chapters": {
+        "grece": "ordres"
+      },
+      "provenance": "Turquie",
+      "sort_year": -300,
+      "materials": [
+        "Marbre"
+      ],
+      "techniques": [
+        "Ordre ionique"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/grece-colonne-ionique.webp"
+    },
+    {
+      "media": "grece-vase",
+      "title": "Amphore attique à figures noires",
+      "date": "Vers 540 av. J.-C.",
+      "origin": "Attique, Grèce",
+      "observation": "Amphore attique à figures noires, attribuée à Exékias, vers 540 av. J.-C. Terre cuite, époque archaïque. Le décor montre notamment un char et des personnages.",
+      "status_label": "Œuvre conservée",
+      "maker": "Attribuée à Exékias.",
+      "id": "grece-vase",
+      "category": "objets",
+      "kind": "Vases",
+      "periods": [
+        "grece"
+      ],
+      "course_chapters": {
+        "grece": "mythes-images"
+      },
+      "provenance": "Grèce",
+      "sort_year": -540,
+      "materials": [
+        "Terre cuite"
+      ],
+      "techniques": [
+        "Figures noires"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/grece-vase.webp"
+    },
+    {
+      "title": "Le lit et son marchepied : structure et revêtement décoratif",
+      "media": "rome-lit",
+      "date": "Ier–IIe siècle apr. J.-C.",
+      "origin": "Monde romain · Metropolitan Museum of Art, 17.190.2076",
+      "observation": "Volume allongé et extrémités relevées : observer les montants et les appuis qui encadrent la surface de repos.",
+      "status_label": "Meuble conservé",
+      "id": "rome-lit",
+      "category": "mobilier",
+      "kind": "Lits",
+      "periods": [
+        "rome"
+      ],
+      "course_chapters": {
+        "rome": "mobilier"
+      },
+      "provenance": "Monde romain",
+      "sort_year": 1,
+      "materials": [
+        "Bois",
+        "Os",
+        "Verre"
+      ],
+      "techniques": [],
+      "thumbnail": "res://assets/catalogue/thumbnails/rome-lit.webp"
+    },
+    {
+      "title": "Une table d’apparat en marbre et bronze",
+      "media": "rome-table",
+      "date": "Ier siècle apr. J.-C.",
+      "origin": "Monde romain · Metropolitan Museum of Art, 06.1021.301",
+      "observation": "Plateau rectangulaire : observer sa bordure et le contraste entre la pierre et le métal.",
+      "status_label": "Meuble conservé",
+      "id": "rome-table",
+      "category": "mobilier",
+      "kind": "Tables",
+      "periods": [
+        "rome"
+      ],
+      "course_chapters": {
+        "rome": "mobilier"
+      },
+      "provenance": "Monde romain",
+      "sort_year": 1,
+      "materials": [
+        "Marbre",
+        "Bronze"
+      ],
+      "techniques": [],
+      "thumbnail": "res://assets/catalogue/thumbnails/rome-table.webp"
+    },
+    {
+      "title": "Un pied de table : le motif animalier devient un élément porteur",
+      "media": "rome-pied-table",
+      "date": "Ier–IIe siècle apr. J.-C.",
+      "origin": "Monde romain · Metropolitan Museum of Art, 23.160.83",
+      "observation": "Forme verticale du pied : rechercher la partie destinée à recevoir une charge.",
+      "status_label": "Fragment de mobilier conservé",
+      "id": "rome-pied-table",
+      "category": "mobilier",
+      "kind": "Tables",
+      "periods": [
+        "rome"
+      ],
+      "course_chapters": {
+        "rome": "mobilier"
+      },
+      "provenance": "Monde romain",
+      "sort_year": 1,
+      "materials": [
+        "Marbre"
+      ],
+      "techniques": [
+        "Sculpture"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/rome-pied-table.webp"
+    },
+    {
+      "title": "Le candélabre : un équipement pour éclairer l’intérieur",
+      "media": "rome-candelabre",
+      "date": "Vers le Ier siècle apr. J.-C.",
+      "origin": "Monde romain · Metropolitan Museum of Art, 08.258.15",
+      "observation": "Fût élancé : suivre la ligne verticale qui élève la source lumineuse.",
+      "status_label": "Équipement d’ameublement conservé",
+      "id": "rome-candelabre",
+      "category": "objets",
+      "kind": "Luminaires",
+      "periods": [
+        "rome"
+      ],
+      "course_chapters": {
+        "rome": "mobilier"
+      },
+      "provenance": "Monde romain",
+      "sort_year": 1,
+      "materials": [
+        "Bronze"
+      ],
+      "techniques": [],
+      "thumbnail": "res://assets/catalogue/thumbnails/rome-candelabre.webp"
+    },
+    {
+      "title": "Buste de Silène pour un lit",
+      "date": "1–125 apr. J.-C.",
+      "origin": "Italie romaine",
+      "observation": "Le buste de bronze garnissait le fulcrum, l’appui relevé à l’extrémité d’un lit. Observer les boucles serrées de la barbe.",
+      "media": "cma-1974.88",
+      "status_label": "Garniture originale",
+      "id": "cma-1974.88",
+      "category": "mobilier",
+      "kind": "Garnitures de lit",
+      "periods": [
+        "rome"
+      ],
+      "course_chapters": {
+        "rome": "catalogue"
+      },
+      "provenance": "Italie",
+      "sort_year": 1,
+      "materials": [
+        "Bronze"
+      ],
+      "techniques": [],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1974.88.webp"
+    },
+    {
+      "title": "Candélabre aux pattes de fauve",
+      "date": "Ier siècle av. J.-C.",
+      "origin": "Italie romaine",
+      "observation": "Les cannelures verticales font monter le regard depuis les pattes animales jusqu’au petit cratère qui couronne le fût.",
+      "media": "cma-1953.11",
+      "status_label": "Équipement conservé",
+      "id": "cma-1953.11",
+      "category": "objets",
+      "kind": "Luminaires",
+      "periods": [
+        "rome"
+      ],
+      "course_chapters": {
+        "rome": "catalogue"
+      },
+      "provenance": "Italie",
+      "sort_year": -100,
+      "materials": [
+        "Bronze"
+      ],
+      "techniques": [],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1953.11.webp"
+    },
+    {
+      "media": "rome-chapiteau-corinthien",
+      "title": "Chapiteau de pilastre corinthien",
+      "date": "Première moitié du Ier siècle apr. J.-C.",
+      "origin": "Monde romain",
+      "observation": "Chapiteau romain de pilastre, première moitié du Ier siècle apr. J.-C. Marbre. Les feuilles d’acanthe et les enroulements composent un décor corinthien destiné à un élément vertical plat.",
+      "status_label": "Œuvre conservée",
+      "id": "rome-chapiteau-corinthien",
+      "category": "architecture",
+      "kind": "Chapiteaux",
+      "periods": [
+        "rome"
+      ],
+      "course_chapters": {
+        "rome": "colonnes"
+      },
+      "provenance": "Monde romain",
+      "sort_year": 1,
+      "materials": [
+        "Marbre"
+      ],
+      "techniques": [
+        "Ordre corinthien"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/rome-chapiteau-corinthien.webp"
+    },
+    {
+      "media": "rome-peinture",
+      "title": "Portrait de la jeune femme aux tablettes",
+      "date": "55–79 apr. J.-C.",
+      "origin": "Pompéi, Italie · Musée archéologique national de Naples, inv. 9084",
+      "observation": "Portrait peint d’une femme tenant un stylet et des tablettes. Ces accessoires évoquent l’écriture et la culture.",
+      "status_label": "Œuvre conservée",
+      "source_url": "https://artsandculture.google.com/asset/saffo/NQHJ4PX9zPcpzg?hl=fr",
+      "id": "rome-peinture",
+      "category": "peinture",
+      "kind": "Portraits",
+      "periods": [
+        "rome"
+      ],
+      "course_chapters": {
+        "rome": "pouvoir-images"
+      },
+      "provenance": "Italie",
+      "sort_year": 55,
+      "materials": [
+        "Enduit"
+      ],
+      "techniques": [
+        "Peinture murale"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/rome-peinture.webp"
+    },
+    {
+      "media": "roman-cathedre-avignon",
+      "title": "Cathèdre de Notre-Dame des Doms",
+      "date": "XIIe siècle",
+      "origin": "Avignon, Provence",
+      "status_label": "Siège épiscopal conservé · dessin documentaire",
+      "observation": "Les accotoirs sont taillés dans deux joues de marbre blanc. Sur la joue visible, un lion ailé représente saint Marc. Cette vue de trois quarts permet de suivre d’un seul regard le dossier, l’assise et la découpe des accotoirs.",
+      "id": "roman-cathedre-avignon",
+      "category": "mobilier",
+      "kind": "Sièges",
+      "periods": [
+        "roman"
+      ],
+      "course_chapters": {
+        "roman": "catalogue"
+      },
+      "provenance": "France",
+      "sort_year": 1101,
+      "materials": [
+        "Marbre"
+      ],
+      "techniques": [
+        "Sculpture"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/roman-cathedre-avignon.webp"
+    },
+    {
+      "media": "roman-table-saint-sernin",
+      "title": "Table d’autel de Saint-Sernin",
+      "date": "Consacrée en 1096",
+      "origin": "Toulouse, basilique Saint-Sernin",
+      "status_label": "Table liturgique conservée",
+      "observation": "Observez la tranche du plateau en marbre. Le relief se lit sur cette faible épaisseur, au-dessus du vide entre les appuis. La pièce datée et signée est la table elle-même.",
+      "maker": "Bernard Gilduin, sculpteur de la table.",
+      "id": "roman-table-saint-sernin",
+      "category": "mobilier",
+      "kind": "Autels",
+      "periods": [
+        "roman"
+      ],
+      "course_chapters": {
+        "roman": "catalogue"
+      },
+      "provenance": "France",
+      "sort_year": 1096,
+      "materials": [
+        "Marbre"
+      ],
+      "techniques": [
+        "Relief"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/roman-table-saint-sernin.webp"
+    },
+    {
+      "media": "roman-autel-avenas",
+      "title": "Autel sculpté d’Avenas",
+      "date": "XIIe siècle",
+      "origin": "Avenas, Beaujolais",
+      "status_label": "Autel conservé · restauré en 1987",
+      "observation": "La table déborde légèrement de la caisse en pierre. Vue de côté, sa rive forme une corniche au-dessus du bas-relief. Comparez ce volume fermé avec le plateau porté sur des appuis à Saint-Sernin.",
+      "id": "roman-autel-avenas",
+      "category": "mobilier",
+      "kind": "Autels",
+      "periods": [
+        "roman"
+      ],
+      "course_chapters": {
+        "roman": "catalogue"
+      },
+      "provenance": "France",
+      "sort_year": 1101,
+      "materials": [
+        "Pierre"
+      ],
+      "techniques": [
+        "Relief"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/roman-autel-avenas.webp"
+    },
+    {
+      "media": "roman-chasse-champagnat",
+      "title": "Châsse de Champagnat",
+      "date": "Vers 1150",
+      "origin": "Fabriquée à Limoges, provenant de l’église Saint-Martial de Champagnat",
+      "status_label": "Coffret-reliquaire conservé",
+      "observation": "Les longs côtés du coffret et ses deux pignons composent un petit édifice à toit en bâtière, c’est-à-dire à deux versants. Le cuivre doré sépare les couleurs de l’émail champlevé dans les figures.",
+      "id": "roman-chasse-champagnat",
+      "category": "objets",
+      "kind": "Reliquaires",
+      "periods": [
+        "roman"
+      ],
+      "course_chapters": {
+        "roman": "catalogue"
+      },
+      "provenance": "France",
+      "sort_year": 1150,
+      "materials": [
+        "Cuivre",
+        "Émail"
+      ],
+      "techniques": [
+        "Champlevé"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/roman-chasse-champagnat.webp"
+    },
+    {
+      "media": "cma-1931.462",
+      "title": "Autel portatif de la comtesse Gertrude",
+      "date": "Vers 1045",
+      "origin": "Allemagne, peut-être Basse-Saxe",
+      "observation": "L’autel se transporte comme un coffret. Sur le dessus, une dalle de porphyre délimite la surface de célébration.",
+      "status_label": "Objet conservé",
+      "maker": "Commanditaire : la comtesse Gertrude de Brunswick.",
+      "id": "cma-1931.462",
+      "category": "mobilier",
+      "kind": "Autels",
+      "periods": [
+        "roman"
+      ],
+      "course_chapters": {
+        "roman": "mobilier"
+      },
+      "provenance": "Allemagne",
+      "sort_year": 1045,
+      "materials": [
+        "Bois",
+        "Or",
+        "Porphyre",
+        "Émail"
+      ],
+      "techniques": [
+        "Cloisonné"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1931.462.webp"
+    },
+    {
+      "title": "Le trône de la Vierge en majesté",
+      "date": "Vers 1150–1200",
+      "origin": "Auvergne, France",
+      "observation": "La vue de profil dégage le bord de l’assise sous le manteau. Cette sculpture en noyer polychrome montre un siège roman tel qu’il a été représenté.",
+      "media": "cma-2012.52",
+      "status_label": "Siège représenté dans une sculpture romane",
+      "id": "cma-2012.52",
+      "category": "mobilier",
+      "kind": "Sièges",
+      "periods": [
+        "roman"
+      ],
+      "course_chapters": {
+        "roman": "mobilier"
+      },
+      "provenance": "France",
+      "sort_year": 1150,
+      "materials": [
+        "Noyer"
+      ],
+      "techniques": [
+        "Polychromie"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-2012.52.webp"
+    },
+    {
+      "media": "cma-1953.362",
+      "title": "Coffret en buis sculpté",
+      "date": "Vers 1050",
+      "origin": "Angleterre, peut-être les West Midlands",
+      "observation": "La petite surface de chaque paroi accueille plusieurs épisodes de la vie du Christ. Sa fonction de reliquaire reste une hypothèse.",
+      "status_label": "Objet conservé",
+      "id": "cma-1953.362",
+      "category": "objets",
+      "kind": "Coffrets",
+      "periods": [
+        "roman"
+      ],
+      "course_chapters": {
+        "roman": "mobilier"
+      },
+      "provenance": "Angleterre",
+      "sort_year": 1050,
+      "materials": [
+        "Buis",
+        "Verre"
+      ],
+      "techniques": [
+        "Sculpture"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1953.362.webp"
+    },
+    {
+      "media": "cma-1949.16",
+      "title": "Plaques médiévales d’un coffret émaillé",
+      "date": "Peut-être 1100–1150",
+      "origin": "Peut-être Allemagne du Nord",
+      "observation": "Les plaques médiévales sont montées sur une âme en bois moderne. Une radiographie suggère que l’objet a pu servir de pied de croix.",
+      "status_label": "Plaques médiévales sur une âme moderne",
+      "id": "cma-1949.16",
+      "category": "objets",
+      "kind": "Coffrets",
+      "periods": [
+        "roman"
+      ],
+      "course_chapters": {
+        "roman": "mobilier"
+      },
+      "provenance": "Allemagne (attribution incertaine)",
+      "sort_year": 1100,
+      "materials": [
+        "Cuivre",
+        "Émail"
+      ],
+      "techniques": [
+        "Champlevé"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1949.16.webp"
+    },
+    {
+      "media": "cma-1922.359",
+      "title": "Plaque de la Crucifixion pour un autel portatif",
+      "date": "1050–1100",
+      "origin": "Basse vallée du Rhin",
+      "observation": "Cette plaque constitue un fragment de parement. Son format et son relief expliquent comment un autel transportable pouvait porter un cycle sculpté sur ses flancs.",
+      "status_label": "Fragment original",
+      "id": "cma-1922.359",
+      "category": "objets",
+      "kind": "Plaques de parement",
+      "periods": [
+        "roman"
+      ],
+      "course_chapters": {
+        "roman": "mobilier"
+      },
+      "provenance": "Basse vallée du Rhin",
+      "sort_year": 1050,
+      "materials": [
+        "Ivoire de morse"
+      ],
+      "techniques": [
+        "Relief"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1922.359.webp"
+    },
+    {
+      "media": "cma-1952.152",
+      "title": "Lampas aux griffons du reliquaire de sainte Librada",
+      "date": "1100–1150",
+      "origin": "Almería, Espagne",
+      "observation": "Cette étoffe issue d’un atelier de l’Espagne islamique témoigne de la circulation des soieries dans les trésors chrétiens.",
+      "status_label": "Étoffe conservée",
+      "id": "cma-1952.152",
+      "category": "textiles",
+      "kind": "Étoffes",
+      "periods": [
+        "roman"
+      ],
+      "course_chapters": {
+        "roman": "catalogue"
+      },
+      "provenance": "Espagne",
+      "sort_year": 1100,
+      "materials": [
+        "Soie",
+        "Or"
+      ],
+      "techniques": [
+        "Lampas"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1952.152.webp"
+    },
+    {
+      "media": "cma-1968.35",
+      "title": "Chapiteau de Marthe et Marie",
+      "date": "1145–1165",
+      "origin": "Région de Foix, Ariège",
+      "observation": "Chapiteau de Marthe et Marie. 1145–1165. Région de Foix, Ariège.",
+      "status_label": "Œuvre conservée",
+      "id": "cma-1968.35",
+      "category": "architecture",
+      "kind": "Chapiteaux",
+      "periods": [
+        "roman"
+      ],
+      "course_chapters": {
+        "roman": "arts"
+      },
+      "provenance": "France",
+      "sort_year": 1145,
+      "materials": [
+        "Grès"
+      ],
+      "techniques": [
+        "Relief",
+        "Polychromie"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1968.35.webp"
+    },
+    {
+      "media": "gothique-armoire-noyon",
+      "title": "Armoire à pentures de la cathédrale de Noyon",
+      "date": "XIIIe siècle",
+      "origin": "Noyon, Picardie",
+      "status_label": "Armoire conservée",
+      "observation": "Repérez les deux registres de battants. Les pentures, longues bandes de fer articulées, se ramifient en volutes sur les planches. Leurs alignements permettent de distinguer les ouvrants même lorsque l’armoire est fermée.",
+      "id": "gothique-armoire-noyon",
+      "category": "mobilier",
+      "kind": "Armoires",
+      "periods": [
+        "gothique"
+      ],
+      "course_chapters": {
+        "gothique": "catalogue"
+      },
+      "provenance": "France",
+      "sort_year": 1201,
+      "materials": [
+        "Bois",
+        "Fer"
+      ],
+      "techniques": [],
+      "thumbnail": "res://assets/catalogue/thumbnails/gothique-armoire-noyon.webp"
+    },
+    {
+      "media": "gothique-siege-noyer",
+      "title": "Siège en noyer à dossier enveloppant",
+      "date": "XVe siècle",
+      "origin": "France · Metropolitan Museum of Art, inv. 41.100.125",
+      "status_label": "Siège conservé",
+      "observation": "Le dossier incurvé enveloppe l’assise et rejoint les montants latéraux. De petites arcatures sculptées rythment la façade sous le siège. Comparez cette assise fermée avec le piètement ouvert du siège en fer.",
+      "id": "gothique-siege-noyer",
+      "category": "mobilier",
+      "kind": "Sièges",
+      "periods": [
+        "gothique"
+      ],
+      "course_chapters": {
+        "gothique": "catalogue"
+      },
+      "provenance": "France",
+      "sort_year": 1401,
+      "materials": [
+        "Noyer"
+      ],
+      "techniques": [
+        "Sculpture"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/gothique-siege-noyer.webp"
+    },
+    {
+      "media": "gothique-coffre-arcatures",
+      "title": "Coffre en bois à façade sculptée",
+      "date": "Fin du XVe siècle",
+      "origin": "France · Metropolitan Museum of Art, inv. 57.144.3",
+      "status_label": "Coffre conservé",
+      "observation": "Sous le couvercle plat, le décor de façade combine courbes, pointes et petites arcatures. Les panneaux s’inscrivent entre des montants qui descendent jusqu’au sol. Le côté reçoit son propre décor.",
+      "id": "gothique-coffre-arcatures",
+      "category": "mobilier",
+      "kind": "Coffres",
+      "periods": [
+        "gothique"
+      ],
+      "course_chapters": {
+        "gothique": "catalogue"
+      },
+      "provenance": "France",
+      "sort_year": 1475,
+      "materials": [
+        "Bois"
+      ],
+      "techniques": [
+        "Sculpture"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/gothique-coffre-arcatures.webp"
+    },
+    {
+      "media": "gothique-siege-fer",
+      "title": "Siège en fer à piètement croisé",
+      "date": "Fin du XIVe – début du XVe siècle",
+      "origin": "France · Metropolitan Museum of Art, inv. 47.101.77a, b",
+      "status_label": "Siège conservé",
+      "observation": "Suivez les tiges de fer depuis le sol jusqu’aux extrémités relevées. Elles se croisent sous l’assise et dégagent l’espace entre les pieds. Le musée identifie aussi de la soie sur cette pièce.",
+      "id": "gothique-siege-fer",
+      "category": "mobilier",
+      "kind": "Sièges",
+      "periods": [
+        "gothique"
+      ],
+      "course_chapters": {
+        "gothique": "catalogue"
+      },
+      "provenance": "France",
+      "sort_year": 1375,
+      "materials": [
+        "Fer",
+        "Soie"
+      ],
+      "techniques": [],
+      "thumbnail": "res://assets/catalogue/thumbnails/gothique-siege-fer.webp"
+    },
+    {
+      "media": "gothique-stalles-dais",
+      "title": "Trois stalles en chêne sous un dais",
+      "date": "XVe siècle",
+      "origin": "France · Metropolitan Museum of Art, inv. 16.32.23",
+      "status_label": "Ensemble de sièges conservé",
+      "observation": "Le dais, ou couronnement en surplomb, réunit les trois places. Sous ce toit commun, chaque dossier présente un réseau d’arcatures aveugles sculptées dans le bois. Les assises sont ici abaissées.",
+      "id": "gothique-stalles-dais",
+      "category": "mobilier",
+      "kind": "Sièges",
+      "periods": [
+        "gothique"
+      ],
+      "course_chapters": {
+        "gothique": "catalogue"
+      },
+      "provenance": "France",
+      "sort_year": 1401,
+      "materials": [
+        "Chêne"
+      ],
+      "techniques": [
+        "Sculpture"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/gothique-stalles-dais.webp"
+    },
+    {
+      "media": "gothique-coffret-fer",
+      "title": "Coffret à enveloppe de fer",
+      "date": "XVe siècle",
+      "origin": "France · Metropolitan Museum of Art, inv. 47.100.75a, b",
+      "status_label": "Coffret conservé",
+      "observation": "Le fer ajouré laisse lire le réseau de losanges devant l’âme en bois. Une poignée annulaire se détache sur le côté. La notice précise que l’intérieur est garni de tissu et de cuir.",
+      "id": "gothique-coffret-fer",
+      "category": "objets",
+      "kind": "Coffrets",
+      "periods": [
+        "gothique"
+      ],
+      "course_chapters": {
+        "gothique": "catalogue"
+      },
+      "provenance": "France",
+      "sort_year": 1401,
+      "materials": [
+        "Fer",
+        "Bois",
+        "Cuir",
+        "Tissu"
+      ],
+      "techniques": [],
+      "thumbnail": "res://assets/catalogue/thumbnails/gothique-coffret-fer.webp"
+    },
+    {
+      "media": "gothique-stalles-misericordes",
+      "title": "Deux stalles à miséricordes sculptées",
+      "date": "XVe siècle",
+      "origin": "France · Metropolitan Museum of Art, inv. 16.32.15",
+      "status_label": "Ensemble de sièges conservé",
+      "observation": "Les deux assises sont relevées. Le relief visible sous chacune est une miséricorde, petite console sur laquelle on pouvait prendre appui debout. Comparez cette position avec les assises abaissées des trois stalles à dais.",
+      "id": "gothique-stalles-misericordes",
+      "category": "mobilier",
+      "kind": "Sièges",
+      "periods": [
+        "gothique"
+      ],
+      "course_chapters": {
+        "gothique": "catalogue"
+      },
+      "provenance": "France",
+      "sort_year": 1401,
+      "materials": [
+        "Chêne"
+      ],
+      "techniques": [
+        "Sculpture"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/gothique-stalles-misericordes.webp"
+    },
+    {
+      "media": "cma-1971.270",
+      "title": "Panneaux de stalles de Pedralbes",
+      "date": "Vers 1330–1340",
+      "origin": "Monastère de Pedralbes, Catalogne",
+      "observation": "Ces panneaux en noyer appartenaient à des sièges de chœur. Leur présentation actuelle rassemble des pièces dont la disposition d’origine différait.",
+      "status_label": "Panneaux originaux de stalles",
+      "id": "cma-1971.270",
+      "category": "mobilier",
+      "kind": "Sièges",
+      "periods": [
+        "gothique"
+      ],
+      "course_chapters": {
+        "gothique": "mobilier"
+      },
+      "provenance": "Espagne",
+      "sort_year": 1330,
+      "materials": [
+        "Noyer"
+      ],
+      "techniques": [
+        "Relief"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1971.270.webp"
+    },
+    {
+      "media": "cma-1999.211",
+      "title": "Coffret de cuir aux scènes courtoises",
+      "date": "Vers 1350–1400",
+      "origin": "France",
+      "observation": "Sous le cuir décoré se trouve une âme en bois. Le gainage enveloppe un volume rigide et reçoit le sujet figuré.",
+      "status_label": "Objet conservé",
+      "id": "cma-1999.211",
+      "category": "objets",
+      "kind": "Coffrets",
+      "periods": [
+        "gothique"
+      ],
+      "course_chapters": {
+        "gothique": "mobilier"
+      },
+      "provenance": "France",
+      "sort_year": 1350,
+      "materials": [
+        "Cuir",
+        "Fer",
+        "Bois"
+      ],
+      "techniques": [
+        "Repoussé",
+        "Incision"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1999.211.webp"
+    },
+    {
+      "media": "cma-1954.600",
+      "title": "Coffret domestique peint et doré",
+      "date": "Fin du XIVe siècle",
+      "origin": "Italie, peut-être Sienne",
+      "observation": "Un coffret de cette taille pouvait recevoir bijoux, peignes ou sceaux. Sa finition précieuse participe à l’ameublement d’un intérieur privé.",
+      "status_label": "Objet conservé",
+      "id": "cma-1954.600",
+      "category": "objets",
+      "kind": "Coffrets",
+      "periods": [
+        "gothique"
+      ],
+      "course_chapters": {
+        "gothique": "mobilier"
+      },
+      "provenance": "Italie",
+      "sort_year": 1375,
+      "materials": [
+        "Bois",
+        "Gesso"
+      ],
+      "techniques": [
+        "Peinture",
+        "Dorure"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1954.600.webp"
+    },
+    {
+      "media": "cma-1915.535",
+      "title": "Coffre de mariage catalan",
+      "date": "Vers 1500",
+      "origin": "Catalogne, peut-être Barcelone",
+      "observation": "Ce coffre se situe à la limite du cours. Le musée rattache sa forme à une production barcelonaise apparue à la fin du XVe siècle.",
+      "status_label": "Objet conservé",
+      "id": "cma-1915.535",
+      "category": "mobilier",
+      "kind": "Coffres",
+      "periods": [
+        "gothique"
+      ],
+      "course_chapters": {
+        "gothique": "mobilier"
+      },
+      "provenance": "Espagne",
+      "sort_year": 1500,
+      "materials": [
+        "Bois"
+      ],
+      "techniques": [
+        "Peinture",
+        "Dorure"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1915.535.webp"
+    },
+    {
+      "media": "cma-1978.36",
+      "title": "Broderie de parement d’autel",
+      "date": "Années 1330 ou 1340",
+      "origin": "Florence, Italie",
+      "observation": "La bande brodée surmontait un grand parement textile. Le décor d’un meuble liturgique pouvait ainsi varier avec les étoffes.",
+      "status_label": "Parement textile conservé",
+      "id": "cma-1978.36",
+      "category": "textiles",
+      "kind": "Parements d’autel",
+      "periods": [
+        "gothique"
+      ],
+      "course_chapters": {
+        "gothique": "arts"
+      },
+      "provenance": "Italie",
+      "sort_year": 1330,
+      "materials": [
+        "Lin",
+        "Soie",
+        "Or"
+      ],
+      "techniques": [
+        "Broderie",
+        "Couchure"
+      ],
+      "thumbnail": "res://assets/catalogue/thumbnails/cma-1978.36.webp"
+    }
+  ]
+}

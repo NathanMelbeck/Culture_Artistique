@@ -98,7 +98,7 @@ func _run() -> void:
 		await frames()
 		for index in course["chapters"].size():
 			for block in course["chapters"][index]["blocks"]:
-				if block["type"] in ["image", "catalogue_item", "furniture_example", "column_example", "annotated_image"]:
+				if block["type"] in ["image", "furniture_example", "column_example", "annotated_image"]:
 					expected_figures += 1
 			browser._child.show_chapter(index)
 			await frames(3)

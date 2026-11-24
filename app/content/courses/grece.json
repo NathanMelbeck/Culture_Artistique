@@ -708,56 +708,8 @@
     {
       "id": "catalogue",
       "title": "Catalogue",
-      "intro": "Objets et détails à comparer. Ouvrez une image pour l’agrandir.",
-      "blocks": [
-        {
-          "type": "catalogue_item",
-          "title": "Un siège représenté sur une stèle grecque",
-          "media": "grece-stele-siege",
-          "date": "Vers 375–350 av. J.-C.",
-          "origin": "Grèce, Attique · Metropolitan Museum of Art, 65.11.11",
-          "observation": "Le dossier se lit derrière le dos du personnage : suivre sa ligne jusqu’à l’assise.",
-          "status_label": "Représentation antique"
-        },
-        {
-          "type": "catalogue_item",
-          "title": "La klinè : cadre de lit et coussins du banquet",
-          "media": "grece-banquet-lits",
-          "date": "Vers 480 av. J.-C.",
-          "origin": "Grèce, Attique · Metropolitan Museum of Art, 20.246",
-          "observation": "Cadre rectangulaire surélevé : repérer les traverses et les pieds droits sous la surface où reposent les convives.",
-          "status_label": "Mobilier peint sur une coupe",
-          "maker": "Coupe signée par Hiéron, potier. Peinture attribuée à Makron."
-        },
-        {
-          "type": "catalogue_item",
-          "title": "Les tables de service : un mobilier lié au banquet",
-          "media": "grece-banquet-tables",
-          "date": "Vers 480 av. J.-C.",
-          "origin": "Grèce, Attique · Metropolitan Museum of Art, 20.246",
-          "observation": "Plateau étroit, présenté devant les convives : rechercher le rapport entre sa hauteur et celle du lit.",
-          "status_label": "Mobilier peint sur une coupe",
-          "maker": "Coupe signée par Hiéron, potier. Peinture attribuée à Makron."
-        },
-        {
-          "type": "catalogue_item",
-          "title": "Tête de mule pour un lit de banquet",
-          "date": "200–100 av. J.-C.",
-          "origin": "Grèce hellénistique",
-          "observation": "Cette garniture en bronze appartenait à l’extrémité relevée d’un lit. La crinière et les oreilles rejetées en arrière animent le profil du meuble.",
-          "media": "cma-1943.68",
-          "status_label": "Garniture originale"
-        },
-        {
-          "type": "catalogue_item",
-          "title": "Plaque à tête de Gorgone",
-          "date": "Vers 525–475 av. J.-C.",
-          "origin": "Monde grec, Italie méridionale",
-          "observation": "La tête en terre cuite a été moulée. Le musée propose une fixation sur un cercueil en bois ou sur un autre meuble funéraire. Cette destination reste hypothétique.",
-          "media": "cma-1994.8",
-          "status_label": "Applique antique"
-        }
-      ]
+      "intro": "Choisissez une œuvre pour examiner son image, sa datation et sa provenance.",
+      "blocks": []
     },
     {
       "id": "synthese",

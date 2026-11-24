@@ -1,0 +1,80 @@
+{
+  "objectID": 463833,
+  "isHighlight": false,
+  "accessionNumber": "16.32.23",
+  "accessionYear": "1916",
+  "isPublicDomain": true,
+  "primaryImage": "https://images.metmuseum.org/CRDImages/md/original/DP279507.jpg",
+  "primaryImageSmall": "https://images.metmuseum.org/CRDImages/md/web-large/DP279507.jpg",
+  "additionalImages": [
+    "https://images.metmuseum.org/CRDImages/md/original/sf16-32-23s4.jpg",
+    "https://images.metmuseum.org/CRDImages/md/original/sf16-32-23s3.jpg",
+    "https://images.metmuseum.org/CRDImages/md/original/sf16-32-23d3.jpg",
+    "https://images.metmuseum.org/CRDImages/md/original/sf16-32-23d1.jpg"
+  ],
+  "constituents": null,
+  "department": "Medieval Art",
+  "objectName": "Choir stall",
+  "title": "Triple Choir Stall with Canopy",
+  "culture": "French",
+  "period": "",
+  "dynasty": "",
+  "reign": "",
+  "portfolio": "",
+  "artistRole": "",
+  "artistPrefix": "",
+  "artistDisplayName": "",
+  "artistDisplayBio": "",
+  "artistSuffix": "",
+  "artistAlphaSort": "",
+  "artistNationality": "",
+  "artistBeginDate": "",
+  "artistEndDate": "",
+  "artistGender": "",
+  "artistWikidata_URL": "",
+  "artistULAN_URL": "",
+  "objectDate": "15th century",
+  "objectBeginDate": 1400,
+  "objectEndDate": 1499,
+  "medium": "Oak",
+  "dimensions": "Overall: 121 x 80 5/8 x 17 7/8 in. (307.3 x 204.8 x 45.4 cm)",
+  "measurements": [
+    {
+      "elementName": "Overall",
+      "elementDescription": null,
+      "elementMeasurements": {
+        "Depth": 45.4026,
+        "Height": 307.3406,
+        "Width": 204.7879
+      }
+    }
+  ],
+  "creditLine": "Gift of J. Pierpont Morgan, 1916",
+  "geographyType": "Made in",
+  "city": "",
+  "state": "",
+  "county": "",
+  "country": "France",
+  "region": "",
+  "subregion": "",
+  "locale": "",
+  "locus": "",
+  "excavation": "",
+  "river": "",
+  "classification": "Woodwork-Furniture",
+  "rightsAndReproduction": "",
+  "linkResource": "",
+  "metadataDate": "2025-12-18T09:36:43.22Z",
+  "repository": "Metropolitan Museum of Art, New York, NY",
+  "objectURL": "https://www.metmuseum.org/art/collection/search/463833",
+  "tags": [
+    {
+      "term": "Lions",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300310388",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q140"
+    }
+  ],
+  "objectWikidata_URL": "https://www.wikidata.org/wiki/Q116274804",
+  "isTimelineWork": false,
+  "GalleryNumber": "305"
+}

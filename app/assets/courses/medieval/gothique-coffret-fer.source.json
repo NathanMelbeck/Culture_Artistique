@@ -1,0 +1,93 @@
+{
+  "objectID": 470126,
+  "isHighlight": false,
+  "accessionNumber": "47.100.75a, b",
+  "accessionYear": "1947",
+  "isPublicDomain": true,
+  "primaryImage": "https://images.metmuseum.org/CRDImages/cl/original/sf47-100-75abs05.jpg",
+  "primaryImageSmall": "https://images.metmuseum.org/CRDImages/cl/web-large/sf47-100-75abs05.jpg",
+  "additionalImages": [
+    "https://images.metmuseum.org/CRDImages/cl/original/sf47-100-75abs01.jpg",
+    "https://images.metmuseum.org/CRDImages/cl/original/sf47-100-75abs02.jpg",
+    "https://images.metmuseum.org/CRDImages/cl/original/sf47-100-75abs03.jpg",
+    "https://images.metmuseum.org/CRDImages/cl/original/sf47-100-75abs04.jpg",
+    "https://images.metmuseum.org/CRDImages/cl/original/sf47-100-75abs10.jpg",
+    "https://images.metmuseum.org/CRDImages/cl/original/sf47-100-75abs11.jpg",
+    "https://images.metmuseum.org/CRDImages/cl/original/sf47-100-75abs09.jpg",
+    "https://images.metmuseum.org/CRDImages/cl/original/sf47-100-75bs1.jpg"
+  ],
+  "constituents": null,
+  "department": "The Cloisters",
+  "objectName": "Coffer",
+  "title": "Coffer",
+  "culture": "French",
+  "period": "",
+  "dynasty": "",
+  "reign": "",
+  "portfolio": "",
+  "artistRole": "",
+  "artistPrefix": "",
+  "artistDisplayName": "",
+  "artistDisplayBio": "",
+  "artistSuffix": "",
+  "artistAlphaSort": "",
+  "artistNationality": "",
+  "artistBeginDate": "",
+  "artistEndDate": "",
+  "artistGender": "",
+  "artistWikidata_URL": "",
+  "artistULAN_URL": "",
+  "objectDate": "15th century",
+  "objectBeginDate": 1400,
+  "objectEndDate": 1499,
+  "medium": "Iron on wood core with cloth and leather interior",
+  "dimensions": "Overall (coffer): 4 3/4 x 6 1/8 x 8 7/16 in. (12 x 15.6 x 21.5 cm)\r\nOverall (key): 2 5/16 x 13/16 x 5/16 in. (5.9 x 2.1 x 0.8 cm)",
+  "measurements": [
+    {
+      "elementName": "Overall",
+      "elementDescription": "key",
+      "elementMeasurements": {
+        "Depth": 0.8,
+        "Length": 5.9,
+        "Width": 2.1
+      }
+    },
+    {
+      "elementName": "Overall",
+      "elementDescription": "coffer",
+      "elementMeasurements": {
+        "Depth": 21.5,
+        "Height": 12,
+        "Width": 15.6
+      }
+    }
+  ],
+  "creditLine": "Fletcher Fund, 1947",
+  "geographyType": "",
+  "city": "",
+  "state": "",
+  "county": "",
+  "country": "",
+  "region": "",
+  "subregion": "",
+  "locale": "",
+  "locus": "",
+  "excavation": "",
+  "river": "",
+  "classification": "Metalwork-Iron",
+  "rightsAndReproduction": "",
+  "linkResource": "",
+  "metadataDate": "2025-01-31T04:54:36.6Z",
+  "repository": "Metropolitan Museum of Art, New York, NY",
+  "objectURL": "https://www.metmuseum.org/art/collection/search/470126",
+  "tags": [
+    {
+      "term": "Chests",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300038992",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q366134"
+    }
+  ],
+  "objectWikidata_URL": "https://www.wikidata.org/wiki/Q116256767",
+  "isTimelineWork": false,
+  "GalleryNumber": "307"
+}
