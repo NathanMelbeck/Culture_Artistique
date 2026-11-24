@@ -766,5 +766,440 @@
     "provider": "wikimedia",
     "visual_role": "reference_diagram",
     "full_width": true
+  },
+  "cma-1931.462": {
+    "path": "res://assets/courses/medieval/cma-1931.462.webp",
+    "title": "Autel portatif de la comtesse Gertrude",
+    "caption": "Autel portatif de la comtesse Gertrude. Vers 1045. Allemagne, peut-être Basse-Saxe.",
+    "alt": "L’autel se transporte comme un coffret. Sur le dessus, une dalle de porphyre délimite la surface de célébration.",
+    "source": "https://clevelandart.org/art/1931.462",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/medieval/cma-1931.462.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1931.462/1931.462_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1931.462 · CC0",
+    "source_image_sha256": "ee1d49143eaece7a1f4cfee845e5d75a554d84c9451f0767798cc798eaf2fb95",
+    "historical_status": "original",
+    "subject_periods": [
+      "roman"
+    ]
+  },
+  "cma-1953.362": {
+    "path": "res://assets/courses/medieval/cma-1953.362.webp",
+    "title": "Coffret en buis sculpté",
+    "caption": "Coffret en buis sculpté. Vers 1050. Angleterre, peut-être les West Midlands.",
+    "alt": "La petite surface de chaque paroi accueille plusieurs épisodes de la vie du Christ. Sa fonction de reliquaire reste une hypothèse.",
+    "source": "https://clevelandart.org/art/1953.362",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/medieval/cma-1953.362.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1953.362/1953.362_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1953.362 · CC0",
+    "source_image_sha256": "6798e6feb11e778b884f741e6afaa4b361b60041d516c153f339c59168e28c36",
+    "historical_status": "original",
+    "subject_periods": [
+      "roman"
+    ]
+  },
+  "cma-1949.16": {
+    "path": "res://assets/courses/medieval/cma-1949.16.webp",
+    "title": "Plaques médiévales d’un coffret émaillé",
+    "caption": "Plaques médiévales d’un coffret émaillé. Peut-être 1100–1150. Peut-être Allemagne du Nord.",
+    "alt": "Les plaques médiévales sont montées sur une âme en bois moderne. Une radiographie suggère que l’objet a pu servir de pied de croix.",
+    "source": "https://clevelandart.org/art/1949.16",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/medieval/cma-1949.16.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1949.16/1949.16_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1949.16 · CC0",
+    "source_image_sha256": "9de6a11f264f2f2e17b0e00ea40ee8b76f1cb2cefb39b916bacf36b77a4c3b18",
+    "historical_status": "original",
+    "subject_periods": [
+      "roman"
+    ]
+  },
+  "cma-1922.359": {
+    "path": "res://assets/courses/medieval/cma-1922.359.webp",
+    "title": "Plaque de la Crucifixion pour un autel portatif",
+    "caption": "Plaque de la Crucifixion pour un autel portatif. 1050–1100. Basse vallée du Rhin.",
+    "alt": "Cette plaque constitue un fragment de parement. Son format et son relief expliquent comment un autel transportable pouvait porter un cycle sculpté sur ses flancs.",
+    "source": "https://clevelandart.org/art/1922.359",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/medieval/cma-1922.359.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1922.359/1922.359_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1922.359 · CC0",
+    "source_image_sha256": "c74c2616a062cd7db3282de9c64d14c1537f04642b4a2ec3a71ad73757276f63",
+    "historical_status": "original",
+    "subject_periods": [
+      "roman"
+    ]
+  },
+  "cma-1952.152": {
+    "path": "res://assets/courses/medieval/cma-1952.152.webp",
+    "title": "Lampas aux griffons du reliquaire de sainte Librada",
+    "caption": "Lampas aux griffons du reliquaire de sainte Librada. 1100–1150. Almería, Espagne.",
+    "alt": "Cette étoffe issue d’un atelier de l’Espagne islamique témoigne de la circulation des soieries dans les trésors chrétiens.",
+    "source": "https://clevelandart.org/art/1952.152",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/medieval/cma-1952.152.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1952.152/1952.152_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1952.152 · CC0",
+    "source_image_sha256": "64965d5caa7b29d3cb305881849aa4f319d9da3a8a3bbc7fd01d48e86f66086c",
+    "historical_status": "original",
+    "subject_periods": [
+      "roman"
+    ]
+  },
+  "cma-1971.270": {
+    "path": "res://assets/courses/medieval/cma-1971.270.webp",
+    "title": "Panneaux de stalles de Pedralbes",
+    "caption": "Panneaux de stalles de Pedralbes. Vers 1330–1340. Monastère de Pedralbes, Catalogne.",
+    "alt": "Ces panneaux en noyer appartenaient à des sièges de chœur. Leur présentation actuelle rassemble des pièces dont la disposition d’origine différait.",
+    "source": "https://clevelandart.org/art/1971.270",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/medieval/cma-1971.270.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1971.270/1971.270_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1971.270 · CC0",
+    "source_image_sha256": "861c115d452fcec51c31da2a3d8bf668d9a33b049b085032cb9836a0fda8b6f1",
+    "historical_status": "original",
+    "subject_periods": [
+      "gothique"
+    ]
+  },
+  "cma-1999.211": {
+    "path": "res://assets/courses/medieval/cma-1999.211.webp",
+    "title": "Coffret de cuir aux scènes courtoises",
+    "caption": "Coffret de cuir aux scènes courtoises. Vers 1350–1400. France.",
+    "alt": "Sous le cuir décoré se trouve une âme en bois. Le gainage enveloppe un volume rigide et reçoit le sujet figuré.",
+    "source": "https://clevelandart.org/art/1999.211",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/medieval/cma-1999.211.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1999.211/1999.211_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1999.211 · CC0",
+    "source_image_sha256": "df20c0c0d097d8a385c0d79b63fd1f9a004e9fc8431d74741676ade89ce2419f",
+    "historical_status": "original",
+    "subject_periods": [
+      "gothique"
+    ]
+  },
+  "cma-1954.600": {
+    "path": "res://assets/courses/medieval/cma-1954.600.webp",
+    "title": "Coffret domestique peint et doré",
+    "caption": "Coffret domestique peint et doré. Fin du XIVe siècle. Italie, peut-être Sienne.",
+    "alt": "Un coffret de cette taille pouvait recevoir bijoux, peignes ou sceaux. Sa finition précieuse participe à l’ameublement d’un intérieur privé.",
+    "source": "https://clevelandart.org/art/1954.600",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/medieval/cma-1954.600.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1954.600/1954.600_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1954.600 · CC0",
+    "source_image_sha256": "3078e851ab5e20b8acbde2c465651ed0bbd7d28f183865308a2004a7fc59c3e0",
+    "historical_status": "original",
+    "subject_periods": [
+      "gothique"
+    ]
+  },
+  "cma-1915.535": {
+    "path": "res://assets/courses/medieval/cma-1915.535.webp",
+    "title": "Coffre de mariage catalan",
+    "caption": "Coffre de mariage catalan. Vers 1500. Catalogne, peut-être Barcelone.",
+    "alt": "Ce coffre se situe à la limite du cours. Le musée rattache sa forme à une production barcelonaise apparue à la fin du XVe siècle.",
+    "source": "https://clevelandart.org/art/1915.535",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/medieval/cma-1915.535.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1915.535/1915.535_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1915.535 · CC0",
+    "source_image_sha256": "ba83702e21e3973c18e6a00af8c416a87ee13a1601ba18ae978df79142bd36e1",
+    "historical_status": "original",
+    "subject_periods": [
+      "gothique"
+    ]
+  },
+  "cma-1978.36": {
+    "path": "res://assets/courses/medieval/cma-1978.36.webp",
+    "title": "Broderie de parement d’autel",
+    "caption": "Broderie de parement d’autel. Années 1330 ou 1340. Florence, Italie.",
+    "alt": "La bande brodée surmontait un grand parement textile. Le décor d’un meuble liturgique pouvait ainsi varier avec les étoffes.",
+    "source": "https://clevelandart.org/art/1978.36",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/medieval/cma-1978.36.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1978.36/1978.36_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1978.36 · CC0",
+    "source_image_sha256": "5111663dd3dd9dfb7ecf47ce71dbde180e7c1a366327500fb02e483120110b0e",
+    "historical_status": "original",
+    "subject_periods": [
+      "gothique"
+    ]
+  },
+  "cma-1968.35": {
+    "path": "res://assets/courses/medieval/cma-1968.35.webp",
+    "title": "Chapiteau de Marthe et Marie",
+    "caption": "Chapiteau de Marthe et Marie. 1145–1165. Région de Foix, Ariège.",
+    "alt": "La scène de la résurrection de Lazare se lit sur plusieurs faces du chapiteau. Des inscriptions identifient les personnages et des traces de couleur subsistent sur le grès.",
+    "source": "https://clevelandart.org/art/1968.35",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/medieval/cma-1968.35.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1968.35/1968.35_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1968.35 · CC0",
+    "source_image_sha256": "3eb81d4d0607aa287d3e3a1d16ab5228f7a12ae8334e1286e063f1f76e537600"
+  },
+  "roman-voutes": {
+    "path": "res://assets/courses/medieval/roman-voutes.webp",
+    "title": "Profils des arcs et des voûtes",
+    "caption": "Profils des arcs et des voûtes. Suivre la courbure du berceau et les lignes de rencontre des voûtes.",
+    "alt": "Profils des arcs et des voûtes. Suivre la courbure du berceau et les lignes de rencontre des voûtes.",
+    "source": "documents_support_cours/moyen age roman et gothique.pdf",
+    "source_page": 6,
+    "source_image_index": 0,
+    "original_image_name": "Im7.jpg",
+    "original_size": [
+      450,
+      663
+    ],
+    "source_image_sha256": "c60cbce42a422f3666eb242021fcddc768e1d7916c85c9768cb0c0eb8acc3a7a",
+    "rights": "Droits d’origine conservés.",
+    "credit": "Document pédagogique de Nathan, page 6",
+    "display_credit": "",
+    "full_width": true
+  },
+  "roman-interieur": {
+    "path": "res://assets/courses/medieval/roman-interieur.webp",
+    "title": "Espace voûté",
+    "caption": "Espace voûté. Les arcs retombent sur des colonnes dont les chapiteaux marquent le départ des courbes.",
+    "alt": "Espace voûté. Les arcs retombent sur des colonnes dont les chapiteaux marquent le départ des courbes.",
+    "source": "documents_support_cours/moyen age roman et gothique.pdf",
+    "source_page": 5,
+    "source_image_index": 0,
+    "original_image_name": "Im6.png",
+    "original_size": [
+      1600,
+      1064
+    ],
+    "source_image_sha256": "2583c6928e79152a4d61aa89fbd0abbf81d36798f5b14b7c45be571038dce302",
+    "rights": "Droits d’origine conservés.",
+    "credit": "Document pédagogique de Nathan, page 5",
+    "display_credit": "",
+    "full_width": true
+  },
+  "gothique-nef": {
+    "path": "res://assets/courses/medieval/gothique-nef.webp",
+    "title": "Élévation gothique",
+    "caption": "Élévation gothique. Les lignes des piliers se prolongent vers les nervures des voûtes.",
+    "alt": "Élévation gothique. Les lignes des piliers se prolongent vers les nervures des voûtes.",
+    "source": "documents_support_cours/moyen age roman et gothique.pdf",
+    "source_page": 13,
+    "source_image_index": 0,
+    "original_image_name": "Im16.png",
+    "original_size": [
+      1023,
+      683
+    ],
+    "source_image_sha256": "221066d1f1bcda6d07f0111c5c8f695122d8dd8a394a1f6bb24d511b7788d2bf",
+    "rights": "Droits d’origine conservés.",
+    "credit": "Document pédagogique de Nathan, page 13",
+    "display_credit": "",
+    "full_width": true
+  },
+  "gothique-voutes": {
+    "path": "res://assets/courses/medieval/gothique-voutes.webp",
+    "title": "Plans de voûtes sur croisées d’ogives",
+    "caption": "Plans de voûtes sur croisées d’ogives. Les diagonales relient les angles de chaque travée.",
+    "alt": "Plans de voûtes sur croisées d’ogives. Les diagonales relient les angles de chaque travée.",
+    "source": "documents_support_cours/moyen age roman et gothique.pdf",
+    "source_page": 15,
+    "source_image_index": 1,
+    "original_image_name": "Im21.jpg",
+    "original_size": [
+      1515,
+      2088
+    ],
+    "source_image_sha256": "22420c75d507deed19525a0485763789a1cd3dd3e0be58540aa82c9571c3321c",
+    "rights": "Droits d’origine conservés.",
+    "credit": "Document pédagogique de Nathan, page 15",
+    "display_credit": "",
+    "full_width": true,
+    "modifications": "Recadrage de la page de droite et conversion WebP."
+  },
+  "gothique-assemblage": {
+    "path": "res://assets/courses/medieval/gothique-assemblage.webp",
+    "title": "Assemblages du mobilier",
+    "caption": "Coffre, panneau et assemblage chevillé. La coupe inférieure montre le profil du décor en parchemin plissé.",
+    "alt": "Coffre, panneau et assemblage chevillé. La coupe inférieure montre le profil du décor en parchemin plissé.",
+    "source": "documents_support_cours/moyen age roman et gothique.pdf",
+    "source_page": 17,
+    "source_image_index": 0,
+    "original_image_name": "Im23.jpg",
+    "original_size": [
+      392,
+      640
+    ],
+    "source_image_sha256": "7754771eab71a6adf15458785b684f1d3a100511b2904a1add33eff6fb43a7f8",
+    "rights": "Droits d’origine conservés.",
+    "credit": "Document pédagogique de Nathan, page 17",
+    "display_credit": "",
+    "full_width": true
+  },
+  "gothique-enluminure": {
+    "path": "res://assets/courses/medieval/gothique-enluminure.webp",
+    "title": "Page enluminée",
+    "caption": "Page enluminée. Une initiale historiée accueille une scène peinte à l’intérieur de la lettre.",
+    "alt": "Page enluminée. Une initiale historiée accueille une scène peinte à l’intérieur de la lettre.",
+    "source": "documents_support_cours/moyen age roman et gothique.pdf",
+    "source_page": 12,
+    "source_image_index": 1,
+    "original_image_name": "Im15.jpg",
+    "original_size": [
+      500,
+      561
+    ],
+    "source_image_sha256": "522b41802d4fc476dc7685325e55f70e69c59a43a127daacdcda292ad5ab6b7b",
+    "rights": "Droits d’origine conservés.",
+    "credit": "Document pédagogique de Nathan, page 12",
+    "display_credit": "",
+    "full_width": true
+  },
+  "cma-1914.805": {
+    "path": "res://assets/courses/museum/cma-1914.805.webp",
+    "title": "Tabouret d’enfant en bois",
+    "caption": "Tabouret d’enfant en bois. 1295–1188 av. J.-C..",
+    "alt": "Comparer la hauteur des pieds à la largeur de l’assise. Ce petit siège conserve la silhouette d’un tabouret malgré son échelle.",
+    "source": "https://clevelandart.org/art/1914.805",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/museum/cma-1914.805.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1914.805/1914.805_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1914.805 · CC0",
+    "source_image_sha256": "fc73a935634bde8bccd62d1711942f3ce318b6fc610ca6c67d34db8a0239ff36",
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ]
+  },
+  "cma-1914.626": {
+    "path": "res://assets/courses/museum/cma-1914.626.webp",
+    "title": "Appui-tête funéraire d’Irout",
+    "caption": "Appui-tête funéraire d’Irout. Vers 2454–2140 av. J.-C..",
+    "alt": "Le travertin transpose en pierre la forme d’un appui-tête. Une inscription sur la colonne nomme Irout, destinataire du mobilier funéraire.",
+    "source": "https://clevelandart.org/art/1914.626",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/museum/cma-1914.626.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1914.626/1914.626_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1914.626 · CC0",
+    "source_image_sha256": "67b7952ae7d95ccb37aa2d9da5ebbf25cd24216c196ede3f14723640e80908b8",
+    "historical_status": "original",
+    "subject_periods": [
+      "egypte"
+    ]
+  },
+  "cma-1943.68": {
+    "path": "res://assets/courses/museum/cma-1943.68.webp",
+    "title": "Tête de mule pour un lit de banquet",
+    "caption": "Tête de mule pour un lit de banquet. 200–100 av. J.-C..",
+    "alt": "Cette garniture en bronze appartenait à l’extrémité relevée d’un lit. La crinière et les oreilles rejetées en arrière animent le profil du meuble.",
+    "source": "https://clevelandart.org/art/1943.68",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/museum/cma-1943.68.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1943.68/1943.68_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1943.68 · CC0",
+    "source_image_sha256": "73b12126f7f9e7ae276fd5c7bfb6488f1b7a4b671622a6635bd594903ce23971",
+    "historical_status": "original",
+    "subject_periods": [
+      "grece"
+    ]
+  },
+  "cma-1994.8": {
+    "path": "res://assets/courses/museum/cma-1994.8.webp",
+    "title": "Plaque à tête de Gorgone",
+    "caption": "Plaque à tête de Gorgone. Vers 525–475 av. J.-C..",
+    "alt": "La tête en terre cuite a été moulée. Le musée propose une fixation sur un cercueil en bois ou sur un autre meuble funéraire. Cette destination reste hypothétique.",
+    "source": "https://clevelandart.org/art/1994.8",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/museum/cma-1994.8.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1994.8/1994.8_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1994.8 · CC0",
+    "source_image_sha256": "2e55be5f82aefebd1a8b3491015b6c7d16a960f213961a2780b7b3e83fa2cb19",
+    "historical_status": "original",
+    "subject_periods": [
+      "grece"
+    ]
+  },
+  "cma-1974.88": {
+    "path": "res://assets/courses/museum/cma-1974.88.webp",
+    "title": "Buste de Silène pour un lit",
+    "caption": "Buste de Silène pour un lit. 1–125 apr. J.-C..",
+    "alt": "Le buste de bronze garnissait le fulcrum, l’appui relevé à l’extrémité d’un lit. Observer les boucles serrées de la barbe.",
+    "source": "https://clevelandart.org/art/1974.88",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/museum/cma-1974.88.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1974.88/1974.88_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1974.88 · CC0",
+    "source_image_sha256": "ba7f7ecb24ff96cd093e149f92fb4e7609fdf066f510257904d128f4b9c8a377",
+    "historical_status": "original",
+    "subject_periods": [
+      "rome"
+    ]
+  },
+  "cma-1953.11": {
+    "path": "res://assets/courses/museum/cma-1953.11.webp",
+    "title": "Candélabre aux pattes de fauve",
+    "caption": "Candélabre aux pattes de fauve. Ier siècle av. J.-C..",
+    "alt": "Les cannelures verticales font monter le regard depuis les pattes animales jusqu’au petit cratère qui couronne le fût.",
+    "source": "https://clevelandart.org/art/1953.11",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/museum/cma-1953.11.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/1953.11/1953.11_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 1953.11 · CC0",
+    "source_image_sha256": "fe8e9bc95e805a690d34e334011565df65152d5bd7998a32892fe4c5c5484cc4",
+    "historical_status": "original",
+    "subject_periods": [
+      "rome"
+    ]
+  },
+  "cma-2012.52": {
+    "path": "res://assets/courses/medieval/cma-2012.52.webp",
+    "title": "Le trône de la Vierge en majesté",
+    "caption": "Vierge à l’Enfant en majesté. Vue de profil du siège représenté, Auvergne, vers 1150–1200.",
+    "alt": "La vue de profil dégage le bord de l’assise sous le manteau. Cette sculpture en noyer polychrome montre un siège roman tel qu’il a été représenté.",
+    "source": "https://clevelandart.org/art/2012.52",
+    "provider": "cleveland",
+    "metadata_file": "app/assets/courses/medieval/cma-2012.52.source.json",
+    "download_url": "https://openaccess-cdn.clevelandart.org/2012.52/2012.52_alt6_web.jpg",
+    "rights": "CC0",
+    "credit": "Cleveland Museum of Art",
+    "display_credit": "Cleveland Museum of Art · 2012.52 · CC0",
+    "source_image_sha256": "47c0372f2929b51a726d12ab1106e6e9ad66b73cb32652e774f183e5992c6fad",
+    "historical_status": "period_representation",
+    "subject_periods": [
+      "roman"
+    ]
   }
 }

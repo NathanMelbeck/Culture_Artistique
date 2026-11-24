@@ -5,6 +5,7 @@ var media: Dictionary
 var texture: Texture2D
 var media_id: String
 var markers: Array = []
+var show_caption := true
 var display_height: float = 0.0
 var _image: CourseMarkedTexture
 
@@ -17,6 +18,13 @@ func _ready() -> void:
 	_image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	_image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	_image.tooltip_text = media.get("alt", "")
+	if texture != null:
+		_image.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		_image.gui_input.connect(func(event: InputEvent) -> void:
+			if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+				_image.accept_event()
+				_open_viewer()
+		)
 	add_child(_image)
 	if not markers.is_empty():
 		add_child(AppTheme.eyebrow("REPÈRES SUR L’IMAGE"))
@@ -25,7 +33,8 @@ func _ready() -> void:
 			var legend := CourseBlock.prose("[b]%s · %s[/b] — %s" % [String.chr(65 + index), marker["label"], marker["definition"]], 16)
 			legend.name = "FigureLegend_" + str(index + 1)
 			add_child(legend)
-	add_child(AppTheme.paragraph(media.get("caption", ""), 14))
+	if show_caption:
+		add_child(AppTheme.paragraph(media.get("caption", ""), 14))
 	var attribution: String = media.get("display_credit", "")
 	if not attribution.is_empty():
 		add_child(AppTheme.paragraph(attribution, 12))

@@ -163,11 +163,7 @@ func setup() -> void:
 		controller._refresh())
 	start = button(controls,"StartFrieze","Distribuer les cartes  →",controller._start_game,true)
 	if controller.session != null and not controller.resume_anchors.is_empty():
-		button(controls, "ResumeFrieze", "Reprendre ma partie", func():
-			controller.anchors = controller.resume_anchors.duplicate()
-			controller.game_mode = controller.session.game_mode
-			controller.mode = "play"
-			controller._refresh())
+		button(controls, "ResumeFrieze", "Reprendre ma partie", controller.resume_game)
 	update_summary()
 
 func update_summary() -> void:
@@ -250,13 +246,13 @@ func collection_tile(grid: Control, card: Dictionary, owned: Dictionary, marker:
 	body.add_child(stripe)
 	var detail := Color("#594824")
 	title(body,category,14,detail).horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	if Table.PHOTOS.has(card.id):
+	if card.has("image"):
 		var artwork := TextureRect.new()
-		artwork.texture = load("res://assets/courses/museum/met-"+Table.PHOTOS[card.id]+".jpg")
+		artwork.texture = load(card.image)
 		artwork.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 		artwork.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		artwork.custom_minimum_size.y = 60
-		artwork.tooltip_text = "The Metropolitan Museum of Art · CC0"
+		artwork.tooltip_text = card.image_credit
 		body.add_child(artwork)
 	var title_area := Control.new()
 	title_area.mouse_filter = MOUSE_FILTER_IGNORE

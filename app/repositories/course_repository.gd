@@ -4,11 +4,14 @@ extends RefCounted
 const CATALOGUE := "res://content/courses/catalogue.json"
 const MEDIA := "res://content/course_media.json"
 var _courses: Array[Dictionary] = []
+var groups: Array = []
 var _media: Dictionary = {}
 
 func _init() -> void:
 	_media = _read(MEDIA)
-	for path in _read(CATALOGUE).get("courses", []):
+	var catalogue := _read(CATALOGUE)
+	groups = catalogue.get("groups", [])
+	for path in catalogue.get("courses", []):
 		var course := _read(path)
 		if not course.get("id", "").is_empty() and not course.get("chapters", []).is_empty():
 			_courses.append(course)
@@ -22,6 +25,12 @@ func _read(path: String) -> Dictionary:
 
 func all() -> Array[Dictionary]:
 	return _courses.duplicate(true)
+
+func group_title(id: String) -> String:
+	for group in groups:
+		if group.id == id:
+			return group.title
+	return ""
 
 func find(id: String) -> Dictionary:
 	for course in _courses:

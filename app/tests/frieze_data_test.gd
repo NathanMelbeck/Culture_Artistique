@@ -38,7 +38,7 @@ func _init() -> void:
 	var included_ids: Array = []
 	for event in filtered:
 		included_ids.append(event["id"])
-	check(repository.events.size() == 24 and repository.events_for(egypt).size() == 5 and "egy-romaine" not in included_ids and "egy-alexandre" not in included_ids and "egy-rosette" not in included_ids and "gre-actium" not in included_ids and "rom-occident" not in included_ids and int(repository.events[-1]["year"]) == 476, "Les événements hors bornes sont exclus des parties sans modifier leurs dates historiques")
+	check(repository.events.filter(func(e): return e.course_id in ["egypte", "grece", "rome"]).size() == 24 and repository.events_for(egypt).size() == 5 and "egy-romaine" not in included_ids and "egy-alexandre" not in included_ids and "egy-rosette" not in included_ids and "gre-actium" not in included_ids and "rom-occident" not in included_ids and repository.events.any(func(e): return e.id == "rom-occident" and int(e.year) == 476), "Les événements hors bornes sont exclus des parties sans modifier leurs dates historiques")
 	var opening := repository.boundary_cards_for(selection)
 	var opening_valid := opening.size() == 4 and repository.cards_for(selection).size() == 23
 	for card in opening:

@@ -1,6 +1,6 @@
 # Culture_Artistique — Architecture et feuille de route
 
-Version : 0.33 — 23 novembre 2026
+Version : 0.34 — 23 novembre 2026
 
 Statut : document de référence initial, à faire évoluer avec les décisions du projet.
 
@@ -631,10 +631,10 @@ Cette étape désigne l'interface d'administration aboutie. Une méthode d'ajout
 
 ### Prochaine reprise — priorités mises à jour le 23 novembre 2026
 
-- [ ] Prévoir un catalogue de mobilier dans chacun des cours d’Égypte, de Grèce et de Rome. Intégrer celui du roman et celui du gothique dès la création de ces deux cours.
+- [x] Les cinq cours présentent un catalogue illustré après « Le Mobilier ».
 
-- [ ] Discuter de la navigation au bilan de la frise. « Quitter » permet de sortir du jeu une fois la partie terminée. « Voir la collection » quitte la frise et ouvre directement la collection.
-- [ ] Prévoir un bouton « Quitter » accessible en permanence pendant la partie, dès le choix des bornes. Préciser ensemble la destination et le devenir d’une partie interrompue.
+- [x] Au bilan, « Quitter » revient aux jeux et « Voir la collection » ouvre les cartes acquises.
+- [x] « Quitter » reste accessible dès les bornes et pendant la saisie. Une partie interrompue se reprend depuis Jeux tant que l’application reste ouverte. Les récompenses sont attribuées au bilan.
 
 - [ ] Avant toute modification du code, demander confirmation explicite à Nathan et attendre son accord, conformément à sa consigne du 17 novembre 2026.
 - [x] Intégrer FRI-12 et FRI-13 dans Godot avec le choix de correction, la seconde tentative, le verrouillage des repères et les bandes de périodes.
@@ -647,8 +647,8 @@ Cette étape désigne l'interface d'administration aboutie. Une méthode d'ajout
 - [x] Attribuer les raretés du catalogue et distinguer le bandeau des événements de celui des repères de période.
 - [x] Proposer dix événements par défaut et le choix du paquet complet (FRI-14).
 - [ ] Enrichir les cours existants avec les nouvelles ressources que Nathan fournira : comparer les apports au contenu actuel, compléter les explications et les exemples, vérifier les sources et la lisibilité des illustrations.
-- [ ] **Prochaine session de code · Moyen Âge.** Créer deux cours distincts, « Roman » et « Gothique », regroupés sous « Moyen Âge ». Rédiger chaque cours à partir du [support commun](<documents_support_cours/moyen age roman et gothique.pdf>), avec vocabulaire technique expliqué, rubrique « Le Mobilier », illustrations authentiques légendées et sourcées et quiz de fin de période avec explications. Relier les fiches déjà intégrées, [Style Roman](<fiche_revision/Style Roman.pdf>) et [Style Gothique](<fiche_revision/Style Gothique.pdf>).
-- [ ] **Chroniques · Moyen Âge.** Permettre de choisir le Moyen Âge entier, le roman seul et le gothique seul. Reprendre les bornes de chaque style dans l’en-tête de sa fiche et créer des cartes d’événements sourcées, rattachées au bon chapitre. Vérifier les trois modes, les sélections traversant plusieurs époques, les repères et couleurs de période, les raretés des événements, leur apparition dans la collection et les renvois depuis la correction.
+- [x] **Cours du Moyen Âge.** Créer deux cours distincts, « Roman » et « Gothique », regroupés sous « Moyen Âge ». Rédiger chaque cours à partir du [support commun](<documents_support_cours/moyen age roman et gothique.pdf>), avec vocabulaire technique expliqué, rubrique « Le Mobilier », illustrations authentiques légendées et sourcées et quiz de fin de période avec explications. Relier les fiches déjà intégrées, [Style Roman](<fiche_revision/Style Roman.pdf>) et [Style Gothique](<fiche_revision/Style Gothique.pdf>).
+- [x] **Chroniques · Moyen Âge.** Permettre de choisir le Moyen Âge entier, le roman seul et le gothique seul. Reprendre les bornes de chaque style dans l’en-tête de sa fiche et créer des cartes d’événements sourcées, rattachées au bon chapitre. Vérifier les trois modes, les sélections traversant plusieurs époques, les repères et couleurs de période, les raretés des événements, leur apparition dans la collection et les renvois depuis la correction.
 - [ ] **Étape ultérieure · Renaissance.** Appliquer la même règle d’intégration aux cours et aux jeux à partir des ressources disponibles à cette étape.
 
 **Frise — décisions et piste restante :** le joueur choisit une carte, l'associe à un repère puis utilise le retour du jeu pour ajuster son raisonnement. La réussite doit donner envie de poursuivre ; une erreur doit permettre une correction compréhensible sans imposer de refaire tout le début de partie.
@@ -752,3 +752,4 @@ Une fonctionnalité n'est marquée terminée qu'après vérification de son comp
 | 22 novembre 2026 | 0.31 | Lots de normales selon la taille de partie et dorure à sept marques sur les cartes déjà possédées. |
 | 23 novembre 2026 | 0.32 | Prochaine session consacrée au roman et au gothique. L’ajout de chaque période couvre les cours et les jeux concernés. |
 | 23 novembre 2026 | 0.33 | Section « Catalogue » prévue dans chaque cours pour comparer de nombreux meubles de la période. |
+| 23 novembre 2026 | 0.34 | Cours roman et gothique, catalogues de mobilier dans les cinq cours, cartes médiévales dans les trois modes de Chroniques et navigation de sortie de partie. |

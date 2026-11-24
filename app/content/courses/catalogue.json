@@ -9,12 +9,22 @@
         "grece",
         "rome"
       ]
+    },
+    {
+      "id": "moyen-age",
+      "title": "Moyen Âge",
+      "periods": [
+        "roman",
+        "gothique"
+      ]
     }
   ],
   "courses": [
     "res://content/courses/egypte.json",
     "res://content/courses/grece.json",
-    "res://content/courses/rome.json"
+    "res://content/courses/rome.json",
+    "res://content/courses/roman.json",
+    "res://content/courses/gothique.json"
   ],
   "editorial_requirements": {
     "furniture_section": {
@@ -53,7 +63,9 @@
         "ionique",
         "corinthien",
         "composite"
-      ]
+      ],
+      "roman": [],
+      "gothique": []
     }
   }
 }

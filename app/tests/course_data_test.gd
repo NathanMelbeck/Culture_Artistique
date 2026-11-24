@@ -22,7 +22,7 @@ func _run() -> void:
 			quiz.answer(int(quiz.current()["correct"]))
 			quiz.advance()
 		all_quizzes_ok = all_quizzes_ok and quiz.score == course["quiz"].size()
-	check(all_quizzes_ok, "Les trois quiz calculent le résultat sans double comptage ni passage sans réponse")
+	check(all_quizzes_ok, "Les quiz de chaque période calculent le résultat sans double comptage ni passage sans réponse")
 	var path := "user://course-validation-%s.json" % Time.get_ticks_usec()
 	var progress := ProgressRepository.new(path)
 	progress.save_quiz("egypte", 3, 4)

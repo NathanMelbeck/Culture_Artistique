@@ -11,7 +11,7 @@ func _ready() -> void:
 	_courses = repository.all()
 	add_theme_constant_override("separation", 16)
 	add_child(AppTheme.eyebrow("COMPRENDRE LES FORMES ET LEURS HISTOIRES"))
-	add_child(AppTheme.label("L’Antiquité, trois regards.", 43, AppTheme.FOREST, true))
+	add_child(AppTheme.label("Les cours par période", 43, AppTheme.FOREST, true))
 	add_child(AppTheme.paragraph("Des cours rédigés pour apprendre à observer : repères historiques, arts, architecture et mobilier.", 17))
 	var row := HBoxContainer.new()
 	add_child(row)
@@ -24,9 +24,13 @@ func _ready() -> void:
 	_filter = OptionButton.new()
 	_filter.name = "CoursePeriodFilter"
 	_filter.custom_minimum_size = Vector2(230, 44)
-	_filter.add_item("Toute l’Antiquité")
+	_filter.add_item("Toutes les périodes")
 	for course in _courses:
 		_filter.add_item(course["title"])
+		_filter.set_item_metadata(_filter.item_count - 1, course.id)
+	for group in repository.groups:
+		_filter.add_item(group.title)
+		_filter.set_item_metadata(_filter.item_count - 1, group.id)
 	_filter.item_selected.connect(func(_index: int) -> void: _show_courses())
 	row.add_child(_filter)
 	var scroll := ScrollContainer.new()
@@ -50,7 +54,7 @@ func _show_courses() -> void:
 		_grid.remove_child(child)
 		child.queue_free()
 	for index in _courses.size():
-		if _filter.selected > 0 and _filter.selected != index + 1:
+		if _filter.selected > 0 and _filter.get_selected_metadata() not in [_courses[index].id, _courses[index].group_id]:
 			continue
 		var course := _courses[index]
 		var panel := PanelContainer.new()
@@ -66,7 +70,7 @@ func _show_courses() -> void:
 		image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 		image.custom_minimum_size.y = 180
 		column.add_child(image)
-		column.add_child(AppTheme.eyebrow("ANTIQUITÉ / %02d" % (index + 1)))
+		column.add_child(AppTheme.eyebrow(repository.group_title(course.group_id).to_upper()))
 		column.add_child(AppTheme.label(course["title"], 30, AppTheme.FOREST, true))
 		column.add_child(AppTheme.label("%d chapitres · %d questions" % [course["chapters"].size(), course["quiz"].size()], 12, AppTheme.MUTED))
 		var summary := AppTheme.paragraph(course["summary"], 16)
@@ -82,7 +86,8 @@ func _show_courses() -> void:
 		open.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		open.pressed.connect(func() -> void: course_requested.emit(course["id"]))
 		column.add_child(open)
+	_adapt()
 
 func _adapt() -> void:
 	if is_instance_valid(_grid):
-		_grid.columns = 3 if size.x >= 1050 else 1
+		_grid.columns = clampi(_grid.get_child_count(), 1, 3) if size.x >= 1050 else 1

@@ -1,0 +1,354 @@
+{
+  "id": "gothique",
+  "period_id": "gothique",
+  "group_id": "moyen-age",
+  "title": "Le style gothique",
+  "subtitle": "Lire le squelette de pierre et les surfaces vitrées.",
+  "summary": "Suivez une nervure de voûte, examinez une stalle et découvrez comment les huchiers construisent un meuble à panneaux.",
+  "cover_media": "gothique-nef",
+  "source_title": "Art roman et art gothique",
+  "objectives": [
+    "Lire le squelette de pierre et les surfaces vitrées.",
+    "Identifier le procédé avant d’interpréter la scène.",
+    "Comprendre la construction à cadre et panneaux, puis lire les décors."
+  ],
+  "references": [
+    {
+      "title": "The Metropolitan Museum of Art — Consécration du chevet de Saint-Denis sous Suger",
+      "url": "https://www.metmuseum.org/essays/gothic-art",
+      "note": "Les chapelles et le déambulatoire ouvrent un espace continu dans ce jalon du premier gothique."
+    },
+    {
+      "title": "Cathédrale de Chartres — Incendie qui précède la reconstruction gothique de Chartres",
+      "url": "https://www.cathedrale-chartres.org/wp-content/uploads/2024/09/Dossier-de-presse-Millenaire.pdf",
+      "note": "En juin 1194, le feu ravage l’édifice. Des éléments plus anciens subsistent lors du nouveau chantier."
+    },
+    {
+      "title": "Cathédrale de Chartres — Dédicace de la cathédrale gothique de Chartres",
+      "url": "https://www.cathedrale-chartres.org/cathedrale/celebrations/le-chapitre/",
+      "note": "La cérémonie du 17 octobre 1260 marque la dédicace de la cathédrale reconstruite."
+    },
+    {
+      "title": "Cleveland Museum of Art — Sculpture des panneaux de stalles de Pedralbes",
+      "url": "https://clevelandart.org/art/1971.270",
+      "note": "Le musée situe les panneaux en noyer vers 1330–1340. L’intervalle est accepté en saisie de date."
+    }
+  ],
+  "chapters": [
+    {
+      "id": "reperes",
+      "title": "Chantiers, villes et ateliers",
+      "intro": "1100–1500 dans la fiche de révision. Au XIIe siècle, roman et gothique coexistent.",
+      "source_pages": [
+        10,
+        11
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dans les villes, évêques, chapitres de chanoines, souverains et commanditaires privés financent différents chantiers. Les ateliers fournissent autant des verrières monumentales que des coffrets domestiques. La destination de l’objet détermine les matériaux, l’échelle et les motifs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le chevet est l’extrémité de l’église du côté du chœur. À Saint-Denis, le chevet édifié sous l’abbé Suger est consacré en 1144. Les chapelles s’ouvrent autour du déambulatoire, passage qui contourne le chœur. Cette organisation favorise la continuité de l’espace et de la lumière."
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Des ogives au remplage",
+      "intro": "Lire le squelette de pierre et les surfaces vitrées.",
+      "source_pages": [
+        13,
+        14,
+        15
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Une travée est l’espace compris entre deux appuis successifs. Les ogives sont les nervures diagonales de la voûte. Elles se rejoignent à la clé. Les voûtains sont les surfaces maçonnées entre les nervures. L’arc brisé décrit un profil à deux courbes qui se rencontrent au sommet."
+        },
+        {
+          "type": "image",
+          "media": "gothique-voutes"
+        },
+        {
+          "type": "paragraph",
+          "text": "À l’extérieur, l’arc-boutant franchit le bas-côté et transmet une partie des poussées de la voûte haute à une culée. Celle-ci forme un appui massif. À l’intérieur, des faisceaux de colonnettes prolongent visuellement les retombées des nervures."
+        },
+        {
+          "type": "image",
+          "media": "gothique-nef"
+        },
+        {
+          "type": "paragraph",
+          "text": "À Chartres, l’incendie de 1194 ouvre une nouvelle campagne de reconstruction. La dédicace de la cathédrale a lieu en 1260. En 1417, la chapelle de Vendôme est ajoutée dans le bas-côté sud. Ces campagnes successives expliquent la présence de formes de plusieurs siècles dans le même édifice. Dans le gothique rayonnant, le remplage, réseau de pierre qui subdivise une baie, réserve une place croissante au verre. Dans le flamboyant, certains réseaux dessinent des courbes en forme de flammes."
+        }
+      ]
+    },
+    {
+      "id": "arts",
+      "title": "Images, vitraux et textiles",
+      "intro": "Identifier le procédé avant d’interpréter la scène.",
+      "source_pages": [
+        12,
+        16
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le verrier assemble des verres colorés dans un réseau de plomb. Il peut préciser un visage ou un pli par de la grisaille, peinture vitrifiable fixée par cuisson. Dans un manuscrit, l’enlumineur travaille à l’échelle de la page. Une initiale historiée contient une scène, souvent liée au texte qu’elle ouvre."
+        },
+        {
+          "type": "image",
+          "media": "gothique-enluminure"
+        },
+        {
+          "type": "paragraph",
+          "text": "En broderie, l’aiguille ajoute un dessin sur un tissu déjà formé. En tapisserie, les trames colorées forment le motif pendant le tissage. Sur le parement florentin, la couchure fixe les fils précieux en surface, là où ils peuvent réfléchir la lumière."
+        },
+        {
+          "type": "image",
+          "media": "cma-1978.36",
+          "display_height": 300
+        }
+      ]
+    },
+    {
+      "id": "mobilier",
+      "title": "Le Mobilier",
+      "intro": "Comprendre la construction à cadre et panneaux, puis lire les décors.",
+      "source_pages": [
+        17,
+        18,
+        19
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le huchier construit notamment coffres et meubles de rangement. Dans une construction à bâti, les montants verticaux et les traverses horizontales constituent le cadre. Le tenon est la partie saillante d’une pièce qui entre dans une mortaise creusée dans l’autre. Une cheville traversante peut verrouiller l’assemblage."
+        },
+        {
+          "type": "image",
+          "media": "gothique-assemblage"
+        },
+        {
+          "type": "paragraph",
+          "text": "La rive du panneau s’engage dans une rainure ménagée à l’intérieur du cadre. Ce montage laisse au panneau une marge pour les variations dimensionnelles du bois. Sur une porte, observer séparément la rainure, la penture et l’entrée de serrure. Le premier indice explique la tenue du panneau, les deux autres son mouvement et sa fermeture."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le chêne et le noyer se prêtent à la sculpture. Le fenestrage transpose des réseaux de fenêtres à l’échelle d’une façade de meuble. Le pli de parchemin est un relief sculpté qui évoque une feuille repliée. Une étoffe, un cuir ou un coussin rapporté se reconnaît par son bord, sa fixation et sa souplesse."
+        },
+        {
+          "type": "furniture_example",
+          "id": "cma-1971-270",
+          "title": "Panneaux de stalles de Pedralbes",
+          "status_label": "Panneaux originaux de stalles",
+          "description": "Ces panneaux en noyer appartenaient à des sièges de chœur. Leur présentation actuelle rassemble des pièces dont la disposition d’origine différait.",
+          "media": "cma-1971.270",
+          "characteristics": [
+            "Une jouée est le panneau qui ferme latéralement une rangée de sièges.",
+            "Les reliefs figurés restent solidaires du fond de bois.",
+            "La taille différente des panneaux aide à distinguer une extrémité de rangée d’une séparation intérieure."
+          ],
+          "reference": {
+            "title": "Cleveland Museum of Art · 1971.270",
+            "text": "Panneaux de stalles de Pedralbes. Vers 1330–1340. Monastère de Pedralbes, Catalogne.",
+            "url": "https://clevelandart.org/art/1971.270"
+          }
+        },
+        {
+          "type": "furniture_example",
+          "id": "cma-1999-211",
+          "title": "Coffret de cuir aux scènes courtoises",
+          "status_label": "Objet conservé",
+          "description": "Sous le cuir décoré se trouve une âme en bois. Le gainage enveloppe un volume rigide et reçoit le sujet figuré.",
+          "media": "cma-1999.211",
+          "characteristics": [
+            "Un cuir incisé présente des traits entaillés en surface.",
+            "Le relief du cuir travaillé au repoussé se distingue des incisions.",
+            "Les garnitures de fer s’ajoutent au cuir et soulignent les points de fermeture."
+          ],
+          "reference": {
+            "title": "Cleveland Museum of Art · 1999.211",
+            "text": "Coffret de cuir aux scènes courtoises. Vers 1350–1400. France.",
+            "url": "https://clevelandart.org/art/1999.211"
+          }
+        },
+        {
+          "type": "furniture_example",
+          "id": "cma-1954-600",
+          "title": "Coffret domestique peint et doré",
+          "status_label": "Objet conservé",
+          "description": "Un coffret de cette taille pouvait recevoir bijoux, peignes ou sceaux. Sa finition précieuse participe à l’ameublement d’un intérieur privé.",
+          "media": "cma-1954.600",
+          "characteristics": [
+            "Le gesso constitue la couche de préparation appliquée sur le bois.",
+            "Les rehauts dorés accompagnent les plages peintes.",
+            "L’entrée de serrure en façade signale un rangement fermé à clé."
+          ],
+          "reference": {
+            "title": "Cleveland Museum of Art · 1954.600",
+            "text": "Coffret domestique peint et doré. Fin du XIVe siècle. Italie, peut-être Sienne.",
+            "url": "https://clevelandart.org/art/1954.600"
+          }
+        },
+        {
+          "type": "furniture_example",
+          "id": "cma-1915-535",
+          "title": "Coffre de mariage catalan",
+          "status_label": "Objet conservé",
+          "description": "Ce coffre se situe à la limite du cours. Le musée rattache sa forme à une production barcelonaise apparue à la fin du XVe siècle.",
+          "media": "cma-1915.535",
+          "characteristics": [
+            "La caisse longue et profonde permet de ranger les vêtements.",
+            "La façade est divisée en panneaux dont les encadrements organisent le décor.",
+            "La sculpture, la peinture et la dorure enrichissent la surface du bois."
+          ],
+          "reference": {
+            "title": "Cleveland Museum of Art · 1915.535",
+            "text": "Coffre de mariage catalan. Vers 1500. Catalogne, peut-être Barcelone.",
+            "url": "https://clevelandart.org/art/1915.535"
+          }
+        }
+      ],
+      "section": "mobilier"
+    },
+    {
+      "id": "catalogue",
+      "title": "Catalogue",
+      "intro": "Sélectionnez une image pour en examiner les détails. Chaque notice donne accès à la collection du musée.",
+      "blocks": [
+        {
+          "type": "catalogue_item",
+          "media": "cma-1971.270",
+          "title": "Panneaux de stalles de Pedralbes",
+          "date": "Vers 1330–1340",
+          "origin": "Monastère de Pedralbes, Catalogne",
+          "observation": "Ces panneaux en noyer appartenaient à des sièges de chœur. Leur présentation actuelle rassemble des pièces dont la disposition d’origine différait.",
+          "status_label": "Panneaux originaux de stalles"
+        },
+        {
+          "type": "catalogue_item",
+          "media": "cma-1999.211",
+          "title": "Coffret de cuir aux scènes courtoises",
+          "date": "Vers 1350–1400",
+          "origin": "France",
+          "observation": "Sous le cuir décoré se trouve une âme en bois. Le gainage enveloppe un volume rigide et reçoit le sujet figuré.",
+          "status_label": "Objet conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "media": "cma-1954.600",
+          "title": "Coffret domestique peint et doré",
+          "date": "Fin du XIVe siècle",
+          "origin": "Italie, peut-être Sienne",
+          "observation": "Un coffret de cette taille pouvait recevoir bijoux, peignes ou sceaux. Sa finition précieuse participe à l’ameublement d’un intérieur privé.",
+          "status_label": "Objet conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "media": "cma-1915.535",
+          "title": "Coffre de mariage catalan",
+          "date": "Vers 1500",
+          "origin": "Catalogne, peut-être Barcelone",
+          "observation": "Ce coffre se situe à la limite du cours. Le musée rattache sa forme à une production barcelonaise apparue à la fin du XVe siècle.",
+          "status_label": "Objet conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "media": "cma-1978.36",
+          "title": "Broderie de parement d’autel",
+          "date": "Années 1330 ou 1340",
+          "origin": "Florence, Italie",
+          "observation": "La bande brodée surmontait un grand parement textile. Le décor d’un meuble liturgique pouvait ainsi varier avec les étoffes.",
+          "status_label": "Parement textile conservé"
+        }
+      ]
+    },
+    {
+      "id": "identifier",
+      "title": "Reconnaître un meuble gothique",
+      "intro": "Relier le décor à la structure et à l’usage.",
+      "source_pages": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Chercher d’abord les lignes continues du bâti. Un panneau à remplages ou à plis peut se trouver à l’intérieur de ce cadre. Sur une stalle, la jouée ferme le côté d’un siège ou d’une rangée. Une miséricorde est une petite console sous une assise rabattable, qui fournit un appui lorsque le siège est relevé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Une arcature sculptée ne constitue pas à elle seule une preuve de datation. Confronter son profil au type d’assemblage, aux matériaux et à la provenance. Le coffre catalan du catalogue montre que certaines formes de la fin du XVe siècle se prolongent autour de 1500."
+        }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "gothique-q1",
+      "chapter": "architecture",
+      "prompt": "Quelle partie de la voûte relie deux angles opposés de la travée ?",
+      "choices": [
+        "La culée",
+        "L’ogive",
+        "La jouée"
+      ],
+      "correct": 1,
+      "explanation": "L’ogive est une nervure diagonale. Les voûtains occupent les surfaces entre les nervures."
+    },
+    {
+      "id": "gothique-q2",
+      "chapter": "mobilier",
+      "prompt": "Dans quel élément s’engage la rive d’un panneau ?",
+      "choices": [
+        "La serrure",
+        "La penture",
+        "La rainure du cadre"
+      ],
+      "correct": 2,
+      "explanation": "La rainure retient le panneau par ses bords. Tenon et mortaise assemblent les pièces du bâti."
+    },
+    {
+      "id": "gothique-q3",
+      "chapter": "arts",
+      "prompt": "Sur le parement florentin, quel geste correspond à la couchure ?",
+      "choices": [
+        "Fixer un fil posé en surface par de petits points",
+        "Creuser une réserve dans le cuivre",
+        "Peindre les contours sur le verre"
+      ],
+      "correct": 0,
+      "explanation": "La couchure conserve le fil décoratif en surface et limite son passage à travers le tissu."
+    },
+    {
+      "id": "gothique-q4",
+      "chapter": "identifier",
+      "prompt": "Sur une rangée de stalles, comment appelle-t-on le panneau qui ferme le côté ?",
+      "choices": [
+        "Un doubleau",
+        "Une jouée",
+        "Un voûtain"
+      ],
+      "correct": 1,
+      "explanation": "La jouée délimite latéralement la rangée. Les panneaux de Pedralbes en offrent un exemple conservé."
+    },
+    {
+      "id": "gothique-q5",
+      "chapter": "reperes",
+      "prompt": "Où se trouve le déambulatoire du chevet de Saint-Denis ?",
+      "choices": [
+        "Sous la flèche",
+        "Derrière une stalle mobile",
+        "Autour du chœur"
+      ],
+      "correct": 2,
+      "explanation": "Le déambulatoire distribue les chapelles et permet de circuler autour du chœur."
+    }
+  ]
+}

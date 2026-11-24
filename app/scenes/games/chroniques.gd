@@ -11,11 +11,7 @@ const DARK := Color("#10272c")
 const GOOD := Color("#83d1aa")
 const BAD := Color("#ef8f81")
 const CHANGED := Color("#b99cde")
-const COLORS := {"egypte": Color("#e5b65e"), "grece": Color("#58bebd"), "rome": CHANGED}
-const PHOTOS := {
-	"egy-kemeni":"543955", "egy-reniseneb":"547687", "egy-hatshepsout":"544450",
-	"gre-exekias":"250551", "gre-sardes":"252453", "egy-akhenaton":"544056"
-}
+const COLORS := {"egypte": Color("#e5b65e"), "grece": Color("#58bebd"), "rome": CHANGED, "roman": Color("#afca78"), "gothique": Color("#ee96a4")}
 const DropZone = preload("res://components/frieze_drop_zone.gd")
 var date_dialog: Control
 var session: FriezeSession
@@ -213,6 +209,10 @@ func header() -> void:
 	label(canvas,subtitle,570,73,460,29)
 	header_count = label(canvas,counter,1150,46,170,35,26,GOLD,true,HORIZONTAL_ALIGNMENT_RIGHT)
 	label(canvas,unit,1110,81,210,24,13,MUTED,false,HORIZONTAL_ALIGNMENT_RIGHT)
+	if session.phase != "result" or session.comparing:
+		action(canvas,"QuitFrieze","Quitter",1042,51,126,47,controller.leave_game)
+	if session.comparing:
+		action(canvas,"ReviewCollection","Voir la collection",345,890,248,41,controller.leave_game.bind("collection"))
 	action(canvas,"ChroniquesHome","",52,49,202,60,func(): controller.destination_requested.emit("home"),false,true).tooltip_text = "Retour au menu"
 	action(canvas,"ChangePeriods","",1415,48,54,60,controller._show_setup,false,true).tooltip_text = "Choisir les périodes"
 	var sound := action(canvas,"Sound","",1363,48,59,60,toggle_sound,false,true)
@@ -445,9 +445,9 @@ func make_card(parent: Control,id: String,area: Rect2,slot := "",review := "") -
 		var rank: Array = ChronologyRepository.RARITIES.get(event.get("rarity","common"))
 		box(b,12,13,w-24,5,period_color(event.periods[0]) if period else rank[1],Color.TRANSPARENT,2)
 		label(b,"REPÈRE DE PÉRIODE" if period else "ÉVÉNEMENT",6,19,w-12,23,11,Color("#735e38"))
-		if PHOTOS.has(id):
+		if event.has("image"):
 			box(b,13,44,w-26,66,Color("#e2d9c6"),Color.TRANSPARENT,6)
-			picture(b,load("res://assets/courses/museum/met-"+PHOTOS[id]+".jpg"),17,47,w-34,61,true)
+			picture(b,load(event.image),17,47,w-34,61,true)
 			label(b,event.title,9,111,w-18,h-143,16,INK,true)
 		else:
 			label(b,"◆",0,43,w,36,23,GOLD if status!="wrong" else BAD)
@@ -463,7 +463,7 @@ func make_card(parent: Control,id: String,area: Rect2,slot := "",review := "") -
 			recycle.add_theme_font_size_override("font_size",12)
 			recycle.add_theme_stylebox_override("normal",surface(Color("#773c38"),BAD,6))
 		else:
-			var mark := "THE MET · CC0" if PHOTOS.has(id) else "CHRONIQUES"
+			var mark := str(event.get("image_credit","Chroniques")).to_upper()
 			if golden: mark = "✦ DORÉE · " + mark
 			if review=="changed":
 				box(b,15,h-30,w-30,21,Color("#594975"),Color.TRANSPARENT,9)
@@ -761,6 +761,8 @@ func result() -> void:
 	footer("Retrouvez les œuvres et leurs dates." if mistakes == 0 else "Choisissez votre façon de revoir les erreurs.")
 	action(canvas,"ReplayFrieze","Recommencer",830,786,286,51,controller._start_game,false,true)
 	action(canvas,"ShowReward",reward_button_text(),475,786,350,51,reward_dialog,true)
+	action(canvas,"QuitFrieze","Quitter",429,887,278,46,controller.leave_game)
+	action(canvas,"ResultCollection","Voir la collection",735,887,432,46,controller.leave_game.bind("collection"))
 	if not session.new_gold.is_empty():
 		label(canvas,"✦ %d nouvelle(s) carte(s) dorée(s)" % session.new_gold.size(),445,842,710,36,17,GOLD)
 
@@ -926,6 +928,7 @@ func dialog_frame() -> Control:
 		button.set_meta("prior_mode",button.focus_mode)
 		button.focus_mode = FOCUS_NONE
 	box(date_dialog,306,158,988,670,DARK,GOLD,20)
+	action(date_dialog,"QuitFromDialog","Quitter",1042,51,126,47,controller.leave_game)
 	return date_dialog
 
 func close_dialog() -> void:
@@ -1055,8 +1058,8 @@ func reward_dialog() -> void:
 			box(face,14,14,166,4,period_color(card.periods[0]) if marker else rank[1])
 			label(face,"REPÈRE DE PÉRIODE" if marker else str(rank[0]).to_upper(),10,21,174,28,13,INK)
 			var top := 55
-			if PHOTOS.has(card.id):
-				picture(face,load("res://assets/courses/museum/met-"+PHOTOS[card.id]+".jpg"),15,50,164,66,true)
+			if card.has("image"):
+				picture(face,load(card.image),15,50,164,66,true)
 				top = 120
 			label(face,card.title,13,top,168,216-top,21,INK,true)
 			label(face,"Normale acquise",12,222,170,30,14,INK)

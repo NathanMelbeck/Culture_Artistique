@@ -160,6 +160,8 @@ func _catalogue() -> void:
 	card.add_child(AppTheme.paragraph("1 · Choisir les périodes      2 · Retrouver les bornes      3 · Placer les cartes", 15))
 	card.add_child(AppTheme.paragraph("Placez d’abord tous les repères de période : leur correction est immédiate. Les événements se débloquent une fois ces repères validés. Les deux bornes déjà trouvées sont exclues du paquet.", 14, AppTheme.FOREST))
 	card.add_child(_button("Collection de Chroniques", "OpenCollection", open_collection))
+	if session != null:
+		card.add_child(_button("Reprendre ma partie", "ResumeFrieze", resume_game))
 	card.add_child(_button("Choisir les périodes  →", "OpenFrieze", _show_setup, true))
 	column.add_child(AppTheme.paragraph("Les quiz de chaque période restent accessibles à la fin des cours. La frise fonctionne entièrement hors ligne.", 14))
 
@@ -176,6 +178,25 @@ func _setup() -> void:
 	lobby.controller = self
 	lobby.size_flags_vertical = SIZE_EXPAND_FILL
 	_content.add_child(lobby)
+
+func resume_game() -> void:
+	anchors = resume_anchors.duplicate()
+	game_mode = session.game_mode
+	mode = "play"
+	_refresh()
+
+func leave_game(destination := "catalogue") -> void:
+	if session.phase == "result":
+		session = null
+		resume_anchors.clear()
+	else:
+		resume_anchors = anchors.duplicate()
+	selected_card = ""
+	boundary_feedback = ""
+	_message = ""
+	mode = destination
+	lobby_scroll = 0
+	_refresh()
 
 func open_collection() -> void:
 	mode = "collection"

@@ -818,6 +818,67 @@
       "section": "mobilier"
     },
     {
+      "id": "catalogue",
+      "title": "Catalogue",
+      "intro": "Objets et détails à comparer. Ouvrez une image pour l’agrandir.",
+      "blocks": [
+        {
+          "type": "catalogue_item",
+          "title": "Le coffret de Kemeni : structure et placage",
+          "media": "egypte-kemeni",
+          "date": "Vers 1805 av. J.-C.",
+          "origin": "Thèbes, Assassif, Birabi · tombe CC 25 · Metropolitan Museum of Art, 26.7.1438",
+          "observation": "Volume rectangulaire : observer l’ouverture, les compartiments et le tiroir, qui organisent le rangement.",
+          "status_label": "Meuble conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "title": "La chaise de Reniseneb : pieds animaliers et dossier",
+          "media": "egypte-reniseneb",
+          "date": "Vers 1450 av. J.-C.",
+          "origin": "Haute-Égypte, Thèbes · Metropolitan Museum of Art, 68.58",
+          "observation": "Pieds à caractère animal : repérer les pattes sculptées et la silhouette des jambes.",
+          "status_label": "Meuble conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "title": "Le tabouret bas : une assise tressée dans un cadre",
+          "media": "egypte-tabouret",
+          "date": "Vers 1991–1450 av. J.-C.",
+          "origin": "Thèbes, Assassif · Metropolitan Museum of Art, 14.10.3",
+          "observation": "Quatre pieds courts portent un cadre sans dossier ni accoudoirs : la silhouette est celle d’un tabouret bas.",
+          "status_label": "Meuble conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "title": "L’appui-tête : une forme adaptée au repos",
+          "media": "egypte-appui-tete",
+          "date": "Vers 1550–1300 av. J.-C.",
+          "origin": "Thèbes, Dra Abou el-Naga · tombe CC 37 · Metropolitan Museum of Art, 12.181.308",
+          "observation": "Partie supérieure concave : observer la courbe qui reçoit la tête et ses extrémités relevées.",
+          "status_label": "Meuble conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "title": "Tabouret d’enfant en bois",
+          "date": "1295–1188 av. J.-C.",
+          "origin": "Égypte, XIXe dynastie",
+          "observation": "Comparer la hauteur des pieds à la largeur de l’assise. Ce petit siège conserve la silhouette d’un tabouret malgré son échelle.",
+          "media": "cma-1914.805",
+          "status_label": "Meuble conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "title": "Appui-tête funéraire d’Irout",
+          "date": "Vers 2454–2140 av. J.-C.",
+          "origin": "Égypte, Ancien Empire",
+          "observation": "Le travertin transpose en pierre la forme d’un appui-tête. Une inscription sur la colonne nomme Irout, destinataire du mobilier funéraire.",
+          "media": "cma-1914.626",
+          "status_label": "Objet funéraire antique"
+        }
+      ]
+    },
+    {
       "id": "synthese",
       "title": "Reconnaître le mobilier égyptien",
       "intro": "Quels indices chercher sur un siège, un lit ou un coffre ?",

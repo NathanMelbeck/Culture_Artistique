@@ -1,5 +1,6 @@
 extends VBoxContainer
 
+signal revision_requested(sheet_id: String)
 signal destination_requested(route: String)
 const CATALOGUE = preload("res://scenes/courses/course_catalogue.gd")
 const READER = preload("res://scenes/courses/course_reader.gd")
@@ -66,6 +67,7 @@ func _show_reader(chapter_id: String = "") -> void:
 				page.chapter_index = index
 				page.scroll_position = 0
 	page.quiz_resume_available = _quiz_session != null
+	page.revision_requested.connect(revision_requested.emit)
 	page.catalogue_requested.connect(_show_catalogue)
 	page.quiz_requested.connect(_show_quiz)
 	add_child(page)

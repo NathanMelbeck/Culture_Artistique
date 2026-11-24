@@ -18,7 +18,7 @@ func synthetic(stocks: Array) -> ChronologyRepository:
 
 func _initialize() -> void:
 	var repo := ChronologyRepository.new()
-	var all := repo.periods
+	var all := repo.resolve_periods(["egypte", "rome"])
 	var allocation_ok := true
 	for example in [[[25,25,25],30],[[5,30,30],50],[[5,12,20],50],[[1,0,20],10],[[1,20,20],1]]:
 		var data := synthetic(example[0])

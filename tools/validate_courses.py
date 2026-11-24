@@ -52,6 +52,10 @@ def main():
             assert reference["title"] and reference["text"] and reference["url"].startswith("https://")
             assert media[example["media"]]["source"] == reference["url"], "Example and image provenance must agree"
             validate_furniture_visual(media[example["media"]], course["period_id"], allowed_types)
+        gallery = course["chapters"][course["chapters"].index(furniture_section) + 1]
+        assert gallery["id"] == "catalogue" and len(gallery["blocks"]) >= 4
+        gallery_media = [block["media"] for block in gallery["blocks"] if block["type"] == "catalogue_item"]
+        assert len(set(gallery_media)) == len(gallery["blocks"]), "Each catalogue item needs its own illustration"
         used_media.add(course["cover_media"])
         chapter_ids = set()
         words = []
@@ -62,10 +66,10 @@ def main():
             if "source_pages" in chapter:
                 assert chapter["source_pages"] and all(isinstance(n, int) and n > 0 for n in chapter["source_pages"])
             for block in chapter["blocks"]:
-                assert block["type"] in {"paragraph", "heading", "image", "key_points", "callout", "source", "furniture_example", "column_example", "annotated_image"}
+                assert block["type"] in {"paragraph", "heading", "image", "key_points", "callout", "source", "furniture_example", "column_example", "annotated_image", "catalogue_item"}
                 if block["type"] == "source":
                     assert block["title"] and block["text"] and block["url"].startswith("https://")
-                if block["type"] in {"image", "furniture_example", "column_example", "annotated_image"}:
+                if block["type"] in {"catalogue_item", "image", "furniture_example", "column_example", "annotated_image"}:
                     used_media.add(block["media"])
                     item = media[block["media"]]
                     if "historical_status" in item:
@@ -79,6 +83,10 @@ def main():
                         for point in [marker["point"], marker.get("label_point", marker["point"])]:
                             assert len(point) == 2 and all(0 <= value <= 1 for value in point), "Pointer outside displayed image"
                     assert "support" not in block.get("caption", "").lower()
+                if block["type"] == "catalogue_item":
+                    assert all(block.get(k) for k in ["title", "date", "origin", "observation"])
+                    assert item["source"].startswith("https://")
+                    validate_furniture_visual(item, course["period_id"], allowed_types)
                 if block["type"] == "column_example":
                     assert block["title"] and block["description"] and len(block["cues"]) >= 3
                     assert all(cue.strip() for cue in block["cues"])
@@ -122,6 +130,9 @@ def main():
                 if item["rights"] == "CC BY-SA 4.0":
                     assert item["license_url"] == original["extmetadata"]["LicenseUrl"]["value"]
                     assert "JLVwiki" in item["display_credit"] and "même licence" in item["display_credit"]
+            elif item.get("provider") == "cleveland":
+                assert original["share_license_status"] == item["rights"] == "CC0"
+                assert original["url"] == item["source"] and original["image_web"] == item["download_url"]
             else:
                 assert item["rights"].startswith("CC0")
                 assert original["isPublicDomain"] and original["objectURL"] == item["source"]

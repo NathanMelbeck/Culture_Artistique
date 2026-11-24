@@ -9,6 +9,14 @@
         "grece",
         "rome"
       ]
+    },
+    {
+      "id": "moyen-age",
+      "title": "Tout le Moyen Âge",
+      "periods": [
+        "roman",
+        "gothique"
+      ]
     }
   ],
   "periods": [
@@ -104,6 +112,68 @@
         "page": 1,
         "heading": "Style Romain | -800 à 400"
       }
+    },
+    {
+      "id": "roman",
+      "title": "Style roman",
+      "order": 3,
+      "start": 900,
+      "end": 1200,
+      "start_choices": [
+        750,
+        850,
+        900,
+        950,
+        1000
+      ],
+      "end_choices": [
+        1100,
+        1150,
+        1200,
+        1250,
+        1350
+      ],
+      "scope": "Périmètre de style de la fiche de révision.",
+      "start_note": "Début du style selon la fiche de révision.",
+      "end_note": "Fin du style selon la fiche de révision.",
+      "start_approximate": false,
+      "end_approximate": false,
+      "bounds_source": {
+        "sheet_id": "roman",
+        "page": 1,
+        "heading": "Style Roman | 900 à 1200"
+      }
+    },
+    {
+      "id": "gothique",
+      "title": "Style gothique",
+      "order": 4,
+      "start": 1100,
+      "end": 1500,
+      "start_choices": [
+        950,
+        1050,
+        1100,
+        1150,
+        1200
+      ],
+      "end_choices": [
+        1400,
+        1450,
+        1500,
+        1550,
+        1650
+      ],
+      "scope": "Périmètre de style de la fiche de révision.",
+      "start_note": "Début du style selon la fiche de révision.",
+      "end_note": "Fin du style selon la fiche de révision.",
+      "start_approximate": false,
+      "end_approximate": false,
+      "bounds_source": {
+        "sheet_id": "gothique",
+        "page": 1,
+        "heading": "Style Gothique | 1100 à 1500"
+      }
     }
   ],
   "events": [
@@ -143,7 +213,9 @@
       },
       "course_id": "egypte",
       "chapter": "mobilier",
-      "approximate": true
+      "approximate": true,
+      "image": "res://assets/courses/museum/met-543955.jpg",
+      "image_credit": "The Met · CC0"
     },
     {
       "id": "egy-hatshepsout",
@@ -162,7 +234,9 @@
       },
       "course_id": "egypte",
       "chapter": "sculpture",
-      "approximate": true
+      "approximate": true,
+      "image": "res://assets/courses/museum/met-544450.jpg",
+      "image_credit": "The Met · CC0"
     },
     {
       "id": "egy-reniseneb",
@@ -181,7 +255,9 @@
       },
       "course_id": "egypte",
       "chapter": "mobilier",
-      "approximate": true
+      "approximate": true,
+      "image": "res://assets/courses/museum/met-547687.jpg",
+      "image_credit": "The Met · CC0"
     },
     {
       "id": "egy-akhenaton",
@@ -200,7 +276,9 @@
       },
       "course_id": "egypte",
       "chapter": "images",
-      "approximate": true
+      "approximate": true,
+      "image": "res://assets/courses/museum/met-544056.jpg",
+      "image_credit": "The Met · CC0"
     },
     {
       "id": "egy-alexandre",
@@ -287,7 +365,9 @@
       },
       "course_id": "grece",
       "chapter": "mythes-images",
-      "approximate": true
+      "approximate": true,
+      "image": "res://assets/courses/museum/met-250551.jpg",
+      "image_credit": "The Met · CC0"
     },
     {
       "id": "gre-hieron",
@@ -373,7 +453,9 @@
       },
       "course_id": "grece",
       "chapter": "ordres",
-      "approximate": true
+      "approximate": true,
+      "image": "res://assets/courses/museum/met-252453.jpg",
+      "image_credit": "The Met · CC0"
     },
     {
       "id": "gre-actium",
@@ -518,6 +600,200 @@
       },
       "course_id": "rome",
       "chapter": "reperes"
+    },
+    {
+      "id": "roman-chartres-fulbert",
+      "periods": [
+        "roman"
+      ],
+      "year": 1020,
+      "title": "Incendie de l’église de Chartres avant le chantier de Fulbert",
+      "rarity": "rare",
+      "course_id": "roman",
+      "chapter": "reperes",
+      "source": {
+        "title": "Cathédrale de Chartres",
+        "url": "https://www.cathedrale-chartres.org/wp-content/uploads/2024/09/Dossier-de-presse-Millenaire.pdf"
+      },
+      "explanation": "L’incendie conduit Fulbert à rebâtir l’église. Une partie de sa crypte subsiste.",
+      "accepted_from": 1020,
+      "accepted_to": 1020
+    },
+    {
+      "id": "roman-autel-gertrude",
+      "periods": [
+        "roman"
+      ],
+      "year": 1045,
+      "title": "Commande de l’autel portatif de Gertrude",
+      "rarity": "rare",
+      "course_id": "roman",
+      "chapter": "mobilier",
+      "source": {
+        "title": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1931.462"
+      },
+      "explanation": "La comtesse de Brunswick commande cet autel daté vers 1045. La surface supérieure associe le porphyre à un encadrement précieux.",
+      "accepted_from": 1045,
+      "accepted_to": 1045,
+      "approximate": true,
+      "image": "res://assets/courses/medieval/cma-1931.462.webp",
+      "image_credit": "Cleveland Museum of Art · CC0"
+    },
+    {
+      "id": "roman-buis",
+      "periods": [
+        "roman"
+      ],
+      "year": 1050,
+      "title": "Réalisation du coffret anglais en buis sculpté",
+      "rarity": "common",
+      "course_id": "roman",
+      "chapter": "mobilier",
+      "source": {
+        "title": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1953.362"
+      },
+      "explanation": "Le musée situe ce petit coffret vers 1050. Ses reliefs sculptés racontent des épisodes de la vie du Christ.",
+      "accepted_from": 1050,
+      "accepted_to": 1050,
+      "approximate": true,
+      "image": "res://assets/courses/medieval/cma-1953.362.webp",
+      "image_credit": "Cleveland Museum of Art · CC0"
+    },
+    {
+      "id": "roman-taull",
+      "periods": [
+        "roman"
+      ],
+      "year": 1123,
+      "title": "Consécration de Sant Climent de Taüll",
+      "rarity": "epic",
+      "course_id": "roman",
+      "chapter": "arts",
+      "source": {
+        "title": "Museu Nacional d’Art de Catalunya",
+        "url": "https://www.museunacional.cat/en/colleccio/paintings-sant-climent-de-taull/master-taull/015966-cjt"
+      },
+      "explanation": "Une inscription peinte sur une colonne date précisément la consécration. Les peintures de l’abside sont datées autour de cette cérémonie.",
+      "accepted_from": 1123,
+      "accepted_to": 1123
+    },
+    {
+      "id": "gothique-saint-denis",
+      "periods": [
+        "gothique"
+      ],
+      "year": 1144,
+      "title": "Consécration du chevet de Saint-Denis sous Suger",
+      "rarity": "legendary",
+      "course_id": "gothique",
+      "chapter": "reperes",
+      "source": {
+        "title": "The Metropolitan Museum of Art",
+        "url": "https://www.metmuseum.org/essays/gothic-art"
+      },
+      "explanation": "Les chapelles et le déambulatoire ouvrent un espace continu dans ce jalon du premier gothique.",
+      "accepted_from": 1144,
+      "accepted_to": 1144
+    },
+    {
+      "id": "gothique-chartres-incendie",
+      "periods": [
+        "gothique"
+      ],
+      "year": 1194,
+      "title": "Incendie qui précède la reconstruction gothique de Chartres",
+      "rarity": "rare",
+      "course_id": "gothique",
+      "chapter": "architecture",
+      "source": {
+        "title": "Cathédrale de Chartres",
+        "url": "https://www.cathedrale-chartres.org/wp-content/uploads/2024/09/Dossier-de-presse-Millenaire.pdf"
+      },
+      "explanation": "En juin 1194, le feu ravage l’édifice. Des éléments plus anciens subsistent lors du nouveau chantier.",
+      "accepted_from": 1194,
+      "accepted_to": 1194
+    },
+    {
+      "id": "gothique-chartres-dedicace",
+      "periods": [
+        "gothique"
+      ],
+      "year": 1260,
+      "title": "Dédicace de la cathédrale gothique de Chartres",
+      "rarity": "epic",
+      "course_id": "gothique",
+      "chapter": "architecture",
+      "source": {
+        "title": "Cathédrale de Chartres",
+        "url": "https://www.cathedrale-chartres.org/cathedrale/celebrations/le-chapitre/"
+      },
+      "explanation": "La cérémonie du 17 octobre 1260 marque la dédicace de la cathédrale reconstruite.",
+      "accepted_from": 1260,
+      "accepted_to": 1260
+    },
+    {
+      "id": "gothique-pedralbes",
+      "periods": [
+        "gothique"
+      ],
+      "year": 1330,
+      "title": "Sculpture des panneaux de stalles de Pedralbes",
+      "rarity": "common",
+      "course_id": "gothique",
+      "chapter": "mobilier",
+      "source": {
+        "title": "Cleveland Museum of Art",
+        "url": "https://clevelandart.org/art/1971.270"
+      },
+      "explanation": "Le musée situe les panneaux en noyer vers 1330–1340. L’intervalle est accepté en saisie de date.",
+      "accepted_from": 1330,
+      "accepted_to": 1340,
+      "approximate": true,
+      "year_end": 1340,
+      "image": "res://assets/courses/medieval/cma-1971.270.webp",
+      "image_credit": "Cleveland Museum of Art · CC0"
+    },
+    {
+      "id": "roman-chapiteau-foix",
+      "accepted_from": 1145,
+      "accepted_to": 1165,
+      "year": 1145,
+      "year_end": 1165,
+      "approximate": true,
+      "periods": [
+        "roman"
+      ],
+      "title": "Sculpture du chapiteau de Marthe et Marie en Ariège",
+      "rarity": "common",
+      "course_id": "roman",
+      "chapter": "arts",
+      "explanation": "Le musée date ce chapiteau du milieu du XIIe siècle, entre 1145 et 1165. Les inscriptions donnent leurs noms aux figures sculptées.",
+      "source": {
+        "title": "Cleveland Museum of Art · Chapiteau de Marthe et Marie",
+        "url": "https://clevelandart.org/art/1968.35"
+      },
+      "image": "res://assets/courses/medieval/cma-1968.35.webp",
+      "image_credit": "Cleveland Museum of Art · CC0"
+    },
+    {
+      "id": "gothique-chapelle-vendome",
+      "accepted_from": 1417,
+      "accepted_to": 1417,
+      "year": 1417,
+      "periods": [
+        "gothique"
+      ],
+      "title": "Ajout de la chapelle de Vendôme à Chartres",
+      "rarity": "common",
+      "course_id": "gothique",
+      "chapter": "architecture",
+      "explanation": "La chronologie de la cathédrale situe en 1417 l’ajout de cette chapelle dans le bas-côté sud, bien après la dédicace de 1260.",
+      "source": {
+        "title": "Cathédrale de Chartres · Les grandes dates",
+        "url": "https://www.cathedrale-chartres.org/wp-content/uploads/2024/09/Dossier-de-presse-Millenaire.pdf"
+      }
     }
   ]
 }

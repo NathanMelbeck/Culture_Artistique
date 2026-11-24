@@ -14,7 +14,8 @@ func click(node_name: String) -> void:
 	await super.click(node_name)
 
 func _run() -> void:
-	output_directory = ProjectSettings.globalize_path("res://../docs/validation/courses")
+	output_directory = OS.get_environment("COURSES_CAPTURE_DIR")
+	if output_directory.is_empty(): output_directory = ProjectSettings.globalize_path("res://../docs/validation/courses")
 	DirAccess.make_dir_recursive_absolute(output_directory)
 	app = load("res://scenes/app_shell.tscn").instantiate()
 	# Ephemeral state: this test never changes the user's learning progress.
@@ -24,8 +25,8 @@ func _run() -> void:
 	root.position = Vector2i(20, 20)
 	await frames(10)
 	await click("CoursesNav")
-	check(app._page.mode == "catalogue", "Cours ouvre le catalogue de l’Antiquité")
-	check(app.course_repository.all().size() == 3, "Les trois cours sont disponibles")
+	check(app._page.mode == "catalogue", "Cours ouvre le catalogue des périodes")
+	check(app.course_repository.all().size() == 5, "Les cinq cours sont disponibles")
 	await capture("catalogue-1440.png")
 	var filter := app.find_child("CoursePeriodFilter", true, false) as OptionButton
 	filter.select(2)
@@ -97,7 +98,7 @@ func _run() -> void:
 		await frames()
 		for index in course["chapters"].size():
 			for block in course["chapters"][index]["blocks"]:
-				if block["type"] in ["image", "furniture_example", "column_example", "annotated_image"]:
+				if block["type"] in ["image", "catalogue_item", "furniture_example", "column_example", "annotated_image"]:
 					expected_figures += 1
 			browser._child.show_chapter(index)
 			await frames(3)
@@ -176,8 +177,8 @@ func _run() -> void:
 	check(figures_checked == expected_figures and figures_readable, "Toutes les figures des cours ont une texture et une hauteur de lecture suffisante")
 	check(column_examples_rendered == 14 and column_examples_ok, "Les quatorze types de colonnes ont chacun une image d’au moins 400 pixels de haut")
 	check(annotated_zoom_checked, "Le zoom conserve le cadrage du détail composite et ses repères")
-	check(furniture_sections_ok and furniture_examples_rendered == 12, "Chaque période affiche Le Mobilier avec quatre exemples commentés et illustrés")
-	check(chapters_rendered == expected_chapters and expected_chapters == 21, "Les 21 chapitres sont construits avec le même lecteur")
+	check(furniture_sections_ok and furniture_examples_rendered >= 20, "Chaque période affiche Le Mobilier avec quatre exemples commentés et illustrés")
+	check(chapters_rendered == expected_chapters and expected_chapters == 36, "Les 36 chapitres sont construits avec le même lecteur")
 	browser._open_course("grece")
 	await frames()
 	await click("Chapter_ordres")

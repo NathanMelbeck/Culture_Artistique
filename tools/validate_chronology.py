@@ -42,6 +42,9 @@ def main():
         assert not re.search(r'\d|av\. J|ap\. J', event['title']), 'Card fronts must not display dates'
         assert event['source']['url'].startswith('https://')
         assert type(event['year']) is int and event['year'] != 0
+        if 'image' in event:
+            assert event.get('image_credit') and event['image'].startswith('res://assets/courses/')
+            assert (APP / event['image'].removeprefix('res://')).is_file()
         assert event['rarity'] in {'common', 'rare', 'epic', 'legendary'}, event['id']
         if event.get('approximate'):
             lower, upper = event['accepted_from'], event['accepted_to']

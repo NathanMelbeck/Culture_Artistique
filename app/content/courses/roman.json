@@ -1,0 +1,370 @@
+{
+  "id": "roman",
+  "period_id": "roman",
+  "group_id": "moyen-age",
+  "title": "Le style roman",
+  "subtitle": "Observer le profil, puis suivre les charges jusqu’au sol.",
+  "summary": "De l’autel portatif au coffre en buis, apprenez à lire les assemblages, les revêtements et les images du monde roman.",
+  "cover_media": "roman-interieur",
+  "source_title": "Art roman et art gothique",
+  "objectives": [
+    "Observer le profil, puis suivre les charges jusqu’au sol.",
+    "Voir comment une image s’adapte à son emplacement.",
+    "Examiner la structure, les ferrures et les matières rapportées."
+  ],
+  "references": [
+    {
+      "title": "Cathédrale de Chartres — Incendie de l’église de Chartres avant le chantier de Fulbert",
+      "url": "https://www.cathedrale-chartres.org/wp-content/uploads/2024/09/Dossier-de-presse-Millenaire.pdf",
+      "note": "L’incendie conduit Fulbert à rebâtir l’église. Une partie de sa crypte subsiste."
+    },
+    {
+      "title": "Cleveland Museum of Art — Commande de l’autel portatif de Gertrude",
+      "url": "https://clevelandart.org/art/1931.462",
+      "note": "La comtesse de Brunswick commande cet autel daté vers 1045. La surface supérieure associe le porphyre à un encadrement précieux."
+    },
+    {
+      "title": "Cleveland Museum of Art — Réalisation du coffret anglais en buis sculpté",
+      "url": "https://clevelandart.org/art/1953.362",
+      "note": "Le musée situe ce petit coffret vers 1050. Ses reliefs sculptés racontent des épisodes de la vie du Christ."
+    },
+    {
+      "title": "Museu Nacional d’Art de Catalunya — Consécration de Sant Climent de Taüll",
+      "url": "https://www.museunacional.cat/en/colleccio/paintings-sant-climent-de-taull/master-taull/015966-cjt",
+      "note": "Une inscription peinte sur une colonne date précisément la consécration. Les peintures de l’abside sont datées autour de cette cérémonie."
+    }
+  ],
+  "chapters": [
+    {
+      "id": "reperes",
+      "title": "Abbayes, pèlerinages et commandes",
+      "intro": "900–1200 dans la fiche de révision. Les formes se diffusent à des rythmes différents selon les régions.",
+      "source_pages": [
+        2,
+        3
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’abbaye réunit une communauté religieuse autour de l’église et du cloître. Le cloître est une cour bordée de galeries qui relie les espaces de la vie commune. Les commandes concernent aussi bien des pierres taillées pour un emplacement précis que des objets précieux destinés à voyager."
+        },
+        {
+          "type": "image",
+          "media": "roman-interieur"
+        },
+        {
+          "type": "paragraph",
+          "text": "À Chartres, l’incendie de 1020 conduit l’évêque Fulbert à faire reconstruire son église. Une grande partie de la crypte subsiste sous la cathédrale gothique. Un même monument peut donc conserver des états de construction appartenant à plusieurs périodes."
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Lire un arc et une voûte",
+      "intro": "Observer le profil, puis suivre les charges jusqu’au sol.",
+      "source_pages": [
+        5,
+        6
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Un arc en plein cintre dessine un demi-cercle. Les voussoirs, blocs taillés en coin, travaillent en compression. L’imposte marque la naissance de l’arc sur son appui. En prolongeant ce profil dans la profondeur, on obtient une voûte en berceau."
+        },
+        {
+          "type": "image",
+          "media": "roman-voutes"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un arc doubleau traverse la nef et marque la séparation de deux travées. La voûte d’arêtes résulte de la rencontre de deux berceaux. Ses arêtes suivent leurs intersections. Dans une coupole, le passage du plan carré au cercle peut se faire par quatre trompes, petites voûtes d’angle, ou par des pendentifs, triangles courbes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les poussées latérales expliquent le rôle de l’épaisseur du mur, des piles et des contreforts. Certaines nefs romanes sont simplement charpentées. Pour identifier une construction, comparer le couvrement, les appuis et le traitement des ouvertures."
+        }
+      ]
+    },
+    {
+      "id": "arts",
+      "title": "Sculpter et peindre pour raconter",
+      "intro": "Voir comment une image s’adapte à son emplacement.",
+      "source_pages": [
+        4,
+        7
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Au portail, le tympan occupe le champ au-dessus du linteau. Sur une colonne, la corbeille du chapiteau offre plusieurs faces. Le sculpteur répartit les figures selon la surface disponible. Un chapiteau historié raconte un épisode identifiable."
+        },
+        {
+          "type": "image",
+          "media": "cma-1968.35"
+        },
+        {
+          "type": "paragraph",
+          "text": "Levez les yeux vers l’inscription au-dessus des deux femmes du chapiteau de Foix. Leurs noms permettent de reconnaître Marthe et Marie. La face voisine poursuit le récit. Le grès conserve des traces de polychromie, terme qui désigne l’emploi de plusieurs couleurs."
+        },
+        {
+          "type": "paragraph",
+          "text": "À Sant Climent de Taüll, une inscription date la consécration de 1123. Dans l’abside, volume arrondi qui termine le chœur, le Christ domine le registre supérieur. À fresque, le pigment appliqué sur l’enduit de chaux encore frais se fixe lors de sa prise. Des rehauts peuvent aussi être appliqués à sec."
+        }
+      ]
+    },
+    {
+      "id": "mobilier",
+      "title": "Le Mobilier",
+      "intro": "Examiner la structure, les ferrures et les matières rapportées.",
+      "source_pages": [
+        8,
+        9
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Une huche est un grand coffre de rangement. Suivre les joints des ais, les planches de la caisse, puis chercher comment le couvercle pivote. Une penture est une longue bande de fer fixée au bois qui participe à l’articulation. La serrure protège le contenu. Des formes de coffres simples coexistent avec des réalisations précieuses pour la liturgie."
+        },
+        {
+          "type": "paragraph",
+          "text": "Le bois se conserve moins bien que certains revêtements. Un fragment d’ivoire peut documenter le parement d’un autel disparu. Les housses, coussins et tissus rapportés changent le contact avec une assise ou une surface dure. Un textile conservé dans un trésor renseigne sur un tissage, sans prouver que tous les sièges recevaient la même garniture."
+        },
+        {
+          "type": "furniture_example",
+          "id": "trone-auvergne",
+          "title": "Le trône de la Vierge en majesté",
+          "description": "La vue de profil dégage le bord de l’assise sous le manteau. Cette sculpture en noyer polychrome montre un siège roman tel qu’il a été représenté.",
+          "status_label": "Représentation d’époque",
+          "media": "cma-2012.52",
+          "characteristics": [
+            "L’assise forme une ligne horizontale visible en arrière des jambes.",
+            "Le drapé masque une partie du siège. La vue de profil permet de distinguer le textile représenté et le bord du meuble.",
+            "Les traces de couleur appartiennent à la sculpture en noyer. Elles renseignent sur sa polychromie, sans documenter la finition d’un siège réel."
+          ],
+          "reference": {
+            "title": "Cleveland Museum of Art · 2012.52",
+            "url": "https://clevelandart.org/art/2012.52",
+            "text": "La notice identifie la Vierge assise sur un trône. Elle devient à son tour le trône de l’Enfant, image appelée Sedes Sapientiae, le siège de la Sagesse."
+          }
+        },
+        {
+          "type": "furniture_example",
+          "id": "cma-1931-462",
+          "title": "Autel portatif de la comtesse Gertrude",
+          "status_label": "Objet conservé",
+          "description": "L’autel se transporte comme un coffret. Sur le dessus, une dalle de porphyre délimite la surface de célébration.",
+          "media": "cma-1931.462",
+          "characteristics": [
+            "Une âme en bois porte les revêtements précieux.",
+            "Le porphyre moucheté distingue la table des parois figurées.",
+            "Dans un émail cloisonné, des cloisons métalliques délimitent les plages colorées."
+          ],
+          "reference": {
+            "title": "Cleveland Museum of Art · 1931.462",
+            "text": "Autel portatif de la comtesse Gertrude. Vers 1045. Allemagne, peut-être Basse-Saxe.",
+            "url": "https://clevelandart.org/art/1931.462"
+          }
+        },
+        {
+          "type": "furniture_example",
+          "id": "cma-1953-362",
+          "title": "Coffret en buis sculpté",
+          "status_label": "Objet conservé",
+          "description": "La petite surface de chaque paroi accueille plusieurs épisodes de la vie du Christ. Sa fonction de reliquaire reste une hypothèse.",
+          "media": "cma-1953.362",
+          "characteristics": [
+            "Le buis à grain fin permet de rapprocher de très petites figures.",
+            "Les scènes s’étendent sur les longs côtés du coffret.",
+            "Le musée identifie du verre et un alliage cuivreux associés au bois."
+          ],
+          "reference": {
+            "title": "Cleveland Museum of Art · 1953.362",
+            "text": "Coffret en buis sculpté. Vers 1050. Angleterre, peut-être les West Midlands.",
+            "url": "https://clevelandart.org/art/1953.362"
+          }
+        },
+        {
+          "type": "furniture_example",
+          "id": "cma-1949-16",
+          "title": "Plaques médiévales d’un coffret émaillé",
+          "status_label": "Plaques médiévales sur une âme moderne",
+          "description": "Les plaques médiévales sont montées sur une âme en bois moderne. Une radiographie suggère que l’objet a pu servir de pied de croix.",
+          "media": "cma-1949.16",
+          "characteristics": [
+            "Le cuivre doré apparaît entre les champs émaillés.",
+            "En champlevé, l’artisan creuse les réserves dans le métal avant d’y déposer l’émail.",
+            "Des rangées de têtes sphériques soulignent le bord des plaques."
+          ],
+          "reference": {
+            "title": "Cleveland Museum of Art · 1949.16",
+            "text": "Plaques médiévales d’un coffret émaillé. Peut-être 1100–1150. Peut-être Allemagne du Nord.",
+            "url": "https://clevelandart.org/art/1949.16"
+          }
+        },
+        {
+          "type": "furniture_example",
+          "id": "cma-1922-359",
+          "title": "Plaque de la Crucifixion pour un autel portatif",
+          "status_label": "Fragment original",
+          "description": "Cette plaque constitue un fragment de parement. Son format et son relief expliquent comment un autel transportable pouvait porter un cycle sculpté sur ses flancs.",
+          "media": "cma-1922.359",
+          "characteristics": [
+            "Le matériau identifié est l’ivoire de morse.",
+            "Les figures ressortent sur le fond dans une faible épaisseur.",
+            "Le contour rectangulaire forme un panneau indépendant du corps de l’autel."
+          ],
+          "reference": {
+            "title": "Cleveland Museum of Art · 1922.359",
+            "text": "Plaque de la Crucifixion pour un autel portatif. 1050–1100. Basse vallée du Rhin.",
+            "url": "https://clevelandart.org/art/1922.359"
+          }
+        }
+      ],
+      "section": "mobilier"
+    },
+    {
+      "id": "catalogue",
+      "title": "Catalogue",
+      "intro": "Sélectionnez une image pour en examiner les détails. Chaque notice donne accès à la collection du musée.",
+      "blocks": [
+        {
+          "type": "catalogue_item",
+          "media": "cma-1931.462",
+          "title": "Autel portatif de la comtesse Gertrude",
+          "date": "Vers 1045",
+          "origin": "Allemagne, peut-être Basse-Saxe",
+          "observation": "L’autel se transporte comme un coffret. Sur le dessus, une dalle de porphyre délimite la surface de célébration.",
+          "status_label": "Objet conservé",
+          "maker": "Commanditaire : la comtesse Gertrude de Brunswick."
+        },
+        {
+          "type": "catalogue_item",
+          "title": "Le trône de la Vierge en majesté",
+          "date": "Vers 1150–1200",
+          "origin": "Auvergne, France",
+          "observation": "La vue de profil dégage le bord de l’assise sous le manteau. Cette sculpture en noyer polychrome montre un siège roman tel qu’il a été représenté.",
+          "media": "cma-2012.52",
+          "status_label": "Siège représenté dans une sculpture romane"
+        },
+        {
+          "type": "catalogue_item",
+          "media": "cma-1953.362",
+          "title": "Coffret en buis sculpté",
+          "date": "Vers 1050",
+          "origin": "Angleterre, peut-être les West Midlands",
+          "observation": "La petite surface de chaque paroi accueille plusieurs épisodes de la vie du Christ. Sa fonction de reliquaire reste une hypothèse.",
+          "status_label": "Objet conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "media": "cma-1949.16",
+          "title": "Plaques médiévales d’un coffret émaillé",
+          "date": "Peut-être 1100–1150",
+          "origin": "Peut-être Allemagne du Nord",
+          "observation": "Les plaques médiévales sont montées sur une âme en bois moderne. Une radiographie suggère que l’objet a pu servir de pied de croix.",
+          "status_label": "Plaques médiévales sur une âme moderne"
+        },
+        {
+          "type": "catalogue_item",
+          "media": "cma-1922.359",
+          "title": "Plaque de la Crucifixion pour un autel portatif",
+          "date": "1050–1100",
+          "origin": "Basse vallée du Rhin",
+          "observation": "Cette plaque constitue un fragment de parement. Son format et son relief expliquent comment un autel transportable pouvait porter un cycle sculpté sur ses flancs.",
+          "status_label": "Fragment original"
+        },
+        {
+          "type": "catalogue_item",
+          "media": "cma-1952.152",
+          "title": "Lampas aux griffons du reliquaire de sainte Librada",
+          "date": "1100–1150",
+          "origin": "Almería, Espagne",
+          "observation": "Cette étoffe issue d’un atelier de l’Espagne islamique témoigne de la circulation des soieries dans les trésors chrétiens.",
+          "status_label": "Étoffe conservée"
+        }
+      ]
+    },
+    {
+      "id": "identifier",
+      "title": "Reconnaître un ouvrage roman",
+      "intro": "Raisonner à partir de plusieurs indices.",
+      "source_pages": [
+        7,
+        8,
+        9
+      ],
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Sur un meuble, commencer par décrire la silhouette et l’ouverture. Repérer ensuite ce qui porte, ce qui ferme et ce qui décore. Un corps en planches peut recevoir une peau de métal, d’ivoire ou de tissu. Des cadres fermement dessinés organisent souvent les scènes en registres."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour distinguer deux émaux, suivre le contour d’une couleur. Une mince cloison ajoutée signale le cloisonné. Une plage laissée en réserve dans une plaque évidée indique le champlevé. Un revêtement précieux, pris isolément, ne suffit pas à dater la structure qu’il recouvre."
+        }
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "id": "roman-q1",
+      "chapter": "architecture",
+      "prompt": "Quelle ligne faut-il suivre pour reconnaître une voûte d’arêtes ?",
+      "choices": [
+        "L’intersection de deux berceaux",
+        "Le joint d’une penture",
+        "La découpe du tympan"
+      ],
+      "correct": 0,
+      "explanation": "Les deux berceaux se rencontrent suivant des arêtes diagonales."
+    },
+    {
+      "id": "roman-q2",
+      "chapter": "arts",
+      "prompt": "Pourquoi faut-il tourner autour du chapiteau de Foix ?",
+      "choices": [
+        "Pour lire un plan de ville",
+        "Pour suivre un récit sur plusieurs faces",
+        "Pour voir une inscription de dédicace de Chartres"
+      ],
+      "correct": 1,
+      "explanation": "Les faces présentent plusieurs personnages de la résurrection de Lazare. Les noms gravés aident à les reconnaître."
+    },
+    {
+      "id": "roman-q3",
+      "chapter": "mobilier",
+      "prompt": "Sur un coffre, quelle pièce permet au couvercle de pivoter ?",
+      "choices": [
+        "Le médaillon",
+        "La corbeille",
+        "La penture"
+      ],
+      "correct": 2,
+      "explanation": "La penture relie le bois à l’articulation du couvercle. Une serrure en contrôle l’ouverture."
+    },
+    {
+      "id": "roman-q4",
+      "chapter": "identifier",
+      "prompt": "Comment obtient-on les plages de couleur d’un émail champlevé ?",
+      "choices": [
+        "En évidant des réserves dans le métal",
+        "En brodant un fil d’or",
+        "En assemblant des lames de porphyre"
+      ],
+      "correct": 0,
+      "explanation": "L’émail remplit les creux ménagés dans une plaque. Dans le cloisonné, les cloisons sont ajoutées."
+    },
+    {
+      "id": "roman-q5",
+      "chapter": "reperes",
+      "prompt": "Quelle partie de l’édifice de Fulbert subsiste sous la cathédrale de Chartres ?",
+      "choices": [
+        "Le réseau flamboyant",
+        "La crypte",
+        "La flèche actuelle"
+      ],
+      "correct": 1,
+      "explanation": "Une grande partie de la crypte de la construction entreprise après 1020 a survécu."
+    }
+  ]
+}

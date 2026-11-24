@@ -25,6 +25,8 @@ static func prose(value: String, size: int = 18, color: Color = AppTheme.FOREST)
 
 static func build(block: Dictionary, repository: CourseRepository) -> Control:
 	match block.get("type", ""):
+		"catalogue_item":
+			return _catalogue_item(block, repository)
 		"column_example":
 			return _column_example(block, repository)
 		"annotated_image":
@@ -57,8 +59,26 @@ static func build(block: Dictionary, repository: CourseRepository) -> Control:
 		"source":
 			return _source(block)
 		"image":
-			return _figure(block.get("media", ""), repository)
+			return _figure(block.get("media", ""), repository, block)
 	return AppTheme.paragraph("Bloc de cours indisponible.")
+
+static func _catalogue_item(block: Dictionary, repository: CourseRepository) -> Control:
+	var column := VBoxContainer.new()
+	column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	column.add_theme_constant_override("separation", 10)
+	column.add_child(AppTheme.divider())
+	column.add_child(_figure(block.media, repository, {"display_height": 260, "show_caption": false}))
+	column.add_child(AppTheme.eyebrow(block.status_label.to_upper()))
+	column.add_child(prose("[b]" + block.title + "[/b]", 25))
+	column.add_child(prose(block.date + " · " + block.origin, 17))
+	if block.has("maker"):
+		column.add_child(prose(block.maker, 16))
+	column.add_child(prose(block.observation))
+	var source := AppTheme.quiet_button("Voir la source  ↗")
+	source.tooltip_text = repository.get_media(block.media).source
+	source.pressed.connect(func(): OS.shell_open(source.tooltip_text))
+	column.add_child(source)
+	return column
 
 static func _furniture_example(block: Dictionary, repository: CourseRepository) -> Control:
 	var column := VBoxContainer.new()
@@ -107,6 +127,7 @@ static func _figure(id: String, repository: CourseRepository, options: Dictionar
 	if options.has("caption"):
 		figure.media["caption"] = options["caption"]
 		figure.media["alt"] = options.get("alt", options["caption"])
+	figure.show_caption = options.get("show_caption", true)
 	figure.markers = options.get("markers", [])
 	figure.display_height = options.get("display_height", 0.0)
 	return figure

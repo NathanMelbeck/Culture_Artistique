@@ -783,6 +783,67 @@
       "section": "mobilier"
     },
     {
+      "id": "catalogue",
+      "title": "Catalogue",
+      "intro": "Objets et détails à comparer. Ouvrez une image pour l’agrandir.",
+      "blocks": [
+        {
+          "type": "catalogue_item",
+          "title": "Le lit et son marchepied : structure et revêtement décoratif",
+          "media": "rome-lit",
+          "date": "Ier–IIe siècle apr. J.-C.",
+          "origin": "Monde romain · Metropolitan Museum of Art, 17.190.2076",
+          "observation": "Volume allongé et extrémités relevées : observer les montants et les appuis qui encadrent la surface de repos.",
+          "status_label": "Meuble conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "title": "Une table d’apparat en marbre et bronze",
+          "media": "rome-table",
+          "date": "Ier siècle apr. J.-C.",
+          "origin": "Monde romain · Metropolitan Museum of Art, 06.1021.301",
+          "observation": "Plateau rectangulaire : observer sa bordure et le contraste entre la pierre et le métal.",
+          "status_label": "Meuble conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "title": "Un pied de table : le motif animalier devient un élément porteur",
+          "media": "rome-pied-table",
+          "date": "Ier–IIe siècle apr. J.-C.",
+          "origin": "Monde romain · Metropolitan Museum of Art, 23.160.83",
+          "observation": "Forme verticale du pied : rechercher la partie destinée à recevoir une charge.",
+          "status_label": "Fragment de mobilier conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "title": "Le candélabre : un équipement pour éclairer l’intérieur",
+          "media": "rome-candelabre",
+          "date": "Vers le Ier siècle apr. J.-C.",
+          "origin": "Monde romain · Metropolitan Museum of Art, 08.258.15",
+          "observation": "Fût élancé : suivre la ligne verticale qui élève la source lumineuse.",
+          "status_label": "Équipement d’ameublement conservé"
+        },
+        {
+          "type": "catalogue_item",
+          "title": "Buste de Silène pour un lit",
+          "date": "1–125 apr. J.-C.",
+          "origin": "Italie romaine",
+          "observation": "Le buste de bronze garnissait le fulcrum, l’appui relevé à l’extrémité d’un lit. Observer les boucles serrées de la barbe.",
+          "media": "cma-1974.88",
+          "status_label": "Garniture originale"
+        },
+        {
+          "type": "catalogue_item",
+          "title": "Candélabre aux pattes de fauve",
+          "date": "Ier siècle av. J.-C.",
+          "origin": "Italie romaine",
+          "observation": "Les cannelures verticales font monter le regard depuis les pattes animales jusqu’au petit cratère qui couronne le fût.",
+          "media": "cma-1953.11",
+          "status_label": "Équipement conservé"
+        }
+      ]
+    },
+    {
       "id": "synthese",
       "title": "Reconnaître le mobilier romain",
       "intro": "Lits de repas, piètements et décors sculptés : quels indices observer ?",
